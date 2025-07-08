@@ -1,0 +1,15 @@
+autoInstallPeers: true
+
+dedupePeerDependents: true
+
+gitChecks: false
+
+onlyBuiltDependencies:
+  - "@a-novel/connector-authentication"
+  - "@a-novel/neon-ui"
+  - "@a-novel/package-authenticator"
+  - "@a-novel/tanstack-start-config"
+  - "@parcel/watcher"
+  - esbuild
+
+strictPeerDependencies: false

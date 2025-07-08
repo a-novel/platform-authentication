@@ -1,0 +1,9 @@
+pnpm-lock.yaml
+dist
+build
+coverage
+
+**/*.gen.ts
+
+.output
+.nitro
