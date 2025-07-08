@@ -1,0 +1,29 @@
+# Client.
+export CLIENT_PORT=6001
+
+# API.
+export AUTH_API_PORT=4011
+export VITE_AUTH_API_URL=http://127.0.0.1:${AUTH_API_PORT}/v1
+
+export PATH_UPDATE_EMAIL=/ext/email/validate
+export PATH_UPDATE_PASSWORD=/ext/password/update
+export PATH_REGISTER=/ext/account/create
+export AUTH_PLATFORM_URL_UPDATE_EMAIL=http://localhost:${AUTH_API_PORT}${PATH_UPDATE_EMAIL}
+export AUTH_PLATFORM_URL_UPDATE_PASSWORD=http://localhost:${AUTH_API_PORT}${PATH_UPDATE_PASSWORD}
+export AUTH_PLATFORM_URL_REGISTER=http://localhost:${AUTH_API_PORT}${PATH_REGISTER}
+
+export JSON_KEYS_MASTER=fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca
+
+# Infra
+export AUTH_API_SMTP_SANDBOX=true
+#export AUTH_API_SMTP_PASSWORD="[your_smtp_password]"
+#export AUTH_API_SMTP_SENDER="[your_smtp_sender]"
+#export AUTH_API_SMTP_DOMAIN="[your_smtp_domain]"
+#export AUTH_API_SMTP_ADDRESS="[your_smtp_address]"
+
+export AUTH_API_SERVER_NAME=platform-authentification-dev
+export AUTH_API_ENV=local
+
+# Other.
+export PODMAN_IGNORE_CGROUPSV1_WARNING="true"
+export PODMAN_COMPOSE_PROVIDER="podman-compose"
