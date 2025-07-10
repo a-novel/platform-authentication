@@ -13,13 +13,13 @@ importers:
         version: 1.3.1(@tanstack/react-query@5.81.5(react@19.1.0))(react@19.1.0)
       '@a-novel/neon-ui':
         specifier: ^2.8.2
-        version: 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@a-novel/package-authenticator':
         specifier: ^1.5.1
-        version: 1.5.1(c3cf7350f8627adc28333b2b74996da5)
+        version: 1.5.1(160dced16eda12f2a1daa228b5fe7ec3)
       '@a-novel/tanstack-start-config':
         specifier: ^1.3.0
-        version: 1.3.0(fc622e45cebf72cf5c23395dae28ce44)
+        version: 1.3.0(2f72f37f8f07df20e9d9dff0160a486d)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -37,7 +37,7 @@ importers:
         version: 7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-form':
         specifier: ^1.14.1
-        version: 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-query':
         specifier: ^5.81.5
         version: 5.81.5(react@19.1.0)
@@ -49,7 +49,7 @@ importers:
         version: 1.125.6(@tanstack/react-query@5.81.5(react@19.1.0))(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.125.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-start':
         specifier: ^1.126.1
-        version: 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+        version: 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@tanstack/zod-adapter':
         specifier: ^1.125.6
         version: 1.125.6(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(zod@3.25.76)
@@ -86,7 +86,7 @@ importers:
         version: 9.1.0-alpha.6(@vitest/browser@3.2.4)(@vitest/runner@3.2.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(vitest@3.2.4)
       '@storybook/react-vite':
         specifier: 9.1.0-alpha.6
-        version: 9.1.0-alpha.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(rollup@4.44.2)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+        version: 9.1.0-alpha.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(rollup@4.44.2)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@svgr/rollup':
         specifier: ^8.1.0
         version: 8.1.0(rollup@4.44.2)(typescript@5.8.3)
@@ -110,10 +110,10 @@ importers:
         version: 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react':
         specifier: ^4.6.0
-        version: 4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+        version: 4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@vitest/browser':
         specifier: 3.2.4
-        version: 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
+        version: 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(@vitest/browser@3.2.4)(vitest@3.2.4)
@@ -160,11 +160,11 @@ importers:
         specifier: ^8.36.0
         version: 8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: ^7.0.3
-        version: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+        specifier: ^7.0.4
+        version: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+        version: 5.1.4(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.0.11)(@vitest/browser@3.2.4)(jiti@2.4.2)(jsdom@26.1.0)(terser@5.43.1)(tsx@4.20.3)
@@ -5391,8 +5391,8 @@ packages:
       vite:
         optional: true
 
-  vite@7.0.3:
-    resolution: {integrity: sha512-y2L5oJZF7bj4c0jgGYgBNSdIu+5HF+m68rn2cQXFbGoShdhV1phX9rbnxy9YXj82aS8MMsCLAAFkRxZeWdldrQ==}
+  vite@7.0.4:
+    resolution: {integrity: sha512-SkaSguuS7nnmV7mfJ8l81JGBFV7Gvzp8IzgE8A8t23+AxuNX61Q5H1Tpz5efduSN7NHC8nQXD3sKQKZAu5mNEA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -5624,27 +5624,27 @@ snapshots:
       react: 19.1.0
       zod: 3.25.76
 
-  '@a-novel/neon-ui@2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@a-novel/neon-ui@2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@fontsource/arimo': 5.2.6
       '@fontsource/bungee': 5.2.6
       '@mui/material': 7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tanstack/react-form': 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@tanstack/react-form': 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tolgee/format-icu': 6.2.6
       '@tolgee/react': 6.2.6(react@19.1.0)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@a-novel/package-authenticator@1.5.1(c3cf7350f8627adc28333b2b74996da5)':
+  '@a-novel/package-authenticator@1.5.1(160dced16eda12f2a1daa228b5fe7ec3)':
     dependencies:
       '@a-novel/connector-authentication': 1.3.1(@tanstack/react-query@5.81.5(react@19.1.0))(react@19.1.0)
-      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@mui/material': 7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tanstack/react-form': 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@tanstack/react-form': 1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-query': 5.81.5(react@19.1.0)
       '@tolgee/format-icu': 6.2.6
       '@tolgee/react': 6.2.6(react@19.1.0)
@@ -5655,10 +5655,10 @@ snapshots:
       - '@tanstack/react-start'
       - vinxi
 
-  '@a-novel/tanstack-start-config@1.3.0(fc622e45cebf72cf5c23395dae28ce44)':
+  '@a-novel/tanstack-start-config@1.3.0(2f72f37f8f07df20e9d9dff0160a486d)':
     dependencies:
-      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@a-novel/package-authenticator': 1.5.1(c3cf7350f8627adc28333b2b74996da5)
+      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@a-novel/package-authenticator': 1.5.1(160dced16eda12f2a1daa228b5fe7ec3)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@fontsource-variable/arimo': 5.2.6
@@ -6808,12 +6808,12 @@ snapshots:
 
   '@istanbuljs/schema@0.1.3': {}
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       glob: 10.4.5
       magic-string: 0.30.17
       react-docgen-typescript: 2.4.0(typescript@5.8.3)
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     optionalDependencies:
       typescript: 5.8.3
 
@@ -7315,19 +7315,19 @@ snapshots:
       storybook: 9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2)
       ts-dedent: 2.2.0
     optionalDependencies:
-      '@vitest/browser': 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
+      '@vitest/browser': 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
       '@vitest/runner': 3.2.4
       vitest: 3.2.4(@types/node@24.0.11)(@vitest/browser@3.2.4)(jiti@2.4.2)(jsdom@26.1.0)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - react
       - react-dom
 
-  '@storybook/builder-vite@9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@storybook/builder-vite@9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@storybook/csf-plugin': 9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))
       storybook: 9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2)
       ts-dedent: 2.2.0
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
 
   '@storybook/csf-plugin@9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))':
     dependencies:
@@ -7347,11 +7347,11 @@ snapshots:
       react-dom: 19.1.0(react@19.1.0)
       storybook: 9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2)
 
-  '@storybook/react-vite@9.1.0-alpha.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(rollup@4.44.2)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@storybook/react-vite@9.1.0-alpha.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(rollup@4.44.2)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.0(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.0(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@rollup/pluginutils': 5.2.0(rollup@4.44.2)
-      '@storybook/builder-vite': 9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@storybook/builder-vite': 9.1.0-alpha.6(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@storybook/react': 9.1.0-alpha.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(storybook@9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2))(typescript@5.8.3)
       find-up: 7.0.0
       magic-string: 0.30.17
@@ -7361,7 +7361,7 @@ snapshots:
       resolve: 1.22.10
       storybook: 9.1.0-alpha.6(@testing-library/dom@10.4.0)(prettier@3.6.2)
       tsconfig-paths: 4.2.0
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -7472,7 +7472,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tanstack/directive-functions-plugin@1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/directive-functions-plugin@1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.28.0
@@ -7481,7 +7481,7 @@ snapshots:
       '@tanstack/router-utils': 1.121.21
       babel-dead-code-elimination: 1.0.10
       tiny-invariant: 1.3.3
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -7501,7 +7501,7 @@ snapshots:
 
   '@tanstack/query-core@5.81.5': {}
 
-  '@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@tanstack/form-core': 1.14.0
       '@tanstack/react-store': 0.7.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -7509,7 +7509,7 @@ snapshots:
       devalue: 5.1.1
       react: 19.1.0
     optionalDependencies:
-      '@tanstack/react-start': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/react-start': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
     transitivePeerDependencies:
       - react-dom
 
@@ -7550,11 +7550,11 @@ snapshots:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  '@tanstack/react-start-plugin@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/react-start-plugin@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
-      '@tanstack/start-plugin-core': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
-      '@vitejs/plugin-react': 4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      '@tanstack/start-plugin-core': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@vitejs/plugin-react': 4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
       zod: 3.25.76
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -7600,17 +7600,17 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@tanstack/react-start-client': 1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tanstack/react-start-plugin': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/react-start-plugin': 1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@tanstack/react-start-server': 1.126.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tanstack/start-server-functions-client': 1.125.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
-      '@tanstack/start-server-functions-server': 1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
-      '@vitejs/plugin-react': 4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/start-server-functions-client': 1.125.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/start-server-functions-server': 1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@vitejs/plugin-react': 4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -7672,7 +7672,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/router-plugin@1.125.6(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/router-plugin@1.125.6(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.28.0)
@@ -7690,7 +7690,7 @@ snapshots:
       zod: 3.25.76
     optionalDependencies:
       '@tanstack/react-router': 1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -7705,7 +7705,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/server-functions-plugin@1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/server-functions-plugin@1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.28.0
@@ -7714,7 +7714,7 @@ snapshots:
       '@babel/template': 7.27.2
       '@babel/traverse': 7.28.0
       '@babel/types': 7.28.0
-      '@tanstack/directive-functions-plugin': 1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/directive-functions-plugin': 1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       babel-dead-code-elimination: 1.0.10
       tiny-invariant: 1.3.3
     transitivePeerDependencies:
@@ -7728,16 +7728,16 @@ snapshots:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  '@tanstack/start-plugin-core@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/start-plugin-core@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/core': 7.28.0
       '@babel/types': 7.28.0
       '@tanstack/router-core': 1.125.4
       '@tanstack/router-generator': 1.125.4
-      '@tanstack/router-plugin': 1.125.6(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/router-plugin': 1.125.6(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@tanstack/router-utils': 1.121.21
-      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@tanstack/start-server-core': 1.126.1
       '@types/babel__code-frame': 7.0.6
       '@types/babel__core': 7.20.5
@@ -7747,7 +7747,7 @@ snapshots:
       nitropack: 2.11.13
       pathe: 2.0.3
       ufo: 1.6.1
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
       xmlbuilder2: 3.1.1
       zod: 3.25.76
     transitivePeerDependencies:
@@ -7794,9 +7794,9 @@ snapshots:
       tiny-warning: 1.0.3
       unctx: 2.4.1
 
-  '@tanstack/start-server-functions-client@1.125.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/start-server-functions-client@1.125.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
-      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@tanstack/start-server-functions-fetcher': 1.125.4
     transitivePeerDependencies:
       - supports-color
@@ -7807,9 +7807,9 @@ snapshots:
       '@tanstack/router-core': 1.125.4
       '@tanstack/start-client-core': 1.125.4
 
-  '@tanstack/start-server-functions-server@1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@tanstack/start-server-functions-server@1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
-      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@tanstack/server-functions-plugin': 1.124.1(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       tiny-invariant: 1.3.3
     transitivePeerDependencies:
       - supports-color
@@ -8071,7 +8071,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.0)
@@ -8079,15 +8079,15 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.19
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/browser@3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)':
+  '@vitest/browser@3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)':
     dependencies:
       '@testing-library/dom': 10.4.0
       '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.0)
-      '@vitest/mocker': 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@vitest/mocker': 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@vitest/utils': 3.2.4
       magic-string: 0.30.17
       sirv: 3.0.1
@@ -8117,7 +8117,7 @@ snapshots:
       tinyrainbow: 2.0.0
       vitest: 3.2.4(@types/node@24.0.11)(@vitest/browser@3.2.4)(jiti@2.4.2)(jsdom@26.1.0)(terser@5.43.1)(tsx@4.20.3)
     optionalDependencies:
-      '@vitest/browser': 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
+      '@vitest/browser': 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -8136,13 +8136,13 @@ snapshots:
       chai: 5.2.1
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
+  '@vitest/mocker@3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))':
     dependencies:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
 
   '@vitest/pretty-format@3.0.9':
     dependencies:
@@ -11554,7 +11554,7 @@ snapshots:
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -11569,18 +11569,18 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.8.3)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)):
+  vite-tsconfig-paths@5.1.4(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)):
     dependencies:
       debug: 4.4.1
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.8.3)
     optionalDependencies:
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3):
+  vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3):
     dependencies:
       esbuild: 0.25.6
       fdir: 6.4.6(picomatch@4.0.2)
@@ -11599,7 +11599,7 @@ snapshots:
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
-      '@vitest/mocker': 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
+      '@vitest/mocker': 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
       '@vitest/pretty-format': 3.2.4
       '@vitest/runner': 3.2.4
       '@vitest/snapshot': 3.2.4
@@ -11617,12 +11617,12 @@ snapshots:
       tinyglobby: 0.2.14
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
+      vite: 7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
       vite-node: 3.2.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.0.11
-      '@vitest/browser': 3.2.4(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
+      '@vitest/browser': 3.2.4(vite@7.0.4(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))(vitest@3.2.4)
       jsdom: 26.1.0
     transitivePeerDependencies:
       - jiti
