@@ -12,14 +12,14 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(@tanstack/react-query@5.81.5(react@19.1.0))(react@19.1.0)
       '@a-novel/neon-ui':
-        specifier: ^2.8.2
-        version: 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^2.8.4
+        version: 2.8.4(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@a-novel/package-authenticator':
         specifier: ^1.5.1
-        version: 1.5.1(c3cf7350f8627adc28333b2b74996da5)
+        version: 1.5.1(04c62c61a2ab6f2e3c0526bca3f89747)
       '@a-novel/tanstack-start-config':
         specifier: ^1.3.0
-        version: 1.3.0(fc622e45cebf72cf5c23395dae28ce44)
+        version: 1.3.0(844e9394342d52a7dc4611265a0f0c0b)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -178,14 +178,14 @@ packages:
       '@tanstack/react-query': ^5.75.0
       react: ^19.1.0
 
-  '@a-novel/neon-ui@2.8.2':
-    resolution: {integrity: sha512-9gUyUM62+Ze8JGuMQ7gh1VlKBQLguWpd0yyHJUn2i+pnoWLvY3Dd8RzU0Au8/FwefzWRhhvbAZ6Rv/rB+MvuOA==, tarball: https://npm.pkg.github.com/download/@a-novel/neon-ui/2.8.2/f9d2f5a1dc51caa1b1c6218514303c02bce7559a}
+  '@a-novel/neon-ui@2.8.4':
+    resolution: {integrity: sha512-C2al7TiBoT6bCT4/gEqgBile0OaYLSdXuFRtFjD8SojSnESwKhXaz0kAUeZ2SQYx3M0fxpO5BMlUvtS/EobJ9A==, tarball: https://npm.pkg.github.com/download/@a-novel/neon-ui/2.8.4/ef547d6bfbddf98e40c922feb0d03f4d9981ce31}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.0
       '@mui/material': ^7.0.2
-      '@tanstack/react-form': ^1.11.2
+      '@tanstack/react-form': ^1.14.1
       '@tolgee/format-icu': ^6.2.6
       '@tolgee/react': ^6.2.6
       react: ^19.1.0
@@ -5624,7 +5624,7 @@ snapshots:
       react: 19.1.0
       zod: 3.25.76
 
-  '@a-novel/neon-ui@2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@a-novel/neon-ui@2.8.4(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
@@ -5637,10 +5637,10 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@a-novel/package-authenticator@1.5.1(c3cf7350f8627adc28333b2b74996da5)':
+  '@a-novel/package-authenticator@1.5.1(04c62c61a2ab6f2e3c0526bca3f89747)':
     dependencies:
       '@a-novel/connector-authentication': 1.3.1(@tanstack/react-query@5.81.5(react@19.1.0))(react@19.1.0)
-      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@a-novel/neon-ui': 2.8.4(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@mui/material': 7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -5655,10 +5655,10 @@ snapshots:
       - '@tanstack/react-start'
       - vinxi
 
-  '@a-novel/tanstack-start-config@1.3.0(fc622e45cebf72cf5c23395dae28ce44)':
+  '@a-novel/tanstack-start-config@1.3.0(844e9394342d52a7dc4611265a0f0c0b)':
     dependencies:
-      '@a-novel/neon-ui': 2.8.2(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@a-novel/package-authenticator': 1.5.1(c3cf7350f8627adc28333b2b74996da5)
+      '@a-novel/neon-ui': 2.8.4(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.126.1(@tanstack/react-router@1.125.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.6.0(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.3(@types/node@24.0.11)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@a-novel/package-authenticator': 1.5.1(04c62c61a2ab6f2e3c0526bca3f89747)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@fontsource-variable/arimo': 5.2.6
