@@ -19,7 +19,7 @@ importers:
         version: 1.5.2(a3eee8e0fda0dbfd91ded7b69b9589bd)
       '@a-novel/tanstack-start-config':
         specifier: ^1.3.1
-        version: 1.3.1(6f54c7a5116a30741efbcf73667ee7f2)
+        version: 1.3.1(c6d6bf2ff02d0ce6a8d666607bc05575)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -45,8 +45,8 @@ importers:
         specifier: ^1.128.3
         version: 1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-router-with-query':
-        specifier: ^1.128.3
-        version: 1.128.3(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^1.128.4
+        version: 1.128.4(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-start':
         specifier: ^1.128.3
         version: 1.128.3(@netlify/blobs@9.1.2)(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.7.0(vite@7.0.5(@types/node@24.0.14)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.5(@types/node@24.0.14)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3))
@@ -1996,8 +1996,8 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
-  '@tanstack/react-router-with-query@1.128.3':
-    resolution: {integrity: sha512-l0bS2WkNR9DlG/hLjGgRmuvd47LzKkM+THPqDWQI68I9+5SUYsDUKAo3jtEcu1DJ5FEnhpo6eNbwsg2qAkpZlA==}
+  '@tanstack/react-router-with-query@1.128.4':
+    resolution: {integrity: sha512-RsBdUssXdPc4x89ZKqqPh53qiIUYAKPvdled0yxh5U/77B+a6Y3aZB4CIZJ3qWGjUiiIOJdmV+DTj9mlzCuP/Q==}
     engines: {node: '>=12'}
     peerDependencies:
       '@tanstack/react-query': '>=5.49.2'
@@ -5690,7 +5690,7 @@ snapshots:
       - '@tanstack/react-start'
       - vinxi
 
-  '@a-novel/tanstack-start-config@1.3.1(6f54c7a5116a30741efbcf73667ee7f2)':
+  '@a-novel/tanstack-start-config@1.3.1(c6d6bf2ff02d0ce6a8d666607bc05575)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.1(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
       '@a-novel/neon-ui': 2.8.5(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.1(@tanstack/react-start@1.128.3(@netlify/blobs@9.1.2)(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.7.0(vite@7.0.5(@types/node@24.0.14)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.5(@types/node@24.0.14)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -5702,7 +5702,7 @@ snapshots:
       '@mui/material': 7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-query': 5.83.0(react@19.1.0)
       '@tanstack/react-router': 1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tanstack/react-router-with-query': 1.128.3(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@tanstack/react-router-with-query': 1.128.4(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tolgee/format-icu': 6.2.6
       '@tolgee/react': 6.2.6(react@19.1.0)
       react: 19.1.0
@@ -7556,7 +7556,7 @@ snapshots:
       '@tanstack/query-core': 5.83.0
       react: 19.1.0
 
-  '@tanstack/react-router-with-query@1.128.3(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@tanstack/react-router-with-query@1.128.4(@tanstack/react-query@5.83.0(react@19.1.0))(@tanstack/react-router@1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.128.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@tanstack/react-query': 5.83.0(react@19.1.0)
       '@tanstack/react-router': 1.128.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
