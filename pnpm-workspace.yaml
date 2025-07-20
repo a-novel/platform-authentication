@@ -7,9 +7,17 @@ gitChecks: false
 onlyBuiltDependencies:
   - "@a-novel/connector-authentication"
   - "@a-novel/neon-ui"
+  - "@a-novel/nodelib"
   - "@a-novel/package-authenticator"
+  - "@a-novel/package-ui"
   - "@a-novel/tanstack-start-config"
   - "@parcel/watcher"
+  - edgedriver
   - esbuild
+  - geckodriver
+  - msw
 
 strictPeerDependencies: false
+
+packages:
+  - "."

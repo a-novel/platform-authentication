@@ -4,10 +4,8 @@ import type { Decorator } from "@storybook/react-vite";
 import { FormatIcu } from "@tolgee/format-icu";
 import { BackendFetch, Tolgee, TolgeeProvider } from "@tolgee/react";
 
-const cdn = "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b";
-
 export const tolgee = Tolgee()
-  .use(BackendFetch({ prefix: cdn }))
+  .use(BackendFetch({ prefix: import.meta.env.VITE_TOLGEE_CDN }))
   .use(FormatIcu())
   .init({
     defaultLanguage: "en",

@@ -13,10 +13,12 @@ export default defineConfig([
     "**/node_modules/**",
     "**/.output/**",
     "**/.nitro/**",
+    "**/.idea/**",
     "**/.tanstack/**",
     "**/dist/**",
     "**/*.gen.ts",
     "**/coverage/**",
+    "**/storybook-static/**",
   ]),
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   {

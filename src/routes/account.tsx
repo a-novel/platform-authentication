@@ -1,21 +1,15 @@
 import { AccountPage } from "~/components/pages";
 import { useRequestEmailUpdateFormConnector, useUpdatePasswordFormConnector } from "~/connectors/forms";
 
-import { SessionPrivateSuspense } from "@a-novel/package-authenticator";
-import type { RouteContext } from "@a-novel/tanstack-start-config";
+import { WithPrivateSession } from "@a-novel/package-authenticator";
 
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/account")({
-  component: () => (
-    <SessionPrivateSuspense>
-      <Account />
-    </SessionPrivateSuspense>
-  ),
-  beforeLoad: () =>
-    ({
-      getTitle: (tolgee) => tolgee.t("metadata.account.title", { ns: "platform.authentication" }),
-    }) as RouteContext,
+  head: ({ match }) => ({
+    meta: [{ title: match.context.tolgee.t("metadata.account.title", { ns: "platform.authentication" }) }],
+  }),
+  component: WithPrivateSession(Account),
 });
 
 function Account() {

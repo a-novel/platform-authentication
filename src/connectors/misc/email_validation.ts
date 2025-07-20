@@ -11,10 +11,10 @@ export interface EmailValidationConnectorProps {
   shortCode: string;
 }
 
-export const useEmailValidationConnector = ({
+export function useEmailValidationConnector({
   userID,
   shortCode,
-}: EmailValidationConnectorProps): EmailValidationConnector => {
+}: EmailValidationConnectorProps): EmailValidationConnector {
   const accessToken = useAccessToken();
 
   const emailUpdate = UpdateEmail.useAPI(accessToken);
@@ -37,4 +37,4 @@ export const useEmailValidationConnector = ({
     isError: emailUpdate.isError && !isForbidden,
     isLinkError: isForbidden,
   };
-};
+}

@@ -3,7 +3,7 @@
     "jsx": "react-jsx",
     "moduleResolution": "Bundler",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "@vitest/browser/providers/playwright"],
     "module": "ESNext",
     "target": "ES2022",
     "skipLibCheck": true,

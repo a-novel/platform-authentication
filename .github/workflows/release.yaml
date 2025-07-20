@@ -1,0 +1,101 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: a-novel-kit/workflows/publish-actions/auto-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    needs: [release]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: a-novel-kit/workflows/node-actions/build-node@master
+        with:
+          pat: ${{ secrets.ACTION_PAT }}
+
+  platform-build:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+    services:
+      postgres-authentication:
+        image: ghcr.io/a-novel/service-authentication/database:v1
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+          POSTGRES_INITDB_ARGS: --auth=scram-sha-256
+
+      postgres-json-keys:
+        image: ghcr.io/a-novel/service-json-keys/database:v1
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+          POSTGRES_INITDB_ARGS: --auth=scram-sha-256
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      json-keys:
+        image: ghcr.io/a-novel/service-json-keys/standalone:v1
+        env:
+          POSTGRES_DSN: postgres://postgres:postgres@postgres-json-keys:5432/postgres?sslmode=disable
+          APP_MASTER_KEY: "fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca"
+
+      authentication-service:
+        image: ghcr.io/a-novel/service-authentication/standalone:v1
+        ports:
+          - "4011:8080"
+        env:
+          POSTGRES_DSN: postgres://postgres:postgres@postgres-authentication:5432/postgres?sslmode=disable
+          JSON_KEYS_SERVICE_URL: http://json-keys:8080/v1
+    env:
+      VITE_SERVICE_AUTH_URL: http://0.0.0.0:4011/v1
+      VITE_TOLGEE_CDN: "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: install pnpm
+        shell: bash
+        run: npm install -g pnpm
+      - name: setup github registry
+        shell: bash
+        run: |
+          echo "@a-novel:registry=https://npm.pkg.github.com" > $HOME/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACTION_PAT }}" >> $HOME/.npmrc
+          echo "NPMRC=$HOME/.npmrc" >> "$GITHUB_ENV"
+      - uses: a-novel-kit/workflows/build-actions/docker@master
+        with:
+          file: build/platform.Dockerfile
+          image_name: ${{ github.repository }}/platform
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          secret-files: |
+            npmrc=${{ env.NPMRC }}
+          run_args: >-
+            -e VITE_SERVICE_AUTH_URL="${VITE_SERVICE_AUTH_URL}"
+            -e VITE_TOLGEE_CDN="${VITE_TOLGEE_CDN}"

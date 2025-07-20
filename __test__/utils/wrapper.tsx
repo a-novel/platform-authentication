@@ -1,7 +1,7 @@
 import { MockSession } from "#/mocks/session";
 
-import { theme } from "@a-novel/neon-ui";
 import { SessionContext } from "@a-novel/package-authenticator";
+import { theme } from "@a-novel/package-ui/mui";
 
 import type { ContextType, FC, ReactNode } from "react";
 

@@ -1,9 +1,7 @@
-import type { UpdatePasswordFormConnector } from "~/components/forms";
-
 import { BINDINGS_VALIDATION, isForbiddenError } from "@a-novel/connector-authentication/api";
 import { UpdatePassword } from "@a-novel/connector-authentication/hooks";
 import { useAccessToken } from "@a-novel/package-authenticator";
-import { useTolgeeNamespaces } from "@a-novel/tanstack-start-config";
+import { useTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { useForm } from "@tanstack/react-form";
 import { useTranslate, type UseTranslateResult } from "@tolgee/react";
@@ -11,11 +9,41 @@ import { z } from "zod";
 
 type FormTFunction = UseTranslateResult["t"];
 
+export type UpdatePasswordFormConnector = ReturnType<typeof useUpdatePasswordFormConnector>;
+
+const ns = ["form", "generic", "platform.authentication.account"];
+
+export const useUpdatePasswordFormConnector = () => {
+  const { t } = useTranslate(ns);
+  useTolgeeNs(ns);
+
+  const accessToken = useAccessToken();
+  const updatePassword = UpdatePassword.useAPI(accessToken);
+
+  const form = useForm({
+    defaultValues: {
+      currentPassword: "",
+      password: "",
+      passwordConfirmation: "",
+    },
+    validators: {
+      onBlur: formValidator(t),
+      onSubmitAsync: ({ value }) =>
+        updatePassword
+          .mutateAsync(value)
+          .then(() => null)
+          .catch(newSubmitErrorHandler(t)),
+    },
+  });
+
+  return { form };
+};
+
 /**
  * Extends the original form with translated error messages.
  */
-const formValidator = (t: FormTFunction) =>
-  z
+function formValidator(t: FormTFunction) {
+  return z
     .object({
       currentPassword: z
         .string()
@@ -75,54 +103,19 @@ const formValidator = (t: FormTFunction) =>
         ns: "platform.authentication.account",
       }),
     });
+}
 
 /**
  * Handle error from login form submit. Properly sets field errors for tanstack depending on the returned value.
  */
-const handleSubmitError = (t: FormTFunction) => (error: any) => {
-  if (isForbiddenError(error)) {
-    return {
-      fields: { password: t("fields.password.errors.invalid", { ns: "form" }) },
-    };
-  }
+function newSubmitErrorHandler(t: FormTFunction) {
+  return function handleSubmitError(error: any) {
+    if (isForbiddenError(error)) {
+      return {
+        fields: { password: t("fields.password.errors.invalid", { ns: "form" }) },
+      };
+    }
 
-  return `${t("updatePassword.form.errors.generic", { ns: "platform.authentication.account" })} ${t("error", { ns: "generic" })}`;
-};
-
-export const useUpdatePasswordFormConnector = (): UpdatePasswordFormConnector<
-  any,
-  any,
-  any,
-  any,
-  any,
-  any,
-  any,
-  any,
-  any
-> => {
-  const { t } = useTranslate(["form", "generic", "platform.authentication.account"]);
-  useTolgeeNamespaces("form");
-  useTolgeeNamespaces("generic");
-  useTolgeeNamespaces("platform.authentication.account");
-
-  const accessToken = useAccessToken();
-  const updatePassword = UpdatePassword.useAPI(accessToken);
-
-  const form = useForm({
-    defaultValues: {
-      currentPassword: "",
-      password: "",
-      passwordConfirmation: "",
-    },
-    validators: {
-      onBlur: formValidator(t),
-      onSubmitAsync: ({ value }) =>
-        updatePassword
-          .mutateAsync(value)
-          .then(() => null)
-          .catch(handleSubmitError(t)),
-    },
-  });
-
-  return { form };
-};
+    return `${t("updatePassword.form.errors.generic", { ns: "platform.authentication.account" })} ${t("error", { ns: "generic" })}`;
+  };
+}

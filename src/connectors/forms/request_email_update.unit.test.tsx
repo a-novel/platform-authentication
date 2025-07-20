@@ -1,15 +1,20 @@
-import { MockQueryClient, MockRequestOptions } from "#/mocks/query_client";
+import { MockHeaders } from "#/mocks/query_client";
 import { MockAccessToken, MockCurrentUser, MockSession } from "#/mocks/session";
 import "#/mocks/tolgee";
-import { writeField } from "#/utils/field";
-import { genericSetup } from "#/utils/setup";
+import { server } from "#/setup/unit";
 import { SessionWrapper, StandardWrapper } from "#/utils/wrapper";
 
-import { RequestEmailUpdateForm, type RequestEmailUpdateFormConnector } from "~/components/forms";
-import { useRequestEmailUpdateFormConnector } from "~/connectors/forms/request_email_update";
+import { RequestEmailUpdateForm } from "~/components/forms";
+import {
+  useRequestEmailUpdateFormConnector,
+  type RequestEmailUpdateFormConnector,
+} from "~/connectors/forms/request_email_update";
 
 import { BINDINGS_VALIDATION, LangEnum } from "@a-novel/connector-authentication/api";
 import { GetUser } from "@a-novel/connector-authentication/hooks";
+import { MockQueryClient } from "@a-novel/nodelib/mocks/query_client";
+import { http } from "@a-novel/nodelib/msw";
+import { writeField } from "@a-novel/nodelib/test/form";
 
 import type { ReactNode } from "react";
 
@@ -23,46 +28,39 @@ import {
   type RenderResult,
   waitFor,
 } from "@testing-library/react";
-import nock from "nock";
+import { HttpResponse } from "msw";
 import { beforeEach, describe, expect, it } from "vitest";
 
-let nockAPI: nock.Scope;
-
-let requestEmailUpdateFormConnector: RenderHookResult<
-  RequestEmailUpdateFormConnector<any, any, any, any, any, any, any, any, any>,
-  object
->;
+let requestEmailUpdateFormConnector: RenderHookResult<RequestEmailUpdateFormConnector, object>;
 let screen: RenderResult;
 
 let queryClient: QueryClient;
 
 describe("RequestEmailUpdate", () => {
-  genericSetup({
-    setNockAPI: (newScope) => {
-      nockAPI = newScope;
-    },
-  });
-
   beforeEach(async () => {
     queryClient = new QueryClient(MockQueryClient);
 
-    const nockUser = nockAPI
-      .get(`/user?userID=${MockSession.session!.claims!.userID}`, undefined, MockRequestOptions)
-      .reply(200, MockCurrentUser);
+    server.use(
+      http
+        .get("http://localhost:4011/user")
+        .headers(new Headers(MockHeaders), HttpResponse.error())
+        .searchParams(new URLSearchParams({ userID: MockSession.session!.claims!.userID! }), true, HttpResponse.error())
+        .resolve(() => HttpResponse.json(MockCurrentUser))
+    );
 
     // Render the hook, then inject the connector into the form.
     requestEmailUpdateFormConnector = renderHook(() => useRequestEmailUpdateFormConnector(), {
       wrapper: ({ children }: { children: ReactNode }) => (
-        <SessionWrapper>
+        <SessionWrapper session={MockSession}>
           <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
         </SessionWrapper>
       ),
     });
 
     await waitFor(() => {
-      nockUser.done();
       expect(requestEmailUpdateFormConnector.result.current).not.toBeNull();
     });
+    requestEmailUpdateFormConnector.rerender();
 
     screen = render(<RequestEmailUpdateForm connector={requestEmailUpdateFormConnector.result.current} />, {
       wrapper: StandardWrapper,
@@ -74,10 +72,12 @@ describe("RequestEmailUpdate", () => {
     const inputs = [/form:fields\.email\.label/];
 
     for (const label of inputs) {
-      it(`renders input with label ${label}`, () => {
+      it(`renders input with label ${label}`, async () => {
         const input = screen.getByLabelText(label) as HTMLInputElement;
-        expect(input).toBeDefined();
-        expect((input as HTMLInputElement).disabled).toBe(false);
+        await waitFor(() => {
+          expect(input).toBeDefined();
+          expect((input as HTMLInputElement).disabled).toBe(false);
+        });
       });
     }
 
@@ -260,9 +260,13 @@ describe("RequestEmailUpdate", () => {
 
     for (const [name, { form, responseStatus, expectErrors }] of Object.entries(forms)) {
       it(name, async () => {
-        const nockRequestEmailUpdate = nockAPI
-          .put("/short-code/update-email", form, MockRequestOptions)
-          .reply(responseStatus, {});
+        server.use(
+          http
+            .put("http://localhost:4011/short-code/update-email")
+            .headers(new Headers(MockHeaders), HttpResponse.error())
+            .bodyJSON(form, HttpResponse.error())
+            .resolve(() => HttpResponse.json(undefined, { status: responseStatus }))
+        );
 
         const emailInput = screen.getByLabelText(/form:fields\.email\.label/) as HTMLInputElement;
 
@@ -275,11 +279,6 @@ describe("RequestEmailUpdate", () => {
         // Submit the form.
         act(() => {
           fireEvent.click(submitButton);
-        });
-
-        // Wait for the form to submit.
-        await waitFor(() => {
-          nockRequestEmailUpdate.done();
         });
 
         // Check the form errors.

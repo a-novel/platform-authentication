@@ -1,35 +1,24 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+# IDE
 .idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
+# Private files
 .envrc
 
-coverage
+# Tanstack build files
+.nitro
+.output
+.tanstack
+
+# Storybook files
 storybook-static
 
-*storybook.log
+# Coverage and test files
+coverage
+test-results
+port*.txt
+__test__/screenshots
 
-.output
-.nitro
-.tanstack
+# Node modules
+node_modules
+
+*storybook.log

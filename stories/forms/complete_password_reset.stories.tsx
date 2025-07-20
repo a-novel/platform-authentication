@@ -1,24 +1,18 @@
 import { CompletePasswordResetForm, type CompletePasswordResetFormProps } from "~/components/forms";
 
 import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
-import { SPACINGS } from "@a-novel/neon-ui";
-import { FormRenderer, NewMockForm } from "@a-novel/neon-ui/storybook";
+import { FormRenderer, NewMockForm } from "@a-novel/package-ui/storybook";
 
 import type { FC } from "react";
 
-import { Stack } from "@mui/material";
 import { type Meta, type StoryObj } from "@storybook/react-vite";
 import { type ReactFormExtendedApi } from "@tanstack/react-form";
 
 const RenderComponents: FC<
-  CompletePasswordResetFormProps<any, any, any, any, any, any, any, any, any> & {
+  CompletePasswordResetFormProps & {
     form: ReactFormExtendedApi<any, any, any, any, any, any, any, any, any, any>;
   }
-> = (props) => (
-  <Stack height="100%" alignItems="center" justifyContent="center" padding={SPACINGS.MEDIUM}>
-    <CompletePasswordResetForm connector={{ ...props.connector, form: props.form }} />
-  </Stack>
-);
+> = (props) => <CompletePasswordResetForm connector={{ ...props.connector, form: props.form }} />;
 
 const meta: Meta<typeof CompletePasswordResetForm> = {
   component: CompletePasswordResetForm,

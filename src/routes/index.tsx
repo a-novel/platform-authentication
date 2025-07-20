@@ -1,18 +1,12 @@
-import { SessionPrivateSuspense } from "@a-novel/package-authenticator";
-import type { RouteContext } from "@a-novel/tanstack-start-config";
+import { WithPrivateSession } from "@a-novel/package-authenticator";
 
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
-  component: () => (
-    <SessionPrivateSuspense>
-      <Home />
-    </SessionPrivateSuspense>
-  ),
-  beforeLoad: () =>
-    ({
-      getTitle: (tolgee) => tolgee.t("metadata.home.title", { ns: "platform.authentication" }),
-    }) as RouteContext,
+  head: ({ match }) => ({
+    meta: [{ title: match.context.tolgee.t("metadata.home.title", { ns: "platform.authentication" }) }],
+  }),
+  component: WithPrivateSession(Home),
 });
 
 function Home() {
