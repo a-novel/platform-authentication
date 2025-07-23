@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       '@a-novel/connector-authentication':
-        specifier: ^1.4.3
-        version: 1.4.3(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
+        specifier: ^1.4.4
+        version: 1.4.4(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
       '@a-novel/neon-ui':
         specifier: ^2.8.5
         version: 2.8.5(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.2(@tanstack/react-start@1.129.5(@netlify/blobs@9.1.2)(@tanstack/react-router@1.129.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.7.0(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@a-novel/package-authenticator':
         specifier: ^1.5.2
-        version: 1.5.2(55058c4d952826f0daea3b7fdb434d05)
+        version: 1.5.2(89ee053135938095207b929bf750c5ce)
       '@a-novel/tanstack-start-config':
         specifier: ^1.3.1
-        version: 1.3.1(83ea5c062585dd8b08508d1699499992)
+        version: 1.3.1(89be260f6a43dc7b3062ba19c83f713d)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -174,8 +174,8 @@ importers:
 
 packages:
 
-  '@a-novel/connector-authentication@1.4.3':
-    resolution: {integrity: sha512-dBVqk3zR9loBNtZ3Sjxgx6MsYIuIif2Vor/dJFVmeZwO0KIkhX06cnXlpNcxuVoggVShYa6uGJYJCG+dUsqQCg==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.3/47090afd3181454e55c94b6c8c16208d8b94b460}
+  '@a-novel/connector-authentication@1.4.4':
+    resolution: {integrity: sha512-ApujyKf6TDmbcGA+b9bKrGDS8nY89hmjDQxY5AOZu/DQU4VOeykV5983JCFvlNw2KWheHeMLHoee5uIz/appew==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.4/5f314b12a98a60704dcc89936e9ba8ef19225530}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@tanstack/react-query': ^5.0.0
@@ -5867,7 +5867,7 @@ packages:
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.3(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)':
+  '@a-novel/connector-authentication@1.4.4(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)':
     dependencies:
       '@tanstack/react-query': 5.83.0(react@19.1.0)
       react: 19.1.0
@@ -5886,9 +5886,9 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@a-novel/package-authenticator@1.5.2(55058c4d952826f0daea3b7fdb434d05)':
+  '@a-novel/package-authenticator@1.5.2(89ee053135938095207b929bf750c5ce)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.3(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
+      '@a-novel/connector-authentication': 1.4.4(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
       '@a-novel/neon-ui': 2.8.5(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.2(@tanstack/react-start@1.129.5(@netlify/blobs@9.1.2)(@tanstack/react-router@1.129.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.7.0(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
@@ -5904,11 +5904,11 @@ snapshots:
       - '@tanstack/react-start'
       - vinxi
 
-  '@a-novel/tanstack-start-config@1.3.1(83ea5c062585dd8b08508d1699499992)':
+  '@a-novel/tanstack-start-config@1.3.1(89be260f6a43dc7b3062ba19c83f713d)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.3(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
+      '@a-novel/connector-authentication': 1.4.4(@tanstack/react-query@5.83.0(react@19.1.0))(react@19.1.0)(zod@4.0.5)
       '@a-novel/neon-ui': 2.8.5(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/react-form@1.14.2(@tanstack/react-start@1.129.5(@netlify/blobs@9.1.2)(@tanstack/react-router@1.129.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@vitejs/plugin-react@4.7.0(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@7.0.5(@types/node@24.1.0)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tolgee/format-icu@6.2.6)(@tolgee/react@6.2.6(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@a-novel/package-authenticator': 1.5.2(55058c4d952826f0daea3b7fdb434d05)
+      '@a-novel/package-authenticator': 1.5.2(89ee053135938095207b929bf750c5ce)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0)
       '@fontsource-variable/arimo': 5.2.6

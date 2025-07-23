@@ -29,7 +29,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@a-novel/connector-authentication": "^1.4.3",
+    "@a-novel/connector-authentication": "^1.4.4",
     "@a-novel/neon-ui": "^2.8.5",
     "@a-novel/package-authenticator": "^1.5.2",
     "@a-novel/tanstack-start-config": "^1.3.1",
