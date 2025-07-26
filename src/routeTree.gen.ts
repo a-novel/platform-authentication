@@ -8,12 +8,17 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createServerRootRoute } from '@tanstack/react-start/server'
+
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ExtPasswordUpdateRouteImport } from './routes/ext/password.update'
+import { Route as ExtPasswordResetRouteImport } from './routes/ext/password.reset'
 import { Route as ExtEmailValidateRouteImport } from './routes/ext/email.validate'
 import { Route as ExtAccountCreateRouteImport } from './routes/ext/account.create'
+import { ServerRoute as ApiHealthcheckServerRouteImport } from './routes/api/healthcheck'
+
+const rootServerRouteImport = createServerRootRoute()
 
 const AccountRoute = AccountRouteImport.update({
   id: '/account',
@@ -25,9 +30,9 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExtPasswordUpdateRoute = ExtPasswordUpdateRouteImport.update({
-  id: '/ext/password/update',
-  path: '/ext/password/update',
+const ExtPasswordResetRoute = ExtPasswordResetRouteImport.update({
+  id: '/ext/password/reset',
+  path: '/ext/password/reset',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExtEmailValidateRoute = ExtEmailValidateRouteImport.update({
@@ -40,20 +45,25 @@ const ExtAccountCreateRoute = ExtAccountCreateRouteImport.update({
   path: '/ext/account/create',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiHealthcheckServerRoute = ApiHealthcheckServerRouteImport.update({
+  id: '/api/healthcheck',
+  path: '/api/healthcheck',
+  getParentRoute: () => rootServerRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
   '/ext/account/create': typeof ExtAccountCreateRoute
   '/ext/email/validate': typeof ExtEmailValidateRoute
-  '/ext/password/update': typeof ExtPasswordUpdateRoute
+  '/ext/password/reset': typeof ExtPasswordResetRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
   '/ext/account/create': typeof ExtAccountCreateRoute
   '/ext/email/validate': typeof ExtEmailValidateRoute
-  '/ext/password/update': typeof ExtPasswordUpdateRoute
+  '/ext/password/reset': typeof ExtPasswordResetRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,7 +71,7 @@ export interface FileRoutesById {
   '/account': typeof AccountRoute
   '/ext/account/create': typeof ExtAccountCreateRoute
   '/ext/email/validate': typeof ExtEmailValidateRoute
-  '/ext/password/update': typeof ExtPasswordUpdateRoute
+  '/ext/password/reset': typeof ExtPasswordResetRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -70,21 +80,21 @@ export interface FileRouteTypes {
     | '/account'
     | '/ext/account/create'
     | '/ext/email/validate'
-    | '/ext/password/update'
+    | '/ext/password/reset'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/account'
     | '/ext/account/create'
     | '/ext/email/validate'
-    | '/ext/password/update'
+    | '/ext/password/reset'
   id:
     | '__root__'
     | '/'
     | '/account'
     | '/ext/account/create'
     | '/ext/email/validate'
-    | '/ext/password/update'
+    | '/ext/password/reset'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -92,7 +102,28 @@ export interface RootRouteChildren {
   AccountRoute: typeof AccountRoute
   ExtAccountCreateRoute: typeof ExtAccountCreateRoute
   ExtEmailValidateRoute: typeof ExtEmailValidateRoute
-  ExtPasswordUpdateRoute: typeof ExtPasswordUpdateRoute
+  ExtPasswordResetRoute: typeof ExtPasswordResetRoute
+}
+export interface FileServerRoutesByFullPath {
+  '/api/healthcheck': typeof ApiHealthcheckServerRoute
+}
+export interface FileServerRoutesByTo {
+  '/api/healthcheck': typeof ApiHealthcheckServerRoute
+}
+export interface FileServerRoutesById {
+  __root__: typeof rootServerRouteImport
+  '/api/healthcheck': typeof ApiHealthcheckServerRoute
+}
+export interface FileServerRouteTypes {
+  fileServerRoutesByFullPath: FileServerRoutesByFullPath
+  fullPaths: '/api/healthcheck'
+  fileServerRoutesByTo: FileServerRoutesByTo
+  to: '/api/healthcheck'
+  id: '__root__' | '/api/healthcheck'
+  fileServerRoutesById: FileServerRoutesById
+}
+export interface RootServerRouteChildren {
+  ApiHealthcheckServerRoute: typeof ApiHealthcheckServerRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -111,11 +142,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ext/password/update': {
-      id: '/ext/password/update'
-      path: '/ext/password/update'
-      fullPath: '/ext/password/update'
-      preLoaderRoute: typeof ExtPasswordUpdateRouteImport
+    '/ext/password/reset': {
+      id: '/ext/password/reset'
+      path: '/ext/password/reset'
+      fullPath: '/ext/password/reset'
+      preLoaderRoute: typeof ExtPasswordResetRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ext/email/validate': {
@@ -134,14 +165,31 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+declare module '@tanstack/react-start/server' {
+  interface ServerFileRoutesByPath {
+    '/api/healthcheck': {
+      id: '/api/healthcheck'
+      path: '/api/healthcheck'
+      fullPath: '/api/healthcheck'
+      preLoaderRoute: typeof ApiHealthcheckServerRouteImport
+      parentRoute: typeof rootServerRouteImport
+    }
+  }
+}
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccountRoute: AccountRoute,
   ExtAccountCreateRoute: ExtAccountCreateRoute,
   ExtEmailValidateRoute: ExtEmailValidateRoute,
-  ExtPasswordUpdateRoute: ExtPasswordUpdateRoute,
+  ExtPasswordResetRoute: ExtPasswordResetRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+const rootServerRouteChildren: RootServerRouteChildren = {
+  ApiHealthcheckServerRoute: ApiHealthcheckServerRoute,
+}
+export const serverRouteTree = rootServerRouteImport
+  ._addFileChildren(rootServerRouteChildren)
+  ._addFileTypes<FileServerRouteTypes>()

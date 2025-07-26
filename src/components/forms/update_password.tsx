@@ -1,105 +1,27 @@
-import {
-  BINDINGS_VALIDATION,
-  UpdatePasswordForm as UpdatePasswordRequest,
-} from "@a-novel/connector-authentication/api";
-import { SPACINGS } from "@a-novel/neon-ui";
-import { MaterialSymbol, Modal, Section } from "@a-novel/neon-ui/ui";
-import { PasswordInput, TanstackFormWrapper } from "@a-novel/neon-ui/ux";
-import { useTolgeeNamespaces } from "@a-novel/tanstack-start-config";
+import type { UpdatePasswordFormConnector } from "~/connectors/forms";
+
+import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
+import { MaterialSymbol, Modal, Section } from "@a-novel/package-ui/mui/components";
+import { SPACINGS } from "@a-novel/package-ui/mui/utils";
+import { PasswordInput, TanstackFormWrapper } from "@a-novel/package-ui/tanstack/form";
+import { WithTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { Typography, Stack, Button } from "@mui/material";
-import {
-  type FormAsyncValidateOrFn,
-  type FormValidateOrFn,
-  type ReactFormExtendedApi,
-  useStore,
-} from "@tanstack/react-form";
+import { useStore } from "@tanstack/react-form";
 import { T } from "@tolgee/react";
-import { z } from "zod";
 
-export interface UpdatePasswordFormData extends z.infer<typeof UpdatePasswordRequest> {
-  passwordConfirmation: string;
+export const UpdatePasswordForm = WithTolgeeNs(InnerUpdatePasswordForm, ["form", "platform.authentication.account"]);
+
+export interface UpdatePasswordFormProps {
+  connector: UpdatePasswordFormConnector;
 }
 
-export interface UpdatePasswordFormConnector<
-  TOnMount extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChange extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnBlur extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmit extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TSubmitMeta,
-> {
-  form: ReactFormExtendedApi<
-    UpdatePasswordFormData,
-    TOnMount,
-    TOnChange,
-    TOnChangeAsync,
-    TOnBlur,
-    TOnBlurAsync,
-    TOnSubmit,
-    TOnSubmitAsync,
-    TOnServer,
-    TSubmitMeta
-  >;
-}
-
-export interface UpdatePasswordFormProps<
-  TOnMount extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChange extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnBlur extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmit extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TSubmitMeta,
-> {
-  connector: UpdatePasswordFormConnector<
-    TOnMount,
-    TOnChange,
-    TOnChangeAsync,
-    TOnBlur,
-    TOnBlurAsync,
-    TOnSubmit,
-    TOnSubmitAsync,
-    TOnServer,
-    TSubmitMeta
-  >;
-}
-
-export function UpdatePasswordForm<
-  TOnMount extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChange extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnBlur extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmit extends undefined | FormValidateOrFn<UpdatePasswordFormData>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<UpdatePasswordFormData>,
-  TSubmitMeta,
->({
-  connector,
-}: UpdatePasswordFormProps<
-  TOnMount,
-  TOnChange,
-  TOnChangeAsync,
-  TOnBlur,
-  TOnBlurAsync,
-  TOnSubmit,
-  TOnSubmitAsync,
-  TOnServer,
-  TSubmitMeta
->) {
-  useTolgeeNamespaces("platform.authentication.account");
-
+function InnerUpdatePasswordForm({ connector }: UpdatePasswordFormProps) {
   const isSubmitSuccessful = useStore(connector.form.store, (state) => state.isSubmitSuccessful);
 
   return (
     <Section direction="column" maxWidth="100%" boxSizing="border-box" gap={SPACINGS.LARGE}>
-      <Typography variant="h3" color="primary" alignSelf="stretch">
+      <Typography variant="h2" color="primary" alignSelf="stretch">
         <T keyName="updatePassword.title" ns="platform.authentication.account" />
       </Typography>
 
@@ -153,7 +75,7 @@ export function UpdatePasswordForm<
         </Typography>
         <br />
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={SPACINGS.MEDIUM}>
-          <Button type="button" color="primary" onClick={() => connector.form.reset()}>
+          <Button type="button" color="primary" onClick={() => connector.form.reset()} sx={{ minWidth: "20ch" }}>
             <T keyName="updatePassword.form.success.action" ns="platform.authentication.account" />
           </Button>
         </Stack>

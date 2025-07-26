@@ -1,26 +1,42 @@
 import banner from "~/assets/images/banner.png";
 
-import { useAuthNavConnector } from "@a-novel/package-authenticator";
-import { AgoraDefaultLayout } from "@a-novel/tanstack-start-config";
+import { AuthNav, type AuthNavProps, useAuthNavConnector } from "@a-novel/package-authenticator";
+import { TolgeeLangMetadata, type TolgeeSupportedLanguages } from "@a-novel/package-ui/translations";
 
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import { Link } from "@tanstack/react-router";
+import { useTolgee } from "@tolgee/react";
 
-export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
-  const connector = useAuthNavConnector();
+export function AppLayout({ children, connector }: { children: ReactNode; connector: AuthNavProps["connector"] }) {
+  const tolgee = useTolgee();
+
   return (
-    <AgoraDefaultLayout<typeof Link>
-      authConnector={connector}
-      banner={banner}
-      links={{
-        account: {
+    <>
+      <AuthNav<typeof TolgeeSupportedLanguages, typeof Link, typeof Link>
+        connector={connector}
+        homeButton={{
+          component: Link,
+          to: "/",
+          icon: banner,
+        }}
+        account={{
           component: Link,
           to: "/account",
-        },
-      }}
-    >
+        }}
+        lang={{
+          langs: TolgeeLangMetadata,
+          selectedLang: (tolgee.getLanguage() ?? tolgee.getPendingLanguage()) as
+            | (typeof TolgeeSupportedLanguages)[number]
+            | undefined,
+          onChange: tolgee.changeLanguage,
+        }}
+      />
       {children}
-    </AgoraDefaultLayout>
+    </>
   );
-};
+}
+
+export function DefaultAppLayout({ children }: { children: ReactNode }) {
+  return <AppLayout connector={useAuthNavConnector()}>{children}</AppLayout>;
+}

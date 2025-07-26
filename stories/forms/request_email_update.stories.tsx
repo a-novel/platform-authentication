@@ -1,8 +1,8 @@
 import { RequestEmailUpdateForm, type RequestEmailUpdateFormProps } from "~/components/forms";
 
 import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
-import { SPACINGS } from "@a-novel/neon-ui";
-import { FormRenderer, NewMockForm } from "@a-novel/neon-ui/storybook";
+import { SPACINGS } from "@a-novel/package-ui/mui/utils";
+import { FormRenderer, NewMockForm } from "@a-novel/package-ui/storybook";
 
 import type { FC } from "react";
 
@@ -11,7 +11,7 @@ import { type Meta, type StoryObj } from "@storybook/react-vite";
 import { type ReactFormExtendedApi } from "@tanstack/react-form";
 
 const RenderComponents: FC<
-  RequestEmailUpdateFormProps<any, any, any, any, any, any, any, any, any> & {
+  RequestEmailUpdateFormProps & {
     form: ReactFormExtendedApi<any, any, any, any, any, any, any, any, any, any>;
   }
 > = (props) => (

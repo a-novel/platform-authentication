@@ -1,34 +1,29 @@
-import { MockQueryClient, MockRequestOptions } from "#/mocks/query_client";
+import { MockHeaders } from "#/mocks/query_client";
 import { MockAnonymousSession, MockNoSession } from "#/mocks/session";
 import "#/mocks/tolgee";
-import { genericSetup } from "#/utils/setup";
+import { server } from "#/setup/unit";
 import { SessionWrapper, StandardWrapper } from "#/utils/wrapper";
 
 import { EmailValidation } from "~/components/misc";
 import { useEmailValidationConnector } from "~/connectors/misc/email_validation";
 
+import { MockQueryClient } from "@a-novel/nodelib/mocks/query_client";
+import { http } from "@a-novel/nodelib/msw";
+
 import type { ReactNode } from "react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { act, render, renderHook, waitFor } from "@testing-library/react";
-import nock from "nock";
+import { render, renderHook, waitFor } from "@testing-library/react";
+import { HttpResponse } from "msw";
 import { beforeEach, it, describe, expect } from "vitest";
-
-let nockAPI: nock.Scope;
 
 let queryClient: QueryClient;
 
 const shortCode = "shortcode";
 
-const userID = "29f71c01-5ae1-4b01-b729-e17488538e15";
+const userID = "94b4d288-dbff-4eca-805a-f45311a34e15";
 
 describe("EmailValidationConnector", () => {
-  genericSetup({
-    setNockAPI: (newScope) => {
-      nockAPI = newScope;
-    },
-  });
-
   beforeEach(() => {
     queryClient = new QueryClient(MockQueryClient);
   });
@@ -88,9 +83,16 @@ describe("EmailValidationConnector", () => {
 
     for (const [name, { session, call, expect: expected }] of Object.entries(testCases)) {
       it(name, async () => {
-        const nockUpdateEmail = nockAPI
-          .patch("/credentials/email", { userID, shortCode }, MockRequestOptions)
-          .reply(call?.status ?? 200, call?.response ?? {});
+        server.use(
+          http
+            .patch("http://localhost:4011/credentials/email")
+            .headers(new Headers(MockHeaders), HttpResponse.error())
+            .bodyJSON({ userID, shortCode }, HttpResponse.error())
+            .resolve(() => {
+              if (!call) return;
+              return HttpResponse.json(call?.response, { status: call?.status ?? 200 });
+            })
+        );
 
         const validateEmailFormConnector = renderHook((props) => useEmailValidationConnector(props), {
           initialProps: { userID, shortCode },
@@ -103,18 +105,6 @@ describe("EmailValidationConnector", () => {
 
         const screen = render(<EmailValidation connector={validateEmailFormConnector.result.current} />, {
           wrapper: StandardWrapper,
-        });
-
-        if (call) {
-          await waitFor(() => {
-            nockUpdateEmail.done();
-          });
-        } else {
-          expect(nockUpdateEmail.isDone()).toBe(false);
-        }
-
-        act(() => {
-          screen.rerender(<EmailValidation connector={validateEmailFormConnector.result.current} />);
         });
 
         const groups = [
@@ -147,6 +137,7 @@ describe("EmailValidationConnector", () => {
         ];
 
         await waitFor(() => {
+          screen.rerender(<EmailValidation connector={validateEmailFormConnector.result.current} />);
           groups.forEach((group) =>
             group.content.forEach((item) => {
               const expectation = expect(screen.queryByText(item), `${item}`);

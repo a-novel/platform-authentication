@@ -1,10 +1,11 @@
-import banner from "~/assets/images/banner.png";
+import { AppLayout } from "~/components/layout";
 
-import { AgoraDefaultLayout, BodyStyle } from "@a-novel/tanstack-start-config";
+import type { AuthNavProps } from "@a-novel/package-authenticator";
+import { BodyStyle } from "@a-novel/package-ui/mui";
 
-import type { ComponentProps, FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
-const connector: ComponentProps<typeof AgoraDefaultLayout>["authConnector"] = {
+const connector: AuthNavProps["connector"] = {
   user: { loading: false, error: false },
   context: { selectedForm: undefined, selectForm: () => {} },
   sessionContext: { setSession: () => {}, synced: true },
@@ -12,14 +13,6 @@ const connector: ComponentProps<typeof AgoraDefaultLayout>["authConnector"] = {
 
 export const LayoutRenderer: FC<{ children: ReactNode }> = ({ children }) => (
   <div style={BodyStyle}>
-    <AgoraDefaultLayout
-      authConnector={connector}
-      banner={banner}
-      links={{
-        account: { component: "div" },
-      }}
-    >
-      {children}
-    </AgoraDefaultLayout>
+    <AppLayout connector={connector}>{children}</AppLayout>
   </div>
 );

@@ -1,105 +1,33 @@
-import {
-  BINDINGS_VALIDATION,
-  RequestEmailUpdateForm as RequestEmailUpdateRequest,
-} from "@a-novel/connector-authentication/api";
-import { SPACINGS } from "@a-novel/neon-ui";
-import { MaterialSymbol, Modal, Section } from "@a-novel/neon-ui/ui";
-import { EmailInput, TanstackFormWrapper } from "@a-novel/neon-ui/ux";
-import { useTolgeeNamespaces } from "@a-novel/tanstack-start-config";
+import type { RequestEmailUpdateFormConnector } from "~/connectors/forms";
+
+import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
+import { MaterialSymbol, Section, Modal } from "@a-novel/package-ui/mui/components";
+import { SPACINGS } from "@a-novel/package-ui/mui/utils";
+import { EmailInput, TanstackFormWrapper } from "@a-novel/package-ui/tanstack/form";
+import { WithTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { Typography, Stack, Button } from "@mui/material";
-import {
-  type FormAsyncValidateOrFn,
-  type FormValidateOrFn,
-  type ReactFormExtendedApi,
-  useStore,
-} from "@tanstack/react-form";
+import { useStore } from "@tanstack/react-form";
 import { T, useTranslate } from "@tolgee/react";
-import { z } from "zod";
 
-export interface RequestEmailUpdateFormConnector<
-  TOnMount extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChange extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlur extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmit extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TSubmitMeta,
-> {
-  form: ReactFormExtendedApi<
-    z.infer<typeof RequestEmailUpdateRequest>,
-    TOnMount,
-    TOnChange,
-    TOnChangeAsync,
-    TOnBlur,
-    TOnBlurAsync,
-    TOnSubmit,
-    TOnSubmitAsync,
-    TOnServer,
-    TSubmitMeta
-  >;
-  currentEmail: string;
+export const RequestEmailUpdateForm = WithTolgeeNs(InnerRequestEmailUpdateForm, [
+  "form",
+  "platform.authentication.account",
+]);
+
+export interface RequestEmailUpdateFormProps {
+  connector: RequestEmailUpdateFormConnector;
 }
 
-export interface RequestEmailUpdateFormProps<
-  TOnMount extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChange extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlur extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmit extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TSubmitMeta,
-> {
-  connector: RequestEmailUpdateFormConnector<
-    TOnMount,
-    TOnChange,
-    TOnChangeAsync,
-    TOnBlur,
-    TOnBlurAsync,
-    TOnSubmit,
-    TOnSubmitAsync,
-    TOnServer,
-    TSubmitMeta
-  >;
-}
-
-export function RequestEmailUpdateForm<
-  TOnMount extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChange extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnChangeAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlur extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnBlurAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmit extends undefined | FormValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnSubmitAsync extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TOnServer extends undefined | FormAsyncValidateOrFn<z.infer<typeof RequestEmailUpdateRequest>>,
-  TSubmitMeta,
->({
-  connector,
-}: RequestEmailUpdateFormProps<
-  TOnMount,
-  TOnChange,
-  TOnChangeAsync,
-  TOnBlur,
-  TOnBlurAsync,
-  TOnSubmit,
-  TOnSubmitAsync,
-  TOnServer,
-  TSubmitMeta
->) {
+function InnerRequestEmailUpdateForm({ connector }: RequestEmailUpdateFormProps) {
   const { t } = useTranslate("form");
-  useTolgeeNamespaces("form");
-  useTolgeeNamespaces("platform.authentication.account");
 
   const isSubmitSuccessful = useStore(connector.form.store, (state) => state.isSubmitSuccessful);
   const userEmail = useStore(connector.form.store, (state) => state.values.email);
 
   return (
     <Section direction="column" maxWidth="100%" gap={SPACINGS.LARGE}>
-      <Typography variant="h3" color="primary" alignSelf="stretch">
+      <Typography variant="h2" color="primary" alignSelf="stretch">
         <T keyName="requestEmailUpdate.title" ns="platform.authentication.account" />
       </Typography>
 
@@ -145,7 +73,7 @@ export function RequestEmailUpdateForm<
         </Typography>
         <br />
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={SPACINGS.MEDIUM}>
-          <Button type="button" color="primary" onClick={() => connector.form.reset()}>
+          <Button type="button" color="primary" onClick={() => connector.form.reset()} sx={{ minWidth: "20ch" }}>
             <T keyName="requestEmailUpdate.form.success.action" ns="platform.authentication.account" />
           </Button>
         </Stack>

@@ -1,80 +1,14 @@
-
+# https://github.com/containers/podman-compose
 services:
-  json-keys-postgres:
-    image: docker.io/library/postgres:17
-    networks:
-      - api
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: json-keys
-      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
-      POSTGRES_INITDB_ARGS: --auth=scram-sha-256
-    volumes:
-      - json-keys-postgres-data:/var/lib/postgresql/data/
-
-  authentication-postgres:
-    image: docker.io/library/postgres:17
-    networks:
-      - api
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: authentication
-      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
-      POSTGRES_INITDB_ARGS: --auth=scram-sha-256
-    volumes:
-      - authentication-postgres-data:/var/lib/postgresql/data/
-
-  json-keys-service:
-    image: ghcr.io/a-novel/service-json-keys/standalone:v0.2
-    depends_on:
-      - json-keys-postgres
-    environment:
-      PORT: 8080
-      ENV: local
-      APP_NAME: json-keys-service
-      DSN: postgres://postgres:postgres@json-keys-postgres:5432/json-keys?sslmode=disable
-      # Dummy key used only for local environment. Consider using a secure, private key in production.
-      MASTER_KEY: ${JSON_KEYS_MASTER}
-      # Used for tracing purposes, can be omitted.
-      # SENTRY_DSN: [your_sentry_dsn]
-      # SERVER_NAME: json-keys-service-prod
-      # RELEASE: v0.1.2
-      # Set the following if you want to debug the service locally.
-      # DEBUG: true
-    networks:
-      - api
-
-  authentication-service:
-    image: ghcr.io/a-novel/service-authentication/api:v0.6
-    depends_on:
-      - authentication-postgres
-      - json-keys-service
+  playwright:
+    image: "mcr.microsoft.com/playwright:v${PLAYWRIGHT_VERSION}"
+    ipc: host
+    init: true
+    extra_hosts:
+      - "hostmachine:host-gateway"
+    entrypoint:
+      - /bin/sh
+      - -c
+      - "npx -y playwright@v1.54.1 run-server --port 8000 --host 0.0.0.0"
     ports:
-      # Expose the service on port 4001 on the local machine.
-      - "${AUTH_API_TEST_PORT}:8080"
-    environment:
-      PORT: 8080
-      ENV: local
-      APP_NAME: authentication-service
-      DSN: postgres://postgres:postgres@authentication-postgres:5432/authentication?sslmode=disable
-      JSON_KEYS_URL: http://json-keys-service:8080/v1
-      SMTP_PASSWORD: ${AUTH_API_TEST_SMTP_PASSWORD}
-      SMTP_SENDER: ${AUTH_API_TEST_SMTP_SENDER}
-      SMTP_DOMAIN: ${AUTH_API_TEST_SMTP_DOMAIN}
-      SMTP_ADDRESS: ${AUTH_API_TEST_SMTP_ADDRESS}
-      AUTH_PLATFORM_URL_UPDATE_EMAIL: ${AUTH_PLATFORM_TEST_URL_UPDATE_EMAIL}
-      AUTH_PLATFORM_URL_UPDATE_PASSWORD: ${AUTH_PLATFORM_TEST_URL_UPDATE_PASSWORD}
-      AUTH_PLATFORM_URL_REGISTER: ${AUTH_PLATFORM_TEST_URL_REGISTER}
-
-      DEBUG: true
-    networks:
-      - api
-
-networks:
-  api: {}
-
-volumes:
-  authentication-postgres-data:
-  json-keys-postgres-data:
+      - "${PLAYWRIGHT_TEST_PORT}:8000"

@@ -2,8 +2,6 @@ import { CompletePasswordResetForm } from "~/components/forms";
 import { useCompletePasswordResetFormConnector } from "~/connectors/forms";
 
 import { ShortCode, UserID } from "@a-novel/connector-authentication/api";
-import { SessionPrivateSuspense } from "@a-novel/package-authenticator";
-import type { RouteContext } from "@a-novel/tanstack-start-config";
 
 import { createFileRoute } from "@tanstack/react-router";
 import { zodValidator } from "@tanstack/zod-adapter";
@@ -14,17 +12,12 @@ const SearchParamsSchema = z.object({
   shortCode: ShortCode,
 });
 
-export const Route = createFileRoute("/ext/password/update")({
-  component: () => (
-    <SessionPrivateSuspense>
-      <ResetPassword />
-    </SessionPrivateSuspense>
-  ),
+export const Route = createFileRoute("/ext/password/reset")({
+  head: ({ match }) => ({
+    meta: [{ title: match.context.tolgee.t("metadata.resetPassword.title", { ns: "platform.authentication" }) }],
+  }),
+  component: ResetPassword,
   validateSearch: zodValidator(SearchParamsSchema),
-  beforeLoad: () =>
-    ({
-      getTitle: (tolgee) => tolgee.t("metadata.resetPassword.title", { ns: "platform.authentication" }),
-    }) as RouteContext,
 });
 
 function ResetPassword() {

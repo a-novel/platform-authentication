@@ -1,11 +1,11 @@
 import svgr from "@svgr/rollup";
-import react from "@vitejs/plugin-react";
+import viteReact from "@vitejs/plugin-react";
 import tsConfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   plugins: [
-    react(),
+    viteReact(),
     tsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
@@ -18,24 +18,25 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: "jsdom",
     alias: {
       "#": "/__test__",
       "~": "/src",
     },
-    server: {
-      deps: {
-        // Mock the tolgee instance used by the UI components.
-        inline: ["@a-novel/neon-ui", "@a-novel/package-authenticator", "@a-novel/tanstack-start-config"],
-      },
-    },
     coverage: {
       enabled: true,
-      clean: true,
-      provider: "v8",
-      reporter: ["text", "json", "html", "lcov"],
-      reportsDirectory: "./coverage",
-      include: ["src/**/*.{ts,tsx}", "__test__/**/*.{ts,tsx}"],
+      clean: false,
+      provider: "istanbul",
+      reporter: ["json"],
+      reportsDirectory: "./coverage/unit",
+      include: ["src/**/*.{ts,tsx}"],
     },
+    environment: "jsdom",
+    server: {
+      deps: {
+        // Allows to mock the tolgee instance used by the UI components.
+        inline: ["@a-novel/package-ui", "@a-novel/package-authenticator"],
+      },
+    },
+    include: ["src/**/*.unit.{test,spec}.{ts,tsx}"],
   },
 });

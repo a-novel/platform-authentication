@@ -1,7 +1,7 @@
 import { BINDINGS_VALIDATION, isForbiddenError } from "@a-novel/connector-authentication/api";
 import { ResetPassword } from "@a-novel/connector-authentication/hooks";
 import { useAccessToken } from "@a-novel/package-authenticator";
-import { useTolgeeNamespaces } from "@a-novel/tanstack-start-config";
+import { useTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { type Dispatch, type SetStateAction, useState } from "react";
 
@@ -11,11 +11,54 @@ import { z } from "zod";
 
 type FormTFunction = UseTranslateResult["t"];
 
+export interface CompletePasswordResetFormConnectorProps {
+  shortCode: string;
+  userID: string;
+}
+
+export type CompletePasswordResetFormConnector = ReturnType<typeof useCompletePasswordResetFormConnector>;
+
+const ns = ["form", "generic", "platform.authentication.ext"];
+
+export function useCompletePasswordResetFormConnector({ shortCode, userID }: CompletePasswordResetFormConnectorProps) {
+  const { t } = useTranslate(ns);
+  useTolgeeNs(ns);
+
+  const accessToken = useAccessToken();
+  const completePasswordReset = ResetPassword.useAPI(accessToken);
+
+  const [isLinkError, setIsLinkError] = useState(false);
+
+  const form = useForm({
+    defaultValues: {
+      password: "",
+      passwordConfirmation: "",
+    },
+    validators: {
+      onBlur: formValidator(t),
+      onSubmitAsync: ({ value }) =>
+        completePasswordReset
+          .mutateAsync({
+            password: value.password,
+            shortCode,
+            userID,
+          })
+          .then(() => null)
+          .catch(newSubmitErrorHandler(t, setIsLinkError)),
+    },
+  });
+
+  return {
+    form,
+    isLinkError,
+  };
+}
+
 /**
  * Extends the original form with translated error messages.
  */
-const formValidator = (t: FormTFunction) =>
-  z
+function formValidator(t: FormTFunction) {
+  return z
     .object({
       password: z
         .string()
@@ -56,59 +99,18 @@ const formValidator = (t: FormTFunction) =>
       path: ["passwordConfirmation"],
       message: t("resetPassword.fields.newPasswordConfirmation.errors.mismatch", { ns: "platform.authentication.ext" }),
     });
+}
 
 /**
  * Handle error from login form submit. Properly sets field errors for tanstack depending on the returned value.
  */
-const handleSubmitError = (t: FormTFunction, setLinkError: Dispatch<SetStateAction<boolean>>) => (error: any) => {
-  if (isForbiddenError(error)) {
-    setLinkError(true);
-    return null;
-  }
+function newSubmitErrorHandler(t: FormTFunction, setLinkError: Dispatch<SetStateAction<boolean>>) {
+  return function handleSubmitError(error: any) {
+    if (isForbiddenError(error)) {
+      setLinkError(true);
+      return null;
+    }
 
-  return `${t("resetPassword.form.errors.generic", { ns: "platform.authentication.ext" })} ${t("error", { ns: "generic" })}`;
-};
-
-export interface CompletePasswordResetFormConnectorProps {
-  shortCode: string;
-  userID: string;
-}
-
-export const useCompletePasswordResetFormConnector = ({
-  shortCode,
-  userID,
-}: CompletePasswordResetFormConnectorProps) => {
-  const { t } = useTranslate(["form", "generic", "platform.authentication.ext"]);
-  useTolgeeNamespaces("form");
-  useTolgeeNamespaces("generic");
-  useTolgeeNamespaces("platform.authentication.ext");
-
-  const accessToken = useAccessToken();
-  const completePasswordReset = ResetPassword.useAPI(accessToken);
-
-  const [isLinkError, setIsLinkError] = useState(false);
-
-  const form = useForm({
-    defaultValues: {
-      password: "",
-      passwordConfirmation: "",
-    },
-    validators: {
-      onBlur: formValidator(t),
-      onSubmitAsync: ({ value }) =>
-        completePasswordReset
-          .mutateAsync({
-            password: value.password,
-            shortCode,
-            userID,
-          })
-          .then(() => null)
-          .catch(handleSubmitError(t, setIsLinkError)),
-    },
-  });
-
-  return {
-    form,
-    isLinkError,
+    return `${t("resetPassword.form.errors.generic", { ns: "platform.authentication.ext" })} ${t("error", { ns: "generic" })}`;
   };
-};
+}

@@ -1,13 +1,12 @@
 import { defineConfig } from "vite";
 
 import svgr from "@svgr/rollup";
-import react from "@vitejs/plugin-react";
+import viteReact from "@vitejs/plugin-react";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [
-    react(),
     tsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
@@ -16,5 +15,16 @@ export default defineConfig({
       icon: true,
       svgo: false,
     }),
+    viteReact(),
   ],
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+          return;
+        }
+        warn(warning);
+      },
+    },
+  },
 });

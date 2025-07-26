@@ -1,6 +1,7 @@
+# https://github.com/containers/podman-compose
 services:
   json-keys-postgres:
-    image: docker.io/library/postgres:17
+    image: ghcr.io/a-novel/service-json-keys/database:v1
     networks:
       - api
     environment:
@@ -13,7 +14,7 @@ services:
       - json-keys-postgres-data:/var/lib/postgresql/data/
 
   authentication-postgres:
-    image: docker.io/library/postgres:17
+    image: ghcr.io/a-novel/service-authentication/database:v1
     networks:
       - api
     environment:
@@ -26,61 +27,44 @@ services:
       - authentication-postgres-data:/var/lib/postgresql/data/
 
   json-keys-service:
-    image: ghcr.io/a-novel/service-json-keys/standalone:v0.2
+    image: ghcr.io/a-novel/service-json-keys/standalone:v1
     depends_on:
-      - json-keys-postgres
+      json-keys-postgres:
+        condition: service_started
     environment:
-      PORT: 8080
-      ENV: local
-      APP_NAME: json-keys-service
-      DSN: postgres://postgres:postgres@json-keys-postgres:5432/json-keys?sslmode=disable
-      # Dummy key used only for local environment. Consider using a secure, private key in production.
-      MASTER_KEY: ${JSON_KEYS_MASTER}
-      # Used for tracing purposes, can be omitted.
-      # SENTRY_DSN: [your_sentry_dsn]
-      # SERVER_NAME: json-keys-service-prod
-      # RELEASE: v0.1.2
-      # Set the following if you want to debug the service locally.
-      # DEBUG: true
+      POSTGRES_DSN: postgres://postgres:postgres@json-keys-postgres:5432/json-keys?sslmode=disable
+      APP_MASTER_KEY: fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca
     networks:
       - api
 
   authentication-service:
-    image: ghcr.io/a-novel/service-authentication/api:v0.6
+    image: ghcr.io/a-novel/service-authentication/standalone:v1
     depends_on:
-      - authentication-postgres
-      - json-keys-service
+      authentication-postgres:
+        condition: service_started
+      json-keys-service:
+        condition: service_started
     ports:
-      # Expose the service on port 4001 on the local machine.
-      - "${AUTH_API_PORT}:8080"
+      - "4011:8080"
     environment:
-      PORT: 8080
-      ENV: local
-      APP_NAME: authentication-service
-      DSN: postgres://postgres:postgres@authentication-postgres:5432/authentication?sslmode=disable
-      JSON_KEYS_URL: http://json-keys-service:8080/v1
-      # In sandbox mode, mails are logged in the server logs rather than being sent. Alternatively, you need to provide
-      # a valid SMTP server configuration.
-      SMTP_SANDBOX: ${AUTH_API_SMTP_SANDBOX}
-      SMTP_PASSWORD: ${AUTH_API_SMTP_PASSWORD}
-      SMTP_SENDER: ${AUTH_API_SMTP_SENDER}
-      SMTP_DOMAIN: ${AUTH_API_SMTP_DOMAIN}
-      SMTP_ADDRESS: ${AUTH_API_SMTP_ADDRESS}
-      AUTH_PLATFORM_URL_UPDATE_EMAIL: ${AUTH_PLATFORM_URL_UPDATE_EMAIL}
-      AUTH_PLATFORM_URL_UPDATE_PASSWORD: ${AUTH_PLATFORM_URL_UPDATE_PASSWORD}
-      AUTH_PLATFORM_URL_REGISTER: ${AUTH_PLATFORM_URL_REGISTER}
-      # Used for tracing purposes, can be omitted.
-      # SENTRY_DSN: [your_sentry_dsn]
-      # SERVER_NAME: authentication-service-prod
-      # RELEASE: v0.1.2
-      # Set the following if you want to debug the service locally.
-      # DEBUG: true
+      POSTGRES_DSN: postgres://postgres:postgres@authentication-postgres:5432/authentication?sslmode=disable
+      JSON_KEYS_SERVICE_URL: http://json-keys-service:8080/v1
+      AUTH_PLATFORM_URL: ${AUTH_PLATFORM_URL}
+#      AUTH_PLATFORM_URL_UPDATE_EMAIL: ${AUTH_PLATFORM_URL_UPDATE_EMAIL}
+#      AUTH_PLATFORM_URL_UPDATE_PASSWORD: ${AUTH_PLATFORM_URL_UPDATE_PASSWORD}
+#      AUTH_PLATFORM_URL_REGISTER: ${AUTH_PLATFORM_URL_REGISTER}
+      SMTP_SENDER_DOMAIN: ${SMTP_SENDER_DOMAIN}
+      SMTP_ADDR: ${SMTP_ADDR}
+      SMTP_SENDER_NAME: ${SMTP_SENDER_NAME}
+      SMTP_SENDER_EMAIL: ${SMTP_SENDER_EMAIL}
+      SMTP_SENDER_PASSWORD: ${SMTP_SENDER_PASSWORD}
+      DEBUG: true
     networks:
       - api
 
 networks:
-  api: {}
+  api:
 
 volumes:
-  authentication-postgres-data:
   json-keys-postgres-data:
+  authentication-postgres-data:

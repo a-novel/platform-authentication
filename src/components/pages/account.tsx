@@ -1,25 +1,21 @@
-import {
-  RequestEmailUpdateForm,
-  type RequestEmailUpdateFormConnector,
-  UpdatePasswordForm,
-  type UpdatePasswordFormConnector,
-} from "~/components/forms";
+import { RequestEmailUpdateForm, UpdatePasswordForm } from "~/components/forms";
+import type { RequestEmailUpdateFormConnector, UpdatePasswordFormConnector } from "~/connectors/forms";
 
-import { SPACINGS } from "@a-novel/neon-ui";
-import { Section } from "@a-novel/neon-ui/ui";
-import { useTolgeeNamespaces } from "@a-novel/tanstack-start-config";
+import { Section } from "@a-novel/package-ui/mui/components";
+import { SPACINGS } from "@a-novel/package-ui/mui/utils";
+import { WithTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { Typography } from "@mui/material";
 import { T } from "@tolgee/react";
 
+export const AccountPage = WithTolgeeNs(InnerAccountPage, "platform.authentication.account");
+
 export interface AccountPageProps {
-  requestEmailUpdateConnector: RequestEmailUpdateFormConnector<any, any, any, any, any, any, any, any, any>;
-  updatePasswordConnector: UpdatePasswordFormConnector<any, any, any, any, any, any, any, any, any>;
+  requestEmailUpdateConnector: RequestEmailUpdateFormConnector;
+  updatePasswordConnector: UpdatePasswordFormConnector;
 }
 
-export function AccountPage({ requestEmailUpdateConnector, updatePasswordConnector }: AccountPageProps) {
-  useTolgeeNamespaces("platform.authentication.account");
-
+function InnerAccountPage({ requestEmailUpdateConnector, updatePasswordConnector }: AccountPageProps) {
   return (
     <Section
       margin="auto"
@@ -30,7 +26,7 @@ export function AccountPage({ requestEmailUpdateConnector, updatePasswordConnect
       padding={SPACINGS.LARGE}
       gap={SPACINGS.XLARGE}
     >
-      <Typography color="primary" variant="h2" component="h1" alignSelf="stretch">
+      <Typography color="primary" variant="h1" alignSelf="stretch">
         <T keyName="title" ns="platform.authentication.account" />
       </Typography>
 

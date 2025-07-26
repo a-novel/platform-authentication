@@ -1,14 +1,15 @@
-import { MockQueryClient, MockRequestOptions } from "#/mocks/query_client";
-import { MockAccessToken, MockAnonymousSession } from "#/mocks/session";
+import { MockHeaders } from "#/mocks/query_client";
 import "#/mocks/tolgee";
-import { writeField } from "#/utils/field";
-import { genericSetup } from "#/utils/setup";
+import { server } from "#/setup/unit";
 import { SessionWrapper, StandardWrapper } from "#/utils/wrapper";
 
-import { CompletePasswordResetForm, type CompletePasswordResetFormConnector } from "~/components/forms";
-import { useCompletePasswordResetFormConnector } from "~/connectors/forms";
+import { UpdatePasswordForm } from "~/components/forms";
+import { useUpdatePasswordFormConnector, type UpdatePasswordFormConnector } from "~/connectors/forms/update_password";
 
 import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
+import { MockQueryClient } from "@a-novel/nodelib/mocks/query_client";
+import { http } from "@a-novel/nodelib/msw";
+import { writeField } from "@a-novel/nodelib/test/form";
 
 import type { ReactNode } from "react";
 
@@ -22,44 +23,28 @@ import {
   type RenderResult,
   waitFor,
 } from "@testing-library/react";
-import nock from "nock";
-import { beforeEach, describe, expect, it } from "vitest";
+import { HttpResponse } from "msw";
+import { describe, it, expect, beforeEach } from "vitest";
 
-let nockAPI: nock.Scope;
-
-let completePasswordResetFormConnector: RenderHookResult<
-  CompletePasswordResetFormConnector<any, any, any, any, any, any, any, any, any>,
-  object
->;
+let updatePasswordFormConnector: RenderHookResult<UpdatePasswordFormConnector, object>;
 let screen: RenderResult;
 
 let queryClient: QueryClient;
 
-const shortCode = "shortcode";
-
-const userID = "29f71c01-5ae1-4b01-b729-e17488538e15";
-
-describe("CompletePasswordResetForm", () => {
-  genericSetup({
-    setNockAPI: (newScope) => {
-      nockAPI = newScope;
-    },
-  });
-
+describe("UpdatePassword", () => {
   beforeEach(() => {
     queryClient = new QueryClient(MockQueryClient);
 
     // Render the hook, then inject the connector into the form.
-    completePasswordResetFormConnector = renderHook((props) => useCompletePasswordResetFormConnector(props), {
-      initialProps: { userID, shortCode },
+    updatePasswordFormConnector = renderHook(() => useUpdatePasswordFormConnector(), {
       wrapper: ({ children }: { children: ReactNode }) => (
-        <SessionWrapper session={MockAnonymousSession}>
+        <SessionWrapper>
           <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
         </SessionWrapper>
       ),
     });
 
-    screen = render(<CompletePasswordResetForm connector={completePasswordResetFormConnector.result.current} />, {
+    screen = render(<UpdatePasswordForm connector={updatePasswordFormConnector.result.current} />, {
       wrapper: StandardWrapper,
     });
   });
@@ -67,8 +52,9 @@ describe("CompletePasswordResetForm", () => {
   describe("renders", async () => {
     // Verify inputs are rendered.
     const inputs = [
-      /platform\.authentication\.ext:resetPassword\.fields\.newPassword\.label/,
-      /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.label/,
+      /platform\.authentication\.account:updatePassword\.fields\.currentPassword\.label/,
+      /platform\.authentication\.account:updatePassword\.fields\.newPassword\.label/,
+      /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.label/,
     ];
 
     for (const label of inputs) {
@@ -83,15 +69,22 @@ describe("CompletePasswordResetForm", () => {
   describe("form state", () => {
     const fields = [
       {
+        name: "currentPassword",
+        tKey: /platform\.authentication\.account:updatePassword\.fields\.currentPassword\.label/,
+        max: BINDINGS_VALIDATION.PASSWORD.MAX,
+        min: BINDINGS_VALIDATION.PASSWORD.MIN,
+        required: true,
+      },
+      {
         name: "password",
-        tKey: /platform\.authentication\.ext:resetPassword\.fields\.newPassword\.label/,
+        tKey: /platform\.authentication\.account:updatePassword\.fields\.newPassword\.label/,
         max: BINDINGS_VALIDATION.PASSWORD.MAX,
         min: BINDINGS_VALIDATION.PASSWORD.MIN,
         required: true,
       },
       {
         name: "passwordConfirmation",
-        tKey: /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.label/,
+        tKey: /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.label/,
         max: BINDINGS_VALIDATION.PASSWORD.MAX,
         min: BINDINGS_VALIDATION.PASSWORD.MIN,
         required: true,
@@ -107,12 +100,16 @@ describe("CompletePasswordResetForm", () => {
         });
 
         const initialForm = {
+          currentPassword: {
+            tKey: /platform\.authentication\.account:updatePassword\.fields\.currentPassword\.label/,
+            value: "current-password",
+          },
           password: {
-            tKey: /platform\.authentication\.ext:resetPassword\.fields\.newPassword\.label/,
+            tKey: /platform\.authentication\.account:updatePassword\.fields\.newPassword\.label/,
             value: "new-password",
           },
           passwordConfirmation: {
-            tKey: /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.label/,
+            tKey: /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.label/,
             value: "new-password",
           },
         };
@@ -190,20 +187,24 @@ describe("CompletePasswordResetForm", () => {
     }
 
     it("handles password confirmation validation", async () => {
+      const currentPasswordInput = screen.getByLabelText(
+        /platform\.authentication\.account:updatePassword\.fields\.currentPassword\.label/
+      ) as HTMLInputElement;
       const passwordInput = screen.getByLabelText(
-        /platform\.authentication\.ext:resetPassword\.fields\.newPassword\.label/
+        /platform\.authentication\.account:updatePassword\.fields\.newPassword\.label/
       ) as HTMLInputElement;
       const passwordConfirmationInput = screen.getByLabelText(
-        /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.label/
+        /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.label/
       ) as HTMLInputElement;
 
+      await writeField(currentPasswordInput, "abcdef");
       await writeField(passwordInput, "123456");
       await writeField(passwordConfirmationInput, "1234567");
 
       await waitFor(() => {
         expect(
           screen.getByText(
-            /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.errors\.mismatch/
+            /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.errors\.mismatch/
           )
         ).toBeDefined();
       });
@@ -214,61 +215,73 @@ describe("CompletePasswordResetForm", () => {
     const forms = {
       "successfully submits": {
         form: {
+          currentPassword: "current-password",
           password: "new-password",
           passwordConfirmation: "new-password",
         },
         responseStatus: 204,
-        expectLinkError: false,
         expectErrors: [],
       },
-      "sets link error when short code is rejected": {
+      "successfully submits with fields at size limit": {
         form: {
+          currentPassword: "c".repeat(BINDINGS_VALIDATION.PASSWORD.MAX),
+          password: "n".repeat(BINDINGS_VALIDATION.PASSWORD.MAX),
+          passwordConfirmation: "n".repeat(BINDINGS_VALIDATION.PASSWORD.MAX),
+        },
+        responseStatus: 204,
+        expectErrors: [],
+      },
+      "sets password incorrect on forbidden error": {
+        form: {
+          currentPassword: "current-password",
           password: "new-password",
           passwordConfirmation: "new-password",
         },
         responseStatus: 403,
-        expectLinkError: true,
-        expectErrors: [],
+        expectErrors: [/form:fields\.password\.errors\.invalid/],
       },
       "sets global error on unknown error": {
         form: {
+          currentPassword: "current-password",
           password: "new-password",
           passwordConfirmation: "new-password",
         },
         responseStatus: 500,
-        expectLinkError: false,
-        expectErrors: [/platform\.authentication\.ext:resetPassword\.form\.errors\.generic/],
+        expectErrors: [/platform\.authentication\.account:updatePassword\.form\.errors\.generic/],
       },
     };
 
     for (const [name, { form, responseStatus, expectErrors }] of Object.entries(forms)) {
       it(name, async () => {
-        const nockUpdatePassword = nockAPI
-          .patch("/credentials/password/reset", { password: form.password, userID, shortCode }, MockRequestOptions)
-          .reply(responseStatus, { accessToken: "new-" + MockAccessToken });
+        server.use(
+          http
+            .patch("http://localhost:4011/credentials/password")
+            .headers(new Headers(MockHeaders), HttpResponse.error())
+            .bodyJSON(form, HttpResponse.error())
+            .resolve(() => HttpResponse.json(undefined, { status: responseStatus }))
+        );
 
+        const currentPasswordInput = screen.getByLabelText(
+          /platform\.authentication\.account:updatePassword\.fields\.currentPassword\.label/
+        ) as HTMLInputElement;
         const passwordInput = screen.getByLabelText(
-          /platform\.authentication\.ext:resetPassword\.fields\.newPassword\.label/
+          /platform\.authentication\.account:updatePassword\.fields\.newPassword\.label/
         ) as HTMLInputElement;
         const passwordConfirmationInput = screen.getByLabelText(
-          /platform\.authentication\.ext:resetPassword\.fields\.newPasswordConfirmation\.label/
+          /platform\.authentication\.account:updatePassword\.fields\.newPasswordConfirmation\.label/
         ) as HTMLInputElement;
 
-        const submitButton = screen.getByText(/platform\.authentication\.ext:resetPassword\.form\.submit/, {
+        const submitButton = screen.getByText(/platform\.authentication\.account:updatePassword\.form\.submit/, {
           selector: "button",
         });
 
+        await writeField(currentPasswordInput, form.currentPassword);
         await writeField(passwordInput, form.password);
         await writeField(passwordConfirmationInput, form.passwordConfirmation);
 
         // Submit the form.
         act(() => {
           fireEvent.click(submitButton);
-        });
-
-        // Wait for the form to submit.
-        await waitFor(() => {
-          nockUpdatePassword.done();
         });
 
         // Check the form errors.
@@ -280,13 +293,21 @@ describe("CompletePasswordResetForm", () => {
 
         if (expectErrors.length === 0) {
           await waitFor(() => {
-            expect(screen.getByText(/platform\.authentication\.ext:resetPassword\.form\.success\.title/)).toBeDefined();
-            expect(screen.getByText(/platform\.authentication\.ext:resetPassword\.form\.success\.main/)).toBeDefined();
+            expect(
+              screen.getByText(/platform\.authentication\.account:updatePassword\.form\.success\.title/)
+            ).toBeDefined();
+            expect(
+              screen.getByText(/platform\.authentication\.account:updatePassword\.form\.success\.main/)
+            ).toBeDefined();
           });
         } else {
           await waitFor(() => {
-            expect(screen.queryByText(/platform\.authentication\.ext:resetPassword\.form\.success\.title/)).toBeNull();
-            expect(screen.queryByText(/platform\.authentication\.ext:resetPassword\.form\.success\.main/)).toBeNull();
+            expect(
+              screen.queryByText(/platform\.authentication\.account:updatePassword\.form\.success\.title/)
+            ).toBeNull();
+            expect(
+              screen.queryByText(/platform\.authentication\.account:updatePassword\.form\.success\.main/)
+            ).toBeNull();
           });
         }
       });

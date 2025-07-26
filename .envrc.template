@@ -1,29 +1,44 @@
+# ======================================================================================================================
+# Platform variables.
+# ======================================================================================================================
+
 # Client.
-export CLIENT_PORT=6001
+export VITE_SERVER_PORT=6001
+export VITE_TOLGEE_CDN="https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
 
 # API.
-export AUTH_API_PORT=4011
-export VITE_AUTH_API_URL=http://127.0.0.1:${AUTH_API_PORT}/v1
+export SERVICE_AUTH_PORT=4011
+export SERVICE_AUTH_VERSION=v1
+export VITE_SERVICE_AUTH_URL=http://127.0.0.1:${SERVICE_AUTH_PORT}/${SERVICE_AUTH_VERSION}
 
-export PATH_UPDATE_EMAIL=/ext/email/validate
-export PATH_UPDATE_PASSWORD=/ext/password/update
-export PATH_REGISTER=/ext/account/create
-export AUTH_PLATFORM_URL_UPDATE_EMAIL=http://localhost:${AUTH_API_PORT}${PATH_UPDATE_EMAIL}
-export AUTH_PLATFORM_URL_UPDATE_PASSWORD=http://localhost:${AUTH_API_PORT}${PATH_UPDATE_PASSWORD}
-export AUTH_PLATFORM_URL_REGISTER=http://localhost:${AUTH_API_PORT}${PATH_REGISTER}
+# ======================================================================================================================
+# Test variables.
+# ======================================================================================================================
 
-export JSON_KEYS_MASTER=fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca
+export PLAYWRIGHT_TEST_PORT=6002
+export PLAYWRIGHT_VERSION="$(pnpm list playwright --json | jq -r ".[0].devDependencies.playwright.version")"
+# In case your system does not support JQ. Make sure it matches the version in package.json.
+# export PLAYWRIGHT_VERSION=1.54.1
+export PW_TEST_CONNECT_WS_ENDPOINT="ws://127.0.0.1:${PLAYWRIGHT_TEST_PORT}/"
+# Takes screenshots during E2E tests. Beware, it takes a lot of them.
+# export E2E_TAKE_SCREENSHOTS=true
 
-# Infra
-export AUTH_API_SMTP_SANDBOX=true
-#export AUTH_API_SMTP_PASSWORD="[your_smtp_password]"
-#export AUTH_API_SMTP_SENDER="[your_smtp_sender]"
-#export AUTH_API_SMTP_DOMAIN="[your_smtp_domain]"
-#export AUTH_API_SMTP_ADDRESS="[your_smtp_address]"
+# ======================================================================================================================
+# Compose variables.
+# ======================================================================================================================
 
-export AUTH_API_SERVER_NAME=platform-authentification-dev
-export AUTH_API_ENV=local
+export AUTH_PLATFORM_URL=http://localhost:${CLIENT_PORT}
+#export AUTH_PLATFORM_URL_UPDATE_EMAIL=${AUTH_PLATFORM_URL}/ext/email/validate
+#export AUTH_PLATFORM_URL_UPDATE_PASSWORD=${AUTH_PLATFORM_URL}/ext/password/update
+#export AUTH_PLATFORM_URL_REGISTER=${AUTH_PLATFORM_URL}/ext/account/create
+
+#export SMTP_SENDER_DOMAIN="smtp.gmail.com"
+#export SMTP_ADDR="${SMTP_SENDER_DOMAIN}:587"
+#export SMTP_SENDER_NAME="Agora Storyverse (noreply)"
+#export SMTP_SENDER_EMAIL="noreply@agoradesecrivains.com"
+#export SMTP_SENDER_PASSWORD="[your_password_here]"
 
 # Other.
 export PODMAN_IGNORE_CGROUPSV1_WARNING="true"
 export PODMAN_COMPOSE_PROVIDER="podman-compose"
+export PODMAN_COMPOSE_WARNING_LOGS=false

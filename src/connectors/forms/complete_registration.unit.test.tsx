@@ -1,14 +1,19 @@
-import { MockQueryClient, MockRequestOptions } from "#/mocks/query_client";
+import { MockHeaders } from "#/mocks/query_client";
 import { MockAccessToken, MockAnonymousSession } from "#/mocks/session";
 import "#/mocks/tolgee";
-import { writeField } from "#/utils/field";
-import { genericSetup } from "#/utils/setup";
+import { server } from "#/setup/unit";
 import { SessionWrapper, StandardWrapper } from "#/utils/wrapper";
 
-import { CompleteRegistrationForm, type CompleteRegistrationFormConnector } from "~/components/forms";
-import { useCompleteRegistrationFormConnector } from "~/connectors/forms/complete_registration";
+import { CompleteRegistrationForm } from "~/components/forms";
+import {
+  useCompleteRegistrationFormConnector,
+  type CompleteRegistrationFormConnector,
+} from "~/connectors/forms/complete_registration";
 
 import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
+import { MockQueryClient } from "@a-novel/nodelib/mocks/query_client";
+import { http } from "@a-novel/nodelib/msw";
+import { writeField } from "@a-novel/nodelib/test/form";
 
 import type { ReactNode } from "react";
 
@@ -22,15 +27,10 @@ import {
   type RenderResult,
   waitFor,
 } from "@testing-library/react";
-import nock from "nock";
+import { HttpResponse } from "msw";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-let nockAPI: nock.Scope;
-
-let completeRegisterFormConnector: RenderHookResult<
-  CompleteRegistrationFormConnector<any, any, any, any, any, any, any, any, any>,
-  object
->;
+let completeRegisterFormConnector: RenderHookResult<CompleteRegistrationFormConnector, object>;
 let screen: RenderResult;
 
 let queryClient: QueryClient;
@@ -40,22 +40,14 @@ const toDashboardAction = vi.fn();
 const shortCode = "shortcode";
 
 const email = "new-user@provider.com";
-// Base64 URL-safe version produced by the service.
-const emailBase64 = "bmV3LXVzZXJAcHJvdmlkZXIuY29t";
 
 describe("CompleteRegistrationForm", () => {
-  genericSetup({
-    setNockAPI: (newScope) => {
-      nockAPI = newScope;
-    },
-  });
-
   beforeEach(() => {
     queryClient = new QueryClient(MockQueryClient);
 
     // Render the hook, then inject the connector into the form.
     completeRegisterFormConnector = renderHook((props) => useCompleteRegistrationFormConnector(props), {
-      initialProps: { toDashboard: toDashboardAction, email: emailBase64, shortCode },
+      initialProps: { toDashboard: toDashboardAction, email, shortCode },
       wrapper: ({ children }: { children: ReactNode }) => (
         <SessionWrapper session={MockAnonymousSession}>
           <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
@@ -243,9 +235,13 @@ describe("CompleteRegistrationForm", () => {
 
     for (const [name, { form, responseStatus, expectErrors }] of Object.entries(forms)) {
       it(name, async () => {
-        const nockUpdatePassword = nockAPI
-          .put("/credentials", { password: form.password, email, shortCode }, MockRequestOptions)
-          .reply(responseStatus, { accessToken: "new-" + MockAccessToken });
+        server.use(
+          http
+            .put("http://localhost:4011/credentials")
+            .headers(new Headers(MockHeaders), HttpResponse.error())
+            .bodyJSON({ password: form.password, email, shortCode }, HttpResponse.error())
+            .resolve(() => HttpResponse.json({ accessToken: "new-" + MockAccessToken }, { status: responseStatus }))
+        );
 
         const passwordInput = screen.getByLabelText(/form:fields\.password\.label/) as HTMLInputElement;
         const passwordConfirmationInput = screen.getByLabelText(
@@ -262,11 +258,6 @@ describe("CompleteRegistrationForm", () => {
         // Submit the form.
         act(() => {
           fireEvent.click(submitButton);
-        });
-
-        // Wait for the form to submit.
-        await waitFor(() => {
-          nockUpdatePassword.done();
         });
 
         // Check the form errors.
