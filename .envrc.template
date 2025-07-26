@@ -11,6 +11,9 @@ export SERVICE_AUTH_PORT=4011
 export SERVICE_AUTH_VERSION=v1
 export VITE_SERVICE_AUTH_URL=http://127.0.0.1:${SERVICE_AUTH_PORT}/${SERVICE_AUTH_VERSION}
 
+# Applications.
+export VITE_PLATFORM_STUDIO_URL=http://localhost:6011
+
 # ======================================================================================================================
 # Test variables.
 # ======================================================================================================================

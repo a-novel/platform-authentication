@@ -4,7 +4,7 @@ import "#/mocks/tolgee";
 import { server } from "#/setup/unit";
 import { SessionWrapper, StandardWrapper } from "#/utils/wrapper";
 
-import { EmailValidation } from "~/components/misc";
+import { EmailValidation } from "~/components/forms/static";
 import { useEmailValidationConnector } from "~/connectors/misc/email_validation";
 
 import { MockQueryClient } from "@a-novel/nodelib/mocks/query_client";

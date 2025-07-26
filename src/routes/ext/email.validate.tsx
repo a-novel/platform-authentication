@@ -1,4 +1,4 @@
-import { EmailValidation as EmailValidationPage } from "~/components/misc";
+import { EmailValidation as EmailValidationPage } from "~/components/forms/static";
 import { useEmailValidationConnector } from "~/connectors/misc";
 
 import { ShortCode, UserID } from "@a-novel/connector-authentication/api";

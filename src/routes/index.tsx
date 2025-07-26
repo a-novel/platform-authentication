@@ -1,3 +1,5 @@
+import { Dashboard } from "~/components/pages";
+
 import { WithPrivateSession } from "@a-novel/package-authenticator";
 
 import { createFileRoute } from "@tanstack/react-router";
@@ -10,5 +12,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  return null;
+  return <Dashboard />;
 }

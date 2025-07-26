@@ -11,6 +11,7 @@ const MOCK_ENV = {
   VITE_SERVER_PORT: PORT.toString(),
   VITE_TOLGEE_CDN: process.env.VITE_TOLGEE_CDN,
   VITE_SERVICE_AUTH_URL: "http://service.auth.test",
+  VITE_PLATFORM_STUDIO_URL: "http://app.studio",
   VITE_NODE_ENV: "test",
 };
 
