@@ -102,7 +102,7 @@ services:
   # Access it in your browser: http://localhost:6001
   # ================================================================================
   platform-authentication:
-    imnage: ghcr.io/a-novel/platform-authentication/platform:v1
+    image: ghcr.io/a-novel/platform-authentication/platform:v1
     depends_on:
       authentication-service:
         condition: service_started
