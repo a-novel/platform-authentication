@@ -37,6 +37,7 @@ export default defineConfig({
         inline: ["@a-novel/package-ui", "@a-novel/package-authenticator"],
       },
     },
-    include: ["src/**/*.unit.{test,spec}.{ts,tsx}"],
+    include: ["src/**/*.{test,spec}.{ts,tsx}"],
+    exclude: ["src/routes.test"],
   },
 });
