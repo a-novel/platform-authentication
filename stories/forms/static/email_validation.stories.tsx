@@ -1,6 +1,6 @@
-import { EmailValidation } from "~/components/misc";
+import { EmailValidation } from "~/components/forms/static";
 
-import { LayoutRenderer } from "../renderer";
+import { LayoutRenderer } from "../../renderer";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 

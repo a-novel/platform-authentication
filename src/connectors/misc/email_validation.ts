@@ -1,4 +1,4 @@
-import type { EmailValidationConnector } from "~/components/misc";
+import type { EmailValidationConnector } from "~/components/forms/static";
 
 import { isForbiddenError } from "@a-novel/connector-authentication/api";
 import { UpdateEmail } from "@a-novel/connector-authentication/hooks";

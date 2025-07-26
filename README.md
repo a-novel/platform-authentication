@@ -33,7 +33,7 @@ pnpm test
 
 Run as a containerized service with:
 
-```bash
+```yaml
 # https://github.com/containers/podman-compose
 services:
   # ================================================================================
@@ -109,9 +109,11 @@ services:
     ports:
       - "6001:8080"
     environment:
-        VITE_SERVICE_AUTH_URL: http://authentication-service:8080/v1
-        # Official CDN for the Tolgee translations of Agora.
-        VITE_TOLGEE_CDN: https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b
+      VITE_SERVICE_AUTH_URL: http://authentication-service:8080/v1
+      # Official CDN for the Tolgee translations of Agora.
+      VITE_TOLGEE_CDN: https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b
+      # Links to external Agora applications.
+      VITE_PLATFORM_STUDIO_URL: https://localhost:6011
     networks:
       - api
 

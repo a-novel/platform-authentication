@@ -1,25 +1,13 @@
 import { MockHeadersWithAccessToken } from "#/mocks/query_client";
 import { MockCurrentUser, MockSession } from "#/mocks/session";
 import { AuthenticatedStorageState, test, expect } from "#/playwright/fixtures/base";
-import { sessionAnonHandlers } from "#/utils/handlers";
+import { sessionAnonHandlers, sessionAuthenticatedHandlers } from "#/utils/handlers";
 
 import { LangEnum } from "@a-novel/connector-authentication/api";
 import { http } from "@a-novel/nodelib/msw";
 import { Screenshot } from "@a-novel/nodelib/test/e2e";
 
 import { HttpResponse } from "msw";
-
-const initHandlers = [
-  http
-    .get("http://service.auth.test/session")
-    .headers(new Headers(MockHeadersWithAccessToken(MockSession.session!.accessToken!)), HttpResponse.error())
-    .resolve(() => HttpResponse.json({ userID: "94b4d288-dbff-4eca-805a-f45311a34e15", roles: ["auth:user"] })),
-  http
-    .get("http://service.auth.test/user")
-    .headers(new Headers(MockHeadersWithAccessToken(MockSession.session!.accessToken!)), HttpResponse.error())
-    .searchParams(new URLSearchParams({ userID: MockSession.session!.claims!.userID! }), true, HttpResponse.error())
-    .resolve(() => HttpResponse.json(MockCurrentUser)),
-];
 
 test.describe("account page", () => {
   test("requires authentication", async ({ network, page, viewport, browserName }) => {
@@ -38,7 +26,7 @@ test.describe("account page", () => {
     });
 
     test("renders", async ({ page, network, viewport, browserName }) => {
-      network.use(...initHandlers);
+      network.use(...sessionAuthenticatedHandlers);
 
       await page.goto("/account");
 
@@ -49,7 +37,7 @@ test.describe("account page", () => {
 
     test.describe("update password", () => {
       test("has interaction", async ({ network, page, viewport, browserName }) => {
-        network.use(...initHandlers);
+        network.use(...sessionAuthenticatedHandlers);
 
         await page.goto("/account");
 
@@ -75,7 +63,7 @@ test.describe("account page", () => {
 
       test("sends valid form", async ({ network, page, viewport, browserName }) => {
         network.use(
-          ...initHandlers,
+          ...sessionAuthenticatedHandlers,
           http
             .patch("http://service.auth.test/credentials/password")
             .headers(new Headers(MockHeadersWithAccessToken(MockSession.session!.accessToken!)), HttpResponse.error())
@@ -123,7 +111,7 @@ test.describe("account page", () => {
 
     test.describe("request email update", () => {
       test("has interaction", async ({ network, page, viewport, browserName }) => {
-        network.use(...initHandlers);
+        network.use(...sessionAuthenticatedHandlers);
 
         await page.goto("/account");
 
@@ -145,7 +133,7 @@ test.describe("account page", () => {
 
       test("sends valid form", async ({ network, page, viewport, browserName }) => {
         network.use(
-          ...initHandlers,
+          ...sessionAuthenticatedHandlers,
           http
             .put("http://service.auth.test/short-code/update-email")
             .headers(new Headers(MockHeadersWithAccessToken(MockSession.session!.accessToken!)), HttpResponse.error())
