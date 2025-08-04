@@ -13,7 +13,7 @@ importers:
         version: 1.4.4(@tanstack/react-query@5.84.1(react@19.1.1))(react@19.1.1)(zod@4.0.14)
       '@a-novel/package-authenticator':
         specifier: ^2.3.4
-        version: 2.3.4(4341eeef1391201e6f5e80bc8f0c2a87)
+        version: 2.4.0(4341eeef1391201e6f5e80bc8f0c2a87)
       '@a-novel/package-ui':
         specifier: ^0.6.4
         version: 0.6.4(ade443fb5272d314880bd7b78910d2da)
@@ -216,12 +216,12 @@ packages:
       v8-to-istanbul: ^9.3.0
       vitest: ^3.2.4
 
-  '@a-novel/package-authenticator@2.3.4':
-    resolution: {integrity: sha512-Mqmzvexk8KeN4tXp1dlw4o9EhlRJFiIXbn5GI9IY9Xt/DYGSLTmBeu5Aw5cRTf334SGANt4a3KfJf9y8f3pVMg==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.3.4/7449aa6f976399560c0709cb93d0c27b1da93062}
+  '@a-novel/package-authenticator@2.4.0':
+    resolution: {integrity: sha512-OvFVarm8U7qCk6XpdwhcsAKB1ArEIe5QzCRqGk5eQyfvQotjANLbU2e7yhv2AHuibjYiA90FeKZcdyavkwL7dw==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.0/21e8cfe16480bf581a3f1d648e160604ea03e9df}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@a-novel/connector-authentication': ^1.4.0
-      '@a-novel/package-ui': ^0.6.0
+      '@a-novel/package-ui': ^0.7.0
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.0
       '@mui/material': ^7.1.0
@@ -230,7 +230,7 @@ packages:
       '@tolgee/react': ^6.2.6
       react: ^19.1.0
       react-dom: ^19.1.0
-      zod: ^4.0.5
+      zod: ^4.0.8
 
   '@a-novel/package-ui@0.6.4':
     resolution: {integrity: sha512-5wGPRFyW4haqTpJs4hgvkPUDR9S9EuRRNJKnE6ah0u6buFV/yhl8mguOW+9jrQJeWnLvfZ2BZMR36KIXWe21VA==, tarball: https://npm.pkg.github.com/download/@a-novel/package-ui/0.6.4/52b5d5518cc40ba5e794848fa6fa853f5bdf6edc}
@@ -2958,8 +2958,8 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
+  chalk@5.5.0:
+    resolution: {integrity: sha512-1tm8DTaJhPBG3bIkVeZt1iZM9GfSX2lzOeDVZH9R9ffRHpmHvxZ/QhgQH/aDTkswQVt+YHdXAdS/In/30OjCbg==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   check-error@2.1.1:
@@ -6282,7 +6282,7 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.1.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.10.4(@types/node@24.1.0)(typescript@5.9.2))(terser@5.43.1)(tsx@4.20.3)
 
-  '@a-novel/package-authenticator@2.3.4(4341eeef1391201e6f5e80bc8f0c2a87)':
+  '@a-novel/package-authenticator@2.4.0(4341eeef1391201e6f5e80bc8f0c2a87)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.4(@tanstack/react-query@5.84.1(react@19.1.1))(react@19.1.1)(zod@4.0.14)
       '@a-novel/package-ui': 0.6.4(ade443fb5272d314880bd7b78910d2da)
@@ -9023,7 +9023,7 @@ snapshots:
 
   '@wdio/logger@9.18.0':
     dependencies:
-      chalk: 5.4.1
+      chalk: 5.5.0
       loglevel: 1.9.2
       loglevel-plugin-prefix: 0.8.4
       safe-regex2: 5.0.0
@@ -9432,7 +9432,7 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chalk@5.4.1:
+  chalk@5.5.0:
     optional: true
 
   check-error@2.1.1: {}
