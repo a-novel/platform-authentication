@@ -25,8 +25,8 @@ jobs:
       - uses: a-novel-kit/workflows/node-actions/build-node@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
-          app_id: ${{ vars.DEPENDENCY_BOT_ID }}
+          app_private_key: ${{ secrets.PUBLISH_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.PUBLISH_BOT_ID }}
 
   platform-build:
     needs: [build]
@@ -83,7 +83,7 @@ jobs:
         shell: bash
         run: |
           echo "@a-novel:registry=https://npm.pkg.github.com" > $HOME/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACTION_PAT }}" >> $HOME/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> $HOME/.npmrc
           echo "NPMRC=$HOME/.npmrc" >> "$GITHUB_ENV"
       - uses: a-novel-kit/workflows/build-actions/docker@master
         with:

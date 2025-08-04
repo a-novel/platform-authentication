@@ -114,7 +114,7 @@ jobs:
         shell: bash
         run: |
           echo "@a-novel:registry=https://npm.pkg.github.com" > $HOME/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACTION_PAT }}" >> $HOME/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> $HOME/.npmrc
           echo "NPMRC=$HOME/.npmrc" >> "$GITHUB_ENV"
       - uses: a-novel-kit/workflows/build-actions/docker@master
         with:
