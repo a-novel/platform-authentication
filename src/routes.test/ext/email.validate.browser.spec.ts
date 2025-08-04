@@ -25,6 +25,9 @@ test.describe("validate email page", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Email validated!");
 
     await Screenshot(page, "validate_email_page", viewport, browserName);
+
+    // Check metadata.
+    await expect(page).toHaveTitle("Email validation | Agora Social");
   });
 
   test("renders link error", async ({ network, page, viewport, browserName }) => {

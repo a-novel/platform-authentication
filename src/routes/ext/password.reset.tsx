@@ -13,8 +13,8 @@ const SearchParamsSchema = z.object({
 });
 
 export const Route = createFileRoute("/ext/password/reset")({
-  head: ({ match }) => ({
-    meta: [{ title: match.context.tolgee.t("metadata.resetPassword.title", { ns: "platform.authentication" }) }],
+  beforeLoad: ({ context }) => ({
+    title: context.tolgee.t("metadata.resetPassword.title", { ns: "platform.authentication" }),
   }),
   component: ResetPassword,
   validateSearch: zodValidator(SearchParamsSchema),

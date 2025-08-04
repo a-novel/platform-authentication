@@ -14,8 +14,8 @@ const SearchParamsSchema = z.object({
 });
 
 export const Route = createFileRoute("/ext/account/create")({
-  head: ({ match }) => ({
-    meta: [{ title: match.context.tolgee.t("metadata.register.title", { ns: "platform.authentication" }) }],
+  beforeLoad: ({ context }) => ({
+    title: context.tolgee.t("metadata.register.title", { ns: "platform.authentication" }),
   }),
   component: CompleteRegistration,
   validateSearch: zodValidator(SearchParamsSchema),

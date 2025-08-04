@@ -12,21 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: read
     steps:
       - uses: a-novel-kit/workflows/node-actions/lint-node@master
         with:
-          pat: ${{ secrets.ACTION_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.DEPENDENCY_BOT_ID }}
 
   test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: read
     env:
       VITE_TOLGEE_CDN: "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
     steps:
       - uses: a-novel-kit/workflows/node-actions/test-node@master
         with:
-          pat: ${{ secrets.ACTION_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.DEPENDENCY_BOT_ID }}
           test_action: "test:ci"
 
   report-codecov:
@@ -44,12 +50,14 @@ jobs:
     needs: [lint, test]
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      packages: write
+      contents: read
+      packages: read
     steps:
       - uses: a-novel-kit/workflows/node-actions/build-node@master
         with:
-          pat: ${{ secrets.ACTION_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.DEPENDENCY_BOT_ID }}
 
   platform-build:
     needs: [build]
@@ -125,6 +133,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: read
       pages: write
       id-token: write
     env:
@@ -133,4 +142,6 @@ jobs:
       - uses: a-novel-kit/workflows/github-pages-actions/publish-storybook@master
         with:
           build_path: storybook-static
-          pat: ${{ secrets.ACTION_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.DEPENDENCY_BOT_ID }}

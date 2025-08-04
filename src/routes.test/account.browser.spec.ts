@@ -13,6 +13,8 @@ test.describe("account page", () => {
   test("requires authentication", async ({ network, page, viewport, browserName }) => {
     network.use(...sessionAnonHandlers);
     await page.goto("/account");
+
+    // Render login modal when unauthenticated.
     await expect(page.getByRole("button", { name: "Log in" })).toBeVisible();
 
     await Screenshot(page, "account_page_unauthenticated", viewport, browserName);
@@ -31,8 +33,12 @@ test.describe("account page", () => {
       await page.goto("/account");
 
       await Screenshot(page, "account_page", viewport, browserName);
+      // Look for the main heading.
       await expect(page.getByRole("heading", { level: 1 })).toHaveText("My account");
       await Screenshot(page, "account_page", viewport, browserName);
+
+      // Check metadata.
+      await expect(page).toHaveTitle("Manage my account | Agora Social");
     });
 
     test.describe("update password", () => {
@@ -41,10 +47,12 @@ test.describe("account page", () => {
 
         await page.goto("/account");
 
+        // Look for the password form fields.
         await expect(page.getByRole("heading", { level: 2, name: "My password" })).toBeVisible();
         await expect(page.getByRole("button", { name: "Update password" })).toBeVisible();
         await page.getByRole("button", { name: "Update password" }).scrollIntoViewIfNeeded();
 
+        // Fill the form fields.
         await page.getByLabel(/Current password$/).fill("123456");
         await page.getByLabel(/New password$/).fill("654321");
         await page.getByLabel(/New password confirmation$/).fill("654321");
@@ -52,12 +60,14 @@ test.describe("account page", () => {
 
         await Screenshot(page, "account_page_update_password_filled", viewport, browserName);
 
+        // Check if the form fields are filled correctly.
         await expect(page.getByLabel(/Current password$/)).toHaveValue("123456");
         await expect(page.getByLabel(/New password$/)).toHaveValue("654321");
         await expect(page.getByLabel(/New password confirmation$/)).toHaveValue("654321");
 
         await Screenshot(page, "account_page_update_password_filled", viewport, browserName);
 
+        // The button should be enabled after filling the form.
         await expect(page.getByRole("button", { name: "Update password" })).toBeEnabled();
       });
 

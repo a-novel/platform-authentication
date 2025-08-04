@@ -6,8 +6,8 @@ import { WithPrivateSession } from "@a-novel/package-authenticator";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/account")({
-  head: ({ match }) => ({
-    meta: [{ title: match.context.tolgee.t("metadata.account.title", { ns: "platform.authentication" }) }],
+  beforeLoad: ({ context }) => ({
+    title: context.tolgee.t("metadata.account.title", { ns: "platform.authentication" }),
   }),
   component: WithPrivateSession(Account),
 });

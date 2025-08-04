@@ -16,6 +16,7 @@ import { createRouter as createTanstackRouter } from "@tanstack/react-router";
 initAuthAPI({ baseURL: import.meta.env.VITE_SERVICE_AUTH_URL });
 
 const tolgee = getDefaultTolgeePreset({ cdn: import.meta.env.VITE_TOLGEE_CDN });
+await tolgee.addActiveNs("platform.authentication");
 
 // =====================================================================================================================
 // Create router.
@@ -26,7 +27,11 @@ export function createRouter() {
 
   const baseRouter = createTanstackRouter({
     routeTree,
-    context: { tolgee, queryClient },
+    context: {
+      tolgee,
+      queryClient,
+      titleTemplate: (title: string) => `${title} | Agora Social`,
+    },
     scrollRestoration: true,
     defaultPreload: "intent",
     defaultNotFoundComponent: NotFoundComponent,

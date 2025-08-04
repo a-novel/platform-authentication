@@ -14,6 +14,9 @@ export const Route = createRootRouteWithContext<AgoraRouterContext>()({
       { rel: "icon", href: "/icon.png" },
     ],
   }),
+  beforeLoad: () => ({
+    title: "Agora Social",
+  }),
   shellComponent: RootComponent,
   errorComponent: ErrorComponent,
   notFoundComponent: NotFoundComponent,

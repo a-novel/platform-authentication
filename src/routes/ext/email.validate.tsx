@@ -13,8 +13,8 @@ const SearchParamsSchema = z.object({
 });
 
 export const Route = createFileRoute("/ext/email/validate")({
-  head: ({ match }) => ({
-    meta: [{ title: match.context.tolgee.t("metadata.validateEmail.title", { ns: "platform.authentication" }) }],
+  beforeLoad: ({ context }) => ({
+    title: context.tolgee.t("metadata.validateEmail.title", { ns: "platform.authentication" }),
   }),
   component: ValidateEmail,
   validateSearch: zodValidator(SearchParamsSchema),

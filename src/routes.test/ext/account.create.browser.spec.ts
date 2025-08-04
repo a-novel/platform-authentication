@@ -19,6 +19,9 @@ test.describe("create account page", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Complete registration");
 
     await Screenshot(page, "create_account_page", viewport, browserName);
+
+    // Check metadata.
+    await expect(page).toHaveTitle("Complete registration | Agora Social");
   });
 
   test("has interaction", async ({ network, page, viewport, browserName }) => {

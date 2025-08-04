@@ -18,6 +18,9 @@ test.describe("reset password page", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Password reset");
 
     await Screenshot(page, "reset_password_page", viewport, browserName);
+
+    // Check metadata.
+    await expect(page).toHaveTitle("Reset password | Agora Social");
   });
 
   test("has interaction", async ({ network, page, viewport, browserName }) => {
