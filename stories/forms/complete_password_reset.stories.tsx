@@ -3,14 +3,13 @@ import { CompletePasswordResetForm, type CompletePasswordResetFormProps } from "
 import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
 import { FormRenderer, NewMockForm } from "@a-novel/package-ui/storybook";
 
-import type { FC } from "react";
+import type { ComponentProps, FC } from "react";
 
 import { type Meta, type StoryObj } from "@storybook/react-vite";
-import { type ReactFormExtendedApi } from "@tanstack/react-form";
 
 const RenderComponents: FC<
   CompletePasswordResetFormProps & {
-    form: ReactFormExtendedApi<any, any, any, any, any, any, any, any, any, any>;
+    form: ComponentProps<typeof FormRenderer>["form"];
   }
 > = (props) => <CompletePasswordResetForm connector={{ ...props.connector, form: props.form }} />;
 

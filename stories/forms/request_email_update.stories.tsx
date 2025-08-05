@@ -4,15 +4,14 @@ import { BINDINGS_VALIDATION } from "@a-novel/connector-authentication/api";
 import { SPACINGS } from "@a-novel/package-ui/mui/utils";
 import { FormRenderer, NewMockForm } from "@a-novel/package-ui/storybook";
 
-import type { FC } from "react";
+import type { ComponentProps, FC } from "react";
 
 import { Stack } from "@mui/material";
 import { type Meta, type StoryObj } from "@storybook/react-vite";
-import { type ReactFormExtendedApi } from "@tanstack/react-form";
 
 const RenderComponents: FC<
   RequestEmailUpdateFormProps & {
-    form: ReactFormExtendedApi<any, any, any, any, any, any, any, any, any, any>;
+    form: ComponentProps<typeof FormRenderer>["form"];
   }
 > = (props) => (
   <Stack height="100%" alignItems="center" justifyContent="center" padding={SPACINGS.MEDIUM}>

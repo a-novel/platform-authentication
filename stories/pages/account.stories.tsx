@@ -4,13 +4,12 @@ import { LayoutRenderer } from "../renderer";
 
 import { FormRenderer, NewMockForm } from "@a-novel/package-ui/storybook";
 
-import type { FC } from "react";
+import type { ComponentProps, FC } from "react";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import type { ReactFormExtendedApi } from "@tanstack/react-form";
 
 const RenderComponents: FC<{
-  form: ReactFormExtendedApi<any, any, any, any, any, any, any, any, any, any>;
+  form: ComponentProps<typeof FormRenderer>["form"];
   currentEmail: string;
 }> = ({ form, currentEmail }) => (
   <LayoutRenderer>
