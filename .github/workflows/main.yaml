@@ -69,7 +69,7 @@ jobs:
       id-token: write
     services:
       postgres-json-keys:
-        image: ghcr.io/a-novel/service-json-keys/database:v1
+        image: ghcr.io/a-novel/service-json-keys/database:v1.2.6
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
@@ -78,13 +78,13 @@ jobs:
           POSTGRES_INITDB_ARGS: --auth=scram-sha-256
 
       json-keys:
-        image: ghcr.io/a-novel/service-json-keys/standalone:v1
+        image: ghcr.io/a-novel/service-json-keys/standalone:v1.2.6
         env:
           POSTGRES_DSN: postgres://postgres:postgres@postgres-json-keys:5432/postgres?sslmode=disable
           APP_MASTER_KEY: "fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca"
 
       postgres-authentication:
-        image: ghcr.io/a-novel/service-authentication/database:v1
+        image: ghcr.io/a-novel/service-authentication/database:v1.1.4
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
@@ -93,7 +93,7 @@ jobs:
           POSTGRES_INITDB_ARGS: --auth=scram-sha-256
 
       authentication-service:
-        image: ghcr.io/a-novel/service-authentication/standalone:v1
+        image: ghcr.io/a-novel/service-authentication/standalone:v1.1.4
         ports:
           - "4011:8080"
         env:
