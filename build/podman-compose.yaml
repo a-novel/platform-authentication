@@ -1,7 +1,7 @@
 # https://github.com/containers/podman-compose
 services:
   json-keys-postgres:
-    image: ghcr.io/a-novel/service-json-keys/database:v1
+    image: ghcr.io/a-novel/service-json-keys/database:v1.2.6
     networks:
       - api
     environment:
@@ -14,7 +14,7 @@ services:
       - json-keys-postgres-data:/var/lib/postgresql/data/
 
   json-keys-service:
-    image: ghcr.io/a-novel/service-json-keys/standalone:v1
+    image: ghcr.io/a-novel/service-json-keys/standalone:v1.2.6
     depends_on:
       json-keys-postgres:
         condition: service_started
@@ -25,7 +25,7 @@ services:
       - api
 
   authentication-postgres:
-    image: ghcr.io/a-novel/service-authentication/database:v1
+    image: ghcr.io/a-novel/service-authentication/database:v1.1.4
     networks:
       - api
     environment:
@@ -38,7 +38,7 @@ services:
       - authentication-postgres-data:/var/lib/postgresql/data/
 
   authentication-service:
-    image: ghcr.io/a-novel/service-authentication/standalone:v1
+    image: ghcr.io/a-novel/service-authentication/standalone:v1.1.4
     depends_on:
       authentication-postgres:
         condition: service_started
