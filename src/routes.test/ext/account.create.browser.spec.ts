@@ -111,7 +111,7 @@ test.describe("create account page", () => {
     await page.getByRole("button", { name: "Create account" }).click();
 
     await Screenshot(page, "create_account_page_error", viewport, browserName);
-    await expect(page.getByText(/An unknown error prevented the account creation/)).toBeVisible();
+    await expect(page.getByText(/An unknown error prevented the creation of the account/)).toBeVisible();
     await Screenshot(page, "create_account_page_error", viewport, browserName);
   });
 });
