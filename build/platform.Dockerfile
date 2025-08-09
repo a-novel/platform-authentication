@@ -47,6 +47,8 @@ RUN VITE_SERVER_PORT=8080 pnpm run build:ci
 FROM docker.io/library/node:alpine
 
 COPY --from=build /app/.output .output
+COPY --from=build /app/.tanstack .tanstack
+COPY --from=build /app/.nitro .nitro
 
 # Inject env variables at runtime.
 COPY scripts/env.sh /usr/local/bin/env.sh
