@@ -13,9 +13,6 @@ import { createRouter as createTanstackRouter } from "@tanstack/react-router";
 // Initialize dependencies.
 // =====================================================================================================================
 
-const safeEnv = Object.fromEntries(Object.entries(import.meta.env).filter(([key]) => key.startsWith("VITE_")));
-console.log(`Starting Social Platform with:\n${JSON.stringify(safeEnv, null, 2)}`);
-
 initAuthAPI({ baseURL: import.meta.env.VITE_SERVICE_AUTH_URL });
 
 const tolgee = getDefaultTolgeePreset({ cdn: import.meta.env.VITE_TOLGEE_CDN });
