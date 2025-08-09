@@ -8,7 +8,6 @@ import tsConfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     port: parseInt(process.env.VITE_SERVER_PORT ?? "0", 10) || undefined,
-    cors: true,
   },
   build: {
     chunkSizeWarningLimit: 999999,

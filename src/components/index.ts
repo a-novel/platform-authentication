@@ -5,9 +5,17 @@ import {
   DefaultErrorComponent,
   DefaultNotFoundComponent,
   DefaultRootComponent,
+  useOverrideRouteMetaDescription,
+  useOverrideRouteMetaTitle,
 } from "@a-novel/package-ui/tanstack/start";
 
-export const RootComponent = DefaultRootComponent({ wrapper: DefaultSessionProvider({ layout: DefaultAppLayout }) });
+export const RootComponent = DefaultRootComponent({
+  wrapper: DefaultSessionProvider({
+    layout: DefaultAppLayout,
+    useOverrideRouteMetaTitle,
+    useOverrideRouteMetaDescription,
+  }),
+});
 
 export const ErrorComponent = DefaultErrorComponent({
   ns: "generic",

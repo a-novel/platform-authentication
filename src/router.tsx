@@ -1,5 +1,3 @@
-import { ErrorComponent, NotFoundComponent } from "~/components";
-
 import { routeTree } from "./routeTree.gen";
 
 import { init as initAuthAPI } from "@a-novel/connector-authentication";
@@ -34,8 +32,6 @@ export function createRouter() {
     },
     scrollRestoration: true,
     defaultPreload: "intent",
-    defaultNotFoundComponent: NotFoundComponent,
-    defaultErrorComponent: ErrorComponent,
   });
 
   return routerWithAgoraContext(baseRouter, { tolgee, queryClient });

@@ -1,8 +1,12 @@
 # https://github.com/containers/podman-compose
+#
+# This is a generic podman-compose file for the Agora application. You may disable or enable services as needed by
+# commenting out the respective sections.
 services:
   # ====================================================================================================================
   # DATABASES
   # ====================================================================================================================
+
   json-keys-postgres:
     image: ghcr.io/a-novel/service-json-keys/database:v1.2.6
     networks:
@@ -52,14 +56,11 @@ services:
       json-keys-service:
         condition: service_started
     ports:
-      - "4011:8080"
+      - "${SERVICE_AUTH_PORT}:8080"
     environment:
       POSTGRES_DSN: postgres://postgres:postgres@authentication-postgres:5432/authentication?sslmode=disable
       JSON_KEYS_SERVICE_URL: http://json-keys-service:8080/v1
       AUTH_PLATFORM_URL: ${AUTH_PLATFORM_URL}
-#      AUTH_PLATFORM_URL_UPDATE_EMAIL: ${AUTH_PLATFORM_URL_UPDATE_EMAIL}
-#      AUTH_PLATFORM_URL_UPDATE_PASSWORD: ${AUTH_PLATFORM_URL_UPDATE_PASSWORD}
-#      AUTH_PLATFORM_URL_REGISTER: ${AUTH_PLATFORM_URL_REGISTER}
       SMTP_SENDER_DOMAIN: ${SMTP_SENDER_DOMAIN}
       SMTP_ADDR: ${SMTP_ADDR}
       SMTP_SENDER_NAME: ${SMTP_SENDER_NAME}
@@ -71,7 +72,9 @@ services:
 
 networks:
   api:
+    driver: bridge
 
 volumes:
   json-keys-postgres-data:
   authentication-postgres-data:
+  story-schematics-postgres-data:
