@@ -46,6 +46,8 @@ RUN VITE_SERVER_PORT=8080 pnpm run build:ci
 
 FROM docker.io/library/node:alpine
 
+WORKDIR /
+
 COPY --from=build /app/.output .output
 COPY --from=build /app/.tanstack .tanstack
 COPY --from=build /app/.nitro .nitro
@@ -76,4 +78,4 @@ EXPOSE 8080
 ENV HOST=0.0.0.0
 
 ENTRYPOINT ["/usr/local/bin/platform.entrypoint.sh"]
-CMD ["node", ".output/server/index.mjs"]
+CMD ["node", "/.output/server/index.mjs"]
