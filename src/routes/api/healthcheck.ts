@@ -4,7 +4,7 @@ import { createServerFileRoute } from "@tanstack/react-start/server";
 export const ServerRoute = createServerFileRoute("/api/healthcheck").methods({
   GET: async () => {
     const dependencies = {
-      authentication: await pingAPI("authentication service", process.env.VITE_SERVICE_AUTH_URL + "/healthcheck"),
+      authentication: await pingAPI("authentication service", import.meta.env.VITE_SERVICE_AUTH_URL + "/healthcheck"),
     };
 
     const healthy = Object.values(dependencies).every((status) => status.healthy);
