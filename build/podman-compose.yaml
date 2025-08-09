@@ -1,5 +1,8 @@
 # https://github.com/containers/podman-compose
 services:
+  # ====================================================================================================================
+  # DATABASES
+  # ====================================================================================================================
   json-keys-postgres:
     image: ghcr.io/a-novel/service-json-keys/database:v1.2.6
     networks:
@@ -13,17 +16,6 @@ services:
     volumes:
       - json-keys-postgres-data:/var/lib/postgresql/data/
 
-  json-keys-service:
-    image: ghcr.io/a-novel/service-json-keys/standalone:v1.2.6
-    depends_on:
-      json-keys-postgres:
-        condition: service_started
-    environment:
-      POSTGRES_DSN: postgres://postgres:postgres@json-keys-postgres:5432/json-keys?sslmode=disable
-      APP_MASTER_KEY: fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca
-    networks:
-      - api
-
   authentication-postgres:
     image: ghcr.io/a-novel/service-authentication/database:v1.1.4
     networks:
@@ -36,6 +28,21 @@ services:
       POSTGRES_INITDB_ARGS: --auth=scram-sha-256
     volumes:
       - authentication-postgres-data:/var/lib/postgresql/data/
+
+  # ====================================================================================================================
+  # SERVICES
+  # ====================================================================================================================
+
+  json-keys-service:
+    image: ghcr.io/a-novel/service-json-keys/standalone:v1.2.6
+    depends_on:
+      json-keys-postgres:
+        condition: service_started
+    environment:
+      POSTGRES_DSN: postgres://postgres:postgres@json-keys-postgres:5432/json-keys?sslmode=disable
+      APP_MASTER_KEY: fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca
+    networks:
+      - api
 
   authentication-service:
     image: ghcr.io/a-novel/service-authentication/standalone:v1.1.4

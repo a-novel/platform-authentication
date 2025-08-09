@@ -67,4 +67,6 @@ ENV VITE_SERVER_PORT=8080
 
 EXPOSE 8080
 
+ENV HOST=0.0.0.0
+
 CMD ["node", ".output/server/index.mjs"]
