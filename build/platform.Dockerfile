@@ -38,6 +38,7 @@ COPY src/lib ./src/lib
 COPY src/routes ./src/routes
 COPY src/router.tsx ./src/router.tsx
 COPY src/routeTree.gen.ts ./src/routeTree.gen.ts
+COPY .env.production .env.production
 
 COPY --from=deps /usr/local/app/node_modules /app/node_modules
 
@@ -45,16 +46,19 @@ RUN VITE_SERVER_PORT=8080 pnpm run build:ci
 
 FROM docker.io/library/node:alpine
 
-WORKDIR /
+COPY --from=build /app/.output .output
 
-COPY --from=build /app/.output /.output
-COPY --from=build /app/.nitro /app/.nitro
-COPY --from=build /app/.tanstack /app/.tanstack
+# Inject env variables at runtime.
+COPY scripts/env.sh /usr/local/bin/env.sh
+RUN chmod +x /usr/local/bin/env.sh
+
+COPY build/platform.entrypoint.sh /usr/local/bin/platform.entrypoint.sh
+RUN chmod +x ./usr/local/bin/platform.entrypoint.sh
 
 # ======================================================================================================================
 # Healthcheck.
 # ======================================================================================================================
-RUN apk --update add curl
+RUN apk --update add curl bash
 
 HEALTHCHECK --interval=1s --timeout=3s --retries=30 --start-period=1s \
     CMD curl --fail http://localhost:8080/api/healthcheck || exit 1
@@ -69,4 +73,5 @@ EXPOSE 8080
 
 ENV HOST=0.0.0.0
 
+ENTRYPOINT ["/usr/local/bin/platform.entrypoint.sh"]
 CMD ["node", ".output/server/index.mjs"]

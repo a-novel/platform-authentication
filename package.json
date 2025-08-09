@@ -10,8 +10,8 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "vite build && tsc --noEmit",
-    "build:ci": "vite build",
+    "build": "vite build --mode development && tsc --noEmit",
+    "build:ci": "vite build --mode production",
     "dev": "sh ./scripts/dev.sh",
     "dev:ci": "vite dev",
     "format": "prettier --write . --config prettier.config.ts",
