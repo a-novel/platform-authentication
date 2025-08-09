@@ -100,9 +100,10 @@ jobs:
           POSTGRES_DSN: postgres://postgres:postgres@authentication-postgres:5432/postgres?sslmode=disable
           JSON_KEYS_SERVICE_URL: http://json-keys:8080/v1
     env:
-      VITE_SERVICE_AUTH_URL: http://0.0.0.0:4011/v1
-      VITE_TOLGEE_CDN: "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
-      VITE_PLATFORM_STUDIO_URL: http://0.0.0.0:6011
+      # Use runtime prefix, otherwise the variables will override the .env.production file.
+      RUNTIME_VITE_SERVICE_AUTH_URL: http://0.0.0.0:4011/v1
+      RUNTIME_VITE_TOLGEE_CDN: "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
+      RUNTIME_VITE_PLATFORM_STUDIO_URL: http://0.0.0.0:6011
     steps:
       - uses: actions/setup-node@v4
         with:
@@ -124,8 +125,9 @@ jobs:
           secret-files: |
             npmrc=${{ env.NPMRC }}
           run_args: >-
-            -e VITE_SERVICE_AUTH_URL="${VITE_SERVICE_AUTH_URL}"
-            -e VITE_TOLGEE_CDN="${VITE_TOLGEE_CDN}"
+            -e VITE_SERVICE_AUTH_URL="${RUNTIME_VITE_SERVICE_AUTH_URL}"
+            -e VITE_TOLGEE_CDN="${RUNTIME_VITE_TOLGEE_CDN}"
+            -e VITE_PLATFORM_STUDIO_URL="${RUNTIME_VITE_PLATFORM_STUDIO_URL}"
 
   pages:
     if: github.ref == 'refs/heads/master' && success()
