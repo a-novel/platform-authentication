@@ -19,10 +19,11 @@ function InnerAccountPage({ requestEmailUpdateConnector, updatePasswordConnector
   return (
     <Section
       margin="auto"
-      maxWidth="100vw"
       boxSizing="border-box"
       component="main"
       alignSelf="center"
+      width="lg"
+      maxWidth="100%"
       padding={SPACINGS.LARGE}
       gap={SPACINGS.XLARGE}
     >

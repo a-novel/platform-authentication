@@ -2,7 +2,7 @@ import StudioBanner from "~/assets/images/applications/studio-banner.png";
 import StudioBackground from "~/assets/images/applications/studio-bg.png";
 
 import { Section } from "@a-novel/package-ui/mui/components";
-import { SPACINGS, withTransparency } from "@a-novel/package-ui/mui/utils";
+import { SPACINGS } from "@a-novel/package-ui/mui/utils";
 import { WithTolgeeNs } from "@a-novel/package-ui/translations";
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
@@ -73,25 +73,6 @@ function InnerAgoraApplications({ applications = AGORA_DEFAULT_APPLICATIONS }: A
                 " > .agora-app-logo": {
                   opacity: 1,
                 },
-                " > .agora-app-description": {
-                  opacity: 0,
-                },
-                "&:hover:not(:active)": {
-                  " > .agora-shader": {
-                    backdropFilter: "brightness(100%) saturate(100%)",
-                  },
-                  " > .agora-app-logo": {
-                    opacity: 0,
-                  },
-                  " > .agora-app-description": {
-                    opacity: 1,
-                  },
-                },
-                "&:active": {
-                  " > .agora-shader": {
-                    backdropFilter: "brightness(40%) saturate(80%)",
-                  },
-                },
               }}
             >
               <Box
@@ -115,41 +96,6 @@ function InnerAgoraApplications({ applications = AGORA_DEFAULT_APPLICATIONS }: A
                 zIndex={10}
                 sx={{ transition: "ease-out 0.2s" }}
               />
-              <Stack
-                className="agora-app-description"
-                flexDirection="column"
-                gap={SPACINGS.SMALL}
-                position="absolute"
-                top={SPACINGS.MEDIUM}
-                left={SPACINGS.MEDIUM}
-                bottom={SPACINGS.MEDIUM}
-                right={SPACINGS.MEDIUM}
-                padding={SPACINGS.MEDIUM}
-                zIndex={10}
-                borderRadius="inherit"
-                sx={{
-                  transition: "ease-out 0.2s",
-                  backgroundColor: (theme) => `${withTransparency(theme.palette.background.default, 75)}`,
-                  borderRadius: SPACINGS.SMALL,
-                }}
-              >
-                <Typography variant="h5" color="textPrimary">
-                  <T keyName={`applications.${app.name}.title`} ns="platform.authentication.dashboard" />
-                </Typography>
-                <Typography
-                  color="textPrimary"
-                  flexGrow={1}
-                  overflow="auto"
-                  sx={{
-                    // Make scrollbar invisible.
-                    scrollbarWidth: "none",
-                    WebkitOverflowScrolling: "touch",
-                    msOverflowStyle: "none",
-                  }}
-                >
-                  <T keyName={`applications.${app.name}.description`} ns="platform.authentication.dashboard" />
-                </Typography>
-              </Stack>
             </Stack>
           </Grid>
         ))}
