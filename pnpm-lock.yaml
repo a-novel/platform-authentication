@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.8(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
+        version: 1.4.9(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.6(e1f12ae881ad1b94bdafd0a842b45b6d)
+        version: 2.4.6(f7cc2e7e5436ba60c4bd49daac1d0eff)
       '@a-novel/package-ui':
         specifier: ^0.8.7
         version: 0.8.9(c69e751f8a815d4a5504c7a5dcb37d08)
@@ -198,8 +198,8 @@ importers:
 
 packages:
 
-  '@a-novel/connector-authentication@1.4.8':
-    resolution: {integrity: sha512-v98y8/BMKpDH0aW3NvZpyai5OEymv/fbH+Tvb+mwGf29o4yTXsgKe37AO32WV6HHQXBOYJfsbQ5/qfxHTXHoZg==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.8/b282c36fb7c3f9253381440b781f476cb4b5024c}
+  '@a-novel/connector-authentication@1.4.9':
+    resolution: {integrity: sha512-i2xXNYrd22cL9CIZUk8eMq1I05T4TeTlsCoQCVdAOsbteu1MU0TUBykvz4xJk7c4tt973hF5YPqpsHV26GWbEw==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.9/37212ac736ee5bc910a60dcbc39ef98c5bc3224d}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@tanstack/react-query': ^5.0.0
@@ -6396,7 +6396,7 @@ packages:
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.8(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)':
+  '@a-novel/connector-authentication@1.4.9(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)':
     dependencies:
       '@tanstack/react-query': 5.85.3(react@19.1.1)
       react: 19.1.1
@@ -6416,9 +6416,9 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.10.5(@types/node@24.3.0)(typescript@5.9.2))(terser@5.43.1)(tsx@4.20.4)
 
-  '@a-novel/package-authenticator@2.4.6(e1f12ae881ad1b94bdafd0a842b45b6d)':
+  '@a-novel/package-authenticator@2.4.6(f7cc2e7e5436ba60c4bd49daac1d0eff)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.8(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
+      '@a-novel/connector-authentication': 1.4.9(@tanstack/react-query@5.85.3(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
       '@a-novel/package-ui': 0.8.9(c69e751f8a815d4a5504c7a5dcb37d08)
       '@emotion/react': 11.14.0(@types/react@19.1.10)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.10)(react@19.1.1))(@types/react@19.1.10)(react@19.1.1)
