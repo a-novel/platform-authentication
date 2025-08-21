@@ -13,7 +13,7 @@ importers:
         version: 1.4.9(@tanstack/react-query@5.85.5(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.6(c8e497a190e4fe5151249c7fc645a7c2)
+        version: 2.4.7(c8e497a190e4fe5151249c7fc645a7c2)
       '@a-novel/package-ui':
         specifier: ^0.8.7
         version: 0.8.9(4950fb27c8f2c0b5773fb9eaeba1f3e9)
@@ -220,8 +220,8 @@ packages:
       v8-to-istanbul: ^9.3.0
       vitest: ^3.2.4
 
-  '@a-novel/package-authenticator@2.4.6':
-    resolution: {integrity: sha512-9k091am5H/UZbKXi4XikF9DNknI6+UOkWay+u+wrzTGG/Q/O/0qSwfMmAAZznFR961oCB+U7YTYF3zdIlqKeLg==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.6/c6c1e0354dcc63f18c494f64ea9a45eeee542c41}
+  '@a-novel/package-authenticator@2.4.7':
+    resolution: {integrity: sha512-phSnE3dbfOzFuL6E0Z4kBEtelHmxsZof8BNOfdvt7t6+BR94T6mbpl2+wNoFHqCZysCVvMtNr2vG+wkp9ghPDw==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.7/27a556adfccae12b1c33a9dd0c1146f858d3bea1}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@a-novel/connector-authentication': ^1.4.0
@@ -1893,8 +1893,8 @@ packages:
   '@promptbook/utils@0.69.5':
     resolution: {integrity: sha512-xm5Ti/Hp3o4xHrsK9Yy3MS6KbDxYbq485hDsFvxqaNA7equHLPdo8H8faTitTeb14QCDfLW4iwCxdVYu5sn6YQ==}
 
-  '@puppeteer/browsers@2.10.6':
-    resolution: {integrity: sha512-pHUn6ZRt39bP3698HFQlu2ZHCkS/lPcpv7fVQcGBSzNNygw171UXAKrCUhy+TEMw4lEttOKDgNpb04hwUAJeiQ==}
+  '@puppeteer/browsers@2.10.7':
+    resolution: {integrity: sha512-wHWLkQWBjHtajZeqCB74nsa/X70KheyOhySYBRmVQDJiNj0zjZR/naPCvdWjMhcG1LmjaMV/9WtTo5mpe8qWLw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6445,7 +6445,7 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.10.5(@types/node@24.3.0)(typescript@5.9.2))(terser@5.43.1)(tsx@4.20.4)
 
-  '@a-novel/package-authenticator@2.4.6(c8e497a190e4fe5151249c7fc645a7c2)':
+  '@a-novel/package-authenticator@2.4.7(c8e497a190e4fe5151249c7fc645a7c2)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.9(@tanstack/react-query@5.85.5(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.17)
       '@a-novel/package-ui': 0.8.9(4950fb27c8f2c0b5773fb9eaeba1f3e9)
@@ -8249,7 +8249,7 @@ snapshots:
       spacetrim: 0.11.59
     optional: true
 
-  '@puppeteer/browsers@2.10.6':
+  '@puppeteer/browsers@2.10.7':
     dependencies:
       debug: 4.4.1
       extract-zip: 2.0.1
@@ -9475,7 +9475,7 @@ snapshots:
 
   '@wdio/utils@9.18.0':
     dependencies:
-      '@puppeteer/browsers': 2.10.6
+      '@puppeteer/browsers': 2.10.7
       '@wdio/logger': 9.18.0
       '@wdio/types': 9.16.2
       decamelize: 6.0.1
