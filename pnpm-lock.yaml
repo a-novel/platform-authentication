@@ -13,7 +13,7 @@ importers:
         version: 1.4.12(@tanstack/react-query@5.85.6(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.9(d73d23e790247bcb4874c6ffd2d0985c)
+        version: 2.4.10(d73d23e790247bcb4874c6ffd2d0985c)
       '@a-novel/package-ui':
         specifier: ^0.8.7
         version: 0.8.13(3c326c7b84817225b709ab068bd6c3a2)
@@ -220,8 +220,8 @@ packages:
       v8-to-istanbul: ^9.3.0
       vitest: ^3.2.4
 
-  '@a-novel/package-authenticator@2.4.9':
-    resolution: {integrity: sha512-3Uzm1Lic5vuosBsiByw3CRls1/pSCfBQJ97W5jRAM7JZy11ZCxcu7jkbZt5BtIA0soZQ7RoLgjrugWcgL4OMpw==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.9/e7d900ee7b47d1a5bd134c40f7f1628673e9cc3b}
+  '@a-novel/package-authenticator@2.4.10':
+    resolution: {integrity: sha512-v48MDoNp1KbGlVFENR1Vtrfqk/v5ZSUeYMLDRkBmsmca6OcfMnAC8B8TR/cYX9aUWO1BVOk02H5eLT7TP6TsWQ==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.10/d19d90b148f9d2a2816e7cfd02fff44fc3e8580f}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@a-novel/connector-authentication': ^1.4.0
@@ -6410,7 +6410,7 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.11.0(@types/node@24.3.0)(typescript@5.9.2))(terser@5.43.1)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.9(d73d23e790247bcb4874c6ffd2d0985c)':
+  '@a-novel/package-authenticator@2.4.10(d73d23e790247bcb4874c6ffd2d0985c)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.12(@tanstack/react-query@5.85.6(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
       '@a-novel/package-ui': 0.8.13(3c326c7b84817225b709ab068bd6c3a2)
