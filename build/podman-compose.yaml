@@ -8,7 +8,7 @@ services:
   # ====================================================================================================================
 
   json-keys-postgres:
-    image: ghcr.io/a-novel/service-json-keys/database:v1.3.5
+    image: ghcr.io/a-novel/service-json-keys/database:v1.3.6
     networks:
       - api
     environment:
@@ -38,7 +38,7 @@ services:
   # ====================================================================================================================
 
   json-keys-service:
-    image: ghcr.io/a-novel/service-json-keys/standalone:v1.3.5
+    image: ghcr.io/a-novel/service-json-keys/standalone:v1.3.6
     depends_on:
       json-keys-postgres:
         condition: service_started
