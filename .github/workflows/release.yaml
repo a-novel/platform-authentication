@@ -73,7 +73,7 @@ jobs:
       RUNTIME_VITE_TOLGEE_CDN: "https://cdn.tolg.ee/74c1bb8828074430ae95b462ab95374b"
       RUNTIME_VITE_PLATFORM_STUDIO_URL: http://0.0.0.0:6011
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: latest
       - name: install pnpm
