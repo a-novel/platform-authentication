@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.14(@tanstack/react-query@5.85.9(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
+        version: 1.4.14(@tanstack/react-query@5.87.1(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.11(4273318bdb6720595551314246f33224)
+        version: 2.4.11(6555de2ffc30ca93217f653d79f43a99)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.15(eb171aba4be8152f89fd8560b383e9b5)
+        version: 0.8.15(c419287bba701b687e0af25ad08a9dfb)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.12)(react@19.1.1)
@@ -40,13 +40,13 @@ importers:
         version: 1.19.5(@tanstack/react-start@1.131.36(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-query':
         specifier: ^5.84.2
-        version: 5.85.9(react@19.1.1)
+        version: 5.87.1(react@19.1.1)
       '@tanstack/react-router':
         specifier: ^1.131.2
         version: 1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-router-with-query':
         specifier: ^1.130.17
-        version: 1.130.17(@tanstack/react-query@5.85.9(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 1.130.17(@tanstack/react-query@5.87.1(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-start':
         specifier: ^1.131.2
         version: 1.131.36(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5))
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@a-novel/nodelib':
         specifier: ^0.7.6
-        version: 0.7.14(@msw/playwright@0.4.2(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.85.9(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
+        version: 0.7.14(@msw/playwright@0.4.2(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.87.1(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
       '@chromatic-com/storybook':
         specifier: ^4.1.0
         version: 4.1.1(storybook@9.1.5(@testing-library/dom@10.4.1)(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(prettier@3.6.2)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))
@@ -104,7 +104,7 @@ importers:
         version: 8.1.0(rollup@4.50.1)(typescript@5.9.2)
       '@tanstack/eslint-plugin-query':
         specifier: ^5.83.1
-        version: 5.83.1(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
+        version: 5.86.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
       '@testing-library/react':
         specifier: ^16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -1933,8 +1933,8 @@ packages:
     peerDependencies:
       vite: '>=6.0.0'
 
-  '@tanstack/eslint-plugin-query@5.83.1':
-    resolution: {integrity: sha512-tdkpPFfzkTksN9BIlT/qjixSAtKrsW6PUVRwdKWaOcag7DrD1vpki3UzzdfMQGDRGeg1Ue1Dg+rcl5FJGembNg==}
+  '@tanstack/eslint-plugin-query@5.86.0':
+    resolution: {integrity: sha512-tmXdnx/fF3yY5G5jpzrJQbASY3PNzsKF0gq9IsZVqz3LJ4sExgdUFGQ305nao0wTMBOclyrSC13v/VQ3yOXu/Q==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -1945,8 +1945,8 @@ packages:
     resolution: {integrity: sha512-cs1WKawpXIe+vSTeiZUuSBy8JFjEuDgdMKZFRLKwQysKo8y2q6Q1HvS74Yw+m5IhOW1nTZooa6rlgdfXcgFAaw==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.85.9':
-    resolution: {integrity: sha512-5fxb9vwyftYE6KFLhhhDyLr8NO75+Wpu7pmTo+TkwKmMX2oxZDoLwcqGP8ItKSpUMwk3urWgQDZfyWr5Jm9LsQ==}
+  '@tanstack/query-core@5.87.1':
+    resolution: {integrity: sha512-HOFHVvhOCprrWvtccSzc7+RNqpnLlZ5R6lTmngb8aq7b4rc2/jDT0w+vLdQ4lD9bNtQ+/A4GsFXy030Gk4ollA==}
 
   '@tanstack/react-form@1.19.5':
     resolution: {integrity: sha512-DHSdom28KcIT+tYmqFnokAMBnbdDJL9BEufyjqalLGDkc256/7mvU6UyM9flCyaeHC+kqGY8ZB+DUv3ivKawdQ==}
@@ -1957,8 +1957,8 @@ packages:
       '@tanstack/react-start':
         optional: true
 
-  '@tanstack/react-query@5.85.9':
-    resolution: {integrity: sha512-2T5zgSpcOZXGkH/UObIbIkGmUPQqZqn7esVQFXLOze622h4spgWf5jmvrqAo9dnI13/hyMcNsF1jsoDcb59nJQ==}
+  '@tanstack/react-query@5.87.1':
+    resolution: {integrity: sha512-YKauf8jfMowgAqcxj96AHs+Ux3m3bWT1oSVKamaRPXSnW2HqSznnTCEkAVqctF1e/W9R/mPcyzzINIgpOH94qg==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -2265,31 +2265,15 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/project-service@8.39.0':
-    resolution: {integrity: sha512-CTzJqaSq30V/Z2Og9jogzZt8lJRR5TKlAdXmWgdu4hgcC9Kww5flQ+xFvMxIBWVNdxJO7OifgdOK4PokMIWPew==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/project-service@8.43.0':
     resolution: {integrity: sha512-htB/+D/BIGoNTQYffZw4uM4NzzuolCoaA/BusuSIcC8YjmBYQioew5VUZAYdAETPjeed0hqCaW7EHg+Robq8uw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/scope-manager@8.39.0':
-    resolution: {integrity: sha512-8QOzff9UKxOh6npZQ/4FQu4mjdOCGSdO3p44ww0hk8Vu+IGbg0tB/H1LcTARRDzGCC8pDGbh2rissBuuoPgH8A==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/scope-manager@8.43.0':
     resolution: {integrity: sha512-daSWlQ87ZhsjrbMLvpuuMAt3y4ba57AuvadcR7f3nl8eS3BjRc8L9VLxFLk92RL5xdXOg6IQ+qKjjqNEimGuAg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/tsconfig-utils@8.39.0':
-    resolution: {integrity: sha512-Fd3/QjmFV2sKmvv3Mrj8r6N8CryYiCS8Wdb/6/rgOXAWGcFuc+VkQuG28uk/4kVNVZBQuuDHEDUpo/pQ32zsIQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
 
   '@typescript-eslint/tsconfig-utils@8.43.0':
     resolution: {integrity: sha512-ALC2prjZcj2YqqL5X/bwWQmHA2em6/94GcbB/KKu5SX3EBDOsqztmmX1kMkvAJHzxk7TazKzJfFiEIagNV3qEA==}
@@ -2304,31 +2288,14 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/types@8.39.0':
-    resolution: {integrity: sha512-ArDdaOllnCj3yn/lzKn9s0pBQYmmyme/v1HbGIGB0GB/knFI3fWMHloC+oYTJW46tVbYnGKTMDK4ah1sC2v0Kg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/types@8.43.0':
     resolution: {integrity: sha512-vQ2FZaxJpydjSZJKiSW/LJsabFFvV7KgLC5DiLhkBcykhQj8iK9BOaDmQt74nnKdLvceM5xmhaTF+pLekrxEkw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/typescript-estree@8.39.0':
-    resolution: {integrity: sha512-ndWdiflRMvfIgQRpckQQLiB5qAKQ7w++V4LlCHwp62eym1HLB/kw7D9f2e8ytONls/jt89TEasgvb+VwnRprsw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
 
   '@typescript-eslint/typescript-estree@8.43.0':
     resolution: {integrity: sha512-7Vv6zlAhPb+cvEpP06WXXy/ZByph9iL6BQRBDj4kmBsW98AqEeQHlj/13X+sZOrKSo9/rNKH4Ul4f6EICREFdw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
-  '@typescript-eslint/utils@8.39.0':
-    resolution: {integrity: sha512-4GVSvNA0Vx1Ktwvf4sFE+exxJ3QGUorQG1/A5mRfRNZtkBT2xrA/BCO2H0eALx/PnvCS6/vmYwRdDA41EoffkQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
 
   '@typescript-eslint/utils@8.43.0':
@@ -2337,10 +2304,6 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
-
-  '@typescript-eslint/visitor-keys@8.39.0':
-    resolution: {integrity: sha512-ldgiJ+VAhQCfIjeOgu8Kj5nSxds0ktPOSO9p4+0VDH2R2pLvQraaM5Oen2d7NxzMCm+Sn/vJT+mv2H5u6b/3fA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/visitor-keys@8.43.0':
     resolution: {integrity: sha512-T+S1KqRD4sg/bHfLwrpF/K3gQLBM1n7Rp7OjjikjTEssI2YJzQpi5WXoynOaQ93ERIuq3O8RBTOUYDKszUCEHw==}
@@ -5799,18 +5762,18 @@ packages:
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.14(@tanstack/react-query@5.85.9(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)':
+  '@a-novel/connector-authentication@1.4.14(@tanstack/react-query@5.87.1(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)':
     dependencies:
-      '@tanstack/react-query': 5.85.9(react@19.1.1)
+      '@tanstack/react-query': 5.87.1(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
       zod: 4.1.5
 
-  '@a-novel/nodelib@0.7.14(@msw/playwright@0.4.2(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.85.9(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
+  '@a-novel/nodelib@0.7.14(@msw/playwright@0.4.2(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.87.1(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
     dependencies:
       '@msw/playwright': 0.4.2(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))
       '@playwright/test': 1.55.0
-      '@tanstack/react-query': 5.85.9(react@19.1.1)
+      '@tanstack/react-query': 5.87.1(react@19.1.1)
       '@testing-library/react': 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       get-port-please: 3.2.0
       lodash-es: 4.17.21
@@ -5819,15 +5782,15 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.1)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.11.1(@types/node@24.3.1)(typescript@5.9.2))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.11(4273318bdb6720595551314246f33224)':
+  '@a-novel/package-authenticator@2.4.11(6555de2ffc30ca93217f653d79f43a99)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.14(@tanstack/react-query@5.85.9(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
-      '@a-novel/package-ui': 0.8.15(eb171aba4be8152f89fd8560b383e9b5)
+      '@a-novel/connector-authentication': 1.4.14(@tanstack/react-query@5.87.1(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.5)
+      '@a-novel/package-ui': 0.8.15(c419287bba701b687e0af25ad08a9dfb)
       '@emotion/react': 11.14.0(@types/react@19.1.12)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1)
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-form': 1.19.5(@tanstack/react-start@1.131.36(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tanstack/react-query': 5.85.9(react@19.1.1)
+      '@tanstack/react-query': 5.87.1(react@19.1.1)
       '@tolgee/format-icu': 6.2.7
       '@tolgee/react': 6.2.7(react@19.1.1)
       react: 19.1.1
@@ -5836,16 +5799,16 @@ snapshots:
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.15(eb171aba4be8152f89fd8560b383e9b5)':
+  '@a-novel/package-ui@0.8.15(c419287bba701b687e0af25ad08a9dfb)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.12)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1)
       '@fontsource/arimo': 5.2.6
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-form': 1.19.5(@tanstack/react-start@1.131.36(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tanstack/react-query': 5.85.9(react@19.1.1)
+      '@tanstack/react-query': 5.87.1(react@19.1.1)
       '@tanstack/react-router': 1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tanstack/react-router-with-query': 1.130.17(@tanstack/react-query@5.85.9(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@tanstack/react-router-with-query': 1.130.17(@tanstack/react-query@5.87.1(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tolgee/format-icu': 6.2.7
       '@tolgee/react': 6.2.7(react@19.1.1)
       react: 19.1.1
@@ -7796,9 +7759,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/eslint-plugin-query@5.83.1(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
+  '@tanstack/eslint-plugin-query@5.86.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/utils': 8.39.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
       eslint: 9.35.0(jiti@2.5.1)
     transitivePeerDependencies:
       - supports-color
@@ -7810,7 +7773,7 @@ snapshots:
 
   '@tanstack/history@1.131.2': {}
 
-  '@tanstack/query-core@5.85.9': {}
+  '@tanstack/query-core@5.87.1': {}
 
   '@tanstack/react-form@1.19.5(@tanstack/react-start@1.131.36(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -7824,14 +7787,14 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@tanstack/react-query@5.85.9(react@19.1.1)':
+  '@tanstack/react-query@5.87.1(react@19.1.1)':
     dependencies:
-      '@tanstack/query-core': 5.85.9
+      '@tanstack/query-core': 5.87.1
       react: 19.1.1
 
-  '@tanstack/react-router-with-query@1.130.17(@tanstack/react-query@5.85.9(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@tanstack/react-router-with-query@1.130.17(@tanstack/react-query@5.87.1(react@19.1.1))(@tanstack/react-router@1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.36)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@tanstack/react-query': 5.85.9(react@19.1.1)
+      '@tanstack/react-query': 5.87.1(react@19.1.1)
       '@tanstack/react-router': 1.131.36(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/router-core': 1.131.36
       react: 19.1.1
@@ -8329,15 +8292,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/project-service@8.39.0(typescript@5.9.2)':
-    dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.9.2)
-      '@typescript-eslint/types': 8.39.0
-      debug: 4.4.1
-      typescript: 5.9.2
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/project-service@8.43.0(typescript@5.9.2)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.43.0(typescript@5.9.2)
@@ -8347,19 +8301,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/scope-manager@8.39.0':
-    dependencies:
-      '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/visitor-keys': 8.39.0
-
   '@typescript-eslint/scope-manager@8.43.0':
     dependencies:
       '@typescript-eslint/types': 8.43.0
       '@typescript-eslint/visitor-keys': 8.43.0
-
-  '@typescript-eslint/tsconfig-utils@8.39.0(typescript@5.9.2)':
-    dependencies:
-      typescript: 5.9.2
 
   '@typescript-eslint/tsconfig-utils@8.43.0(typescript@5.9.2)':
     dependencies:
@@ -8377,25 +8322,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/types@8.39.0': {}
-
   '@typescript-eslint/types@8.43.0': {}
-
-  '@typescript-eslint/typescript-estree@8.39.0(typescript@5.9.2)':
-    dependencies:
-      '@typescript-eslint/project-service': 8.39.0(typescript@5.9.2)
-      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.9.2)
-      '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/visitor-keys': 8.39.0
-      debug: 4.4.1
-      fast-glob: 3.3.3
-      is-glob: 4.0.3
-      minimatch: 9.0.5
-      semver: 7.7.2
-      ts-api-utils: 2.1.0(typescript@5.9.2)
-      typescript: 5.9.2
-    transitivePeerDependencies:
-      - supports-color
 
   '@typescript-eslint/typescript-estree@8.43.0(typescript@5.9.2)':
     dependencies:
@@ -8413,17 +8340,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.39.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@9.35.0(jiti@2.5.1))
-      '@typescript-eslint/scope-manager': 8.39.0
-      '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
-      eslint: 9.35.0(jiti@2.5.1)
-      typescript: 5.9.2
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.0(eslint@9.35.0(jiti@2.5.1))
@@ -8434,11 +8350,6 @@ snapshots:
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/visitor-keys@8.39.0':
-    dependencies:
-      '@typescript-eslint/types': 8.39.0
-      eslint-visitor-keys: 4.2.1
 
   '@typescript-eslint/visitor-keys@8.43.0':
     dependencies:
