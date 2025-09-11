@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.7)
+        version: 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.12(bac9e4ef2ddf7b132573cf1779ecc24a)
+        version: 2.4.12(458dbf37eb9bfcc4b2b571baa12ff05a)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.15(2c5785d240be8256575ace2075e6e10a)
+        version: 0.8.15(98e2e4318f4e918482f0aaefef36d497)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.12)(react@19.1.1)
@@ -55,7 +55,7 @@ importers:
         version: 0.7.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/zod-adapter':
         specifier: ^1.131.2
-        version: 1.131.40(@tanstack/react-router@1.131.40(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(zod@4.1.7)
+        version: 1.131.40(@tanstack/react-router@1.131.40(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(zod@4.1.8)
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.2.7
@@ -70,7 +70,7 @@ importers:
         version: 19.1.1(react@19.1.1)
       zod:
         specifier: ^4.0.17
-        version: 4.1.7
+        version: 4.1.8
     devDependencies:
       '@a-novel/nodelib':
         specifier: ^0.7.6
@@ -2615,8 +2615,8 @@ packages:
   bare-events@2.6.1:
     resolution: {integrity: sha512-AuTJkq9XmE6Vk0FJVNq5QxETrSA/vKHarWVBG5l/JbdCL1prJemiyJqUS0jrlXO0MftuPq4m3YVYhoNc5+aE/g==}
 
-  bare-fs@4.4.0:
-    resolution: {integrity: sha512-DfdhZD+8fPM80vB28NMIlQIW4FBdkRMNLIa8o5HPSfGlxXek1C34qd98YItQzSl86Kt2IGom9+izFCrNuR7BXw==}
+  bare-fs@4.4.1:
+    resolution: {integrity: sha512-B7VdbD19fypJh6jCXgYge06pxj3UvMv+x8IOZjTSqpiy/ib3UHhwe8Zm7wqxHe7QI3CrySjui4YIRBvocuBthg==}
     engines: {bare: '>=1.16.0'}
     peerDependencies:
       bare-buffer: '*'
@@ -5767,17 +5767,17 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.7:
-    resolution: {integrity: sha512-6qi6UYyzAl7W9uV29KvcSFXqK4QCYNYUz2YASPNBWpJE1RY6R1nArmmFPgGY/CBYWzpeMw3EOER+DR9a05O4IA==}
+  zod@4.1.8:
+    resolution: {integrity: sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ==}
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.7)':
+  '@a-novel/connector-authentication@1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)':
     dependencies:
       '@tanstack/react-query': 5.87.4(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      zod: 4.1.7
+      zod: 4.1.8
 
   '@a-novel/nodelib@0.7.14(@msw/playwright@0.4.2(msw@2.11.2(@types/node@24.3.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.87.4(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.2(@types/node@24.3.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
     dependencies:
@@ -5792,10 +5792,10 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.1)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(msw@2.11.2(@types/node@24.3.1)(typescript@5.9.2))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.12(bac9e4ef2ddf7b132573cf1779ecc24a)':
+  '@a-novel/package-authenticator@2.4.12(458dbf37eb9bfcc4b2b571baa12ff05a)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.7)
-      '@a-novel/package-ui': 0.8.15(2c5785d240be8256575ace2075e6e10a)
+      '@a-novel/connector-authentication': 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
+      '@a-novel/package-ui': 0.8.15(98e2e4318f4e918482f0aaefef36d497)
       '@emotion/react': 11.14.0(@types/react@19.1.12)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1)
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -5805,11 +5805,11 @@ snapshots:
       '@tolgee/react': 6.2.7(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      zod: 4.1.7
+      zod: 4.1.8
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.15(2c5785d240be8256575ace2075e6e10a)':
+  '@a-novel/package-ui@0.8.15(98e2e4318f4e918482f0aaefef36d497)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.12)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1)
@@ -5823,7 +5823,7 @@ snapshots:
       '@tolgee/react': 6.2.7(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      zod: 4.1.7
+      zod: 4.1.8
 
   '@adobe/css-tools@4.4.4': {}
 
@@ -8120,10 +8120,10 @@ snapshots:
 
   '@tanstack/virtual-file-routes@1.131.2': {}
 
-  '@tanstack/zod-adapter@1.131.40(@tanstack/react-router@1.131.40(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(zod@4.1.7)':
+  '@tanstack/zod-adapter@1.131.40(@tanstack/react-router@1.131.40(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(zod@4.1.8)':
     dependencies:
       '@tanstack/react-router': 1.131.40(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      zod: 4.1.7
+      zod: 4.1.8
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -8825,7 +8825,7 @@ snapshots:
   bare-events@2.6.1:
     optional: true
 
-  bare-fs@4.4.0:
+  bare-fs@4.4.1:
     dependencies:
       bare-events: 2.6.1
       bare-path: 3.0.0
@@ -11724,7 +11724,7 @@ snapshots:
       pump: 3.0.3
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 4.4.0
+      bare-fs: 4.4.1
       bare-path: 3.0.0
     transitivePeerDependencies:
       - bare-buffer
@@ -12436,4 +12436,4 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.1.7: {}
+  zod@4.1.8: {}
