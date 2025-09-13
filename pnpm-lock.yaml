@@ -13,10 +13,10 @@ importers:
         version: 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.12(8a90874ef701f201280ede3cb21e8876)
+        version: 2.4.12(3afabb4c055286529c783053fd760575)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.15(f7b562b33f253aa85688ad72cfbe939a)
+        version: 0.8.15(2971138c2e843f93af2aab27c7812e9f)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
@@ -37,7 +37,7 @@ importers:
         version: 7.3.2(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-form':
         specifier: ^1.19.0
-        version: 1.19.5(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 1.20.0(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-query':
         specifier: ^5.84.2
         version: 5.87.4(react@19.1.1)
@@ -1953,8 +1953,8 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
-  '@tanstack/form-core@1.19.5':
-    resolution: {integrity: sha512-MhHk/f3fOVhm2kHAEOg+yJklSY84C3qSwwYwAUzAQw6i5ZQquBdB2aYzg89FFXNkhmLcEl9hJCqRZVw4NHzDMQ==}
+  '@tanstack/form-core@1.20.0':
+    resolution: {integrity: sha512-FGlKvcsusOf4756vtN1EoDI4h50r4/11eTcpF3NcnE04N/bSn2gP7cdhG6tYA0lJWzM9H1pNIzZ86uZ4MHB9eA==}
 
   '@tanstack/history@1.131.2':
     resolution: {integrity: sha512-cs1WKawpXIe+vSTeiZUuSBy8JFjEuDgdMKZFRLKwQysKo8y2q6Q1HvS74Yw+m5IhOW1nTZooa6rlgdfXcgFAaw==}
@@ -1963,8 +1963,8 @@ packages:
   '@tanstack/query-core@5.87.4':
     resolution: {integrity: sha512-uNsg6zMxraEPDVO2Bn+F3/ctHi+Zsk+MMpcN8h6P7ozqD088F6mFY5TfGM7zuyIrL7HKpDyu6QHfLWiDxh3cuw==}
 
-  '@tanstack/react-form@1.19.5':
-    resolution: {integrity: sha512-DHSdom28KcIT+tYmqFnokAMBnbdDJL9BEufyjqalLGDkc256/7mvU6UyM9flCyaeHC+kqGY8ZB+DUv3ivKawdQ==}
+  '@tanstack/react-form@1.20.0':
+    resolution: {integrity: sha512-1UfWqEYRnHr4cooGbHiTQqoqus8soNUH+RLD6UyhIQEvomOSQMX0JgX+zGSl08tIugrnWcAnh50n5T9IIs/Evw==}
     peerDependencies:
       '@tanstack/react-start': ^1.130.10
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -5808,14 +5808,14 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.3)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.2(@types/node@24.3.3)(typescript@5.9.2))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.12(8a90874ef701f201280ede3cb21e8876)':
+  '@a-novel/package-authenticator@2.4.12(3afabb4c055286529c783053fd760575)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.14(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
-      '@a-novel/package-ui': 0.8.15(f7b562b33f253aa85688ad72cfbe939a)
+      '@a-novel/package-ui': 0.8.15(2971138c2e843f93af2aab27c7812e9f)
       '@emotion/react': 11.14.0(@types/react@19.1.13)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tanstack/react-form': 1.19.5(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@tanstack/react-form': 1.20.0(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-query': 5.87.4(react@19.1.1)
       '@tolgee/format-icu': 6.2.7
       '@tolgee/react': 6.2.7(react@19.1.1)
@@ -5825,13 +5825,13 @@ snapshots:
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.15(f7b562b33f253aa85688ad72cfbe939a)':
+  '@a-novel/package-ui@0.8.15(2971138c2e843f93af2aab27c7812e9f)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.13)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
       '@fontsource/arimo': 5.2.6
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tanstack/react-form': 1.19.5(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@tanstack/react-form': 1.20.0(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-query': 5.87.4(react@19.1.1)
       '@tanstack/react-router': 1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-router-with-query': 1.130.17(@tanstack/react-query@5.87.4(react@19.1.1))(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@tanstack/router-core@1.131.41)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -7811,7 +7811,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tanstack/form-core@1.19.5':
+  '@tanstack/form-core@1.20.0':
     dependencies:
       '@tanstack/store': 0.7.5
 
@@ -7819,9 +7819,9 @@ snapshots:
 
   '@tanstack/query-core@5.87.4': {}
 
-  '@tanstack/react-form@1.19.5(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@tanstack/react-form@1.20.0(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@tanstack/form-core': 1.19.5
+      '@tanstack/form-core': 1.20.0
       '@tanstack/react-store': 0.7.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       decode-formdata: 0.9.0
       devalue: 5.3.2
