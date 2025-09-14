@@ -13,10 +13,10 @@ importers:
         version: 1.4.15(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.13(3c2297262e7876bfc8b704a43b968952)
+        version: 2.4.13(9daae18f783b7feedb8b2926440191fd)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.16(2971138c2e843f93af2aab27c7812e9f)
+        version: 0.8.16(e0b83548fba21811f4bb1232708ce8d7)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
@@ -25,10 +25,10 @@ importers:
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
       '@fontsource-variable/arimo':
         specifier: ^5.2.6
-        version: 5.2.6
+        version: 5.2.7
       '@fontsource/arimo':
         specifier: ^5.2.6
-        version: 5.2.6
+        version: 5.2.7
       '@fontsource/bungee':
         specifier: ^5.2.6
         version: 5.2.6
@@ -1194,11 +1194,11 @@ packages:
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==}
 
-  '@fontsource-variable/arimo@5.2.6':
-    resolution: {integrity: sha512-gRx40BoeuYva/kbyv5nSt2/riytVsi213G97icnG6lOAq7Mvi9pz5oeBxGtPkjjguPPd7R1GjviOCZIpBp3tnw==}
+  '@fontsource-variable/arimo@5.2.7':
+    resolution: {integrity: sha512-KN/UHPLkoh0ry9HRldYCXgC1IWHB9apkMC8NI5HBFX6NU6farohSN0nSOw3KBkSL+/RwRF+0ZKi8Ctgx8F1suQ==}
 
-  '@fontsource/arimo@5.2.6':
-    resolution: {integrity: sha512-D2fJ0DHYjJz0mSiqtd4HUykEaRZ1o0hMxyFg8/QAnDfNiZapPDXKaflRX4ZDuyxwkI/oizJ9yZkwdBL75MFnoQ==}
+  '@fontsource/arimo@5.2.7':
+    resolution: {integrity: sha512-APdx7DyBF3VRxOpfiWxN/IlPepMxgbEe4RwZ4QV1zGUt57nbnedF/poRfMI2p5FTldRV23mlo4XUQ9zSqJ+XLg==}
 
   '@fontsource/bungee@5.2.6':
     resolution: {integrity: sha512-bA0VFjqjCs0iJ0F5Shvo3AemOp/JoYDefOqo/OPPoDjx18oUfUMI3w5kRFsCmpOX1izpCeHnGnK0LcflO1ztqQ==}
@@ -5817,10 +5817,10 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.3.3)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.2(@types/node@24.3.3)(typescript@5.9.2))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.13(3c2297262e7876bfc8b704a43b968952)':
+  '@a-novel/package-authenticator@2.4.13(9daae18f783b7feedb8b2926440191fd)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.15(@tanstack/react-query@5.87.4(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.8)
-      '@a-novel/package-ui': 0.8.16(2971138c2e843f93af2aab27c7812e9f)
+      '@a-novel/package-ui': 0.8.16(e0b83548fba21811f4bb1232708ce8d7)
       '@emotion/react': 11.14.0(@types/react@19.1.13)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -5834,11 +5834,11 @@ snapshots:
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.16(2971138c2e843f93af2aab27c7812e9f)':
+  '@a-novel/package-ui@0.8.16(e0b83548fba21811f4bb1232708ce8d7)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.13)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
-      '@fontsource/arimo': 5.2.6
+      '@fontsource/arimo': 5.2.7
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-form': 1.20.0(@tanstack/react-start@1.131.43(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.41(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.3)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@tanstack/react-query': 5.87.4(react@19.1.1)
@@ -7064,9 +7064,9 @@ snapshots:
   '@fastify/busboy@3.2.0':
     optional: true
 
-  '@fontsource-variable/arimo@5.2.6': {}
+  '@fontsource-variable/arimo@5.2.7': {}
 
-  '@fontsource/arimo@5.2.6': {}
+  '@fontsource/arimo@5.2.7': {}
 
   '@fontsource/bungee@5.2.6': {}
 
