@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@a-novel/nodelib':
         specifier: ^0.7.6
-        version: 0.7.15(@msw/playwright@0.4.2(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.89.0(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
+        version: 0.7.16(@msw/playwright@0.4.2(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.89.0(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
       '@chromatic-com/storybook':
         specifier: ^4.1.0
         version: 4.1.1(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))(prettier@3.6.2)(vite@7.1.5(@types/node@24.5.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))
@@ -207,8 +207,8 @@ packages:
       react-dom: ^19.1.0
       zod: ^4.0.0
 
-  '@a-novel/nodelib@0.7.15':
-    resolution: {integrity: sha512-bOxY8q6sD4HsLB9j0g8nNZplGeGJ/2xNnJ+Bw+LR6h1kRUSvgRecn/SRguSLnyM9lKAA5dUWpYatdkpEVPwd9g==, tarball: https://npm.pkg.github.com/download/@a-novel/nodelib/0.7.15/bd5dc933416f1ab65be0b48a04074b42b98b0407}
+  '@a-novel/nodelib@0.7.16':
+    resolution: {integrity: sha512-ftgCdvf6XRu04xqKrskp0j3FCNU2wNYqemD+Yvki/EfoZQEyMqx4ATDRWGBHIqsnPP2MvCcajFKLGZZqUYCDfA==, tarball: https://npm.pkg.github.com/download/@a-novel/nodelib/0.7.16/4a479341e41ac88bee9293944856646a5817faac}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@msw/playwright': ^0.4.2
@@ -2315,11 +2315,14 @@ packages:
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
-  '@types/node@20.19.16':
-    resolution: {integrity: sha512-VS6TTONVdgwJwtJr7U+ghEjpfmQdqehLLpg/iMYGOd1+ilaFjdBJwFuPggJ4EAYPDCzWfDUHoIxyVnu+tOWVuQ==}
+  '@types/node@20.19.17':
+    resolution: {integrity: sha512-gfehUI8N1z92kygssiuWvLiwcbOB3IRktR6hTDgJlXMYh5OvkPSRmgfoBUmfZt+vhwJtX7v1Yw4KvvAf7c5QKQ==}
 
   '@types/node@24.5.1':
     resolution: {integrity: sha512-/SQdmUP2xa+1rdx7VwB9yPq8PaKej8TD5cQ+XfKDPWWC+VDJU4rvVVagXqKUzhKjtFoNA8rXDJAkCxQPAe00+Q==}
+
+  '@types/node@24.5.2':
+    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -5952,7 +5955,7 @@ snapshots:
       react-dom: 19.1.1(react@19.1.1)
       zod: 4.1.9
 
-  '@a-novel/nodelib@0.7.15(@msw/playwright@0.4.2(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.89.0(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
+  '@a-novel/nodelib@0.7.16(@msw/playwright@0.4.2(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2)))(@playwright/test@1.55.0)(@tanstack/react-query@5.89.0(react@19.1.1))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))(playwright@1.55.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
     dependencies:
       '@msw/playwright': 0.4.2(msw@2.11.2(@types/node@24.5.1)(typescript@5.9.2))
       '@playwright/test': 1.55.0
@@ -8438,7 +8441,7 @@ snapshots:
 
   '@types/mdx@2.0.13': {}
 
-  '@types/node@20.19.16':
+  '@types/node@20.19.17':
     dependencies:
       undici-types: 6.21.0
     optional: true
@@ -8446,6 +8449,11 @@ snapshots:
   '@types/node@24.5.1':
     dependencies:
       undici-types: 7.12.0
+
+  '@types/node@24.5.2':
+    dependencies:
+      undici-types: 7.12.0
+    optional: true
 
   '@types/parse-json@4.0.2': {}
 
@@ -8477,12 +8485,12 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 24.5.1
+      '@types/node': 24.5.2
     optional: true
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.5.1
+      '@types/node': 24.5.2
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.44.0(@typescript-eslint/parser@8.44.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
@@ -8805,12 +8813,12 @@ snapshots:
 
   '@wdio/repl@9.16.2':
     dependencies:
-      '@types/node': 20.19.16
+      '@types/node': 20.19.17
     optional: true
 
   '@wdio/types@9.16.2':
     dependencies:
-      '@types/node': 20.19.16
+      '@types/node': 20.19.17
     optional: true
 
   '@wdio/utils@9.18.0':
@@ -12510,7 +12518,7 @@ snapshots:
 
   webdriver@9.18.0:
     dependencies:
-      '@types/node': 20.19.16
+      '@types/node': 20.19.17
       '@types/ws': 8.18.1
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
@@ -12531,7 +12539,7 @@ snapshots:
 
   webdriverio@9.18.1:
     dependencies:
-      '@types/node': 20.19.16
+      '@types/node': 20.19.17
       '@types/sinonjs__fake-timers': 8.1.5
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
