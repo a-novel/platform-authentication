@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.19(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
+        version: 1.4.20(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.18(d58ebbe9f1b6793338ce1f49155f1e89)
+        version: 2.4.18(39f4660365710ba6167eaddf474d48f7)
       '@a-novel/package-ui':
         specifier: ^0.8.7
         version: 0.8.20(aad39552498abdc2146fd4af37831e17)
@@ -198,8 +198,8 @@ importers:
 
 packages:
 
-  '@a-novel/connector-authentication@1.4.19':
-    resolution: {integrity: sha512-7hWfZZO9fkmNj1hkdRaU3135hObAsVikEM3UuX3bNu5rwJ3N3W3Dq1071DeV6u/Z1J8yQax3uCyCwqqH19/ykw==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.19/71e4f1699ed7b6cd951e02201044694461f45655}
+  '@a-novel/connector-authentication@1.4.20':
+    resolution: {integrity: sha512-cCaGuwibEA7LP/8YnW1mJcYyReDaBclhTe1EAfHg2LYZggcNuLc6lLvvJ6wLoUnBjkTVKydfwQaE5xSdOjWXfg==, tarball: https://npm.pkg.github.com/download/@a-novel/connector-authentication/1.4.20/b096e43fc9bc8e58f4d03e01e4047ad9dc89bd6e}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@tanstack/react-query': ^5.0.0
@@ -2482,8 +2482,8 @@ packages:
     resolution: {integrity: sha512-ueFCcIPaMgtuYDS9u0qlUoEvj6GiSsKrwnOLPp9SshqjtcRaR1IEHRjoReq3sXNydsF5i0ZnmuYgXq9dV53t0g==}
     engines: {node: '>=18.0.0'}
 
-  '@zip.js/zip.js@2.8.3':
-    resolution: {integrity: sha512-JptkKCqjj6acTiJhiwLqobhBe2pWHsE+Y/SM1nOAV0ROH0qDus7mCp8mTQAiP9X/RVABBCljPnI2pYsRoctB9A==}
+  '@zip.js/zip.js@2.8.4':
+    resolution: {integrity: sha512-DsayUNi6AAXKNahxu2mLSr8iecZYoBgsW0TuPcxwUv0jh3eTf1XI0OI1V1loCyxCyuwnLtwj92iCJ7oiQSt8ow==}
     engines: {bun: '>=0.7.0', deno: '>=1.0.0', node: '>=18.0.0'}
 
   abbrev@3.0.1:
@@ -5833,7 +5833,7 @@ packages:
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.19(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)':
+  '@a-novel/connector-authentication@1.4.20(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)':
     dependencies:
       '@tanstack/react-query': 5.90.2(react@19.1.1)
       react: 19.1.1
@@ -5853,9 +5853,9 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.6.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.3(@types/node@24.6.0)(typescript@5.9.3))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.18(d58ebbe9f1b6793338ce1f49155f1e89)':
+  '@a-novel/package-authenticator@2.4.18(39f4660365710ba6167eaddf474d48f7)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.19(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
+      '@a-novel/connector-authentication': 1.4.20(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
       '@a-novel/package-ui': 0.8.20(aad39552498abdc2146fd4af37831e17)
       '@emotion/react': 11.14.0(@types/react@19.1.16)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.16)(react@19.1.1))(@types/react@19.1.16)(react@19.1.1)
@@ -8703,7 +8703,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@zip.js/zip.js@2.8.3':
+  '@zip.js/zip.js@2.8.4':
     optional: true
 
   abbrev@3.0.1: {}
@@ -9448,7 +9448,7 @@ snapshots:
   edgedriver@6.1.2:
     dependencies:
       '@wdio/logger': 9.18.0
-      '@zip.js/zip.js': 2.8.3
+      '@zip.js/zip.js': 2.8.4
       decamelize: 6.0.1
       edge-paths: 3.0.5
       fast-xml-parser: 5.2.5
@@ -9933,7 +9933,7 @@ snapshots:
   geckodriver@5.0.0:
     dependencies:
       '@wdio/logger': 9.18.0
-      '@zip.js/zip.js': 2.8.3
+      '@zip.js/zip.js': 2.8.4
       decamelize: 6.0.1
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
