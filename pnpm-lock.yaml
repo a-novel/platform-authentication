@@ -13,10 +13,10 @@ importers:
         version: 1.4.20(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.18(39f4660365710ba6167eaddf474d48f7)
+        version: 2.4.18(68783dd0007d9232fb45046882aa27b1)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.20(aad39552498abdc2146fd4af37831e17)
+        version: 0.8.21(aad39552498abdc2146fd4af37831e17)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.16)(react@19.1.1)
@@ -236,8 +236,8 @@ packages:
       react-dom: ^19.1.0
       zod: ^4.0.8
 
-  '@a-novel/package-ui@0.8.20':
-    resolution: {integrity: sha512-UCxqRMGvJx0k5IOmCoqXIVJrK30zGXfjPAYXxXqSK9P4IYW9AZiUnD7m3HAquSfia1hURGmw2i7bwPtaiOSCag==, tarball: https://npm.pkg.github.com/download/@a-novel/package-ui/0.8.20/effb1016e070eed92b1ad55491c616a386bdf7fd}
+  '@a-novel/package-ui@0.8.21':
+    resolution: {integrity: sha512-suW+SjttQ6bPiwtJ78ZOBOeY4uNvdYNsoQc4U5BRrD7uqVs0EsvKViRQWHa56ttkvu+OMig932EZnMkhT2Ms0A==, tarball: https://npm.pkg.github.com/download/@a-novel/package-ui/0.8.21/f8a939405ffa5af786ccaec33ab56f326602da42}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@emotion/react': ^11.14.0
@@ -5853,10 +5853,10 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.6.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.3(@types/node@24.6.0)(typescript@5.9.3))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.18(39f4660365710ba6167eaddf474d48f7)':
+  '@a-novel/package-authenticator@2.4.18(68783dd0007d9232fb45046882aa27b1)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.20(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
-      '@a-novel/package-ui': 0.8.20(aad39552498abdc2146fd4af37831e17)
+      '@a-novel/package-ui': 0.8.21(aad39552498abdc2146fd4af37831e17)
       '@emotion/react': 11.14.0(@types/react@19.1.16)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.16)(react@19.1.1))(@types/react@19.1.16)(react@19.1.1)
       '@mui/material': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.16)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.16)(react@19.1.1))(@types/react@19.1.16)(react@19.1.1))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -5870,7 +5870,7 @@ snapshots:
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.20(aad39552498abdc2146fd4af37831e17)':
+  '@a-novel/package-ui@0.8.21(aad39552498abdc2146fd4af37831e17)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.16)(react@19.1.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.16)(react@19.1.1))(@types/react@19.1.16)(react@19.1.1)
