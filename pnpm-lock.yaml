@@ -13,7 +13,7 @@ importers:
         version: 1.4.19(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.17(d58ebbe9f1b6793338ce1f49155f1e89)
+        version: 2.4.18(d58ebbe9f1b6793338ce1f49155f1e89)
       '@a-novel/package-ui':
         specifier: ^0.8.7
         version: 0.8.20(aad39552498abdc2146fd4af37831e17)
@@ -220,8 +220,8 @@ packages:
       v8-to-istanbul: ^9.3.0
       vitest: ^3.2.4
 
-  '@a-novel/package-authenticator@2.4.17':
-    resolution: {integrity: sha512-55weYIoG4OIwSDHGlgCfZi9ddSQ7g3WbEG/9PYTnea/PwMhndhozwp5zY9taxjfyvCNAYdp25d22WNbVYBFS6g==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.17/2d4f5f59f2307339a1761b041737bfba09acb816}
+  '@a-novel/package-authenticator@2.4.18':
+    resolution: {integrity: sha512-2Wc0QZ5qNMQc60QAWAoojdjbirhVjmoPgVLs0YfSSpL8n9Rg4NsaEW3BnWdPcKk8/jjH27TIeLhoRHDiT0MU2A==, tarball: https://npm.pkg.github.com/download/@a-novel/package-authenticator/2.4.18/b62f9dccd52933f6c3b0b1f903538353f9fce888}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@a-novel/connector-authentication': ^1.4.0
@@ -2219,11 +2219,14 @@ packages:
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
-  '@types/node@20.19.18':
-    resolution: {integrity: sha512-KeYVbfnbsBCyKG8e3gmUqAfyZNcoj/qpEbHRkQkfZdKOBrU7QQ+BsTdfqLSWX9/m1ytYreMhpKvp+EZi3UFYAg==}
+  '@types/node@20.19.19':
+    resolution: {integrity: sha512-pb1Uqj5WJP7wrcbLU7Ru4QtA0+3kAXrkutGiD26wUKzSMgNNaPARTUDQmElUXp64kh3cWdou3Q0C7qwwxqSFmg==}
 
   '@types/node@24.6.0':
     resolution: {integrity: sha512-F1CBxgqwOMc4GKJ7eY22hWhBVQuMYTtqI8L0FcszYcpYX0fzfDGpez22Xau8Mgm7O9fI+zA/TYIdq3tGWfweBA==}
+
+  '@types/node@24.6.1':
+    resolution: {integrity: sha512-ljvjjs3DNXummeIaooB4cLBKg2U6SPI6Hjra/9rRIy7CpM0HpLtG9HptkMKAb4HYWy5S7HUvJEuWgr/y0U8SHw==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -5850,7 +5853,7 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.6.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.3(@types/node@24.6.0)(typescript@5.9.3))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.17(d58ebbe9f1b6793338ce1f49155f1e89)':
+  '@a-novel/package-authenticator@2.4.18(d58ebbe9f1b6793338ce1f49155f1e89)':
     dependencies:
       '@a-novel/connector-authentication': 1.4.19(@tanstack/react-query@5.90.2(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.1.11)
       '@a-novel/package-ui': 0.8.20(aad39552498abdc2146fd4af37831e17)
@@ -8265,7 +8268,7 @@ snapshots:
 
   '@types/mdx@2.0.13': {}
 
-  '@types/node@20.19.18':
+  '@types/node@20.19.19':
     dependencies:
       undici-types: 6.21.0
     optional: true
@@ -8273,6 +8276,11 @@ snapshots:
   '@types/node@24.6.0':
     dependencies:
       undici-types: 7.13.0
+
+  '@types/node@24.6.1':
+    dependencies:
+      undici-types: 7.13.0
+    optional: true
 
   '@types/parse-json@4.0.2': {}
 
@@ -8304,12 +8312,12 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 24.6.0
+      '@types/node': 24.6.1
     optional: true
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.6.0
+      '@types/node': 24.6.1
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.45.0(@typescript-eslint/parser@8.45.0(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.3)':
@@ -8632,12 +8640,12 @@ snapshots:
 
   '@wdio/repl@9.16.2':
     dependencies:
-      '@types/node': 20.19.18
+      '@types/node': 20.19.19
     optional: true
 
   '@wdio/types@9.16.2':
     dependencies:
-      '@types/node': 20.19.18
+      '@types/node': 20.19.19
     optional: true
 
   '@wdio/utils@9.18.0':
@@ -12308,7 +12316,7 @@ snapshots:
 
   webdriver@9.18.0:
     dependencies:
-      '@types/node': 20.19.18
+      '@types/node': 20.19.19
       '@types/ws': 8.18.1
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
@@ -12329,7 +12337,7 @@ snapshots:
 
   webdriverio@9.18.1:
     dependencies:
-      '@types/node': 20.19.18
+      '@types/node': 20.19.19
       '@types/sinonjs__fake-timers': 8.1.5
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
