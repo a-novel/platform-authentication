@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.11)
+        version: 1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.19(b17328a4e778942c922f0ee9a252380c)
+        version: 2.4.19(49c81a604f31faff3274f8b8d8651e99)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.22(86828fece42941b304338c4fbfbf5e3f)
+        version: 0.8.22(d956ab3047289001371a637c65643b6d)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.2.0)(react@19.2.0)
@@ -55,7 +55,7 @@ importers:
         version: 0.7.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/zod-adapter':
         specifier: ^1.131.2
-        version: 1.131.50(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@4.1.11)
+        version: 1.131.50(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@4.1.12)
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.2.7
@@ -70,7 +70,7 @@ importers:
         version: 19.2.0(react@19.2.0)
       zod:
         specifier: ^4.0.17
-        version: 4.1.11
+        version: 4.1.12
     devDependencies:
       '@a-novel/nodelib':
         specifier: ^0.7.6
@@ -5831,17 +5831,17 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.11:
-    resolution: {integrity: sha512-WPsqwxITS2tzx1bzhIKsEs19ABD5vmCVa4xBo2tq/SrV4RNZtfws1EnCWQXM6yh8bD08a1idvkB5MZSBiZsjwg==}
+  zod@4.1.12:
+    resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.11)':
+  '@a-novel/connector-authentication@1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)':
     dependencies:
       '@tanstack/react-query': 5.90.2(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      zod: 4.1.11
+      zod: 4.1.12
 
   '@a-novel/nodelib@0.7.20(@msw/playwright@0.4.2(msw@2.11.3(@types/node@24.7.0)(typescript@5.9.3)))(@playwright/test@1.56.0)(@tanstack/react-query@5.90.2(react@19.2.0))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(msw@2.11.3(@types/node@24.7.0)(typescript@5.9.3))(playwright@1.56.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
     dependencies:
@@ -5856,10 +5856,10 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.7.0)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.3(@types/node@24.7.0)(typescript@5.9.3))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.19(b17328a4e778942c922f0ee9a252380c)':
+  '@a-novel/package-authenticator@2.4.19(49c81a604f31faff3274f8b8d8651e99)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.11)
-      '@a-novel/package-ui': 0.8.22(86828fece42941b304338c4fbfbf5e3f)
+      '@a-novel/connector-authentication': 1.4.21(@tanstack/react-query@5.90.2(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
+      '@a-novel/package-ui': 0.8.22(d956ab3047289001371a637c65643b6d)
       '@emotion/react': 11.14.0(@types/react@19.2.0)(react@19.2.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react@19.2.0)
       '@mui/material': 7.3.4(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -5869,11 +5869,11 @@ snapshots:
       '@tolgee/react': 6.2.7(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      zod: 4.1.11
+      zod: 4.1.12
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.22(86828fece42941b304338c4fbfbf5e3f)':
+  '@a-novel/package-ui@0.8.22(d956ab3047289001371a637c65643b6d)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.0)(react@19.2.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.0)(react@19.2.0))(@types/react@19.2.0)(react@19.2.0)
@@ -5887,7 +5887,7 @@ snapshots:
       '@tolgee/react': 6.2.7(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      zod: 4.1.11
+      zod: 4.1.12
 
   '@adobe/css-tools@4.4.4': {}
 
@@ -8159,10 +8159,10 @@ snapshots:
 
   '@tanstack/virtual-file-routes@1.131.2': {}
 
-  '@tanstack/zod-adapter@1.131.50(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@4.1.11)':
+  '@tanstack/zod-adapter@1.131.50(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@4.1.12)':
     dependencies:
       '@tanstack/react-router': 1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      zod: 4.1.11
+      zod: 4.1.12
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -9669,8 +9669,8 @@ snapshots:
       '@babel/core': 7.28.4
       '@babel/parser': 7.28.4
       eslint: 9.37.0(jiti@2.5.1)
-      zod: 4.1.11
-      zod-validation-error: 4.0.2(zod@4.1.11)
+      zod: 4.1.12
+      zod-validation-error: 4.0.2(zod@4.1.12)
     transitivePeerDependencies:
       - supports-color
 
@@ -12546,10 +12546,10 @@ snapshots:
       compress-commons: 6.0.2
       readable-stream: 4.7.0
 
-  zod-validation-error@4.0.2(zod@4.1.11):
+  zod-validation-error@4.0.2(zod@4.1.12):
     dependencies:
-      zod: 4.1.11
+      zod: 4.1.12
 
   zod@3.25.76: {}
 
-  zod@4.1.11: {}
+  zod@4.1.12: {}
