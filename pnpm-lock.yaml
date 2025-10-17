@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@a-novel/connector-authentication':
         specifier: ^1.4.6
-        version: 1.4.23(@tanstack/react-query@5.90.3(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
+        version: 1.4.23(@tanstack/react-query@5.90.5(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
       '@a-novel/package-authenticator':
         specifier: ^2.4.4
-        version: 2.4.21(48ab629c8a096becc2f66f8a9e016057)
+        version: 2.4.21(e98c31e88a6f935298e1aa557c3863a6)
       '@a-novel/package-ui':
         specifier: ^0.8.7
-        version: 0.8.24(c7c0a4e9eb8fbd436eddc8376bd60c47)
+        version: 0.8.24(7cd0941cb374ab077d107c1504d1c261)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
@@ -40,13 +40,13 @@ importers:
         version: 1.23.7(@tanstack/react-start@1.131.50(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-query':
         specifier: ^5.84.2
-        version: 5.90.3(react@19.2.0)
+        version: 5.90.5(react@19.2.0)
       '@tanstack/react-router':
         specifier: ^1.131.2
         version: 1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-router-with-query':
         specifier: ^1.130.17
-        version: 1.130.17(@tanstack/react-query@5.90.3(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 1.130.17(@tanstack/react-query@5.90.5(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-start':
         specifier: ^1.131.2
         version: 1.131.50(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5))
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@a-novel/nodelib':
         specifier: ^0.7.6
-        version: 0.7.23(@msw/playwright@0.4.2(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3)))(@playwright/test@1.56.0)(@tanstack/react-query@5.90.3(react@19.2.0))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(playwright@1.56.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
+        version: 0.7.23(@msw/playwright@0.4.2(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3)))(@playwright/test@1.56.0)(@tanstack/react-query@5.90.5(react@19.2.0))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(playwright@1.56.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)
       '@chromatic-com/storybook':
         specifier: ^4.1.0
         version: 4.1.1(storybook@9.1.10(@testing-library/dom@10.4.1)(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(prettier@3.6.2)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))
@@ -104,7 +104,7 @@ importers:
         version: 8.1.0(rollup@4.52.4)(typescript@5.9.3)
       '@tanstack/eslint-plugin-query':
         specifier: ^5.83.1
-        version: 5.91.1(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)
+        version: 5.91.2(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)
       '@testing-library/react':
         specifier: ^16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -1942,8 +1942,8 @@ packages:
     peerDependencies:
       vite: '>=6.0.0'
 
-  '@tanstack/eslint-plugin-query@5.91.1':
-    resolution: {integrity: sha512-qbOAm0p7RCEVW5ZyJrqu2sed8hq6YbVqZmfG+C5IZSVOd9GL4XgK8XvF9QsEbaqUzxQrIjw4EEWnYlaYYNd42A==}
+  '@tanstack/eslint-plugin-query@5.91.2':
+    resolution: {integrity: sha512-UPeWKl/Acu1IuuHJlsN+eITUHqAaa9/04geHHPedY8siVarSaWprY0SVMKrkpKfk5ehRT7+/MZ5QwWuEtkWrFw==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -1954,8 +1954,8 @@ packages:
     resolution: {integrity: sha512-cs1WKawpXIe+vSTeiZUuSBy8JFjEuDgdMKZFRLKwQysKo8y2q6Q1HvS74Yw+m5IhOW1nTZooa6rlgdfXcgFAaw==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.90.3':
-    resolution: {integrity: sha512-HtPOnCwmx4dd35PfXU8jjkhwYrsHfuqgC8RCJIwWglmhIUIlzPP0ZcEkDAc+UtAWCiLm7T8rxeEfHZlz3hYMCA==}
+  '@tanstack/query-core@5.90.5':
+    resolution: {integrity: sha512-wLamYp7FaDq6ZnNehypKI5fNvxHPfTYylE0m/ZpuuzJfJqhR5Pxg9gvGBHZx4n7J+V5Rg5mZxHHTlv25Zt5u+w==}
 
   '@tanstack/react-form@1.23.7':
     resolution: {integrity: sha512-p/j9Gi2+s135sOjj48RjM+6xZQr1FVpliQlETLYBEGmmmxWHgYYs2b62mTDSnuv7AqtuZhpQ+t0CRFVfbQLsFA==}
@@ -1966,8 +1966,8 @@ packages:
       '@tanstack/react-start':
         optional: true
 
-  '@tanstack/react-query@5.90.3':
-    resolution: {integrity: sha512-i/LRL6DtuhG6bjGzavIMIVuKKPWx2AnEBIsBfuMm3YoHne0a20nWmsatOCBcVSaT0/8/5YFjNkebHAPLVUSi0Q==}
+  '@tanstack/react-query@5.90.5':
+    resolution: {integrity: sha512-pN+8UWpxZkEJ/Rnnj2v2Sxpx1WFlaa9L6a4UO89p6tTQbeo+m0MS8oYDjbggrR8QcTyjKoYWKS3xJQGr3ExT8Q==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -2219,11 +2219,14 @@ packages:
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
-  '@types/node@20.19.21':
-    resolution: {integrity: sha512-CsGG2P3I5y48RPMfprQGfy4JPRZ6csfC3ltBZSRItG3ngggmNY/qs2uZKp4p9VbrpqNNSMzUZNFZKzgOGnd/VA==}
+  '@types/node@20.19.22':
+    resolution: {integrity: sha512-hRnu+5qggKDSyWHlnmThnUqg62l29Aj/6vcYgUaSFL9oc7DVjeWEQN3PRgdSc6F8d9QRMWkf36CLMch1Do/+RQ==}
 
   '@types/node@24.7.2':
     resolution: {integrity: sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==}
+
+  '@types/node@24.8.1':
+    resolution: {integrity: sha512-alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -2479,8 +2482,8 @@ packages:
     resolution: {integrity: sha512-ueFCcIPaMgtuYDS9u0qlUoEvj6GiSsKrwnOLPp9SshqjtcRaR1IEHRjoReq3sXNydsF5i0ZnmuYgXq9dV53t0g==}
     engines: {node: '>=18.0.0'}
 
-  '@zip.js/zip.js@2.8.7':
-    resolution: {integrity: sha512-8daf29EMM3gUpH/vSBSCYo2bY/wbamgRPxPpE2b+cDnbOLBHAcZikWad79R4Guemth/qtipzEHrZMq1lFXxWIA==}
+  '@zip.js/zip.js@2.8.8':
+    resolution: {integrity: sha512-v0KutehhSAuaoFAFGLp+V4+UiZ1mIxQ8vNOYMD7k9ZJaBbtQV49MYlg568oRLiuwWDg2Di58Iw3Q0ESNWR+5JA==}
     engines: {bun: '>=0.7.0', deno: '>=1.0.0', node: '>=18.0.0'}
 
   abbrev@3.0.1:
@@ -2668,8 +2671,8 @@ packages:
       bare-abort-controller:
         optional: true
 
-  bare-fs@4.4.10:
-    resolution: {integrity: sha512-arqVF+xX/rJHwrONZaSPhlzleT2gXwVs9rsAe1p1mIVwWZI2A76/raio+KwwxfWMO8oV9Wo90EaUkS2QwVmy4w==}
+  bare-fs@4.4.11:
+    resolution: {integrity: sha512-Bejmm9zRMvMTRoHS+2adgmXw1ANZnCNx+B5dgZpGwlP1E3x6Yuxea8RToddHUbWtVV0iUMWqsgZr8+jcgUI2SA==}
     engines: {bare: '>=1.16.0'}
     peerDependencies:
       bare-buffer: '*'
@@ -5845,18 +5848,18 @@ packages:
 
 snapshots:
 
-  '@a-novel/connector-authentication@1.4.23(@tanstack/react-query@5.90.3(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)':
+  '@a-novel/connector-authentication@1.4.23(@tanstack/react-query@5.90.5(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)':
     dependencies:
-      '@tanstack/react-query': 5.90.3(react@19.2.0)
+      '@tanstack/react-query': 5.90.5(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
       zod: 4.1.12
 
-  '@a-novel/nodelib@0.7.23(@msw/playwright@0.4.2(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3)))(@playwright/test@1.56.0)(@tanstack/react-query@5.90.3(react@19.2.0))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(playwright@1.56.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
+  '@a-novel/nodelib@0.7.23(@msw/playwright@0.4.2(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3)))(@playwright/test@1.56.0)(@tanstack/react-query@5.90.5(react@19.2.0))(@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(playwright@1.56.0)(v8-to-istanbul@9.3.0)(vitest@3.2.4)':
     dependencies:
       '@msw/playwright': 0.4.2(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))
       '@playwright/test': 1.56.0
-      '@tanstack/react-query': 5.90.3(react@19.2.0)
+      '@tanstack/react-query': 5.90.5(react@19.2.0)
       '@testing-library/react': 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       get-port-please: 3.2.0
       lodash-es: 4.17.21
@@ -5865,15 +5868,15 @@ snapshots:
       v8-to-istanbul: 9.3.0
       vitest: 3.2.4(@types/node@24.7.2)(@vitest/browser@3.2.4)(jiti@2.5.1)(jsdom@27.0.0(postcss@8.5.6))(msw@2.11.5(@types/node@24.7.2)(typescript@5.9.3))(terser@5.44.0)(tsx@4.20.5)
 
-  '@a-novel/package-authenticator@2.4.21(48ab629c8a096becc2f66f8a9e016057)':
+  '@a-novel/package-authenticator@2.4.21(e98c31e88a6f935298e1aa557c3863a6)':
     dependencies:
-      '@a-novel/connector-authentication': 1.4.23(@tanstack/react-query@5.90.3(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
-      '@a-novel/package-ui': 0.8.24(c7c0a4e9eb8fbd436eddc8376bd60c47)
+      '@a-novel/connector-authentication': 1.4.23(@tanstack/react-query@5.90.5(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(zod@4.1.12)
+      '@a-novel/package-ui': 0.8.24(7cd0941cb374ab077d107c1504d1c261)
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@mui/material': 7.3.4(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-form': 1.23.7(@tanstack/react-start@1.131.50(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@tanstack/react-query': 5.90.3(react@19.2.0)
+      '@tanstack/react-query': 5.90.5(react@19.2.0)
       '@tolgee/format-icu': 6.2.7
       '@tolgee/react': 6.2.7(react@19.2.0)
       react: 19.2.0
@@ -5882,16 +5885,16 @@ snapshots:
     transitivePeerDependencies:
       - '@tanstack/react-start'
 
-  '@a-novel/package-ui@0.8.24(c7c0a4e9eb8fbd436eddc8376bd60c47)':
+  '@a-novel/package-ui@0.8.24(7cd0941cb374ab077d107c1504d1c261)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@fontsource/arimo': 5.2.8
       '@mui/material': 7.3.4(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-form': 1.23.7(@tanstack/react-start@1.131.50(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@tanstack/react-query': 5.90.3(react@19.2.0)
+      '@tanstack/react-query': 5.90.5(react@19.2.0)
       '@tanstack/react-router': 1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@tanstack/react-router-with-query': 1.130.17(@tanstack/react-query@5.90.3(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@tanstack/react-router-with-query': 1.130.17(@tanstack/react-query@5.90.5(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tolgee/format-icu': 6.2.7
       '@tolgee/react': 6.2.7(react@19.2.0)
       react: 19.2.0
@@ -7814,7 +7817,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/eslint-plugin-query@5.91.1(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)':
+  '@tanstack/eslint-plugin-query@5.91.2(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/utils': 8.46.1(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)
       eslint: 9.37.0(jiti@2.5.1)
@@ -7829,7 +7832,7 @@ snapshots:
 
   '@tanstack/history@1.131.2': {}
 
-  '@tanstack/query-core@5.90.3': {}
+  '@tanstack/query-core@5.90.5': {}
 
   '@tanstack/react-form@1.23.7(@tanstack/react-start@1.131.50(@netlify/blobs@9.1.2)(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.10(@types/node@24.7.2)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
@@ -7843,14 +7846,14 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@tanstack/react-query@5.90.3(react@19.2.0)':
+  '@tanstack/react-query@5.90.5(react@19.2.0)':
     dependencies:
-      '@tanstack/query-core': 5.90.3
+      '@tanstack/query-core': 5.90.5
       react: 19.2.0
 
-  '@tanstack/react-router-with-query@1.130.17(@tanstack/react-query@5.90.3(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@tanstack/react-router-with-query@1.130.17(@tanstack/react-query@5.90.5(react@19.2.0))(@tanstack/react-router@1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@tanstack/router-core@1.131.50)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tanstack/react-query': 5.90.3(react@19.2.0)
+      '@tanstack/react-query': 5.90.5(react@19.2.0)
       '@tanstack/react-router': 1.131.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/router-core': 1.131.50
       react: 19.2.0
@@ -8282,7 +8285,7 @@ snapshots:
 
   '@types/mdx@2.0.13': {}
 
-  '@types/node@20.19.21':
+  '@types/node@20.19.22':
     dependencies:
       undici-types: 6.21.0
     optional: true
@@ -8290,6 +8293,11 @@ snapshots:
   '@types/node@24.7.2':
     dependencies:
       undici-types: 7.14.0
+
+  '@types/node@24.8.1':
+    dependencies:
+      undici-types: 7.14.0
+    optional: true
 
   '@types/parse-json@4.0.2': {}
 
@@ -8321,12 +8329,12 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 24.7.2
+      '@types/node': 24.8.1
     optional: true
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.7.2
+      '@types/node': 24.8.1
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.46.1(@typescript-eslint/parser@8.46.1(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.37.0(jiti@2.5.1))(typescript@5.9.3)':
@@ -8650,12 +8658,12 @@ snapshots:
 
   '@wdio/repl@9.16.2':
     dependencies:
-      '@types/node': 20.19.21
+      '@types/node': 20.19.22
     optional: true
 
   '@wdio/types@9.16.2':
     dependencies:
-      '@types/node': 20.19.21
+      '@types/node': 20.19.22
     optional: true
 
   '@wdio/utils@9.18.0':
@@ -8714,7 +8722,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@zip.js/zip.js@2.8.7':
+  '@zip.js/zip.js@2.8.8':
     optional: true
 
   abbrev@3.0.1: {}
@@ -8926,7 +8934,7 @@ snapshots:
   bare-events@2.8.0:
     optional: true
 
-  bare-fs@4.4.10:
+  bare-fs@4.4.11:
     dependencies:
       bare-events: 2.8.0
       bare-path: 3.0.0
@@ -9462,7 +9470,7 @@ snapshots:
   edgedriver@6.1.2:
     dependencies:
       '@wdio/logger': 9.18.0
-      '@zip.js/zip.js': 2.8.7
+      '@zip.js/zip.js': 2.8.8
       decamelize: 6.0.1
       edge-paths: 3.0.5
       fast-xml-parser: 5.3.0
@@ -9955,7 +9963,7 @@ snapshots:
   geckodriver@5.0.0:
     dependencies:
       '@wdio/logger': 9.18.0
-      '@zip.js/zip.js': 2.8.7
+      '@zip.js/zip.js': 2.8.8
       decamelize: 6.0.1
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
@@ -11871,7 +11879,7 @@ snapshots:
       pump: 3.0.3
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 4.4.10
+      bare-fs: 4.4.11
       bare-path: 3.0.0
     transitivePeerDependencies:
       - bare-abort-controller
@@ -12342,7 +12350,7 @@ snapshots:
 
   webdriver@9.18.0:
     dependencies:
-      '@types/node': 20.19.21
+      '@types/node': 20.19.22
       '@types/ws': 8.18.1
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
@@ -12364,7 +12372,7 @@ snapshots:
 
   webdriverio@9.18.1:
     dependencies:
-      '@types/node': 20.19.21
+      '@types/node': 20.19.22
       '@types/sinonjs__fake-timers': 8.1.5
       '@wdio/config': 9.18.0
       '@wdio/logger': 9.18.0
