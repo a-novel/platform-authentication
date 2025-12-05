@@ -1,0 +1,14 @@
+{
+  "aria.form": "Password-reset form",
+  "field.email.helper": "A link to a password-reset form will be sent to this address.",
+  "field.email.label": "Email",
+  "login": "Login",
+  "submit": "Reset password",
+  "submit.error.text": "An unknown error occurred during password-reset form creation. You may try again later.",
+  "submit.error.title": "Password reset failed.",
+  "submitting": "Creating form...",
+  "success.main": "A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to reset your password.",
+  "success.sub": "If you fail to open and complete the form in time, you can always ask for a new one from this page. You may now <strong>leave this page</strong>, or proceed to <strong>login</strong> once you have reset your password.",
+  "success.title": "Password-reset form created!",
+  "title": "Password reset"
+}

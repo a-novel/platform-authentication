@@ -1,0 +1,16 @@
+{
+  "aria.form": "Formulaire de connexion",
+  "field.email.label": "Courriel",
+  "field.password.aria.hide": "Masquer le mot de passe",
+  "field.password.aria.reveal": "Révéler le mot de passe",
+  "field.password.label": "Mot de passe",
+  "password.forgot": "Mot de passe oublié ?",
+  "register": "Inscription",
+  "submit": "Connexion",
+  "submit.error.text": "Une erreur inconnue est survenue pendant la création de la session. Vous pouvez retenter plus tard.",
+  "submit.error.title": "Échec de la connexion.",
+  "submitting": "Connexion en cours...",
+  "success.main": "Connexion réussie ! Bon retour parmi nous, <strong>{user}</strong>.",
+  "success.sub": "Redirection...",
+  "title": "Connexion"
+}

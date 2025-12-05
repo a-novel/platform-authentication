@@ -1,0 +1,19 @@
+{
+  "include": ["*.ts", "eslint.base.config.ts"],
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "target": "ESNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "noEmit": true
+  }
+}
