@@ -1,0 +1,16 @@
+# IDE directories
+.idea
+.vscode
+
+# Node.js directories
+node_modules
+
+# Compiled files
+dist
+build
+
+# Tests
+coverage
+
+.svelte-kit
+.wuchale

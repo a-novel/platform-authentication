@@ -1,0 +1,66 @@
+{
+  "name": "platform-authentication-project",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-novel/platform-authentication.git"
+  },
+  "license": "AGPL-3.0",
+  "type": "module",
+  "workspaces": [
+    ".",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm build:auth",
+    "build:auth": "pnpm run --dir ./packages/auth build",
+    "check": "pnpm check:auth",
+    "check:auth": "pnpm run --dir ./packages/auth check",
+    "check:ci": "pnpm generate && pnpm check",
+    "format": "prettier --write . --config prettier.config.ts",
+    "generate": "pnpm generate:auth",
+    "generate:auth": "pnpm run --dir ./packages/auth generate",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "prettier --check . --config ./prettier.config.ts && eslint . --flag v10_config_lookup_from_file",
+    "publish:major": "pnpm version major --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
+    "publish:minor": "pnpm version minor --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
+    "publish:patch": "pnpm version patch --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "svelte-kit": "^1.2.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^2.0.0",
+    "@eslint/js": "^9.39.1",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-storybook": "^10.1.4",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-packagejson": "^2.5.20",
+    "prettier-plugin-svelte": "^3.4.0",
+    "typescript-eslint": "^8.48.1",
+    "vite": "^7.2.6",
+    "vitest": "^4.0.15"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.9.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@a-novel/uikit",
+      "esbuild",
+      "msw",
+      "sharp"
+    ]
+  }
+}
