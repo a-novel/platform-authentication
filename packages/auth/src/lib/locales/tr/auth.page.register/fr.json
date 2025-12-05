@@ -1,0 +1,14 @@
+{
+  "aria.form": "Formulaire d'inscription",
+  "field.email.helper": "Un lien vers un formulaire d'inscription sera envoyé à cette adresse.",
+  "field.email.label": "Courriel",
+  "login": "Connexion",
+  "submit": "Commencer l'inscription",
+  "submit.error.text": "Une erreur inconnue est survenue pendant la création du formulaire d'inscription. Vous pouvez retenter plus tard.",
+  "submit.error.title": "Échec de l'inscription.",
+  "submitting": "Création du formulaire...",
+  "success.main": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription.",
+  "success.sub": "Si vous ne parvenez pas à compléter le formulaire dans les temps, vous pourrez toujours en demander un nouveau depuis cette page. Vous pouvez à présent <strong>fermer cette page</strong>, ou vous diriger vers la <strong>page de connexion</strong> une fois l'inscription terminée.",
+  "success.title": "Formulaire d'inscription créé.",
+  "title": "Inscription"
+}

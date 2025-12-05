@@ -1,0 +1,11 @@
+{
+  "account": "Account",
+  "account.aria.manage": "Manage account",
+  "account.info": "You are logged in as",
+  "account.loading": "Loading user info...",
+  "account.manage": "Manage",
+  "auth": "Authentication",
+  "login": "Login",
+  "logout": "Logout",
+  "register": "Register"
+}

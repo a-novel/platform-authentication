@@ -1,0 +1,16 @@
+{
+  "aria.form": "Login form",
+  "field.email.label": "Email",
+  "field.password.aria.hide": "Hide password",
+  "field.password.aria.reveal": "Reveal password",
+  "field.password.label": "Password",
+  "password.forgot": "Forgot your password?",
+  "register": "Register",
+  "submit": "Login",
+  "submit.error.text": "An unknown error occurred during session creation. You may try again later.",
+  "submit.error.title": "Login failed.",
+  "submitting": "Creating session...",
+  "success.main": "Login successful! Welcome back, <strong>{user}</strong>.",
+  "success.sub": "Redirecting...",
+  "title": "Login"
+}

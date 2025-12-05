@@ -1,0 +1,22 @@
+# IDE directories
+.idea
+.vscode
+
+# Node.js directories
+node_modules
+
+# Compiled files
+dist
+build
+
+.envrc
+
+# Tests
+coverage
+
+.svelte-kit
+
+*storybook.log
+storybook-static
+
+.DS_Store

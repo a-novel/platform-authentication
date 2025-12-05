@@ -1,0 +1,11 @@
+{
+  "account": "Compte",
+  "account.aria.manage": "Gérer le compte",
+  "account.info": "Vous êtes connecté en tant que",
+  "account.loading": "Chargement du compte...",
+  "account.manage": "Gérer",
+  "auth": "Identification",
+  "login": "Connexion",
+  "logout": "Déconnexion",
+  "register": "Inscription"
+}

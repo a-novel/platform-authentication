@@ -1,0 +1,14 @@
+gitChecks: false
+
+strictPeerDependencies: false
+
+autoInstallPeers: true
+
+dedupePeerDependents: true
+
+packages:
+  - "packages/*"
+
+linkWorkspacePackages: true
+onlyBuiltDependencies:
+  - esbuild

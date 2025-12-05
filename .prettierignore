@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+dist
+build
+
+packages/auth/src/lib/locales
+storybook-static
