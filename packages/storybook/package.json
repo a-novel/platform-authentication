@@ -64,7 +64,7 @@
     "typescript-eslint": "^8.48.1",
     "vite": "^7.2.6"
   },
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.26.1",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }
