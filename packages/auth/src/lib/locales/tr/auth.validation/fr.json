@@ -4,14 +4,10 @@
   "form.email.error.unknown": "Une erreur est survenue pendant la validation du courriel.",
   "form.error.text": "Une erreur inconnue est survenue pendant la validation du formulaire. Vous pouvez retenter plus tard.",
   "form.error.title": "Échec de la validation du formulaire.",
+  "form.password.error.mismatch": "Les mots de passe ne correspondent pas. Veuillez vérifier votre entrée.",
   "form.password.error.tooLong": "Le mot de passe est trop long. La longueur maximale est de {max} caractères.",
   "form.password.error.unknown": "Une erreur est survenue pendant la validation du mot de passe.",
   "submit.error.email.exists": "Un compte existant utilises déjà ce courriel.",
   "submit.error.invalid.email": "Aucun compte utilisant ce courriel n'a été trouvé.",
-  "submit.error.invalid.password": "Le mot de passe fourni n'est pas le bon.",
-  "validation.error": "Échec de la validation du courriel suite à une erreur inattendue. Vous pouvez continuer malgé tout.",
-  "validation.error.email.exists": "Un compte existant utilises déjà ce courriel.",
-  "validation.error.invalid.email": "Aucun compte utilisant ce courriel n'a été trouvé.",
-  "validation.success.email.available": "Ce courriel est disponible.",
-  "validation.success.email.exists": "Un compte utilisant ce courriel a été trouvé."
+  "submit.error.invalid.password": "Le mot de passe fourni n'est pas le bon."
 }

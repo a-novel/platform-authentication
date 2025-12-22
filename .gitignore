@@ -5,6 +5,8 @@
 # Node.js directories
 node_modules
 
+builds/tolgee-data
+
 # Compiled files
 dist
 build

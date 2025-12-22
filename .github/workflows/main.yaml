@@ -15,34 +15,33 @@ jobs:
       contents: read
       packages: read
     steps:
-      - uses: a-novel-kit/workflows/generic-actions/pull-bot@master
+      - uses: a-novel-kit/workflows/node-actions/setup-node@master
         id: app_token
         with:
           app_id: ${{ vars.DEPENDENCY_BOT_ID }}
           app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
-      - uses: actions/setup-node@v6
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: a-novel-kit/workflows/generic-actions/compose@master
         with:
-          node-version: latest
-      - name: install pnpm
-        shell: bash
-        run: npm install -g pnpm
-      - name: setup github registry
-        shell: bash
-        run: |
-          pnpm config set "@a-novel:registry" "https://npm.pkg.github.com"
-          pnpm config set "@a-novel-kit:registry" "https://npm.pkg.github.com"
-          pnpm config set "//npm.pkg.github.com/:_authToken" "${{ secrets.GITHUB_TOKEN }}"
-      - name: install dependencies
-        shell: bash
-        run: pnpm i --frozen-lockfile
+          file: ./builds/podman-compose.tolgee.yaml
+          project: uikit-translations
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          TOLGEE_PORT: 8080
       - name: pnpm
         shell: bash
-        run: pnpm generate
+        run: |
+          diff="$(pnpm generate:check)"
+          if [[ "$diff" == *"out of sync"* ]]
+          then
+            echo "pnpm translations are not up-to-date, please run 'pnpm generate' and commit the changes"
+            echo "$diff"
+            exit 1
+          fi
         env:
-          TOLGEE_PKG_API_KEY: ${{ secrets.TOLGEE_PKG_API_KEY }}
-      - uses: a-novel-kit/workflows/generic-actions/check-changes@master
-        with:
-          fail_message: pnpm definitions are not up-to-date, please run 'pnpm generate' and commit the changes
+          IS_CI: "true"
+          TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY }}
+          TOLGEE_URL: http://localhost:8080
 
   lint:
     runs-on: ubuntu-latest

@@ -13,7 +13,6 @@ import {
   AuthenticationApi,
   Lang,
   claimsGet,
-  credentialsExists,
   shortCodeCreatePasswordReset,
   tokenCreateAnon,
 } from "@a-novel/service-authentication-rest";
@@ -26,7 +25,6 @@ vi.mock(import("@a-novel/service-authentication-rest"), async (importOriginal) =
   return {
     ...mod,
     tokenCreateAnon: vi.fn(),
-    credentialsExists: vi.fn(),
     shortCodeCreatePasswordReset: vi.fn(),
     claimsGet: vi.fn(),
   };
@@ -37,13 +35,12 @@ const api = new AuthenticationApi("http://auth-api.local");
 const mockTokenCreateAnon = tokenCreateAnon as Mock,
   mockShortCodeCreatePasswordReset = shortCodeCreatePasswordReset as Mock,
   mockClaimsGet = claimsGet as Mock,
-  mockCredentialsExists = credentialsExists as Mock;
+  setScreen = vi.fn();
 
 let submitButton: HTMLButtonElement,
   passwordResetPage: ReturnType<typeof render<typeof UITestWrapper>>,
   emailField: HTMLInputElement,
-  user: ReturnType<(typeof userEvent)["setup"]>,
-  setScreen = vi.fn();
+  user: ReturnType<(typeof userEvent)["setup"]>;
 
 function setupBase() {
   localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(MockSessionAnon));
@@ -95,129 +92,6 @@ describe("passwordReset page", () => {
     });
   });
 
-  describe("fields", () => {
-    beforeEach(() => prepare(setupBase));
-
-    describe("email", () => {
-      it("does not trigger api validation while email is not valid", async () => {
-        await user.type(emailField, "john.doe");
-
-        await waitFor(() => {
-          expect(mockCredentialsExists).not.toHaveBeenCalled();
-          expect(emailField.dataset.status).toBe("idle");
-        });
-      });
-
-      it("reports success", async () => {
-        mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
-        await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("validating");
-        });
-
-        await waitFor(() => {
-          expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-            email: "john.doe@gmail.com",
-          });
-          expect(emailField.dataset.status).toBe("valid");
-        });
-      });
-
-      describe("does not exist", () => {
-        it("reports error", async () => {
-          mockCredentialsExists.mockReturnValueOnce(Promise.resolve(false));
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("invalid");
-          });
-
-          const errorMessage = passwordResetPage.queryByText(/no account found with the provided email/i);
-          expect(errorMessage).toBeDefined();
-          expect(errorMessage).not.toBeNull();
-        });
-
-        it("recovers from error", async () => {
-          mockCredentialsExists.mockReturnValueOnce(Promise.resolve(false));
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("invalid");
-          });
-
-          mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
-          await user.type(emailField, "n", { initialSelectionStart: 3 });
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledTimes(2);
-            expect(mockCredentialsExists).toHaveBeenLastCalledWith(api, MockSessionAnon.accessToken, {
-              email: "john.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("valid");
-          });
-
-          const errorMessage = passwordResetPage.queryByText(/no account found with the provided email/i);
-          expect(errorMessage).toBeNull();
-        });
-      });
-
-      describe("unexpected error", () => {
-        it("reports error", async () => {
-          mockCredentialsExists.mockImplementationOnce(async () => {
-            throw new Error("badaboom");
-          });
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("idle");
-          });
-
-          const errorMessage = passwordResetPage.queryByText(/cannot validate email due to unexpected error/i);
-          expect(errorMessage).toBeDefined();
-          expect(errorMessage).not.toBeNull();
-        });
-
-        it("recovers from error", async () => {
-          mockCredentialsExists.mockImplementationOnce(async () => {
-            throw new Error("badaboom");
-          });
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("idle");
-          });
-
-          mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
-          await user.type(emailField, "n", { initialSelectionStart: 3 });
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledTimes(2);
-            expect(mockCredentialsExists).toHaveBeenLastCalledWith(api, MockSessionAnon.accessToken, {
-              email: "john.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("valid");
-          });
-
-          const errorMessage = passwordResetPage.queryByText(/cannot validate email due to unexpected error/i);
-          expect(errorMessage).toBeNull();
-        });
-      });
-    });
-  });
-
   describe("submit", () => {
     beforeEach(() => prepare(setupBase));
 
@@ -238,16 +112,10 @@ describe("passwordReset page", () => {
     });
 
     it("reports success", async () => {
-      mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
       await user.type(emailField, "john.doe@gmail.com");
-
-      await waitFor(() => {
-        expect(emailField.dataset.status).toBe("valid");
-      });
 
       mockShortCodeCreatePasswordReset.mockReturnValueOnce(Promise.resolve());
 
-      const submitButton = passwordResetPage.getByRole("button", { name: /reset password/i }) as HTMLButtonElement;
       await user.click(submitButton);
 
       await waitFor(() => {
@@ -276,18 +144,12 @@ describe("passwordReset page", () => {
 
     describe("on error", () => {
       it("reports email not found", async () => {
-        mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
         await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("valid");
-        });
 
         mockShortCodeCreatePasswordReset.mockImplementationOnce(async () => {
           throw new HttpError(404, "email not found");
         });
 
-        const submitButton = passwordResetPage.getByRole("button", { name: /reset password/i }) as HTMLButtonElement;
         await user.click(submitButton);
 
         await waitFor(() => {
@@ -306,18 +168,12 @@ describe("passwordReset page", () => {
       });
 
       it("reports any error", async () => {
-        mockCredentialsExists.mockReturnValueOnce(Promise.resolve(true));
         await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("valid");
-        });
 
         mockShortCodeCreatePasswordReset.mockImplementationOnce(async () => {
           throw new HttpError(500, "ouh la la");
         });
 
-        const submitButton = passwordResetPage.getByRole("button", { name: /reset password/i }) as HTMLButtonElement;
         await user.click(submitButton);
 
         await waitFor(() => {

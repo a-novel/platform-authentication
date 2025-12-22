@@ -12,15 +12,42 @@ export const SessionSchema = z.object({
   refreshToken: z.string(),
 });
 
+/**
+ * Active user session.
+ */
 export type Session = z.infer<typeof SessionSchema>;
 
 export interface SessionContext {
+  /**
+   * Active access token used to authenticate requests.
+   */
   readonly accessToken: string;
+  /**
+   * Active refresh token used to refresh the access token when needed.
+   * Once this token expires, user must re-authenticate.
+   */
   readonly refreshToken: string;
+  /**
+   * Decoded claims from the access token.
+   */
   readonly claims: Claims | undefined;
+  /**
+   * Resets the current session by obtaining brand-new tokens. If the user was
+   * authenticated, it will switch to an anonymous session.
+   */
   resetSession(): Promise<{ accessToken: string; refreshToken?: string | undefined }>;
+  /**
+   * Refreshes the claims from the access token.
+   */
   refreshClaims(): Promise<void>;
+  /**
+   * Retries the given callback, refreshing the session if needed.
+   */
   retrySession<R>(callback: (accessToken: string) => Promise<R>): (accessToken: string) => Promise<R>;
+  /**
+   * Authenticates the session with the given credentials. If user was anonymous,
+   * it will switch to an authenticated session.
+   */
   authenticate(data: TokenCreateRequest): Promise<void>;
 }
 

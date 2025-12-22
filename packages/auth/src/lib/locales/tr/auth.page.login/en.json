@@ -1,8 +1,6 @@
 {
   "aria.form": "Login form",
   "field.email.label": "Email",
-  "field.password.aria.hide": "Hide password",
-  "field.password.aria.reveal": "Reveal password",
   "field.password.label": "Password",
   "password.forgot": "Forgot your password?",
   "register": "Register",

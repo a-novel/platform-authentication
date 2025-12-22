@@ -14,9 +14,7 @@
     tokenCreateAnon,
     tokenRefresh,
   } from "@a-novel/service-authentication-rest";
-  import { StatusPage } from "@a-novel/uikit/ui/components";
-  import { StatusPageInternalError } from "@a-novel/uikit/ui/components/statusPages";
-  import { LoadingIcon } from "@a-novel/uikit/ui/icons";
+  import { StatusPageInternalError, StatusPageLoading } from "@a-novel/uikit/ui/components/statusPages";
   import { loadLocalStorage, saveLocalStorage } from "@a-novel/uikit/utils";
 
   import { getTranslate } from "@tolgee/svelte";
@@ -27,7 +25,7 @@
   }
 
   let { children, api }: Props = $props();
-  const { t } = getTranslate("auth:session");
+  const { t } = getTranslate("auth.session");
 
   let claims = $state.raw<Claims>(),
     accessToken = $state<string>(""),
@@ -160,10 +158,7 @@
 
   // Sync session with storage.
   $effect(() => {
-    if (!claims || !accessToken || !refreshToken) {
-      return;
-    }
-
+    if (!claims || !accessToken || !refreshToken) return;
     saveLocalStorage(SESSION_STORAGE_KEY, { accessToken, refreshToken, claims } satisfies Session);
   });
 
@@ -171,23 +166,11 @@
 </script>
 
 {#await startSession}
-  <StatusPage color="default">
-    {#snippet icon()}
-      <LoadingIcon />
-    {/snippet}
-
-    <span class="loader">{$t("page.loading.content", "Loading user session...")}</span>
-  </StatusPage>
+  <StatusPageLoading>
+    {$t("page.loading.content", "Loading user session...")}
+  </StatusPageLoading>
 {:then _}
   {@render children()}
 {:catch error}
-  <StatusPageInternalError color="accent" {error} />
+  <StatusPageInternalError {error} />
 {/await}
-
-<style>
-  .loader {
-    color: var(--color-gray-400);
-    font-style: italic;
-    font-size: var(--font-size-h6);
-  }
-</style>

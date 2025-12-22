@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { ComponentProps, Snippet } from "svelte";
 
-  import { loadTranslations } from "@a-novel/package-authentication/locales";
+  import { loadTranslations as loadPackageTranslations } from "@a-novel/package-authentication/locales";
+  import { loadTranslations as loadPlatformTranslations } from "@a-novel/platform-authentication/locales";
   import type { LNG } from "@a-novel/uikit/const";
   import { TolgeeConfig } from "@a-novel/uikit/locales";
   import { LocaleSyncComponent } from "@a-novel/uikit/storybook";
@@ -17,7 +18,8 @@
 
   let { children, theme, locale }: Props = $props();
 
-  loadTranslations(TolgeeConfig);
+  loadPackageTranslations(TolgeeConfig);
+  loadPlatformTranslations(TolgeeConfig);
 </script>
 
 <TolgeeProvider tolgee={TolgeeConfig}>

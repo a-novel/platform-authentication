@@ -16,7 +16,7 @@
   let { children, roles }: Props = $props();
   const session = getSession();
   const sessionScreen = getSessionScreen();
-  const { t } = getTranslate("auth:protected");
+  const { t } = getTranslate("auth.protected");
 
   let forbidden = $derived.by(() => {
     // If some roles are required and the user has a session, verify them.
