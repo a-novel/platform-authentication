@@ -1,0 +1,4 @@
+{
+  "page.forbidden.content": "Vous ne disposez pas des autorisations nécessaires pour accéder à cette page. Veuillez contacter un administrateur afin d'obtenir des privilèges plus élevés, ou connectez-vous avec un compte différent.",
+  "page.forbidden.title": "Accès refusé."
+}

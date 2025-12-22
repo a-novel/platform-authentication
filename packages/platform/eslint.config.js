@@ -10,6 +10,5 @@ export default defineConfig(
   ...Eslint({
     gitIgnorePath: path.join(import.meta.dirname, ".gitignore"),
     svelte: svelteConfig,
-    isLib: true,
   })
 );

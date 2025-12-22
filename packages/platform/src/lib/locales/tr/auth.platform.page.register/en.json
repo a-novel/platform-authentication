@@ -1,0 +1,16 @@
+{
+  "account.action": "Manage my account",
+  "aria.form": "Register completion form",
+  "field.password.aria.hide": "Hide password",
+  "field.password.aria.reveal": "Reveal password",
+  "field.passwordConfirmation.aria.hide": "Hide password confirmation",
+  "field.passwordConfirmation.aria.reveal": "Reveal password confirmation",
+  "field.passwordConfirmation.helper": "Please re-enter your password to confirm it.",
+  "field.passwordConfirmation.label": "Password confirmation",
+  "field.password.label": "Password",
+  "submit": "Create account",
+  "submitting": "Creating account...",
+  "success.main": "Registration completed! Welcome aboard, <strong>{user}</strong>.",
+  "success.sub": "You may now close this page, or proceed to your account page. You are already logged in so no further action is required.",
+  "title": "Complete registration"
+}

@@ -1,0 +1,12 @@
+tolgee:
+  authentication:
+    enabled: false
+  postgres-autostart:
+    enabled: false
+  telemetry:
+    enabled: false
+spring:
+  datasource:
+    url: jdbc:postgresql://tolgee-db:5432/postgres
+    username: postgres
+    password: postgres

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FullPageForm, TextInput } from "$lib/ui/components";
+  import { FullPageForm, FullPageFormSuccess, TextInput } from "$lib/ui/components";
 
   import type { ComponentProps } from "svelte";
 
@@ -76,19 +76,17 @@
   {/snippet}
 
   {#snippet success()}
-    <div class="success">
-      <span class="success-icon">
-        <CheckIcon color="primary" />
-      </span>
-      <p class="success-message">
+    <FullPageFormSuccess>
+      {#snippet message()}
         {@html $t("success.main", "Login successful! Welcome back, <strong>{user}</strong>.", {
           user: email,
         })}
-      </p>
-      <p class="success-message-sub">
+      {/snippet}
+
+      {#snippet sub()}
         {$t("success.sub", "Redirecting...")}
-      </p>
-    </div>
+      {/snippet}
+    </FullPageFormSuccess>
   {/snippet}
 
   <TextInput
@@ -154,7 +152,7 @@
     <Button style="flex-grow: 1.6" disabled={disableSubmit} color="primary" type="submit">
       {formStatus === "validating" ? $t("submitting", "Creating session...") : $t("submit", "Login")}
     </Button>
-    <Button style="flex-grow: 1" color="default" type="button" onclick={registerAction}>
+    <Button style="flex-grow: 1" color="invert" type="button" onclick={registerAction}>
       {$t("register", "Register")}
     </Button>
   </div>
@@ -175,40 +173,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-xxs);
+    gap: var(--spacing-s);
     margin: var(--spacing-s) 0 var(--spacing-xs) 0;
-  }
-
-  .success {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xxs);
-    margin-bottom: var(--spacing-s);
-
-    & > .success-icon {
-      margin-bottom: var(--spacing-s);
-      color: var(--color-primary-500);
-      font-size: 4rem;
-    }
-
-    & > .success-message {
-      margin: 0;
-      color: var(--color-primary-500);
-      font-weight: bold;
-      font-size: var(--font-size-h6);
-      text-align: center;
-
-      & > :global(strong) {
-        color: var(--text);
-      }
-    }
-
-    & > .success-message-sub {
-      margin: 0;
-      color: var(--color-gray-700);
-      font-size: var(--font-size-p);
-      text-align: center;
-    }
   }
 </style>

@@ -1,0 +1,16 @@
+{
+  "account.action": "Gérer mon compte",
+  "aria.form": "Formulaire de complétion de l'inscription",
+  "field.password.aria.hide": "Masquer le mot de passe",
+  "field.password.aria.reveal": "Révéler le mot de passe",
+  "field.passwordConfirmation.aria.hide": "Masquer la confirmation du mot de passe",
+  "field.passwordConfirmation.aria.reveal": "Révéler la confirmation du mot de passe",
+  "field.passwordConfirmation.helper": "Veuillez entrer votre mot de passe une seconde fois afin d'en valider la saisie.",
+  "field.passwordConfirmation.label": "Confirmation du mot de passe",
+  "field.password.label": "Mot de passe",
+  "submit": "Créer un compte",
+  "submitting": "Création du compte...",
+  "success.main": "Inscription terminée! Bienvenue parmi nous, <strong>{user}</strong>.",
+  "success.sub": "Vous pouvez à présent fermer cette page, ou vous rendre sur la page de gestion de votre compte. Vous êtes déjà connecté, aucune action supplémentaire n'est requise.",
+  "title": "Terminer l'inscription"
+}

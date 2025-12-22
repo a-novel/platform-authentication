@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import { LoginPage } from "@a-novel/package-authentication/ui";
+  import { ResetPasswordPage } from "@a-novel/platform-authentication/ui";
   import { LOREM_IPSUM } from "@a-novel/uikit/utils";
 
   import Icon from "@iconify/svelte";
@@ -7,8 +7,8 @@
 
   // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
   const { Story } = defineMeta({
-    title: "Auth/Pages/Login",
-    component: LoginPage,
+    title: "Platform/Pages/ResetPassword",
+    component: ResetPasswordPage,
     tags: ["autodocs"],
   });
 </script>
@@ -18,53 +18,32 @@
 {/snippet}
 
 {#snippet empty()}
-  <LoginPage email="" password="" />
+  <ResetPasswordPage password="" passwordConfirmation="" />
 {/snippet}
 
 <Story name="Empty" template={empty} />
 
 {#snippet filled()}
-  <LoginPage email="john.doe@gmail.com" password="hackthenasa" />
+  <ResetPasswordPage password="hackthenasa" passwordConfirmation="hackthenasa" />
 {/snippet}
 
 <Story name="Filled" template={filled} />
 
-{#snippet validating()}
-  <LoginPage email="john.doe@gmail.com" password="hackthenasa" emailStatus="validating" />
-{/snippet}
-
-<Story name="Validating" template={validating} />
-
-{#snippet validationSuccess()}
-  <LoginPage
-    email="john.doe@gmail.com"
-    password="hackthenasa"
-    emailStatus="valid"
-    emailStatusText={LOREM_IPSUM.SHORT}
-  />
-{/snippet}
-
-<Story name="Validation success" template={validationSuccess} />
-
 {#snippet fieldErrors()}
-  <LoginPage
-    email="john.doe@gmail.com"
+  <ResetPasswordPage
     password="hackthenasa"
-    emailStatus="invalid"
-    passwordStatus="invalid"
-    emailStatusText={LOREM_IPSUM.SHORT}
-    passwordStatusText={LOREM_IPSUM.SHORT}
-    emailError={new TypeError(LOREM_IPSUM.SHORT)}
-    passwordError={new TypeError(LOREM_IPSUM.SHORT)}
+    passwordConfirmation="hackthenasa"
+    passwordConfirmationStatus="invalid"
+    passwordConfirmationStatusText={LOREM_IPSUM.SHORT}
   />
 {/snippet}
 
 <Story name="Field errors" template={fieldErrors} />
 
 {#snippet formError()}
-  <LoginPage
-    email="john.doe@gmail.com"
+  <ResetPasswordPage
     password="hackthenasa"
+    passwordConfirmation="hackthenasa"
     formStatus="invalid"
     formStatusTitle={LOREM_IPSUM.SHORTER}
     formStatusText={LOREM_IPSUM.SHORT}
@@ -76,7 +55,7 @@
 <Story name="Form error" template={formError} />
 
 {#snippet formSuccess()}
-  <LoginPage email="john.doe@gmail.com" password="hackthenasa" formStatus="valid" />
+  <ResetPasswordPage password="hackthenasa" passwordConfirmation="hackthenasa" formStatus="valid" />
 {/snippet}
 
 <Story name="Form success" template={formSuccess} />
