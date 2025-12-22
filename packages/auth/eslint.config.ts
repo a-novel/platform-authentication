@@ -11,6 +11,5 @@ export default defineConfig(
     gitIgnorePath: path.join(import.meta.dirname, ".gitignore"),
     svelte: svelteConfig,
     isLib: true,
-    storybook: true,
   })
 );

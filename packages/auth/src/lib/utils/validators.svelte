@@ -1,15 +1,14 @@
 <script lang="ts">
-  import { getSession } from "$lib";
-
   import { isHttpStatusError } from "@a-novel-kit/nodelib-browser/http";
-  import { type AuthenticationApi, EmailSchema, credentialsExists } from "@a-novel/service-authentication-rest";
 
   import { getTranslate } from "@tolgee/svelte";
   import type { $ZodIssue } from "zod/v4/core";
 
   const { t } = getTranslate("auth.validation");
-  const session = getSession();
 
+  /**
+   * Handle error on email field.
+   */
   export function handleEmailValidationError(val: $ZodIssue): { text: string; error?: Error } {
     switch (val.code) {
       case "too_big":
@@ -33,6 +32,9 @@
     }
   }
 
+  /**
+   * Handle error on password field.
+   */
   export function handlePasswordValidationError(val: $ZodIssue): { text: string; error?: Error } {
     switch (val.code) {
       case "too_big":
@@ -41,6 +43,15 @@
             max: val.maximum,
           }),
         };
+      case "custom":
+        if (val.message === "password mismatch") {
+          return {
+            text: $t("form.password.error.mismatch", "The passwords do not match. Please re-enter them."),
+          };
+        }
+
+      // No breakpoint is intentional: if the custom message is not recognized, we switch to generic error
+      // handling.
       default:
         return {
           text: $t("form.password.error.unknown", "An error occurred while validating the password."),
@@ -49,6 +60,9 @@
     }
   }
 
+  /**
+   * Handle general form validation error.
+   */
   export function formValidationError(val: $ZodIssue) {
     return {
       title: $t("form.error.title", "Form validation error."),
@@ -58,6 +72,9 @@
     };
   }
 
+  /**
+   * Handle error on email field during form submission.
+   */
   export function handleEmailSubmitError(err: unknown): { text: string; error?: Error } | undefined {
     if (isHttpStatusError(err, 404)) {
       return {
@@ -74,6 +91,9 @@
     return undefined;
   }
 
+  /**
+   * Handle error on password field during form submission.
+   */
   export function handlePasswordSubmitError(err: unknown): { text: string; error?: Error } | undefined {
     if (isHttpStatusError(err, 403)) {
       return {
@@ -83,59 +103,26 @@
 
     return undefined;
   }
-
-  interface SetEmailStatusParams {
-    status: "valid" | "invalid" | "idle" | "validating";
-    text?: string;
-    error?: Error;
-  }
-
-  export async function validateEmail(
-    rawEmail: string,
-    api: AuthenticationApi,
-    setStatus: (params?: SetEmailStatusParams) => void,
-    creation?: boolean
-  ) {
-    const email = await EmailSchema.parseAsync(rawEmail).catch(() => "");
-    // Email not ready for async validation.
-    if (!email) {
-      return setStatus({ status: "idle" });
-    }
-
-    // Start async validation.
-    setStatus({ status: "validating" });
-    try {
-      const exist = await credentialsExists(api, session.accessToken, { email });
-
-      if (creation && exist) {
-        return setStatus({
-          status: "invalid",
-          text: $t("validation.error.email.exists", "An account with this email already exists."),
-        });
-      }
-
-      if (!creation && !exist) {
-        return setStatus({
-          status: "invalid",
-          text: $t("validation.error.invalid.email", "No account found with the provided email."),
-        });
-      }
-
-      return setStatus({
-        status: "valid",
-        text: creation
-          ? $t("validation.success.email.available", "The email is available.")
-          : $t("validation.success.email.exists", "An account with this email exists."),
-      });
-    } catch (err) {
-      return setStatus({
-        status: "idle",
-        text: $t(
-          "validation.error",
-          "Cannot validate email due to unexpected error. You might try to proceed anyways."
-        ),
-        error: err as Error,
-      });
-    }
-  }
 </script>
+
+<!--
+@component
+Custom validation functions for authentication forms.
+
+Methods are exposed as a svelte component because stores cannot be
+easily accessed in a regular ts file.
+
+To use:
+
+```svelte
+<script lang="ts">
+ import { Validators } from "$lib/utils";
+
+ let validators: ReturnType<typeof Validators>;
+
+ this.[validators_method]();
+</script>
+
+<Validators bind:this={validators} />
+```
+-->

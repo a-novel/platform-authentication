@@ -1,0 +1,141 @@
+{
+  "name": "@a-novel/platform-authentication",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-novel/platform-authentication.git"
+  },
+  "license": "AGPL-3.0",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "type": "module",
+  "exports": {
+    "./ui": {
+      "types": "./dist/ui/index.d.ts",
+      "import": "./dist/ui/index.js",
+      "svelte": "./dist/ui/index.js"
+    },
+    "./locales": {
+      "types": "./dist/locales/index.d.ts",
+      "import": "./dist/locales/index.js",
+      "svelte": "./dist/locales/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && pnpm prepack",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite dev",
+    "generate": "pnpm generate:translations",
+    "generate:check": "pnpm generate:translations:check",
+    "generate:translations": "pnpm generate:translations:sync && pnpm generate:translations:pull",
+    "generate:translations:check": "pnpm tolgee compare check --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
+    "generate:translations:pull": "pnpm tolgee pull --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
+    "generate:translations:push": "pnpm tolgee push --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
+    "generate:translations:sync": "pnpm tolgee sync --yes --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
+    "preinstall": "npx only-allow pnpm",
+    "prepack": "svelte-kit sync && svelte-package && publint",
+    "prepare": "svelte-kit sync || echo ''",
+    "preview": "vite preview",
+    "test": "pnpm run test:unit",
+    "test:unit": "vitest run",
+    "translations:push": "pnpm tolgee push --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}"
+  },
+  "devDependencies": {
+    "@a-novel-kit/nodelib-browser": "^1.3.4",
+    "@a-novel-kit/nodelib-config": "^1.3.4",
+    "@a-novel/package-authentication": "*",
+    "@a-novel/service-authentication-rest": "^2.1.6",
+    "@a-novel/uikit": "^0.12.3",
+    "@eslint/compat": "^2.0.0",
+    "@eslint/js": "^9.39.1",
+    "@iconify/svelte": "^5.1.0",
+    "@sveltejs/adapter-node": "^5.4.0",
+    "@sveltejs/kit": "^2.49.2",
+    "@sveltejs/package": "^2.5.7",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/svelte": "^5.2.9",
+    "@testing-library/user-event": "^14.6.1",
+    "@tolgee/cli": "^2.15.0",
+    "@tolgee/format-icu": "^6.2.7",
+    "@tolgee/svelte": "^6.2.7",
+    "@tolgee/web": "^6.2.7",
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^24.1.0",
+    "@vitest/browser": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.16",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-svelte": "^3.13.1",
+    "globals": "^16.5.0",
+    "jsdom": "^27.3.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-svelte": "^3.4.0",
+    "publint": "^0.3.16",
+    "sharp": "^0.34.5",
+    "svelte": "^5.46.0",
+    "svelte-check": "^4.3.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.16",
+    "vitest-browser-svelte": "^2.0.1",
+    "zod": "^4.2.1"
+  },
+  "peerDependencies": {
+    "@a-novel-kit/nodelib-browser": "^1.3.4",
+    "@a-novel/package-authentication": "*",
+    "@a-novel/service-authentication-rest": "^2.1.6",
+    "@a-novel/uikit": "^0.12.3",
+    "@iconify/svelte": "^5.1.0",
+    "@sveltejs/kit": "^2.49.2",
+    "@tolgee/format-icu": "^6.2.7",
+    "@tolgee/svelte": "^6.2.7",
+    "@tolgee/web": "^6.2.7",
+    "svelte": "^5.0.0",
+    "zod": "^4.1.12"
+  },
+  "packageManager": "pnpm@10.26.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "tolgee": {
+    "$schema": "https://docs.tolgee.io/cli-schema.json",
+    "projectId": 2,
+    "format": "JSON_ICU",
+    "defaultNamespace": "auth",
+    "patterns": [
+      "./src/**/*.ts",
+      "./src/**/*.svelte"
+    ],
+    "push": {
+      "filesTemplate": "./src/lib/locales/tr/{namespace}/{languageTag}.{extension}",
+      "language": [
+        "en",
+        "fr"
+      ],
+      "forceMode": "OVERRIDE",
+      "namespaces": [
+        "auth.platform.page.validateEmail",
+        "auth.platform.page.passwordReset",
+        "auth.platform.page.manageAccount",
+        "auth.platform.page.register"
+      ],
+      "removeOtherKeys": true
+    },
+    "pull": {
+      "path": "./src/lib/locales/tr/",
+      "filesTemplate": "{namespace}/{languageTag}.{extension} ",
+      "emptyDir": true,
+      "delimiter": ""
+    },
+    "sync": {
+      "removeUnused": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "meta.title": "Validate email",
+  "page.error.content": "We were unable to validate your email <strong>{email}</strong>. The validation link may have expired or is invalid, or you have already validated this address.",
+  "page.error.title": "Email validation failed.",
+  "page.loading.content": "Validating email...",
+  "page.success.content": "Your email <strong>{email}</strong> has been validated successfully. You can now use it to log in.",
+  "page.success.title": "Email validated successfully!"
+}

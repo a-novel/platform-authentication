@@ -1,0 +1,18 @@
+{
+  "account.action": "Manage my account",
+  "aria.form": "Register completion form",
+  "field.passwordConfirmation.helper": "Please re-enter your password to confirm it.",
+  "field.passwordConfirmation.label": "Confirm password",
+  "field.password.label": "Password",
+  "meta.title": "Complete registration",
+  "submit": "Create account",
+  "submit.error.alreadyTaken.text": "An account with the source email already exists. This means your link has probably already been used. You may try logging in instead.",
+  "submit.error.text": "An unknown error occurred during registration. You may try again later.",
+  "submit.error.title": "Registration failed.",
+  "submit.error.unauthorized.text": "You are not allowed to create an account with the provided information. The link you are trying to use may have expired or is invalid, or has already been used.",
+  "submitting": "Creating account...",
+  "success.main": "Registration completed! Welcome aboard, <strong>{user}</strong>.",
+  "success.sub": "You may now close this page, or proceed to your account page. You are already logged in so no further action is required.",
+  "success.title": "Registration successful!",
+  "title": "Complete registration"
+}

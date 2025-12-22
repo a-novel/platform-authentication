@@ -1,0 +1,329 @@
+
+> @a-novel/platform-authentication@0.0.0 test /home/kushuh/git-projects/a-novel/platform-authentication/packages/platform
+> pnpm run test:unit -- --run src/routes/api/health/-server.test.ts
+> @a-novel/platform-authentication@0.0.0 test:unit /home/kushuh/git-projects/a-novel/platform-authentication/packages/platform
+> vitest run -- --run src/routes/api/health/-server.test.ts
+The following Vite config options will be overridden by SvelteKit:
+  - base
+ RUN  v4.0.16 /home/kushuh/git-projects/a-novel/platform-authentication/packages/platform
+      Coverage enabled with v8
+ ❯  client  src/routes/api/health/-server.test.ts (6 tests | 1 failed) 33ms
+     ✓ returns auth-service status up when health check succeeds 24ms
+     × returns auth-service status down when health check fails with Error 6ms
+     ✓ returns auth-service status down when health check fails with non-Error 0ms
+     ✓ returns auth-service with partial dependency failures 1ms
+       ✓ returns 200 when all dependencies are up and fail param is set 1ms
+       ✓ throws 503 when a dependency is down and fail param is set 1ms
+ ✓  server  src/routes/-page.server.test.ts (1 test) 2ms
+ ✓  client  src/routes/ext/email/validate/-page.svelte.test.ts (2 tests) 228ms
+ ✓  client  src/lib/connectors/validateEmailPage.svelte.test.ts (4 tests) 389ms
+ ✓  client  src/routes/ext/password/reset/-page.svelte.test.ts (2 tests) 581ms
+     ✓ renders the password reset form with URL parameters  323ms
+ ✓  client  src/routes/-layout.svelte.test.ts (7 tests) 624ms
+ ✓  client  src/routes/manage-account/-page.svelte.test.ts (4 tests) 740ms
+     ✓ renders both forms when user is authenticated  311ms
+ ✓  client  src/lib/connectors/passwordResetPage.svelte.test.ts (5 tests) 883ms
+         ✓ reports mismatch  380ms
+ ✓  client  src/lib/connectors/registerPage.svelte.test.ts (6 tests) 990ms
+         ✓ reports mismatch  369ms
+ ✓  client  src/lib/connectors/manageAccountPage.svelte.test.ts (9 tests) 1648ms
+       ✓ does not submit while fields are invalid  354ms
+ ❯  client  src/routes/ext/account/create/-page.svelte.test.ts (2 tests | 2 failed) 2153ms
+     × renders the register form with decoded URL parameters 1121ms
+     × calls credentialsCreate with correct decoded email from base64 URL param 1031ms
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+ FAIL   client  src/routes/api/health/-server.test.ts > /api/health > returns auth-service status down when health check fails with Error
+AssertionError: expected { 'auth-service': { …(2) } } to deeply equal { 'auth-service': { …(2) } }
+- Expected
++ Received
+  {
+    "auth-service": {
+-     "error": Any<Error>,
++     "error": {},
+      "status": "down",
+    },
+  }
+ ❯ src/routes/api/health/-server.test.ts:52:18
+     50|     const data = await response.json();
+     51|
+     52|     expect(data).toEqual({
+       |                  ^
+     53|       "auth-service": {
+     54|         status: "down",
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+ FAIL   client  src/routes/ext/account/create/-page.svelte.test.ts > /ext/account/create > renders the register form with decoded URL parameters
+Error: expect(received).toBeInTheDocument()
+received value must be an HTMLElement or an SVGElement.
+Received has type:  Null
+Received has value: null
+Ignored nodes: comments, script, style
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <div>
+      <div
+        data-theme="dark"
+      />
+
+      <section
+        class="svelte-3x67f2"
+        data-color="default"
+      >
+        <div
+          class="icon svelte-3x67f2"
+        >
+          <svg
+            data-color="default"
+            data-icon="true"
+            height="200"
+            preserveAspectRatio="xMidYMid"
+            style="shape-rendering: auto; display: block; background: transparent;"
+            viewBox="0 0 100 100"
+            width="200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                r="32"
+                stroke="var(--color-900)"
+                stroke-dasharray="50.26548245743669 50.26548245743669"
+                stroke-linecap="round"
+                stroke-width="8"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  keyTimes="0;1"
+                  repeatCount="indefinite"
+                  type="rotate"
+                  values="0 50 50;360 50 50"
+                />
+              </circle>
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                r="23"
+                stroke="var(--color-600)"
+                stroke-dasharray="36.12831551628262 36.12831551628262"
+                stroke-dashoffset="36.12831551628262"
+                stroke-linecap="round"
+                stroke-width="8"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  keyTimes="0;1"
+                  repeatCount="indefinite"
+                  type="rotate"
+                  values="0 50 50;-360 50 50"
+                />
+              </circle>
+            </g>
+          </svg>
+
+
+
+        </div>
+
+
+        <p
+          class="svelte-3x67f2"
+          data-width="m"
+        >
+          <span
+            _tolgee="true"
+            class="loader svelte-1qlsv98"
+          >
+            Loading user session...
+          </span>
+        </p>
+      </section>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+ ❯ src/routes/ext/account/create/-page.svelte.test.ts:56:20
+     54|     await waitFor(() => {
+     55|       const form = page.queryByRole("form", { name: /register completi…
+     56|       expect(form).toBeInTheDocument();
+       |                    ^
+     57|     });
+     58|
+ ❯ runWithExpensiveErrorDiagnosticsDisabled ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/config.js:47:12
+ ❯ checkCallback ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/wait-for.js:124:77
+ ❯ Timeout.checkRealTimersCallback ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/wait-for.js:118:16
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+ FAIL   client  src/routes/ext/account/create/-page.svelte.test.ts > /ext/account/create > calls credentialsCreate with correct decoded email from base64 URL param
+Error: expect(received).toBeInTheDocument()
+received value must be an HTMLElement or an SVGElement.
+Received has type:  Null
+Received has value: null
+Ignored nodes: comments, script, style
+<html>
+  <head>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <div>
+      <div
+        data-theme="dark"
+      />
+
+      <section
+        class="svelte-3x67f2"
+        data-color="default"
+      >
+        <div
+          class="icon svelte-3x67f2"
+        >
+          <svg
+            data-color="default"
+            data-icon="true"
+            height="200"
+            preserveAspectRatio="xMidYMid"
+            style="shape-rendering: auto; display: block; background: transparent;"
+            viewBox="0 0 100 100"
+            width="200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                r="32"
+                stroke="var(--color-900)"
+                stroke-dasharray="50.26548245743669 50.26548245743669"
+                stroke-linecap="round"
+                stroke-width="8"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  keyTimes="0;1"
+                  repeatCount="indefinite"
+                  type="rotate"
+                  values="0 50 50;360 50 50"
+                />
+              </circle>
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                r="23"
+                stroke="var(--color-600)"
+                stroke-dasharray="36.12831551628262 36.12831551628262"
+                stroke-dashoffset="36.12831551628262"
+                stroke-linecap="round"
+                stroke-width="8"
+              >
+                <animatetransform
+                  attributeName="transform"
+                  dur="1s"
+                  keyTimes="0;1"
+                  repeatCount="indefinite"
+                  type="rotate"
+                  values="0 50 50;-360 50 50"
+                />
+              </circle>
+            </g>
+          </svg>
+
+
+
+        </div>
+
+
+        <p
+          class="svelte-3x67f2"
+          data-width="m"
+        >
+          <span
+            _tolgee="true"
+            class="loader svelte-1qlsv98"
+          >
+            Loading user session...
+          </span>
+        </p>
+      </section>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+ ❯ src/routes/ext/account/create/-page.svelte.test.ts:83:79
+     81|
+     82|     await waitFor(() => {
+     83|       expect(page.queryByRole("form", { name: /register completion for…
+       |                                                                               ^
+     84|     });
+     85|
+ ❯ runWithExpensiveErrorDiagnosticsDisabled ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/config.js:47:12
+ ❯ checkCallback ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/wait-for.js:124:77
+ ❯ Timeout.checkRealTimersCallback ../../node_modules/.pnpm/@testing-library+dom@10.4.1/node_modules/@testing-library/dom/dist/wait-for.js:118:16
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Vitest caught 2 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+ReferenceError: Sanitizer is not defined
+ ❯ _page src/routes/ext/account/create/+page.svelte:12:18
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/render.js:228:17
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/dom/blocks/boundary.js:159:39
+ ❯ update_reaction ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:264:16
+ ❯ update_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:439:18
+ ❯ create_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/reactivity/effects.js:124:17
+ ❯ branch ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/reactivity/effects.js:419:9
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/dom/blocks/boundary.js:159:32
+ ❯ update_reaction ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:264:16
+ ❯ update_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:439:18
+This error originated in "src/routes/ext/account/create/-page.svelte.test.ts" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "renders the register form with decoded URL parameters". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+ReferenceError: Sanitizer is not defined
+ ❯ _page src/routes/ext/account/create/+page.svelte:12:18
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/render.js:228:17
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/dom/blocks/boundary.js:159:39
+ ❯ update_reaction ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:264:16
+ ❯ update_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:439:18
+ ❯ create_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/reactivity/effects.js:124:17
+ ❯ branch ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/reactivity/effects.js:419:9
+ ❯ ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/dom/blocks/boundary.js:159:32
+ ❯ update_reaction ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:264:16
+ ❯ update_effect ../../node_modules/.pnpm/svelte@5.46.1/node_modules/svelte/src/internal/client/runtime.js:439:18
+This error originated in "src/routes/ext/account/create/-page.svelte.test.ts" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "calls credentialsCreate with correct decoded email from base64 URL param". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 9 passed (11)
+      Tests  3 failed | 45 passed (48)
+     Errors  2 errors
+   Start at  21:45:39
+   Duration  4.44s (transform 10.09s, setup 1.64s, import 14.36s, tests 8.27s, environment 4.03s)
+ ELIFECYCLE  Command failed with exit code 1.
+ ELIFECYCLE  Test failed. See above for more details.

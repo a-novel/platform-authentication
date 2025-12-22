@@ -1,0 +1,17 @@
+{
+  "aria.form": "Formulaire de réinitialisation du mot de passe",
+  "field.passwordConfirmation.helper": "Veuillez entrer votre mot de passe une seconde fois.",
+  "field.passwordConfirmation.label": "Confirmation du mot de passe",
+  "field.password.label": "Mot de passe",
+  "login": "Connexion",
+  "meta.title": "Terminer la réinitialisation du mot de passe",
+  "submit": "Mettre le mot de passe à jour",
+  "submit.error.text": "Une erreur inconnue est survenue pendant la réinitialisation du mot de passe. Veuillez réessayer pus tard.",
+  "submit.error.title": "Échec de la réinitialisation du mot de passe.",
+  "submit.error.unauthorized.text": "Vous n’êtes pas autorisé à réinitialiser votre mot de passe avec les informations fournies. Le lien que vous essayer d'utiliser est peut-être expiré ou invalide,  ou alors il a déjà été utilisé.",
+  "submitting": "Mise à jour du mot de passe...",
+  "success.main": "Le mot de passe associé à votre compte a été mis à jour avec succès.",
+  "success.sub": "Vous pouvez à présent vous connecter avec votre nouveau mot de passe. Vous pouvez fermer cette page, ou vous rendre sur l'écran de connexion.",
+  "success.title": "Mot de passe réinitialisé avec succès !",
+  "title": "Terminer la réinitialisation du mot de passe"
+}

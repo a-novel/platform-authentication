@@ -22,9 +22,13 @@
 
   const { t } = getTranslate("auth.nav");
 
+  // Parse user mail by splitting it into user and host part. Since any registered
+  // user has a valid email address, their should never be a case when splitting fails.
+  // However, as scripts can be manipulated, we still handle edge cases here.
   function safeParseMail(source: string): [string, string] {
     const parts = source.split("@");
 
+    // Only return what's provided, don't use placeholders.
     switch (parts.length) {
       case 0:
         return ["", ""];
@@ -101,7 +105,7 @@
 
     & > .info {
       margin: 0;
-      color: var(--color-gray-500);
+      color: var(--color-gray-600);
       font-size: var(--font-size-p);
       text-align: center;
 
@@ -173,7 +177,7 @@
     }
     & > .provider {
       overflow: hidden;
-      color: var(--color-gray-500);
+      color: var(--color-gray-600);
       font-size: var(--font-size-xsmall);
       text-overflow: ellipsis;
     }

@@ -4,14 +4,10 @@
   "form.email.error.unknown": "An error occurred while validating the email.",
   "form.error.text": "An unknown error occurred during form validation. You may try again later.",
   "form.error.title": "Form validation error.",
+  "form.password.error.mismatch": "The passwords do not match. Please re-enter them.",
   "form.password.error.tooLong": "The password is too long. Maximum length is {max} characters.",
   "form.password.error.unknown": "An error occurred while validating the password.",
   "submit.error.email.exists": "An account with this email already exists.",
   "submit.error.invalid.email": "No account found with the provided email.",
-  "submit.error.invalid.password": "The provided password is not the correct one.",
-  "validation.error": "Cannot validate email due to unexpected error. You might try to proceed anyways.",
-  "validation.error.email.exists": "An account with this email already exists.",
-  "validation.error.invalid.email": "No account found with the provided email.",
-  "validation.success.email.available": "The email is available.",
-  "validation.success.email.exists": "An account with this email exists."
+  "submit.error.invalid.password": "The provided password is not the correct one."
 }

@@ -27,16 +27,16 @@ const api = new AuthenticationApi("http://auth-api.local");
 
 const mockTokenCreateAnon = tokenCreateAnon as Mock,
   mockCredentialsGet = credentialsGet as Mock,
-  mockClaimsGet = claimsGet as Mock;
+  mockClaimsGet = claimsGet as Mock,
+  onManageAccount = vi.fn(),
+  setScreen = vi.fn();
 
 let manageAccountButton: HTMLButtonElement,
   navAuthRender: ReturnType<typeof render<typeof UITestWrapper>>,
   logoutButton: HTMLButtonElement,
   registerButton: HTMLButtonElement,
   loginButton: HTMLButtonElement,
-  onManageAccount = vi.fn(),
-  user: ReturnType<(typeof userEvent)["setup"]>,
-  setScreen = vi.fn();
+  user: ReturnType<(typeof userEvent)["setup"]>;
 
 function setupAnon() {
   localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(MockSessionAnon));

@@ -7,7 +7,7 @@ import { type Mock, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { AuthenticationApi, claimsGet } from "@a-novel/service-authentication-rest";
 
-import { act, render, waitFor } from "@testing-library/svelte";
+import { render, waitFor } from "@testing-library/svelte";
 
 vi.mock(import("@a-novel/service-authentication-rest"), async (importOriginal) => {
   const mod = await importOriginal();

@@ -28,3 +28,90 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           app_private_key: ${{ secrets.PUBLISH_BOT_PRIVATE_KEY }}
           app_id: ${{ vars.PUBLISH_BOT_ID }}
+
+  build-platform:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+    services:
+      postgres-authentication:
+        image: ghcr.io/a-novel/service-authentication/database:v2.1.6
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+          POSTGRES_INITDB_ARGS: --auth=scram-sha-256
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      postgres-json-keys:
+        image: ghcr.io/a-novel/service-json-keys/database:v2.1.2
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+          POSTGRES_INITDB_ARGS: --auth=scram-sha-256
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      service-json-keys:
+        image: ghcr.io/a-novel/service-json-keys/standalone:v2.1.2
+        credentials:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          POSTGRES_DSN: postgres://postgres:postgres@postgres-json-keys:5432/postgres?sslmode=disable
+          APP_MASTER_KEY: "fec0681a2f57242211c559ca347721766f8a3acd8ed2e63b36b3768051c702ca"
+
+      service-authentication:
+        image: ghcr.io/a-novel/service-authentication/standalone:v2.1.6
+        ports:
+          - "4011:8080"
+        credentials:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          POSTGRES_DSN: postgres://postgres:postgres@postgres-authentication:5432/postgres?sslmode=disable
+          SERVICE_JSON_KEYS_PORT: 8080
+          SERVICE_JSON_KEYS_HOST: service-json-keys
+          PLATFORM_AUTH_URL: http://localhost:6000
+    env:
+      PUBLIC_AUTHENTICATION_SERVICE_URL: http://localhost:4011
+      PUBLIC_STUDIO_PLATFORM_URL: http://localhost:6020
+      PUBLIC_STORYVERSE_PLATFORM_URL: http://localhost:6030
+    steps:
+      - uses: a-novel-kit/workflows/node-actions/setup-node@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          app_private_key: ${{ secrets.DEPENDENCY_BOT_PRIVATE_KEY }}
+          app_id: ${{ vars.DEPENDENCY_BOT_ID }}
+      - name: retrieve npmrc
+        run: |
+          echo "@a-novel:registry=https://npm.pkg.github.com" > $HOME/.npmrc
+          echo "@a-novel-kit:registry=https://npm.pkg.github.com" > $HOME/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> $HOME/.npmrc
+          echo "NPMRC=$HOME/.npmrc" >> "$GITHUB_ENV"
+      - uses: a-novel-kit/workflows/build-actions/docker@master
+        with:
+          file: builds/platform.Dockerfile
+          image_name: ${{ github.repository }}/platform
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          secret-files: |
+            npmrc=${{ env.NPMRC }}
+          run_args: >-
+            -e PUBLIC_AUTHENTICATION_SERVICE_URL="${PUBLIC_AUTHENTICATION_SERVICE_URL}"
+            -e PUBLIC_STUDIO_PLATFORM_URL="${PUBLIC_STUDIO_PLATFORM_URL}"
+            -e PUBLIC_STORYVERSE_PLATFORM_URL="${PUBLIC_STORYVERSE_PLATFORM_URL}"

@@ -16,11 +16,11 @@
   let { children, roles }: Props = $props();
   const session = getSession();
   const sessionScreen = getSessionScreen();
-  const { t } = getTranslate("auth:protected");
+  const { t } = getTranslate("auth.protected");
 
   let forbidden = $derived.by(() => {
     // If some roles are required and the user has a session, verify them.
-    // IF the user does not have the required roles, show forbidden message.
+    // IF the user does not have the required roles, show a forbidden message.
     if (roles?.length && session.claims?.userID) {
       const userRoles = (session.claims.roles || []) as string[];
       return !roles.some((role) => userRoles.includes(role));
@@ -30,7 +30,7 @@
   });
 
   $effect(() => {
-    // Render login screen if the user has no authenticated session.
+    // Render the login screen if the user has no authenticated session.
     // Don't show login if there is no access token as it means the session
     // has not been initialized yet (an anonymous session is always created).
     if (session.accessToken && !session.claims?.userID) {
