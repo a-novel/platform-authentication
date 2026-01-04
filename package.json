@@ -71,7 +71,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-storybook": "^10.1.11",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "jiti": "^2.6.1",
     "prettier": "^3.7.4",
     "prettier-plugin-css-order": "^2.1.2",
