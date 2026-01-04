@@ -1,7 +1,13 @@
 <script lang="ts">
   import { getSession, getSessionScreen } from "$lib";
   import { PasswordResetPage } from "$lib/ui";
-  import { FullPageForm } from "$lib/ui/components";
+  import {
+    type FormConnectorStatus,
+    type FormFieldConnectorStatus,
+    type FormFieldStatus,
+    type FormStatus,
+    FullPageForm,
+  } from "$lib/ui/components";
   import { Validators } from "$lib/utils";
 
   import { type ComponentProps, onDestroy } from "svelte";
@@ -22,8 +28,6 @@
   // ===================================================================================================================
   // Props.
   // ===================================================================================================================
-  type FormProps = ComponentProps<typeof PasswordResetPage>;
-
   interface Props extends Omit<
     ComponentProps<typeof FullPageForm>,
     | "children"
@@ -40,19 +44,6 @@
     api: AuthenticationApi;
   }
 
-  interface EmailStatus {
-    status: FormProps["emailStatus"];
-    text?: string;
-    error?: Error;
-  }
-  interface FormStatus {
-    status: FormProps["formStatus"];
-    title?: string;
-    text?: string;
-    iconID?: string;
-    error?: Error;
-  }
-
   let { api, ...props }: Props = $props();
 
   // ===================================================================================================================
@@ -66,7 +57,7 @@
   const tolgee = getTolgee(["language", "pendingLanguage"]);
   let activeLocale = $tolgee.getLanguage() as LNG | undefined;
 
-  const checkEmailDebouncer = new Debounce(100);
+  const checkEmailDebouncer = new Debounce(300);
   onDestroy(() => {
     checkEmailDebouncer.cancel();
   });
@@ -75,16 +66,15 @@
   // States.
   // ===================================================================================================================
   let // Email.
-    email = $state(""),
-    emailStatus = $state<FormProps["emailStatus"]>("idle"),
-    emailStatusText = $state<FormProps["emailStatusText"]>(),
-    emailError = $state<FormProps["emailError"]>(),
+    emailStatus = $state<FormFieldStatus>("idle"),
+    emailStatusText = $state<string>(),
+    emailError = $state<Error>(),
     // Form.
-    formError = $state<FormProps["formError"]>(),
-    formStatus = $state<FormProps["formStatus"]>(),
-    formStatusTitle = $state<FormProps["formStatusTitle"]>(),
-    formStatusText = $state<FormProps["formStatusText"]>(),
-    formStatusIconID = $state("");
+    formStatus = $state<FormStatus>("idle"),
+    formError = $state<Error>(),
+    formStatusTitle = $state<string>(),
+    formStatusText = $state<string>(),
+    formStatusIconID = $state<string>();
 
   // ===================================================================================================================
   // Helpers.
@@ -106,14 +96,14 @@
     emailStatusText = undefined;
   }
 
-  function setEmailStatus(params?: EmailStatus) {
+  function setEmailStatus(params?: FormFieldConnectorStatus) {
     if (params) {
       emailStatus = params.status;
       emailError = params.error;
       emailStatusText = params.text;
     }
   }
-  function setFormStatus(params?: FormStatus) {
+  function setFormStatus(params?: FormConnectorStatus) {
     if (params) {
       formStatus = params.status;
       formError = params.error;
@@ -175,30 +165,16 @@
       })
       .catch(handleSubmitError);
   }
-
-  // Getters & Setters.
-  function getEmail() {
-    return email;
-  }
-
-  function setEmail(value: string) {
-    value = value.trim(); // IMPORTANT: keep separate reference to the current value.
-    email = value;
-    checkEmailDebouncer.call(() => {
-      validators.validateEmail(value, api, setEmailStatus, false);
-    });
-  }
 </script>
 
 {#snippet formStatusIcon()}
-  <Icon icon={formStatusIconID} />
+  <Icon icon={formStatusIconID ?? ""} />
 {/snippet}
 
 <Validators bind:this={validators} />
 
 <PasswordResetPage
   {...props}
-  bind:email={getEmail, setEmail}
   {onsubmit}
   {loginAction}
   {emailStatus}

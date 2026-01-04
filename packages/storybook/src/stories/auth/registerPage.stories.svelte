@@ -32,18 +32,6 @@
 
 <Story name="Filled" template={filled} />
 
-{#snippet validating()}
-  <RegisterPage email="john.doe@gmail.com" emailStatus="validating" />
-{/snippet}
-
-<Story name="Validating" template={validating} />
-
-{#snippet validationSuccess()}
-  <RegisterPage email="john.doe@gmail.com" emailStatus="valid" emailStatusText={LOREM_IPSUM.SHORT} />
-{/snippet}
-
-<Story name="Validation success" template={validationSuccess} />
-
 {#snippet fieldErrors()}
   <RegisterPage
     email="john.doe@gmail.com"
@@ -54,6 +42,12 @@
 {/snippet}
 
 <Story name="Field errors" template={fieldErrors} />
+
+{#snippet formSubmitting()}
+  <RegisterPage email="john.doe@gmail.com" formStatus="validating" />
+{/snippet}
+
+<Story name="Form submitting" template={formSubmitting} />
 
 {#snippet formError()}
   <RegisterPage

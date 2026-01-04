@@ -1,0 +1,27 @@
+services:
+  tolgee-app:
+    image: docker.io/tolgee/tolgee:v3.145.0
+    volumes:
+      - ./tolgee-data:/data
+      - ./tolgee.config.yaml:/config.yaml
+    ports:
+      - "${TOLGEE_PORT}:8080"
+    environment:
+      spring.config.additional-location: file:///config.yaml
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - tolgee-db
+
+  tolgee-db:
+    build:
+      context: .
+      dockerfile: ./tolgee.database.Dockerfile
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./tolgee-data/postgres:/var/lib/postgresql
+      - ./tolgee.database.dump:/tmp/tolgee.database.dump

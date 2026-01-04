@@ -1,10 +1,20 @@
+<script module lang="ts">
+  export type FormFieldStatus = "idle" | "validating" | "invalid" | "valid";
+
+  export interface FormFieldConnectorStatus {
+    status: FormFieldStatus;
+    text?: string;
+    error?: Error;
+  }
+</script>
+
 <script lang="ts">
   import type { ComponentProps, Snippet } from "svelte";
 
   import { ErrorBox, InfoBox, Input } from "@a-novel/uikit/ui/components";
 
   interface Props extends ComponentProps<typeof Input> {
-    status?: "idle" | "validating" | "invalid" | "valid";
+    status?: FormFieldStatus;
     statusText?: string;
     error?: Error;
     helper?: Snippet;
@@ -94,8 +104,8 @@
         font-size: var(--font-size-s);
 
         &[data-required="true"]::after {
-          content: " *";
-          color: var(--color-accent-400);
+          content: "*";
+          color: var(--color-accent);
         }
 
         & > :global(svg) {

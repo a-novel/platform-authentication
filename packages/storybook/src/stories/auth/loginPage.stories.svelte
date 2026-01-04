@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
   import { LoginPage } from "@a-novel/package-authentication/ui";
+  import { LOREM_IPSUM } from "@a-novel/uikit/utils";
 
   import Icon from "@iconify/svelte";
   import { defineMeta } from "@storybook/addon-svelte-csf";
@@ -10,10 +11,6 @@
     component: LoginPage,
     tags: ["autodocs"],
   });
-</script>
-
-<script>
-  import { LOREM_IPSUM } from "@a-novel/uikit/utils";
 </script>
 
 {#snippet errorIcon()}
@@ -32,23 +29,6 @@
 
 <Story name="Filled" template={filled} />
 
-{#snippet validating()}
-  <LoginPage email="john.doe@gmail.com" password="hackthenasa" emailStatus="validating" />
-{/snippet}
-
-<Story name="Validating" template={validating} />
-
-{#snippet validationSuccess()}
-  <LoginPage
-    email="john.doe@gmail.com"
-    password="hackthenasa"
-    emailStatus="valid"
-    emailStatusText={LOREM_IPSUM.SHORT}
-  />
-{/snippet}
-
-<Story name="Validation success" template={validationSuccess} />
-
 {#snippet fieldErrors()}
   <LoginPage
     email="john.doe@gmail.com"
@@ -63,6 +43,12 @@
 {/snippet}
 
 <Story name="Field errors" template={fieldErrors} />
+
+{#snippet formSubmitting()}
+  <LoginPage email="john.doe@gmail.com" password="hackthenasa" formStatus="validating" />
+{/snippet}
+
+<Story name="Form submitting" template={formSubmitting} />
 
 {#snippet formError()}
   <LoginPage

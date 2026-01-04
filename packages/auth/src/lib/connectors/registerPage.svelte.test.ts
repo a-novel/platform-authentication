@@ -13,7 +13,6 @@ import {
   AuthenticationApi,
   Lang,
   claimsGet,
-  credentialsExists,
   shortCodeCreateRegister,
   tokenCreateAnon,
 } from "@a-novel/service-authentication-rest";
@@ -26,7 +25,6 @@ vi.mock(import("@a-novel/service-authentication-rest"), async (importOriginal) =
   return {
     ...mod,
     tokenCreateAnon: vi.fn(),
-    credentialsExists: vi.fn(),
     shortCodeCreateRegister: vi.fn(),
     claimsGet: vi.fn(),
   };
@@ -37,13 +35,12 @@ const api = new AuthenticationApi("http://auth-api.local");
 const mockTokenCreateAnon = tokenCreateAnon as Mock,
   mockShortCodeCreateRegister = shortCodeCreateRegister as Mock,
   mockClaimsGet = claimsGet as Mock,
-  mockCredentialsExists = credentialsExists as Mock;
+  setScreen = vi.fn();
 
 let submitButton: HTMLButtonElement,
   registerPage: ReturnType<typeof render<typeof UITestWrapper>>,
   emailField: HTMLInputElement,
-  user: ReturnType<(typeof userEvent)["setup"]>,
-  setScreen = vi.fn();
+  user: ReturnType<(typeof userEvent)["setup"]>;
 
 function setupBase() {
   localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(MockSessionAnon));
@@ -95,132 +92,6 @@ describe("register page", () => {
     });
   });
 
-  describe("fields", () => {
-    beforeEach(() => prepare(setupBase));
-
-    describe("email", () => {
-      it("does not trigger api validation while email is not valid", async () => {
-        expect(emailField.dataset.status).toBe("idle");
-
-        await user.type(emailField, "john.doe");
-
-        await waitFor(() => {
-          expect(mockCredentialsExists).not.toHaveBeenCalled();
-          expect(emailField.dataset.status).toBe("idle");
-        });
-      });
-
-      it("reports success", async () => {
-        mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
-
-        await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("validating");
-        });
-
-        await waitFor(() => {
-          expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-            email: "john.doe@gmail.com",
-          });
-          expect(emailField.dataset.status).toBe("valid");
-        });
-      });
-
-      describe("already taken", () => {
-        it("reports error", async () => {
-          mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(true), 100)));
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("invalid");
-          });
-
-          const errorMessage = registerPage.queryByText(/an account with this email already exists/i);
-          expect(errorMessage).toBeDefined();
-          expect(errorMessage).not.toBeNull();
-        });
-
-        it("recovers from error", async () => {
-          mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(true), 100)));
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("invalid");
-          });
-
-          mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
-          await user.type(emailField, "n", { initialSelectionStart: 3 });
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledTimes(2);
-            expect(mockCredentialsExists).toHaveBeenLastCalledWith(api, MockSessionAnon.accessToken, {
-              email: "john.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("valid");
-          });
-
-          const errorMessage = registerPage.queryByText(/an account with this email already exists/i);
-          expect(errorMessage).toBeNull();
-        });
-      });
-
-      describe("unexpected error", () => {
-        it("reports error", async () => {
-          mockCredentialsExists.mockImplementationOnce(async () => {
-            throw new Error("badaboom");
-          });
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("idle");
-          });
-
-          const errorMessage = registerPage.queryByText(/cannot validate email due to unexpected error/i);
-          expect(errorMessage).toBeDefined();
-          expect(errorMessage).not.toBeNull();
-        });
-
-        it("recovers from error", async () => {
-          mockCredentialsExists.mockImplementationOnce(async () => {
-            throw new Error("badaboom");
-          });
-          await user.type(emailField, "joh.doe@gmail.com");
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-              email: "joh.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("idle");
-          });
-
-          mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
-          await user.type(emailField, "n", { initialSelectionStart: 3 });
-
-          await waitFor(() => {
-            expect(mockCredentialsExists).toHaveBeenCalledTimes(2);
-            expect(mockCredentialsExists).toHaveBeenLastCalledWith(api, MockSessionAnon.accessToken, {
-              email: "john.doe@gmail.com",
-            });
-            expect(emailField.dataset.status).toBe("valid");
-          });
-
-          const errorMessage = registerPage.queryByText(/cannot validate email due to unexpected error/i);
-          expect(errorMessage).toBeNull();
-        });
-      });
-    });
-  });
-
   describe("submit", () => {
     beforeEach(() => prepare(setupBase));
 
@@ -241,16 +112,10 @@ describe("register page", () => {
     });
 
     it("reports success", async () => {
-      mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
       await user.type(emailField, "john.doe@gmail.com");
-
-      await waitFor(() => {
-        expect(emailField.dataset.status).toBe("valid");
-      });
 
       mockShortCodeCreateRegister.mockReturnValueOnce(Promise.resolve());
 
-      const submitButton = registerPage.getByRole("button", { name: /start registration/i }) as HTMLButtonElement;
       await user.click(submitButton);
 
       await waitFor(() => {
@@ -279,18 +144,12 @@ describe("register page", () => {
 
     describe("on error", () => {
       it("reports email already taken", async () => {
-        mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
         await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("valid");
-        });
 
         mockShortCodeCreateRegister.mockImplementationOnce(async () => {
           throw new HttpError(409, "email taken");
         });
 
-        const submitButton = registerPage.getByRole("button", { name: /start registration/i }) as HTMLButtonElement;
         await user.click(submitButton);
 
         await waitFor(() => {
@@ -309,18 +168,12 @@ describe("register page", () => {
       });
 
       it("reports any error", async () => {
-        mockCredentialsExists.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(false), 100)));
         await user.type(emailField, "john.doe@gmail.com");
-
-        await waitFor(() => {
-          expect(emailField.dataset.status).toBe("valid");
-        });
 
         mockShortCodeCreateRegister.mockImplementationOnce(async () => {
           throw new HttpError(500, "ouh la la");
         });
 
-        const submitButton = registerPage.getByRole("button", { name: /start registration/i }) as HTMLButtonElement;
         await user.click(submitButton);
 
         await waitFor(() => {

@@ -36,8 +36,7 @@ export default defineConfig({
       reporter: ["text", "json", "html", "lcov"],
       reportsDirectory: "./coverage",
       include: ["src/**/*.{ts,tsx,svelte}"],
-      // No tests on purely visual components (unless absolutely required).
-      exclude: ["src/lib/ui", "src/lib/locales", "**/*.d.ts"],
+      exclude: ["**/*.d.ts"],
     },
     projects: [
       {

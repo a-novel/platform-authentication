@@ -1,0 +1,8 @@
+{
+  "meta.title": "Validation du courriel",
+  "page.error.content": "Nous n'avons pas pu valider votre courriel <strong>{email}</strong>. Le lien de validation est peut-être expiré ou invalide, ou ce courriel a déjà été validé.",
+  "page.error.title": "Échec de la validation du courriel.",
+  "page.loading.content": "Validation du courriel...",
+  "page.success.content": "Votre courriel <strong>{email}</strong> a été validé avec succès. Vous pouvez à présent vous connecter avec.",
+  "page.success.title": "Courriel validé avec succès !"
+}

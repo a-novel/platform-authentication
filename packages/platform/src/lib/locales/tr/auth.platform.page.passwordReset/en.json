@@ -1,0 +1,17 @@
+{
+  "aria.form": "Password reset completion form",
+  "field.passwordConfirmation.helper": "Please re-enter your password to confirm it.",
+  "field.passwordConfirmation.label": "Confirm password",
+  "field.password.label": "Password",
+  "login": "Login",
+  "meta.title": "Complete password reset",
+  "submit": "Update password",
+  "submit.error.text": "An unknown error occurred during password reset. You may try again later.",
+  "submit.error.title": "Password reset failed.",
+  "submit.error.unauthorized.text": "You are not allowed to reset your password with the provided information. The link you are trying to use may have expired or is invalid, or has already been used.",
+  "submitting": "Updating password...",
+  "success.main": "The password for your account has been successfully changed.",
+  "success.sub": "You can now use your new password to log in. You may close this page, or proceed to login.",
+  "success.title": "Password reset successful!",
+  "title": "Complete password reset"
+}

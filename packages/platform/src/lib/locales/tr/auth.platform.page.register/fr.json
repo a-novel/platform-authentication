@@ -1,0 +1,18 @@
+{
+  "account.action": "Gérer mon compte",
+  "aria.form": "Formulaire de complétion de l'inscription",
+  "field.passwordConfirmation.helper": "Veuillez entrer votre mot de passe une seconde fois afin d'en valider la saisie.",
+  "field.passwordConfirmation.label": "Confirmation du mot de passe",
+  "field.password.label": "Mot de passe",
+  "meta.title": "Terminer l'inscription",
+  "submit": "Créer un compte",
+  "submit.error.alreadyTaken.text": "Un compte avec le courriel source existe déjà. Cela signifies que votre lien a probablement déjà été utilisé. Vous pouvez tenter de vous connecter à la place.",
+  "submit.error.text": "Une erreur inconnue est survenue pendant l'inscription. Veuillez réessayer plus tard.",
+  "submit.error.title": "Échec de l'inscription.",
+  "submit.error.unauthorized.text": "Vous n’êtes pas autorisé à créer un compte avec ces informations. Le lien que vous essayer d'utiliser est peut-être expiré ou invalide,  ou alors il a déjà été utilisé.",
+  "submitting": "Création du compte...",
+  "success.main": "Inscription terminée! Bienvenue parmi nous, <strong>{user}</strong>.",
+  "success.sub": "Vous pouvez à présent fermer cette page, ou vous rendre sur la page de gestion de votre compte. Vous êtes déjà connecté, aucune action supplémentaire n'est requise.",
+  "success.title": "Inscription terminée avec succès !",
+  "title": "Terminer l'inscription"
+}
