@@ -80,7 +80,7 @@ importers:
         version: 1.3.6(2d562c046e860dedd2d2a4dad07fe2ff)
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.4(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
+        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(b0e918d1bf6a8648d49f62c2c01bec4c)
@@ -194,7 +194,7 @@ importers:
         version: link:../auth
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.4(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
+        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(b0e918d1bf6a8648d49f62c2c01bec4c)
@@ -317,7 +317,7 @@ importers:
         version: link:../platform
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.4(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
+        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(b0e918d1bf6a8648d49f62c2c01bec4c)
@@ -434,8 +434,8 @@ packages:
       typescript: ^5.8.3
       typescript-eslint: ^8.38.0
 
-  '@a-novel/service-authentication-rest@2.2.4':
-    resolution: {integrity: sha512-XrTgb95uic/QrQnQ+2ZUWkTZNVuqUoT8oyrnlHWpvsK5MJtP5u/hToJa5n/t9iq+iHGWdggduVY0g8N/kbdnKA==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.2.4/150b2bb5bff2a7a25975d117f3034253e65e2bdd}
+  '@a-novel/service-authentication-rest@2.2.5':
+    resolution: {integrity: sha512-ubz6HYrbxGGU3SPXz4p3K2MNH/HtZXdezRpABU5n7bC40tLg2Ny2mLM/dIUUTSoGqdARC4XjalY2GbAEsJd78A==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.2.5/7476a74de8f4afaf4ebfe3413a99a79e1914d443}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
       '@a-novel-kit/nodelib-browser': ^1.3.1
@@ -461,25 +461,6 @@ packages:
       storybook: ^10.1.11
       svelte: ^5.0.0
       zod: ^4.1.12
-    peerDependenciesMeta:
-      '@storybook/addon-a11y':
-        optional: true
-      '@storybook/addon-docs':
-        optional: true
-      '@storybook/addon-svelte-csf':
-        optional: true
-      '@storybook/addon-themes':
-        optional: true
-      '@storybook/addon-vitest':
-        optional: true
-      '@storybook/sveltekit':
-        optional: true
-      '@types/react':
-        optional: true
-      react:
-        optional: true
-      storybook:
-        optional: true
 
   '@acemir/cssom@0.9.30':
     resolution: {integrity: sha512-9CnlMCI0LmCIq0olalQqdWrJHPzm0/tw3gzOA9zJSgvFX7Xau3D24mAGa4BtwxwY69nsuJW6kQqqCzf/mEcQgg==}
@@ -3025,7 +3006,7 @@ snapshots:
       typescript: 5.9.3
       typescript-eslint: 8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
 
-  '@a-novel/service-authentication-rest@2.2.4(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)':
+  '@a-novel/service-authentication-rest@2.2.5(@a-novel-kit/nodelib-browser@1.3.6(zod@4.3.5))(zod@4.3.5)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.6(zod@4.3.5)
       zod: 4.3.5
@@ -3034,22 +3015,21 @@ snapshots:
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.6(zod@4.3.5)
       '@iconify/svelte': 5.2.1(svelte@5.47.1)
-      '@sveltejs/kit': 2.50.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)))(svelte@5.47.1)(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))
-      '@tolgee/format-icu': 6.2.7
-      '@tolgee/svelte': 6.2.7(svelte@5.47.1)
-      '@tolgee/web': 6.2.7
-      svelte: 5.47.1
-      zod: 4.3.5
-    optionalDependencies:
       '@storybook/addon-a11y': 10.2.0(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@storybook/addon-docs': 10.2.0(@types/react@19.2.7)(esbuild@0.27.2)(rollup@4.55.1)(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))
       '@storybook/addon-svelte-csf': 5.0.10(@storybook/svelte@10.2.0(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(svelte@5.47.1))(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)))(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))
       '@storybook/addon-themes': 10.2.0(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@storybook/addon-vitest': 10.2.0(@vitest/browser@4.0.17(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)))(@vitest/runner@4.0.17)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0))
       '@storybook/sveltekit': 10.2.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)))(esbuild@0.27.2)(rollup@4.55.1)(storybook@10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))
+      '@sveltejs/kit': 2.50.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.47.1)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)))(svelte@5.47.1)(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1))
+      '@tolgee/format-icu': 6.2.7
+      '@tolgee/svelte': 6.2.7(svelte@5.47.1)
+      '@tolgee/web': 6.2.7
       '@types/react': 19.2.7
       react: 19.2.3
       storybook: 10.2.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      svelte: 5.47.1
+      zod: 4.3.5
 
   '@acemir/cssom@0.9.30': {}
 
