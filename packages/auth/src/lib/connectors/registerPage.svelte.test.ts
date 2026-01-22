@@ -143,30 +143,6 @@ describe("register page", () => {
     });
 
     describe("on error", () => {
-      it("reports email already taken", async () => {
-        await user.type(emailField, "john.doe@gmail.com");
-
-        mockShortCodeCreateRegister.mockImplementationOnce(async () => {
-          throw new HttpError(409, "email taken");
-        });
-
-        await user.click(submitButton);
-
-        await waitFor(() => {
-          expect(mockShortCodeCreateRegister).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-            email: "john.doe@gmail.com",
-            lang: Lang.En,
-          });
-          expect(emailField.dataset.status).toBe("invalid");
-        });
-
-        const errorMessage = registerPage.queryByText(/an account with this email already exists/i);
-        expect(errorMessage).toBeDefined();
-        expect(errorMessage).not.toBeNull();
-
-        expect(setScreen).not.toHaveBeenCalled();
-      });
-
       it("reports any error", async () => {
         await user.type(emailField, "john.doe@gmail.com");
 

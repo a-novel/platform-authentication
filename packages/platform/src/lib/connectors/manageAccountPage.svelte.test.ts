@@ -152,30 +152,6 @@ describe("email update", () => {
     });
 
     describe("on error", () => {
-      it("reports email already in use", async () => {
-        await user.type(emailUpdateEmailField, "john.doe@gmail.com");
-
-        mockShortCodeCreateEmailUpdate.mockImplementationOnce(async () => {
-          throw new HttpError(409, "Conflict");
-        });
-
-        // Send form anyway.
-        await user.click(emailUpdateSubmitButton);
-
-        await waitFor(() => {
-          expect(mockShortCodeCreateEmailUpdate).toHaveBeenCalledExactlyOnceWith(api, MockSessionUser.accessToken, {
-            email: "john.doe@gmail.com",
-            lang: Lang.En,
-          });
-        });
-
-        await waitFor(() => {
-          const errorMessage = manageAccountPage.queryByText(/an account with this email already exists/i);
-          expect(errorMessage).toBeDefined();
-          expect(errorMessage).not.toBeNull();
-        });
-      });
-
       it("reports any error", async () => {
         await user.type(emailUpdateEmailField, "john.doe@gmail.com");
 

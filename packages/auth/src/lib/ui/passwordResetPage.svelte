@@ -54,7 +54,7 @@
       {#snippet message()}
         {@html $t(
           "success.main",
-          "A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to reset your password.",
+          "A link will be sent to <strong>{user}</strong>, if an account exists with this email. This link contains a single-usage temporary form to reset your password.",
           { user: email }
         )}
       {/snippet}

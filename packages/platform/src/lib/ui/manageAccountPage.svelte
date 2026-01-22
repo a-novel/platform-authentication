@@ -134,20 +134,20 @@
     {#snippet success()}
       <PageFormSuccess>
         {#snippet title()}
-          {$t("emailUpdate,success.title", "Confirmation email sent")}
+          {$t("emailUpdate.success.title", "Confirmation email sent")}
         {/snippet}
 
         {#snippet message()}
           {@html $t(
-            "emailUpdate,success.main",
-            "A validation link was sent to <strong>{email}</strong>. You must click this link to activate your new email.",
+            "emailUpdate.success.main",
+            "A validation link will be sent to <strong>{email}</strong>, if no account uses this email yet. You must click this link to activate your new email.",
             { email: emailUpdateEmail }
           )}
         {/snippet}
 
         {#snippet sub()}
           {$t(
-            "emailUpdate,success.sub",
+            "emailUpdate.success.sub",
             "If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page."
           )}
         {/snippet}

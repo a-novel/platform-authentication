@@ -1,5 +1,7 @@
 {
   "aria.form": "Formulaire de connexion",
+  "credentials.error.text": "Le courriel ou le mot de passe fourni sont incorrects.",
+  "credentials.error.title": "Identifiants invalides.",
   "field.email.label": "Courriel",
   "field.password.label": "Mot de passe",
   "password.forgot": "Mot de passe oublié ?",

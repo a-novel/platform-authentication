@@ -207,22 +207,16 @@
   }
 
   function handleEmailUpdateSubmitError(err: unknown) {
-    const emailValidated = validators.handleEmailSubmitError(err);
-    setEmailUpdateEmailStatus(emailValidated && { status: "invalid", ...emailValidated });
-
-    // If no specific error has been set, set a general form error.
-    if (emailUpdateEmailStatus !== "invalid") {
-      setEmailUpdateFormStatus({
-        status: "invalid",
-        title: $t("emailUpdate.submit.error.title", "Email update failed."),
-        text: $t(
-          "emailUpdate.submit.error.text",
-          "An unknown error occurred during the creation of a validation link. You may try again later."
-        ),
-        iconID: "lucide:server-off",
-        error: err instanceof Error ? err : undefined,
-      });
-    }
+    setEmailUpdateFormStatus({
+      status: "invalid",
+      title: $t("emailUpdate.submit.error.title", "Email update failed."),
+      text: $t(
+        "emailUpdate.submit.error.text",
+        "An unknown error occurred during the creation of a validation link. You may try again later."
+      ),
+      iconID: "lucide:server-off",
+      error: err instanceof Error ? err : undefined,
+    });
   }
 
   function handlePasswordUpdateSubmitError(err: unknown) {

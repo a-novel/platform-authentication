@@ -143,30 +143,6 @@ describe("passwordReset page", () => {
     });
 
     describe("on error", () => {
-      it("reports email not found", async () => {
-        await user.type(emailField, "john.doe@gmail.com");
-
-        mockShortCodeCreatePasswordReset.mockImplementationOnce(async () => {
-          throw new HttpError(404, "email not found");
-        });
-
-        await user.click(submitButton);
-
-        await waitFor(() => {
-          expect(mockShortCodeCreatePasswordReset).toHaveBeenCalledExactlyOnceWith(api, MockSessionAnon.accessToken, {
-            email: "john.doe@gmail.com",
-            lang: Lang.En,
-          });
-          expect(emailField.dataset.status).toBe("invalid");
-        });
-
-        const errorMessage = passwordResetPage.queryByText(/no account found with the provided email/i);
-        expect(errorMessage).toBeDefined();
-        expect(errorMessage).not.toBeNull();
-
-        expect(setScreen).not.toHaveBeenCalled();
-      });
-
       it("reports any error", async () => {
         await user.type(emailField, "john.doe@gmail.com");
 

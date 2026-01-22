@@ -157,12 +157,12 @@ describe("login page", () => {
     });
 
     describe("on error", () => {
-      it("reports email not found", async () => {
+      it("reports email or password incorrect", async () => {
         await user.type(emailField, "john.doe@gmail.com");
         await user.type(passwordField, "s3cr3t!");
 
         mockTokenCreate.mockImplementationOnce(async () => {
-          throw new HttpError(404, "email not found");
+          throw new HttpError(401, "email or password incorrect");
         });
 
         await user.click(submitButton);
@@ -172,35 +172,9 @@ describe("login page", () => {
             email: "john.doe@gmail.com",
             password: "s3cr3t!",
           });
-          expect(emailField.dataset.status).toBe("invalid");
         });
 
-        const errorMessage = loginPage.queryByText(/no account found with the provided email/i);
-        expect(errorMessage).toBeDefined();
-        expect(errorMessage).not.toBeNull();
-
-        expect(setScreen).not.toHaveBeenCalled();
-      });
-
-      it("reports password incorrect", async () => {
-        await user.type(emailField, "john.doe@gmail.com");
-        await user.type(passwordField, "s3cr3t!");
-
-        mockTokenCreate.mockImplementationOnce(async () => {
-          throw new HttpError(403, "password incorrect");
-        });
-
-        await user.click(submitButton);
-
-        await waitFor(() => {
-          expect(mockTokenCreate).toHaveBeenCalledExactlyOnceWith(api, {
-            email: "john.doe@gmail.com",
-            password: "s3cr3t!",
-          });
-          expect(passwordField.dataset.status).toBe("invalid");
-        });
-
-        const errorMessage = loginPage.queryByText(/the provided password is not the correct one/i);
+        const errorMessage = loginPage.queryByText(/the provided email or password is incorrect/i);
         expect(errorMessage).toBeDefined();
         expect(errorMessage).not.toBeNull();
 

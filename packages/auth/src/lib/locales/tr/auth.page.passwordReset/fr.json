@@ -7,8 +7,8 @@
   "submit.error.text": "Une erreur inconnue est survenue pendant la création du formulaire de réinitialisation du mot de passe. Vous pouvez retenter plus tard.",
   "submit.error.title": "Échec de la réinitialisation du mot de passe.",
   "submitting": "Création du formulaire...",
-  "success.main": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe.",
+  "success.main": "Un lien sera envoyé à <strong>{user}</strong>, si un compte existe bien pour ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe.",
   "success.sub": "Si vous ne parvenez pas à compléter le formulaire dans les temps, vous pourrez toujours en demander un nouveau depuis cette page. Vous pouvez à présent <strong>fermer cette page</strong>, ou vous diriger vers la <strong>page de connexion</strong> une fois votre mot de passe réinitialisé.",
-  "success.title": "Formulaire de réinitialisation créé.",
+  "success.title": "Formulaire de réinitialisation créé !",
   "title": "Réinitialisation du mot de passe"
 }

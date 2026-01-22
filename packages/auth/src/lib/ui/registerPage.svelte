@@ -54,7 +54,7 @@
       {#snippet message()}
         {@html $t(
           "success.main",
-          "A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to complete your registration.",
+          "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration.",
           { user: email }
         )}
       {/snippet}

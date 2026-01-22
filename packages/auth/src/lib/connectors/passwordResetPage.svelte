@@ -124,22 +124,16 @@
     }
   }
   function handleSubmitError(err: unknown) {
-    const emailValidated = validators.handleEmailSubmitError(err);
-    setEmailStatus(emailValidated && { status: "invalid", ...emailValidated });
-
-    // If no specific error has been set, set a general form error.
-    if (emailStatus !== "invalid") {
-      setFormStatus({
-        status: "invalid",
-        title: $t("submit.error.title", "Password-reset failed."),
-        text: $t(
-          "submit.error.text",
-          "An unknown error occurred during password-reset form creation. You may try again later."
-        ),
-        iconID: "lucide:server-off",
-        error: err instanceof Error ? err : undefined,
-      });
-    }
+    setFormStatus({
+      status: "invalid",
+      title: $t("submit.error.title", "Password-reset failed."),
+      text: $t(
+        "submit.error.text",
+        "An unknown error occurred during password-reset form creation. You may try again later."
+      ),
+      iconID: "lucide:server-off",
+      error: err instanceof Error ? err : undefined,
+    });
   }
   async function onsubmit(evt: Parameters<EventHandler<SubmitEvent, HTMLFormElement>>[0]) {
     evt.preventDefault();

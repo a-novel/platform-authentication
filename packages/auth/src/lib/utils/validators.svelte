@@ -76,12 +76,6 @@
    * Handle error on email field during form submission.
    */
   export function handleEmailSubmitError(err: unknown): { text: string; error?: Error } | undefined {
-    if (isHttpStatusError(err, 404)) {
-      return {
-        text: $t("submit.error.invalid.email", "No account found with the provided email."),
-      };
-    }
-
     if (isHttpStatusError(err, 409)) {
       return {
         text: $t("submit.error.email.exists", "An account with this email already exists."),
@@ -92,7 +86,7 @@
   }
 
   /**
-   * Handle error on password field during form submission.
+   * Handle error on the password field during form submission.
    */
   export function handlePasswordSubmitError(err: unknown): { text: string; error?: Error } | undefined {
     if (isHttpStatusError(err, 403)) {
