@@ -176,7 +176,7 @@ importers:
         version: 4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)
       vitest-browser-svelte:
         specifier: ^2.0.1
-        version: 2.0.1(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0))
+        version: 2.0.2(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0))
       zod:
         specifier: ^4.2.1
         version: 4.3.5
@@ -299,7 +299,7 @@ importers:
         version: 4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)
       vitest-browser-svelte:
         specifier: ^2.0.1
-        version: 2.0.1(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0))
+        version: 2.0.2(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0))
       zod:
         specifier: ^4.2.1
         version: 4.3.5
@@ -2851,8 +2851,8 @@ packages:
       vite:
         optional: true
 
-  vitest-browser-svelte@2.0.1:
-    resolution: {integrity: sha512-z7GFio7vxaOolY+xwPUMEKuwL4KcPzB8+bepA9F0Phqag/TJ4j7IAGSwm4Y/FBh7KznsP+7aEIllMay0qDpFXw==}
+  vitest-browser-svelte@2.0.2:
+    resolution: {integrity: sha512-OLJVYoIYflwToFIy3s41pZ9mVp6dwXfYd8IIsWoc57g8DyN3SxsNJ5GB1xWFPxLFlKM+1MPExjPxLaqdELrfRQ==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
       vitest: ^4.0.0
@@ -5311,8 +5311,9 @@ snapshots:
     optionalDependencies:
       vite: 7.3.1(@types/node@24.10.9)(jiti@2.6.1)
 
-  vitest-browser-svelte@2.0.1(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)):
+  vitest-browser-svelte@2.0.2(svelte@5.48.0)(vitest@4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)):
     dependencies:
+      '@testing-library/svelte-core': 1.0.0(svelte@5.48.0)
       svelte: 5.48.0
       vitest: 4.0.17(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0)
 
