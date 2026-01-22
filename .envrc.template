@@ -1,7 +1,7 @@
 export TOLGEE_PKG_API_KEY="[your_api_key_here]"
 export TOLGEE_PLATFORM_API_KEY="[your_api_key_here]"
 
-export TOLGEE_PORT=6005
+export TOLGEE_PORT=6015
 export TOLGEE_URL="http://localhost:${TOLGEE_PORT}"
 
 export AUTHENTICATION_API_PORT=4011

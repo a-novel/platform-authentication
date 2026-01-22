@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict k1BbfU1Byeoo2rWAujl14KIpNa5JyNNpz8Vr7QWWbQxalU1v6MLZQB5dyKZIUng
+\restrict Zgw5m4imWpHKYY7ulLWeenZyiEcMIZL9mndiIQO9F97zo6Bfdi3KB9MOy8UleBJ
 
 -- Dumped from database version 18.1 (Debian 18.1-1.pgdg13+2)
 -- Dumped by pg_dump version 18.1 (Debian 18.1-1.pgdg13+2)
@@ -2554,7 +2554,7 @@ COPY ee.ee_subscription (id, created_at, updated_at, current_period_end, enabled
 --
 
 COPY ee.usage_to_report (id, created_at, updated_at, keys_to_report, last_reported_keys, last_reported_seats, reported_at, seats_to_report) FROM stdin;
-1	2025-12-22 12:56:22.955	2025-12-22 12:56:22.955	124	124	1	2026-01-04 15:50:06.696	1
+1	2025-12-22 12:56:22.955	2025-12-22 12:56:22.955	125	128	1	2026-01-22 00:57:22.224	1
 \.
 
 
@@ -2717,6 +2717,7 @@ Key	1000001082	{"name": "field.passwordConfirmation.aria.reveal"}	{"namespace": 
 Key	1000001083	{"name": "field.passwordConfirmation.helper"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
 Key	1000001084	{"name": "field.passwordConfirmation.label"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
 Key	1000001085	{"name": "field.password.label"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
+Namespace	1000012003	{"name": "auth.page.login"}	{}	252
 Key	1000001087	{"name": "submitting"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
 Key	1000001088	{"name": "success.main"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
 Key	1000001089	{"name": "success.sub"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	12
@@ -3374,6 +3375,123 @@ Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}
 Namespace	1000012009	{"name": "auth.platform.page.register"}	{}	240
 Key	1000029002	{"name": "meta.title"}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	240
 Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	240
+Key	1000031001	{"name": "credentials.error.text"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	252
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	252
+Key	1000031002	{"name": "credentials.error.title"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	252
+Namespace	1000012003	{"name": "auth.page.login"}	{}	256
+Key	1000031001	{"name": "credentials.error.text"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	256
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	256
+Namespace	1000012005	{"name": "auth.page.register"}	{}	271
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	271
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	271
+Namespace	1000012008	{"name": "auth.validation"}	{}	253
+Key	1000001070	{"name": "submit.error.invalid.email"}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	253
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	253
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	253
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	255
+Key	1000016004	{"name": "emailUpdate,success.sub"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	255
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	255
+Key	1000016005	{"name": "emailUpdate,success.title"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	255
+Key	1000016003	{"name": "emailUpdate,success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	255
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	255
+Namespace	1000012003	{"name": "auth.page.login"}	{}	257
+Key	1000031001	{"name": "credentials.error.text"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	257
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	257
+Namespace	1000012003	{"name": "auth.page.login"}	{}	259
+Key	1000031002	{"name": "credentials.error.title"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	259
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	259
+Namespace	1000012003	{"name": "auth.page.login"}	{}	261
+Key	1000031002	{"name": "credentials.error.title"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	261
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	261
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	264
+Key	1000001043	{"name": "success.main"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	264
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	264
+Namespace	1000012005	{"name": "auth.page.register"}	{}	266
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	266
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	266
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	266
+Namespace	1000012005	{"name": "auth.page.register"}	{}	267
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	267
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	267
+Namespace	1000012005	{"name": "auth.page.register"}	{}	268
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	268
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	268
+Namespace	1000012005	{"name": "auth.page.register"}	{}	272
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	272
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	272
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	275
+Key	1000031003	{"name": "emailUpdate.success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	275
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	275
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	277
+Key	1000031003	{"name": "emailUpdate.success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	277
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	277
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	254
+Key	1000031003	{"name": "emailUpdate.success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	254
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	254
+Key	1000031004	{"name": "emailUpdate.success.sub"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	254
+Key	1000031005	{"name": "emailUpdate.success.title"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	254
+Namespace	1000012003	{"name": "auth.page.login"}	{}	258
+Key	1000031001	{"name": "credentials.error.text"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	258
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	258
+Namespace	1000012003	{"name": "auth.page.login"}	{}	260
+Key	1000031002	{"name": "credentials.error.title"}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	260
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	260
+Namespace	1000012005	{"name": "auth.page.register"}	{}	270
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	270
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	270
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	270
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	274
+Key	1000031003	{"name": "emailUpdate.success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	274
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	274
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	276
+Key	1000031003	{"name": "emailUpdate.success.main"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	276
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	276
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	262
+Key	1000001043	{"name": "success.main"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	262
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	262
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	262
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	265
+Key	1000001043	{"name": "success.main"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	265
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	265
+Namespace	1000012005	{"name": "auth.page.register"}	{}	269
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	269
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	269
+Namespace	1000012005	{"name": "auth.page.register"}	{}	273
+Key	1000001055	{"name": "success.main"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	273
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	273
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	263
+Key	1000001043	{"name": "success.main"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	263
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	263
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	278
+Key	1000031004	{"name": "emailUpdate.success.sub"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	278
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	278
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	279
+Key	1000031004	{"name": "emailUpdate.success.sub"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	279
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	279
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	280
+Key	1000031004	{"name": "emailUpdate.success.sub"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	280
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	280
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	281
+Key	1000031005	{"name": "emailUpdate.success.title"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	281
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	281
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	282
+Key	1000031005	{"name": "emailUpdate.success.title"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	282
+Language	1000000005	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	282
+Namespace	1000015002	{"name": "auth.platform.page.manageAccount"}	{}	283
+Key	1000031005	{"name": "emailUpdate.success.title"}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	283
+Language	1000000004	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	283
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	285
+Key	1000001045	{"name": "success.title"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	285
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	285
+Namespace	1000012005	{"name": "auth.page.register"}	{}	286
+Key	1000001057	{"name": "success.title"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	286
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	286
+Namespace	1000012004	{"name": "auth.page.passwordReset"}	{}	284
+Key	1000001045	{"name": "success.title"}	{"namespace": {"entityId": 1000012004, "entityClass": "Namespace"}}	284
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	284
+Namespace	1000012005	{"name": "auth.page.register"}	{}	287
+Key	1000001057	{"name": "success.title"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	287
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	287
 \.
 
 
@@ -3552,6 +3670,7 @@ Key	1000001048	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespa
 Key	1000001049	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "field.email.label", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 Key	1000001050	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "login", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 UserAccount	1	{}	{}	{}	1	231
+UserAccount	1	{}	{}	{}	1	251
 Key	1000001051	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 Key	1000001052	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit.error.text", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 Key	1000001053	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit.error.title", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
@@ -4313,6 +4432,63 @@ Translation	1000030004	{"text": "Terminer la réinitialisation du mot de passe"}
 Translation	1000030003	{"text": "Validate email"}	{"key": {"entityId": 1000029003, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	241
 Translation	1000030001	{"text": "Complete password reset"}	{"key": {"entityId": 1000029001, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	239
 Translation	1000030002	{"text": "Complete registration"}	{"key": {"entityId": 1000029002, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	240
+Key	1000031001	{}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	{"name": {"new": "credentials.error.text", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.login"}, "entityId": 1000012003, "entityClass": "Namespace"}, "old": null}}	0	252
+Key	1000031002	{}	{"namespace": {"entityId": 1000012003, "entityClass": "Namespace"}}	{"name": {"new": "credentials.error.title", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.login"}, "entityId": 1000012003, "entityClass": "Namespace"}, "old": null}}	0	252
+Translation	1000032001	{}	{"key": {"entityId": 1000031001, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "The provided email or password is incorrect.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	252
+Translation	1000032002	{}	{"key": {"entityId": 1000031002, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Invalid credentials.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	252
+Translation	1000032006	{}	{"key": {"entityId": 1000031001, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Le courriel ou le mot de passe fourni sont incorrects.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	256
+Translation	1000002111	{}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration.", "old": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration."}}	1	271
+Translation	1000002141	{}	{"key": {"entityId": 1000001070, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "No account found with the provided email."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	253
+Translation	1000002156	{}	{"key": {"entityId": 1000001070, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Aucun compte utilisant ce courriel n'a été trouvé."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	253
+Key	1000001070	{}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "submit.error.invalid.email"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.validation"}, "entityId": 1000012008, "entityClass": "Namespace"}}}	2	253
+Translation	1000017004	{}	{"key": {"entityId": 1000016004, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Translation	1000017005	{}	{"key": {"entityId": 1000016005, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Confirmation email sent"}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Translation	1000017030	{}	{"key": {"entityId": 1000016003, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Un lien de validation a été envoyé <strong>{email}</strong>. Vous devez ouvrir le lien afin d'activer votre nouvelle adresse."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Translation	1000017003	{}	{"key": {"entityId": 1000016003, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "A validation link was sent to <strong>{email}</strong>. You must click this link to activate your new email."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Translation	1000017031	{}	{"key": {"entityId": 1000016004, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Si vous ne recevez pas de courriel dans quelques instants, vérifiez vos spams. Vous pouvez demander un nouveau lien en rechargeant cette page."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Translation	1000017032	{}	{"key": {"entityId": 1000016005, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Courriel de validation envoyé"}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
+Key	1000016004	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "emailUpdate,success.sub"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}}}	2	255
+Key	1000016003	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "emailUpdate,success.main"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}}}	2	255
+Key	1000016005	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "emailUpdate,success.title"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}}}	2	255
+Translation	1000032006	{"text": "Le courriel ou le mot de passe fourni sont incorrects."}	{"key": {"entityId": 1000031001, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	257
+Translation	1000032007	{}	{"key": {"entityId": 1000031002, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Identifiants invalides.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	259
+Translation	1000032002	{"text": "Invalid credentials."}	{"key": {"entityId": 1000031002, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	261
+Translation	1000002099	{"text": "Un lien sera envoyé à <strong>{user}</strong>, si un compte existe bien pour ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe."}	{"key": {"entityId": 1000001043, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	264
+Translation	1000002111	{}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "A link will be sent to <strong>{user}</strong>, if an account does not already exist with this email. This link contains a single-usage temporary form to complete your registration.", "old": "A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to complete your registration."}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	266
+Key	1000031003	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate.success.main", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	254
+Key	1000031004	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate.success.sub", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	254
+Key	1000031005	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate.success.title", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	254
+Translation	1000032003	{}	{"key": {"entityId": 1000031003, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "A validation link will be sent to <strong>{email}</strong>, if an account does not already exist with this email. You must click this link to activate your new email.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	254
+Translation	1000032004	{}	{"key": {"entityId": 1000031004, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	254
+Translation	1000032005	{}	{"key": {"entityId": 1000031005, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Confirmation email sent", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	254
+Translation	1000032001	{"text": "The provided email or password is incorrect."}	{"key": {"entityId": 1000031001, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	258
+Translation	1000032007	{"text": "Identifiants invalides."}	{"key": {"entityId": 1000031002, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	260
+Translation	1000002111	{}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration.", "old": "A link will be sent to <strong>{user}</strong>, if an account does not already exist with this email. This link contains a single-usage temporary form to complete your registration."}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	270
+Translation	1000002123	{"text": "Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "TRANSLATED", "old": "REVIEWED"}, "outdated": {"new": true, "old": false}}	1	270
+Translation	1000032003	{}	{"key": {"entityId": 1000031003, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"text": {"new": "A validation link will be sent to <strong>{email}</strong>, if no account uses this email yet. You must click this link to activate your new email.", "old": "A validation link will be sent to <strong>{email}</strong>, if an account does not already exist with this email. You must click this link to activate your new email."}}	1	274
+Translation	1000032008	{"text": "Un lien de validation sera envoyé à <strong>{email}</strong>, si aucun compte n'utilise ce courriel. Vous devez cliquer sur ce lien pour activer votre nouveau courriel."}	{"key": {"entityId": 1000031003, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	276
+Translation	1000002087	{}	{"key": {"entityId": 1000001043, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "A link will be sent to <strong>{user}</strong>, if an account exists with this email. This link contains a single-usage temporary form to reset your password.", "old": "A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to reset your password."}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	262
+Translation	1000002099	{"text": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe."}	{"key": {"entityId": 1000001043, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "TRANSLATED", "old": "REVIEWED"}, "outdated": {"new": true, "old": false}}	1	262
+Translation	1000002087	{"text": "A link will be sent to <strong>{user}</strong>, if an account exists with this email. This link contains a single-usage temporary form to reset your password."}	{"key": {"entityId": 1000001043, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	265
+Translation	1000002111	{"text": "A link will be sent to <strong>{user}</strong>, if an account does not already exist with this email. This link contains a single-usage temporary form to complete your registration."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	269
+Translation	1000002123	{"text": "Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}, "outdated": {"new": false, "old": true}}	1	273
+Translation	1000002099	{}	{"key": {"entityId": 1000001043, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"text": {"new": "Un lien sera envoyé à <strong>{user}</strong>, si un compte existe bien pour ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe.", "old": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe."}, "outdated": {"new": false, "old": true}}	1	263
+Translation	1000002123	{"text": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "TRANSLATED", "old": "REVIEWED"}, "outdated": {"new": true, "old": false}}	1	266
+Translation	1000002123	{}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"text": {"new": "Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription.", "old": "Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription."}, "outdated": {"new": false, "old": true}}	1	267
+Translation	1000002123	{"text": "Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	268
+Translation	1000002111	{"text": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration."}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	272
+Translation	1000032008	{}	{"key": {"entityId": 1000031003, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Un lien de validation sera envoyé à <strong>{email}</strong>, si aucun compte n'utilise ce courriel. Vous devez cliquer sur ce lien pour activer votre nouveau courriel.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	275
+Translation	1000032003	{"text": "A validation link will be sent to <strong>{email}</strong>, if no account uses this email yet. You must click this link to activate your new email."}	{"key": {"entityId": 1000031003, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	277
+Translation	1000032009	{}	{"key": {"entityId": 1000031004, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Si vous ne recevez pas de lien sous peu, vérifiez vos spams. Vous pourrez toujours en demander un nouveau en rechargeant cette page.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	278
+Translation	1000032009	{"text": "Si vous ne recevez pas de lien sous peu, vérifiez vos spams. Vous pourrez toujours en demander un nouveau en rechargeant cette page."}	{"key": {"entityId": 1000031004, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	279
+Translation	1000032004	{"text": "If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page."}	{"key": {"entityId": 1000031004, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	280
+Translation	1000032010	{}	{"key": {"entityId": 1000031005, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Courriel de validation envoyé", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	281
+Translation	1000032010	{"text": "Courriel de validation envoyé"}	{"key": {"entityId": 1000031005, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	282
+Translation	1000032005	{"text": "Confirmation email sent"}	{"key": {"entityId": 1000031005, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	283
+Translation	1000002101	{"text": "Formulaire de réinitialisation créé !"}	{"key": {"entityId": 1000001045, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	285
+Translation	1000002125	{}	{"key": {"entityId": 1000001057, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"text": {"new": "Formulaire d'inscription créé !", "old": "Formulaire d'inscription créé."}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	286
+Translation	1000002101	{}	{"key": {"entityId": 1000001045, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"text": {"new": "Formulaire de réinitialisation créé !", "old": "Formulaire de réinitialisation créé."}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	284
+Translation	1000002125	{"text": "Formulaire d'inscription créé !"}	{"key": {"entityId": 1000001057, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	287
 \.
 
 
@@ -4502,6 +4678,43 @@ COPY public.activity_revision (id, author_id, meta, project_id, "timestamp", typ
 239	1	\N	2	2026-01-04 15:51:13.935	SET_TRANSLATION_STATE	\N	\N	1
 240	1	\N	2	2026-01-04 15:51:14.703	SET_TRANSLATION_STATE	\N	\N	1
 241	1	\N	2	2026-01-04 15:51:15.433	SET_TRANSLATION_STATE	\N	\N	1
+251	\N	\N	\N	2026-01-22 00:34:04.007	\N	\N	\N	\N
+252	1	\N	1	2026-01-22 00:55:31.809	IMPORT	\N	\N	1
+253	1	\N	1	2026-01-22 00:55:31.976	KEY_DELETE	\N	\N	1
+254	1	\N	2	2026-01-22 00:57:22.226	IMPORT	\N	\N	1
+255	1	\N	2	2026-01-22 00:57:22.286	KEY_DELETE	\N	\N	1
+256	1	\N	1	2026-01-22 00:58:28.269	SET_TRANSLATIONS	\N	\N	1
+257	1	\N	1	2026-01-22 00:58:29.894	SET_TRANSLATION_STATE	\N	\N	1
+258	1	\N	1	2026-01-22 00:58:34.112	SET_TRANSLATION_STATE	\N	\N	1
+259	1	\N	1	2026-01-22 00:58:48.844	SET_TRANSLATIONS	\N	\N	1
+260	1	\N	1	2026-01-22 00:58:50.101	SET_TRANSLATION_STATE	\N	\N	1
+261	1	\N	1	2026-01-22 00:58:51.774	SET_TRANSLATION_STATE	\N	\N	1
+262	1	\N	1	2026-01-22 00:59:22.224	SET_TRANSLATIONS	\N	\N	1
+263	1	\N	1	2026-01-22 00:59:56.8	SET_TRANSLATIONS	\N	\N	1
+264	1	\N	1	2026-01-22 00:59:57.948	SET_TRANSLATION_STATE	\N	\N	1
+265	1	\N	1	2026-01-22 00:59:59.839	SET_TRANSLATION_STATE	\N	\N	1
+266	1	\N	1	2026-01-22 01:00:23.974	SET_TRANSLATIONS	\N	\N	1
+267	1	\N	1	2026-01-22 01:00:40.416	SET_TRANSLATIONS	\N	\N	1
+268	1	\N	1	2026-01-22 01:00:41.392	SET_TRANSLATION_STATE	\N	\N	1
+269	1	\N	1	2026-01-22 01:00:42.412	SET_TRANSLATION_STATE	\N	\N	1
+270	1	\N	1	2026-01-22 01:01:23.376	SET_TRANSLATIONS	\N	\N	1
+271	1	\N	1	2026-01-22 01:01:41.844	SET_TRANSLATIONS	\N	\N	1
+272	1	\N	1	2026-01-22 01:01:43.064	SET_TRANSLATION_STATE	\N	\N	1
+273	1	\N	1	2026-01-22 01:01:44.583	SET_TRANSLATION_STATE	\N	\N	1
+274	1	\N	2	2026-01-22 01:02:12.927	SET_TRANSLATIONS	\N	\N	1
+275	1	\N	2	2026-01-22 01:03:10.726	SET_TRANSLATIONS	\N	\N	1
+276	1	\N	2	2026-01-22 01:03:12.292	SET_TRANSLATION_STATE	\N	\N	1
+277	1	\N	2	2026-01-22 01:03:13.124	SET_TRANSLATION_STATE	\N	\N	1
+278	1	\N	2	2026-01-22 01:04:18.196	SET_TRANSLATIONS	\N	\N	1
+279	1	\N	2	2026-01-22 01:04:19.626	SET_TRANSLATION_STATE	\N	\N	1
+280	1	\N	2	2026-01-22 01:04:20.238	SET_TRANSLATION_STATE	\N	\N	1
+281	1	\N	2	2026-01-22 01:04:28.159	SET_TRANSLATIONS	\N	\N	1
+282	1	\N	2	2026-01-22 01:04:28.944	SET_TRANSLATION_STATE	\N	\N	1
+283	1	\N	2	2026-01-22 01:04:29.617	SET_TRANSLATION_STATE	\N	\N	1
+284	1	\N	1	2026-01-22 01:04:54.543	SET_TRANSLATIONS	\N	\N	1
+285	1	\N	1	2026-01-22 01:04:55.85	SET_TRANSLATION_STATE	\N	\N	1
+286	1	\N	1	2026-01-22 01:05:05.336	SET_TRANSLATIONS	\N	\N	1
+287	1	\N	1	2026-01-22 01:05:06.31	SET_TRANSLATION_STATE	\N	\N	1
 \.
 
 
@@ -4518,8 +4731,8 @@ COPY public.ai_playground_result (id, created_at, updated_at, context_descriptio
 --
 
 COPY public.api_key (id, created_at, updated_at, key, project_id, user_account_id, description, key_hash, expires_at, last_used_at) FROM stdin;
-1000011001	2025-12-22 12:58:47.884	2025-12-22 12:58:47.884	\N	1	1	master-key	idw9znh3xhlId3TV0G/ylJ7gYlRuZ4U1ThxD1mPsOQo=	\N	2026-01-04 15:51:26.991
-1000011002	2025-12-22 12:59:08.426	2025-12-22 12:59:08.426	\N	2	1	master-key	Vm7cNfvx4UL3gwwquioz1/K3X304GdRJuF6wEL6cZY4=	\N	2026-01-04 15:51:29.527
+1000011001	2025-12-22 12:58:47.884	2025-12-22 12:58:47.884	\N	1	1	master-key	idw9znh3xhlId3TV0G/ylJ7gYlRuZ4U1ThxD1mPsOQo=	\N	2026-01-22 01:05:28.51
+1000011002	2025-12-22 12:59:08.426	2025-12-22 12:59:08.426	\N	2	1	master-key	Vm7cNfvx4UL3gwwquioz1/K3X304GdRJuF6wEL6cZY4=	\N	2026-01-22 01:05:31.012
 \.
 
 
@@ -5611,7 +5824,6 @@ COPY public.key (id, created_at, updated_at, name, project_id, namespace_id, is_
 1000001067	2025-12-22 13:06:29.597	2025-12-22 13:06:29.597	form.password.error.tooLong	1	1000012008	f	\N
 1000001068	2025-12-22 13:06:29.597	2025-12-22 13:06:29.597	form.password.error.unknown	1	1000012008	f	\N
 1000001069	2025-12-22 13:06:29.597	2025-12-22 13:06:29.597	submit.error.email.exists	1	1000012008	f	\N
-1000001070	2025-12-22 13:06:29.597	2025-12-22 13:06:29.597	submit.error.invalid.email	1	1000012008	f	\N
 1000001071	2025-12-22 13:06:29.598	2025-12-22 13:06:29.598	submit.error.invalid.password	1	1000012008	f	\N
 1000001077	2025-12-22 13:06:30.508	2025-12-22 13:06:30.508	account.action	2	1000012009	f	\N
 1000001078	2025-12-22 13:06:30.51	2025-12-22 13:06:30.51	aria.form	2	1000012009	f	\N
@@ -5640,9 +5852,6 @@ COPY public.key (id, created_at, updated_at, name, project_id, namespace_id, is_
 1000001109	2025-12-22 13:06:30.512	2025-12-22 13:06:30.512	page.success.title	2	1000012011	f	\N
 1000016001	2025-12-23 17:54:32.092	2025-12-23 17:54:32.092	field.password.aria.hide	1	1000015001	f	\N
 1000016002	2025-12-23 17:54:32.243	2025-12-23 17:54:32.243	field.password.aria.reveal	1	1000015001	f	\N
-1000016003	2025-12-23 17:54:36.729	2025-12-23 17:54:36.729	emailUpdate,success.main	2	1000015002	f	\N
-1000016004	2025-12-23 17:54:36.746	2025-12-23 17:54:36.746	emailUpdate,success.sub	2	1000015002	f	\N
-1000016005	2025-12-23 17:54:36.755	2025-12-23 17:54:36.755	emailUpdate,success.title	2	1000015002	f	\N
 1000016006	2025-12-23 17:54:36.764	2025-12-23 17:54:36.764	emailUpdate.aria.form	2	1000015002	f	\N
 1000016007	2025-12-23 17:54:36.773	2025-12-23 17:54:36.773	emailUpdate.field.email.helper	2	1000015002	f	\N
 1000016008	2025-12-23 17:54:36.782	2025-12-23 17:54:36.782	emailUpdate.field.email.label	2	1000015002	f	\N
@@ -5678,6 +5887,11 @@ COPY public.key (id, created_at, updated_at, name, project_id, namespace_id, is_
 1000029001	2026-01-04 15:50:06.509	2026-01-04 15:50:06.509	meta.title	2	1000012010	f	\N
 1000029002	2026-01-04 15:50:06.655	2026-01-04 15:50:06.655	meta.title	2	1000012009	f	\N
 1000029003	2026-01-04 15:50:06.67	2026-01-04 15:50:06.67	meta.title	2	1000012011	f	\N
+1000031001	2026-01-22 00:55:31.592	2026-01-22 00:55:31.592	credentials.error.text	1	1000012003	f	\N
+1000031002	2026-01-22 00:55:31.774	2026-01-22 00:55:31.774	credentials.error.title	1	1000012003	f	\N
+1000031003	2026-01-22 00:57:22.201	2026-01-22 00:57:22.201	emailUpdate.success.main	2	1000015002	f	\N
+1000031004	2026-01-22 00:57:22.21	2026-01-22 00:57:22.21	emailUpdate.success.sub	2	1000015002	f	\N
+1000031005	2026-01-22 00:57:22.215	2026-01-22 00:57:22.215	emailUpdate.success.title	2	1000015002	f	\N
 \.
 
 
@@ -5754,10 +5968,10 @@ COPY public.language (id, created_at, updated_at, tag, name, project_id, origina
 --
 
 COPY public.language_stats (id, created_at, updated_at, reviewed_keys, reviewed_percentage, reviewed_words, translated_keys, translated_percentage, translated_words, untranslated_keys, untranslated_percentage, untranslated_words, language_id, translations_updated_at) FROM stdin;
-1000007001	2025-12-22 12:56:23.361	2025-12-27 16:58:44.841	62	100	386	0	0	0	0	0	0	1000000001	2025-12-24 23:03:35.089
-1000007002	2025-12-22 12:56:23.367	2025-12-27 16:58:44.841	62	100	386	0	0	0	0	0	0	1000000003	2025-12-24 23:03:33.719
-1000007005	2025-12-22 12:57:57.314	2026-01-04 15:51:12.253	62	100	428	0	0	0	0	0	0	1000000005	2026-01-04 15:51:12.232
-1000007004	2025-12-22 12:57:57.312	2026-01-04 15:51:15.451	62	100	428	0	0	0	0	0	0	1000000004	2026-01-04 15:51:15.43
+1000007001	2025-12-22 12:56:23.361	2026-01-22 01:01:43.078	63	100	404	0	0	0	0	0	0	1000000001	2026-01-22 01:01:43.061
+1000007005	2025-12-22 12:57:57.314	2026-01-22 01:04:28.962	62	100	436	0	0	0	0	0	0	1000000005	2026-01-22 01:04:28.941
+1000007004	2025-12-22 12:57:57.312	2026-01-22 01:04:29.635	62	100	436	0	0	0	0	0	0	1000000004	2026-01-22 01:04:29.614
+1000007002	2025-12-22 12:56:23.367	2026-01-22 01:05:06.327	63	100	404	0	0	0	0	0	0	1000000003	2026-01-22 01:05:06.307
 \.
 
 
@@ -6098,9 +6312,7 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002120	2025-12-22 13:06:29.628	2025-12-22 13:06:57.473	Une erreur inconnue est survenue pendant la création du formulaire d'inscription. Vous pouvez retenter plus tard.	1000000003	1000001052	2	f	\N	113	16	f	\N
 1000002121	2025-12-22 13:06:29.628	2025-12-22 13:06:57.474	Échec de l'inscription.	1000000003	1000001053	2	f	\N	23	3	f	\N
 1000002122	2025-12-22 13:06:29.629	2025-12-22 13:06:57.475	Création du formulaire...	1000000003	1000001054	2	f	\N	25	3	f	\N
-1000002125	2025-12-22 13:06:29.629	2025-12-22 13:06:57.479	Formulaire d'inscription créé.	1000000003	1000001057	2	f	\N	30	3	f	\N
 1000002169	2025-12-22 13:06:30.514	2025-12-22 13:06:46.506	Please re-enter your password to confirm it.	1000000004	1000001083	2	f	\N	44	8	f	\N
-1000002101	2025-12-22 13:06:29.621	2025-12-22 13:06:57.464	Formulaire de réinitialisation créé.	1000000003	1000001045	2	f	\N	36	4	f	\N
 1000002102	2025-12-22 13:06:29.621	2025-12-22 13:06:57.465	Réinitialisation du mot de passe	1000000003	1000001046	2	f	\N	32	5	f	\N
 1000002103	2025-12-22 13:06:29.621	2025-12-22 13:06:57.466	Register form	1000000001	1000001047	2	f	\N	13	2	f	\N
 1000002104	2025-12-22 13:06:29.622	2025-12-22 13:06:57.467	A link to a registration form will be sent to this address.	1000000001	1000001048	2	f	\N	59	12	f	\N
@@ -6110,7 +6322,6 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002108	2025-12-22 13:06:29.625	2025-12-22 13:06:57.472	An unknown error occurred during registration form creation. You may try again later.	1000000001	1000001052	2	f	\N	85	13	f	\N
 1000002109	2025-12-22 13:06:29.625	2025-12-22 13:06:57.473	Registration failed.	1000000001	1000001053	2	f	\N	20	2	f	\N
 1000002110	2025-12-22 13:06:29.625	2025-12-22 13:06:57.474	Creating form...	1000000001	1000001054	2	f	\N	16	2	f	\N
-1000002111	2025-12-22 13:06:29.626	2025-12-22 13:06:57.476	A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to complete your registration.	1000000001	1000001055	2	f	\N	119	20	f	\N
 1000002112	2025-12-22 13:06:29.626	2025-12-22 13:06:57.477	If you fail to open and complete the form in time, you can always ask for a new one from this page. You may now <strong>leave this page</strong>, or proceed to <strong>login</strong> once you have completed your registration.	1000000001	1000001056	2	f	\N	225	42	f	\N
 1000002113	2025-12-22 13:06:29.626	2025-12-22 13:06:57.478	Registration form created!	1000000001	1000001057	2	f	\N	26	3	f	\N
 1000002114	2025-12-22 13:06:29.627	2025-12-22 13:06:57.479	Register	1000000001	1000001058	2	f	\N	8	1	f	\N
@@ -6118,9 +6329,10 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002116	2025-12-22 13:06:29.627	2025-12-22 13:06:57.468	Un lien vers un formulaire d'inscription sera envoyé à cette adresse.	1000000003	1000001048	2	f	\N	69	11	f	\N
 1000002117	2025-12-22 13:06:29.628	2025-12-22 13:06:57.469	Courriel	1000000003	1000001049	2	f	\N	8	1	f	\N
 1000002118	2025-12-22 13:06:29.628	2025-12-22 13:06:57.47	Connexion	1000000003	1000001050	2	f	\N	9	1	f	\N
-1000002123	2025-12-22 13:06:29.629	2025-12-22 13:06:57.476	Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription.	1000000003	1000001055	2	f	\N	137	22	f	\N
 1000002124	2025-12-22 13:06:29.629	2025-12-22 13:06:57.478	Si vous ne parvenez pas à compléter le formulaire dans les temps, vous pourrez toujours en demander un nouveau depuis cette page. Vous pouvez à présent <strong>fermer cette page</strong>, ou vous diriger vers la <strong>page de connexion</strong> une fois l'inscription terminée.	1000000003	1000001056	2	f	\N	279	45	f	\N
 1000002126	2025-12-22 13:06:29.629	2025-12-22 13:06:57.48	Inscription	1000000003	1000001058	2	f	\N	11	1	f	\N
+1000002101	2025-12-22 13:06:29.621	2026-01-22 01:04:55.847	Formulaire de réinitialisation créé !	1000000003	1000001045	2	f	\N	37	4	f	\N
+1000002125	2025-12-22 13:06:29.629	2026-01-22 01:05:06.307	Formulaire d'inscription créé !	1000000003	1000001057	2	f	\N	31	3	f	\N
 1000002127	2025-12-22 13:06:29.629	2025-12-22 13:06:57.48	You do not have the required permissions to access this page. Please contact an administrator to request higher privileges, or log in with a different account.	1000000001	1000001059	2	f	\N	159	26	f	\N
 1000002128	2025-12-22 13:06:29.63	2025-12-22 13:06:57.482	Access forbidden.	1000000001	1000001060	2	f	\N	17	2	f	\N
 1000002129	2025-12-22 13:06:29.63	2025-12-22 13:06:57.481	Vous ne disposez pas des autorisations nécessaires pour accéder à cette page. Veuillez contacter un administrateur afin d'obtenir des privilèges plus élevés, ou connectez-vous avec un compte différent.	1000000003	1000001059	2	f	\N	201	29	f	\N
@@ -6135,7 +6347,6 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002138	2025-12-22 13:06:29.633	2025-12-22 13:06:57.492	The password is too long. Maximum length is {max} characters.	1000000001	1000001067	2	f	\N	61	10	f	\N
 1000002139	2025-12-22 13:06:29.634	2025-12-22 13:06:57.493	An error occurred while validating the password.	1000000001	1000001068	2	f	\N	48	7	f	\N
 1000002140	2025-12-22 13:06:29.634	2025-12-22 13:06:57.494	An account with this email already exists.	1000000001	1000001069	2	f	\N	42	7	f	\N
-1000002141	2025-12-22 13:06:29.634	2025-12-22 13:06:57.495	No account found with the provided email.	1000000001	1000001070	2	f	\N	41	7	f	\N
 1000002142	2025-12-22 13:06:29.634	2025-12-22 13:06:57.496	The provided password is not the correct one.	1000000001	1000001071	2	f	\N	45	8	f	\N
 1000002148	2025-12-22 13:06:29.635	2025-12-22 13:06:57.487	Le format du courriel est incorrect. Veuillez entrer une adresse valide.	1000000003	1000001062	2	f	\N	72	11	f	\N
 1000002149	2025-12-22 13:06:29.636	2025-12-22 13:06:57.488	Le courriel est trop long. La longueur maximale est de {max} caractères.	1000000003	1000001063	2	f	\N	72	12	f	\N
@@ -6213,7 +6424,6 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002084	2025-12-22 13:06:29.618	2025-12-22 13:06:57.456	An unknown error occurred during password-reset form creation. You may try again later.	1000000001	1000001040	2	f	\N	87	14	f	\N
 1000002085	2025-12-22 13:06:29.618	2025-12-22 13:06:57.457	Password reset failed.	1000000001	1000001041	2	f	\N	22	3	f	\N
 1000002086	2025-12-22 13:06:29.618	2025-12-22 13:06:57.459	Creating form...	1000000001	1000001042	2	f	\N	16	2	f	\N
-1000002087	2025-12-22 13:06:29.618	2025-12-22 13:06:57.46	A link was sent to <strong>{user}</strong>. This link contains a one-time temporary form to reset your password.	1000000001	1000001043	2	f	\N	112	20	f	\N
 1000002088	2025-12-22 13:06:29.619	2025-12-22 13:06:57.462	If you fail to open and complete the form in time, you can always ask for a new one from this page. You may now <strong>leave this page</strong>, or proceed to <strong>login</strong> once you have reset your password.	1000000001	1000001044	2	f	\N	217	42	f	\N
 1000002089	2025-12-22 13:06:29.619	2025-12-22 13:06:57.463	Password-reset form created!	1000000001	1000001045	2	f	\N	28	4	f	\N
 1000002090	2025-12-22 13:06:29.619	2025-12-22 13:06:57.464	Password reset	1000000001	1000001046	2	f	\N	14	2	f	\N
@@ -6225,12 +6435,10 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002096	2025-12-22 13:06:29.62	2025-12-22 13:06:57.457	Une erreur inconnue est survenue pendant la création du formulaire de réinitialisation du mot de passe. Vous pouvez retenter plus tard.	1000000003	1000001040	2	f	\N	135	21	f	\N
 1000002097	2025-12-22 13:06:29.621	2025-12-22 13:06:57.458	Échec de la réinitialisation du mot de passe.	1000000003	1000001041	2	f	\N	45	8	f	\N
 1000002098	2025-12-22 13:06:29.621	2025-12-22 13:06:57.46	Création du formulaire...	1000000003	1000001042	2	f	\N	25	3	f	\N
-1000002099	2025-12-22 13:06:29.621	2025-12-22 13:06:57.461	Un lien a été envoyé à <strong>{user}</strong>. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe.	1000000003	1000001043	2	f	\N	144	25	f	\N
 1000002100	2025-12-22 13:06:29.621	2025-12-22 13:06:57.463	Si vous ne parvenez pas à compléter le formulaire dans les temps, vous pourrez toujours en demander un nouveau depuis cette page. Vous pouvez à présent <strong>fermer cette page</strong>, ou vous diriger vers la <strong>page de connexion</strong> une fois votre mot de passe réinitialisé.	1000000003	1000001044	2	f	\N	288	48	f	\N
 1000002153	2025-12-22 13:06:29.637	2025-12-22 13:06:57.492	Le mot de passe est trop long. La longueur maximale est de {max} caractères.	1000000003	1000001067	2	f	\N	76	14	f	\N
 1000002154	2025-12-22 13:06:29.638	2025-12-22 13:06:57.493	Une erreur est survenue pendant la validation du mot de passe.	1000000003	1000001068	2	f	\N	62	11	f	\N
 1000002155	2025-12-22 13:06:29.638	2025-12-22 13:06:57.495	Un compte existant utilises déjà ce courriel.	1000000003	1000001069	2	f	\N	45	7	f	\N
-1000002156	2025-12-22 13:06:29.638	2025-12-22 13:06:57.496	Aucun compte utilisant ce courriel n'a été trouvé.	1000000003	1000001070	2	f	\N	50	8	f	\N
 1000002157	2025-12-22 13:06:29.638	2025-12-22 13:06:57.497	Le mot de passe fourni n'est pas le bon.	1000000003	1000001071	2	f	\N	40	9	f	\N
 1000017001	2025-12-23 17:54:32.162	2025-12-23 17:55:18.705	Hide password	1000000001	1000016001	2	f	\N	13	2	f	\N
 1000017002	2025-12-23 17:54:32.26	2025-12-23 17:55:47.436	Reveal password	1000000001	1000016002	2	f	\N	15	2	f	\N
@@ -6239,8 +6447,6 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000017008	2025-12-23 17:54:36.789	2025-12-23 17:57:55.981	New email	1000000004	1000016008	2	f	\N	9	2	f	\N
 1000017009	2025-12-23 17:54:36.798	2025-12-23 17:58:17.186	Get validation link	1000000004	1000016009	2	f	\N	19	3	f	\N
 1000017010	2025-12-23 17:54:36.806	2025-12-23 17:58:36.136	Sending validation link...	1000000004	1000016010	2	f	\N	26	3	f	\N
-1000017004	2025-12-23 17:54:36.754	2025-12-23 18:01:43.011	If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page.	1000000004	1000016004	2	f	\N	121	23	f	\N
-1000017005	2025-12-23 17:54:36.763	2025-12-23 18:02:03.367	Confirmation email sent	1000000004	1000016005	2	f	\N	23	3	f	\N
 1000017011	2025-12-23 17:54:36.814	2025-12-23 18:02:32.004	Update email address	1000000004	1000016011	2	f	\N	20	3	f	\N
 1000017012	2025-12-23 17:54:36.82	2025-12-23 18:03:29.397	Account management	1000000004	1000016012	2	f	\N	18	2	f	\N
 1000017013	2025-12-23 17:54:36.827	2025-12-23 18:03:52.94	Password update form	1000000004	1000016013	2	f	\N	20	3	f	\N
@@ -6260,10 +6466,6 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000017027	2025-12-23 17:57:52.641	2025-12-23 17:57:54.187	Nouveau courriel	1000000005	1000016008	2	f	\N	16	2	f	\N
 1000017028	2025-12-23 17:58:14.617	2025-12-23 17:58:15.768	Obtenir un lien de validation	1000000005	1000016009	2	f	\N	28	5	f	\N
 1000017029	2025-12-23 17:58:33.889	2025-12-23 17:58:35.245	Envoi du lien de validation...	1000000005	1000016010	2	f	\N	30	5	f	\N
-1000017030	2025-12-23 17:58:58.227	2025-12-23 18:00:19.148	Un lien de validation a été envoyé <strong>{email}</strong>. Vous devez ouvrir le lien afin d'activer votre nouvelle adresse.	1000000005	1000016003	2	f	\N	125	20	f	\N
-1000017003	2025-12-23 17:54:36.744	2025-12-23 18:00:20.348	A validation link was sent to <strong>{email}</strong>. You must click this link to activate your new email.	1000000004	1000016003	2	f	\N	108	19	f	\N
-1000017031	2025-12-23 18:01:40.868	2025-12-23 18:01:42.021	Si vous ne recevez pas de courriel dans quelques instants, vérifiez vos spams. Vous pouvez demander un nouveau lien en rechargeant cette page.	1000000005	1000016004	2	f	\N	142	23	f	\N
-1000017032	2025-12-23 18:02:00.229	2025-12-23 18:02:01.355	Courriel de validation envoyé	1000000005	1000016005	2	f	\N	29	4	f	\N
 1000017033	2025-12-23 18:02:29.201	2025-12-23 18:02:30.67	Mise à jour du courriel	1000000005	1000016011	2	f	\N	23	5	f	\N
 1000017034	2025-12-23 18:03:25.383	2025-12-23 18:03:27.673	Gestion du compte	1000000005	1000016012	2	f	\N	17	3	f	\N
 1000017035	2025-12-23 18:03:50.496	2025-12-23 18:03:51.521	Formulaire de mise à jour du mot de passe	1000000005	1000016013	2	f	\N	41	9	f	\N
@@ -6312,6 +6514,20 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000030001	2026-01-04 15:50:06.571	2026-01-04 15:51:13.931	Complete password reset	1000000004	1000029001	2	f	\N	23	3	f	\N
 1000030002	2026-01-04 15:50:06.668	2026-01-04 15:51:14.699	Complete registration	1000000004	1000029002	2	f	\N	21	2	f	\N
 1000030003	2026-01-04 15:50:06.681	2026-01-04 15:51:15.43	Validate email	1000000004	1000029003	2	f	\N	14	2	f	\N
+1000032006	2026-01-22 00:58:28.256	2026-01-22 00:58:29.89	Le courriel ou le mot de passe fourni sont incorrects.	1000000003	1000031001	2	f	\N	54	10	f	\N
+1000032001	2026-01-22 00:55:31.668	2026-01-22 00:58:34.107	The provided email or password is incorrect.	1000000001	1000031001	2	f	\N	44	7	f	\N
+1000032007	2026-01-22 00:58:48.837	2026-01-22 00:58:50.097	Identifiants invalides.	1000000003	1000031002	2	f	\N	23	2	f	\N
+1000032002	2026-01-22 00:55:31.792	2026-01-22 00:58:51.771	Invalid credentials.	1000000001	1000031002	2	f	\N	20	2	f	\N
+1000002099	2025-12-22 13:06:29.621	2026-01-22 00:59:57.944	Un lien sera envoyé à <strong>{user}</strong>, si un compte existe bien pour ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour réinitialiser le mot de passe.	1000000003	1000001043	2	f	\N	186	32	f	\N
+1000002087	2025-12-22 13:06:29.618	2026-01-22 00:59:59.835	A link will be sent to <strong>{user}</strong>, if an account exists with this email. This link contains a single-usage temporary form to reset your password.	1000000001	1000001043	2	f	\N	158	28	f	\N
+1000002111	2025-12-22 13:06:29.626	2026-01-22 01:01:43.061	A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration.	1000000001	1000001055	2	f	\N	162	28	f	\N
+1000032008	2026-01-22 01:03:10.722	2026-01-22 01:03:12.29	Un lien de validation sera envoyé à <strong>{email}</strong>, si aucun compte n'utilise ce courriel. Vous devez cliquer sur ce lien pour activer votre nouveau courriel.	1000000005	1000031003	2	f	\N	168	27	f	\N
+1000032003	2026-01-22 00:57:22.209	2026-01-22 01:03:13.12	A validation link will be sent to <strong>{email}</strong>, if no account uses this email yet. You must click this link to activate your new email.	1000000004	1000031003	2	f	\N	147	27	f	\N
+1000032004	2026-01-22 00:57:22.214	2026-01-22 01:04:20.235	If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page.	1000000004	1000031004	2	f	\N	121	23	f	\N
+1000032005	2026-01-22 00:57:22.219	2026-01-22 01:04:29.614	Confirmation email sent	1000000004	1000031005	2	f	\N	23	3	f	\N
+1000002123	2025-12-22 13:06:29.629	2026-01-22 01:01:44.58	Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription.	1000000003	1000001055	2	f	\N	175	27	f	\N
+1000032009	2026-01-22 01:04:18.188	2026-01-22 01:04:19.623	Si vous ne recevez pas de lien sous peu, vérifiez vos spams. Vous pourrez toujours en demander un nouveau en rechargeant cette page.	1000000005	1000031004	2	f	\N	132	23	f	\N
+1000032010	2026-01-22 01:04:28.155	2026-01-22 01:04:28.941	Courriel de validation envoyé	1000000005	1000031005	2	f	\N	29	4	f	\N
 \.
 
 
@@ -6363,7 +6579,7 @@ COPY public.user_account (id, created_at, updated_at, name, password, reset_pass
 2	2025-12-22 12:56:22.875	2025-12-22 12:56:22.875	Alice Smith	\N	\N	USER	\N	\N	alice-demo@demo.tolgee.io	290B9055C2817991247AFA09D22F250296DE2D8FB6255237914723FEA2616D13	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.857	f	t	t	\N	\N
 3	2025-12-22 12:56:22.902	2025-12-22 12:56:22.902	Bob Johnson	\N	\N	USER	\N	\N	bob-demo@demo.tolgee.io	F216867C6A153CFE741827A9CA3065ED531EF454FBED32BDAA404D9F9AC02220	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.887	f	t	t	\N	\N
 4	2025-12-22 12:56:22.916	2025-12-22 12:56:22.916	Charlie Brown	\N	\N	USER	\N	\N	charlie-demo@demo.tolgee.io	6EB9AF81691DE8B07215C888F931005A01862ED31B5A634EA5458E63894CD082	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.905	f	t	t	\N	\N
-1	2025-12-22 12:56:21.831	2026-01-04 15:47:37.255	admin	$2a$10$Amzi21pSIe62avQn5DjxWObjmKWmXaTxuxMXrQ9.CXyFRm3GNBmEC	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-01-04 15:47:37	\N	\N	t	f	f	\N	\N
+1	2025-12-22 12:56:21.831	2026-01-22 00:34:03.937	admin	$2a$10$6ZHhC85DbmpAh33TMnIcyOWiFOgsS4E3edwBwlGz3hnY.VT/kW8jG	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-01-22 00:34:03	\N	\N	t	f	f	\N	\N
 \.
 
 
@@ -6388,7 +6604,7 @@ COPY public.webhook_config (id, created_at, updated_at, first_failed, last_execu
 -- Name: activity_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.activity_sequence', 250, true);
+SELECT pg_catalog.setval('public.activity_sequence', 290, true);
 
 
 --
@@ -6430,7 +6646,7 @@ SELECT pg_catalog.setval('public.email_verification_id_seq', 1, false);
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.hibernate_sequence', 1000031000, true);
+SELECT pg_catalog.setval('public.hibernate_sequence', 1000033000, true);
 
 
 --
@@ -9515,5 +9731,5 @@ ALTER TABLE ONLY public.batch_step_execution_context
 -- PostgreSQL database dump complete
 --
 
-\unrestrict k1BbfU1Byeoo2rWAujl14KIpNa5JyNNpz8Vr7QWWbQxalU1v6MLZQB5dyKZIUng
+\unrestrict Zgw5m4imWpHKYY7ulLWeenZyiEcMIZL9mndiIQO9F97zo6Bfdi3KB9MOy8UleBJ
 

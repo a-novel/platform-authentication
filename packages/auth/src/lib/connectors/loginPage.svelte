@@ -13,6 +13,7 @@
   import { type ComponentProps, onDestroy } from "svelte";
   import type { EventHandler } from "svelte/elements";
 
+  import { isHttpStatusError } from "@a-novel-kit/nodelib-browser/http";
   import { Debounce } from "@a-novel-kit/nodelib-browser/utils";
   import { type AuthenticationApi, TokenCreateRequestSchema } from "@a-novel/service-authentication-rest";
 
@@ -140,13 +141,17 @@
     }
   }
   function handleSubmitError(err: unknown) {
-    const emailValidated = validators.handleEmailSubmitError(err);
-    const passwordValidated = validators.handlePasswordSubmitError(err);
-    setEmailStatus(emailValidated && { status: "invalid", ...emailValidated });
-    setPasswordStatus(passwordValidated && { status: "invalid", ...passwordValidated });
-
-    // If no specific error has been set, set a general form error.
-    if (emailStatus !== "invalid" && passwordStatus !== "invalid") {
+    // Either email or password is invalid.
+    if (isHttpStatusError(err, 401)) {
+      setFormStatus({
+        status: "invalid",
+        title: $t("credentials.error.title", "Invalid credentials."),
+        text: $t("credentials.error.text", "The provided email or password is incorrect."),
+        iconID: "streamline-flex:incorrect-password-remix",
+        error: err instanceof Error ? err : undefined,
+      });
+    } else {
+      // If no specific error has been set, set a general form error.
       setFormStatus({
         status: "invalid",
         title: $t("submit.error.title", "Login failed."),

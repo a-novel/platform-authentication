@@ -1,5 +1,7 @@
 {
   "aria.form": "Login form",
+  "credentials.error.text": "The provided email or password is incorrect.",
+  "credentials.error.title": "Invalid credentials.",
   "field.email.label": "Email",
   "field.password.label": "Password",
   "password.forgot": "Forgot your password?",

@@ -8,6 +8,5 @@
   "form.password.error.tooLong": "The password is too long. Maximum length is {max} characters.",
   "form.password.error.unknown": "An error occurred while validating the password.",
   "submit.error.email.exists": "An account with this email already exists.",
-  "submit.error.invalid.email": "No account found with the provided email.",
   "submit.error.invalid.password": "The provided password is not the correct one."
 }

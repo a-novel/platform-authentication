@@ -8,6 +8,5 @@
   "form.password.error.tooLong": "Le mot de passe est trop long. La longueur maximale est de {max} caractères.",
   "form.password.error.unknown": "Une erreur est survenue pendant la validation du mot de passe.",
   "submit.error.email.exists": "Un compte existant utilises déjà ce courriel.",
-  "submit.error.invalid.email": "Aucun compte utilisant ce courriel n'a été trouvé.",
   "submit.error.invalid.password": "Le mot de passe fourni n'est pas le bon."
 }
