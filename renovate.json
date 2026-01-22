@@ -9,6 +9,11 @@
         "commands": ["pnpm i --frozen-lockfile && pnpm format"],
         "executionMode": "branch"
       }
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "bump",
+      "enabled": true
     }
   ]
 }
