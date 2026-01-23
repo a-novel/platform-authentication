@@ -17,7 +17,7 @@ COPY pnpm-workspace.yaml ./pnpm-workspace.yaml
 RUN --mount=type=secret,id=npmrc,target=/usr/local/app/.npmrc \
     # Dev dependencies are required to build the vite project. They will be scraped anyway from the
     # final build.
-    pnpm install --frozen-lockfile
+    pnpm install --frozen-lockfile --ignore-scripts
 
 FROM base AS build
 
