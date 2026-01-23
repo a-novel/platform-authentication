@@ -34,6 +34,7 @@
     "generate:platform": "pnpm run --dir ./packages/platform generate",
     "generate:translations:dump": "bash scripts/dump.sh",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm build && pnpm i --ignore-scripts",
     "lint": "pnpm lint:stylecheck && pnpm lint:typecheck && pnpm lint:eslint",
     "lint:ci": "pnpm build && pnpm i && pnpm lint",
     "lint:eslint": "eslint . --flag v10_config_lookup_from_file",
