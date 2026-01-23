@@ -92,7 +92,7 @@
     "@a-novel/package-authentication": "*",
     "@a-novel/service-authentication-rest": "^2.2.5",
     "@a-novel/uikit": "^0.12.4",
-    "@iconify/svelte": "^5.1.0",
+    "@iconify/svelte": "^5.2.1",
     "@sveltejs/kit": "^2.50.1",
     "@tolgee/format-icu": "^6.2.7",
     "@tolgee/svelte": "^6.2.7",
