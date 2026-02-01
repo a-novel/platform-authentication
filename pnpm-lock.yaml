@@ -76,7 +76,7 @@ importers:
         version: 1.3.9(30c40830437bb573d193f94fd405bdff)
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.0(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(6b8ab89bbb418fdf1f0a72c60d6ad042)
@@ -190,7 +190,7 @@ importers:
         version: link:../auth
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.0(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(6b8ab89bbb418fdf1f0a72c60d6ad042)
@@ -313,7 +313,7 @@ importers:
         version: link:../platform
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.2.5(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.0(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
         version: 0.12.4(6b8ab89bbb418fdf1f0a72c60d6ad042)
@@ -432,12 +432,12 @@ packages:
       typescript: ^5.9.3
       typescript-eslint: ^8.54.0
 
-  '@a-novel/service-authentication-rest@2.2.5':
-    resolution: {integrity: sha512-ubz6HYrbxGGU3SPXz4p3K2MNH/HtZXdezRpABU5n7bC40tLg2Ny2mLM/dIUUTSoGqdARC4XjalY2GbAEsJd78A==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.2.5/7476a74de8f4afaf4ebfe3413a99a79e1914d443}
+  '@a-novel/service-authentication-rest@2.3.0':
+    resolution: {integrity: sha512-+77guDQtNyrJjupOU/xroAfOkxrTZ1DJo9hcimDpf9jm5KbtNBHu+iDNAGwOqhahtfEonzkViOKqGJafbTNnLw==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.3.0/75aeac2c2227df0d70c6eae0a9d320a7475bcfbe}
     engines: {node: '>=23.11.0', npm: '>=10.9.2'}
     peerDependencies:
-      '@a-novel-kit/nodelib-browser': ^1.3.1
-      zod: ^4.1.12
+      '@a-novel-kit/nodelib-browser': ^1.3.9
+      zod: ^4.3.6
 
   '@a-novel/uikit@0.12.4':
     resolution: {integrity: sha512-5/21Q2HWBmo7FHPl5LZMIfnv9kjKOZbmdq6C/cEp2nja464bBars9tAMil4s4m8apUiicUA3tqczazgP5oXbsA==, tarball: https://npm.pkg.github.com/download/@a-novel/uikit/0.12.4/446142770e05a71a6845b4ebc51a20c71a852c93}
@@ -3021,7 +3021,7 @@ snapshots:
       typescript: 5.9.3
       typescript-eslint: 8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
 
-  '@a-novel/service-authentication-rest@2.2.5(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)':
+  '@a-novel/service-authentication-rest@2.3.0(@a-novel-kit/nodelib-browser@1.3.9(zod@4.3.6))(zod@4.3.6)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.9(zod@4.3.6)
       zod: 4.3.6
