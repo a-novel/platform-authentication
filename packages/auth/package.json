@@ -89,7 +89,7 @@
     "@vitest/coverage-v8": "^4.0.16",
     "eslint-plugin-svelte": "^3.13.1",
     "globals": "^17.0.0",
-    "jsdom": "^27.3.0",
+    "jsdom": "^28.0.0",
     "prettier-plugin-svelte": "^3.4.0",
     "publint": "^0.3.16",
     "sharp": "^0.34.5",
