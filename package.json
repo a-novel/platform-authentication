@@ -37,7 +37,7 @@
     "postinstall": "pnpm build && pnpm i --ignore-scripts",
     "lint": "pnpm lint:stylecheck && pnpm lint:typecheck && pnpm lint:eslint",
     "lint:ci": "pnpm build && pnpm i && pnpm lint",
-    "lint:eslint": "eslint . --flag v10_config_lookup_from_file",
+    "lint:eslint": "eslint .",
     "lint:stylecheck": "prettier --check . --config ./prettier.config.ts",
     "lint:typecheck": "pnpm lint:typecheck:base && pnpm lint:typecheck:auth && pnpm lint:typecheck:platform && pnpm lint:typecheck:storybook",
     "lint:typecheck:auth": "pnpm tsc --p ./packages/auth/tsconfig.json --noEmit",
