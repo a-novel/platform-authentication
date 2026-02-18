@@ -112,7 +112,7 @@ importers:
         version: 14.6.1(@testing-library/dom@10.4.1)
       '@tolgee/cli':
         specifier: ^2.15.0
-        version: 2.15.1(jiti@2.6.1)(typescript@5.9.3)
+        version: 2.16.0(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.3.0
@@ -226,7 +226,7 @@ importers:
         version: 14.6.1(@testing-library/dom@10.4.1)
       '@tolgee/cli':
         specifier: ^2.15.0
-        version: 2.15.1(jiti@2.6.1)(typescript@5.9.3)
+        version: 2.16.0(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.3.0
@@ -475,8 +475,8 @@ packages:
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
 
-  '@babel/code-frame@7.27.1':
-    resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
+  '@babel/code-frame@7.29.0':
+    resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.28.5':
@@ -1175,8 +1175,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@stomp/stompjs@7.2.1':
-    resolution: {integrity: sha512-DLd/WeicnHS5SsWWSk3x6/pcivqchNaEvg9UEGVqAcfYEBVmS9D6980ckXjTtfpXLjdLDsd96M7IuX4w7nzq5g==}
+  '@stomp/stompjs@7.3.0':
+    resolution: {integrity: sha512-nKMLoFfJhrQAqkvvKd1vLq/cVBGCMwPRCD0LqW7UT1fecRx9C3GoKEIR2CYwVuErGeZu8w0kFkl2rlhPlqHVgQ==}
 
   '@storybook/addon-a11y@10.2.9':
     resolution: {integrity: sha512-oWho1jJXS1QfjShin9yC2o60pvkPskgpqUDB5Of4XHFpOaV4hVfoqS1HjhZBQyjWZkN64EE42X3HVlwUwToPfg==}
@@ -1365,8 +1365,8 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@tolgee/cli@2.15.1':
-    resolution: {integrity: sha512-1BQs2zkN6n5UuR0vj7nW8L9aVHD78DuaKwgRoNh9rfZVKaoTuLyFzXLjVDa/zrwSxSK03eTkNnhzM0prUkED+Q==}
+  '@tolgee/cli@2.16.0':
+    resolution: {integrity: sha512-CJEx3eUHSxcvzzvUncOAfavzoRtqLXTqXeCMB/SRCMSsl5JmAS2SRGrDC9x5v4BwiRFKWXiHpTUON33uBwjTCw==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -1584,8 +1584,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  ajv@8.17.1:
-    resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
+  ajv@8.18.0:
+    resolution: {integrity: sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==}
 
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
@@ -2904,8 +2904,8 @@ packages:
   vscode-oniguruma@2.0.1:
     resolution: {integrity: sha512-poJU8iHIWnC3vgphJnrLZyI3YdqRlR27xzqDmpPXYzA93R4Gk8z7T6oqDzDoHjoikA2aS82crdXFkjELCdJsjQ==}
 
-  vscode-textmate@9.3.0:
-    resolution: {integrity: sha512-zHiZZOdb9xqj5/X1C4a29sbgT2HngdWxPLSl3PyHRQF+5visI4uNM020OHiLJjsMxUssyk/pGVAg/9LCIobrVg==}
+  vscode-textmate@9.3.2:
+    resolution: {integrity: sha512-n2uGbUcrjhUEBH16uGA0TvUfhWwliFZ1e3+pTjrkim1Mt7ydB41lV08aUvsi70OlzDWp6X7Bx3w/x3fAXIsN0Q==}
 
   w3c-xmlserializer@5.0.0:
     resolution: {integrity: sha512-o8qghlI8NZHU1lLPrpi2+Uq7abh4GGPpYANlalzWxyWteJOCsr/P+oPBA49TOLu5FTZO4d3F9MnWJfiMo4BkmA==}
@@ -3067,7 +3067,7 @@ snapshots:
 
   '@asamuzakjp/nwsapi@2.3.9': {}
 
-  '@babel/code-frame@7.27.1':
+  '@babel/code-frame@7.29.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
@@ -3095,13 +3095,13 @@ snapshots:
 
   '@babel/template@7.27.2':
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/parser': 7.28.6
       '@babel/types': 7.28.6
 
   '@babel/traverse@7.28.5':
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/generator': 7.28.5
       '@babel/helper-globals': 7.28.0
       '@babel/parser': 7.28.6
@@ -3547,7 +3547,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@stomp/stompjs@7.2.1': {}
+  '@stomp/stompjs@7.3.0': {}
 
   '@storybook/addon-a11y@10.2.9(storybook@10.2.9(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
     dependencies:
@@ -3744,7 +3744,7 @@ snapshots:
 
   '@testing-library/dom@10.4.1':
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/runtime': 7.28.4
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
@@ -3779,10 +3779,10 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.1
 
-  '@tolgee/cli@2.15.1(jiti@2.6.1)(typescript@5.9.3)':
+  '@tolgee/cli@2.16.0(jiti@2.6.1)(typescript@5.9.3)':
     dependencies:
-      '@stomp/stompjs': 7.2.1
-      ajv: 8.17.1
+      '@stomp/stompjs': 7.3.0
+      ajv: 8.18.0
       ansi-colors: 4.1.3
       base32-decode: 1.0.0
       commander: 12.1.0
@@ -3794,7 +3794,7 @@ snapshots:
       tinyglobby: 0.2.15
       unescape-js: 1.1.4
       vscode-oniguruma: 2.0.1
-      vscode-textmate: 9.3.0
+      vscode-textmate: 9.3.2
       ws: 8.19.0
       yauzl: 3.2.0
     optionalDependencies:
@@ -4076,7 +4076,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  ajv@8.17.1:
+  ajv@8.18.0:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-uri: 3.1.0
@@ -4785,7 +4785,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       error-ex: 1.3.4
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -5338,7 +5338,7 @@ snapshots:
 
   vscode-oniguruma@2.0.1: {}
 
-  vscode-textmate@9.3.0: {}
+  vscode-textmate@9.3.2: {}
 
   w3c-xmlserializer@5.0.0:
     dependencies:
