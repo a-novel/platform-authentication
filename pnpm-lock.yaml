@@ -157,7 +157,7 @@ importers:
         version: 5.53.0
       svelte-check:
         specifier: ^4.3.4
-        version: 4.4.2(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
+        version: 4.4.3(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -280,7 +280,7 @@ importers:
         version: 5.53.0
       svelte-check:
         specifier: ^4.3.4
-        version: 4.4.2(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
+        version: 4.4.3(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -389,7 +389,7 @@ importers:
         version: 10.2.10(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       svelte-check:
         specifier: ^4.3.4
-        version: 4.4.2(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
+        version: 4.4.3(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -2669,8 +2669,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  svelte-check@4.4.2:
-    resolution: {integrity: sha512-hkTWXT1emHOpLhihTzaMsPXtZPnXjIJzIYhfxUO5T8BhIwNxvlyweb9ifWoAj3n3Y1fXfbpvS591hx0ecDOTGA==}
+  svelte-check@4.4.3:
+    resolution: {integrity: sha512-4HtdEv2hOoLCEsSXI+RDELk9okP/4sImWa7X02OjMFFOWeSdFF3NFy3vqpw0z+eH9C88J9vxZfUXz/Uv2A1ANw==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
@@ -5127,7 +5127,7 @@ snapshots:
       svelte: 5.53.0
       zimmerframe: 1.1.2
 
-  svelte-check@4.4.2(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3):
+  svelte-check@4.4.3(picomatch@4.0.3)(svelte@5.53.0)(typescript@5.9.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       chokidar: 4.0.3
