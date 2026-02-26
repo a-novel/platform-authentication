@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: ^1.3.6
-        version: 1.3.16(cb7fd37aa1e3694f40ddf347a9cd9750)
+        version: 1.3.17(cb7fd37aa1e3694f40ddf347a9cd9750)
       '@eslint/compat':
         specifier: ^2.0.0
         version: 2.0.2(eslint@10.0.2(jiti@2.6.1))
@@ -70,16 +70,16 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-browser':
         specifier: ^1.3.6
-        version: 1.3.16(zod@4.3.6)
+        version: 1.3.17(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: ^1.3.6
-        version: 1.3.16(cb7fd37aa1e3694f40ddf347a9cd9750)
+        version: 1.3.17(cb7fd37aa1e3694f40ddf347a9cd9750)
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.16(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.17(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(59025061c20d840c019d8367a18758a2)
+        version: 0.12.5(d988bc7dfd93c0e38aa893dd56c23f57)
       '@eslint/compat':
         specifier: ^2.0.0
         version: 2.0.2(eslint@10.0.2(jiti@2.6.1))
@@ -181,19 +181,19 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-browser':
         specifier: ^1.3.6
-        version: 1.3.16(zod@4.3.6)
+        version: 1.3.17(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: ^1.3.6
-        version: 1.3.16(cb7fd37aa1e3694f40ddf347a9cd9750)
+        version: 1.3.17(cb7fd37aa1e3694f40ddf347a9cd9750)
       '@a-novel/package-authentication':
         specifier: '*'
         version: link:../auth
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.16(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.17(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(59025061c20d840c019d8367a18758a2)
+        version: 0.12.5(d988bc7dfd93c0e38aa893dd56c23f57)
       '@eslint/compat':
         specifier: ^2.0.0
         version: 2.0.2(eslint@10.0.2(jiti@2.6.1))
@@ -304,7 +304,7 @@ importers:
     dependencies:
       '@a-novel-kit/nodelib-browser':
         specifier: ^1.3.6
-        version: 1.3.16(zod@4.3.6)
+        version: 1.3.17(zod@4.3.6)
       '@a-novel/package-authentication':
         specifier: '*'
         version: link:../auth
@@ -313,10 +313,10 @@ importers:
         version: link:../platform
       '@a-novel/service-authentication-rest':
         specifier: ^2.2.4
-        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.16(zod@4.3.6))(zod@4.3.6)
+        version: 2.3.1(@a-novel-kit/nodelib-browser@1.3.17(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(59025061c20d840c019d8367a18758a2)
+        version: 0.12.5(d988bc7dfd93c0e38aa893dd56c23f57)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.53.3)
@@ -341,7 +341,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: ^1.3.6
-        version: 1.3.16(cb7fd37aa1e3694f40ddf347a9cd9750)
+        version: 1.3.17(cb7fd37aa1e3694f40ddf347a9cd9750)
       '@chromatic-com/storybook':
         specifier: ^5.0.0
         version: 5.0.1(storybook@10.2.12(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
@@ -402,35 +402,35 @@ importers:
 
 packages:
 
-  '@a-novel-kit/nodelib-browser@1.3.16':
-    resolution: {integrity: sha512-QYaVol64ie9NyNcW5unRaoGL96iLA7AAgXUVsz3Cg0SzFxg0vSNJmvDFrQqCQgYMeKHbPGBHVtLLgxe7lPgGVg==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-browser/1.3.16/32e037ad4a08e786f6b8fa2353c983dad9f385d2}
+  '@a-novel-kit/nodelib-browser@1.3.17':
+    resolution: {integrity: sha512-mi0ZVSjxWHZNWsbVoYww/cQc+Ku4MiYVTUWI78XhlQz0D60MRxZaCN6bEHc0ZyxvPcM54zKwrHB5l0QjL2urcg==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-browser/1.3.17/a6d57998c75ba9de10d4d13ca64d0dc8a21fe106}
     engines: {node: '>=24.0.0', npm: '>=10.9.2'}
     peerDependencies:
       zod: ^4.3.6
 
-  '@a-novel-kit/nodelib-config@1.3.16':
-    resolution: {integrity: sha512-EP+FekqN9XXAqdXTEOe8fco492EyzE3TknUIiEZ/eLqDd8FmVEzkdjDq1qNwTYCxOwopYgozcLLZAEmiGRNfKA==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-config/1.3.16/37c657d6f4ba15d844c7302670a7461721d98f56}
+  '@a-novel-kit/nodelib-config@1.3.17':
+    resolution: {integrity: sha512-tZGFOnYhXsBHmYiNz6n1IXxuE9T561xuDBPoN4KpSfCjHuMyEezedZyMiZI71QUyVvo9a47qLnU/ZRp2ke86Sg==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-config/1.3.17/194fbfa9e9cc3536475ce0b7cbb4ae04a18e8426}
     engines: {node: '>=24.0.0', npm: '>=10.9.2'}
     peerDependencies:
       '@eslint/compat': ^2.0.2
       '@eslint/js': ^10.0.1
-      '@sveltejs/kit': ^2.53.0
+      '@sveltejs/kit': ^2.53.2
       '@trivago/prettier-plugin-sort-imports': ^6.0.2
       '@types/node': ^24.10.13
-      eslint: ^10.0.1
+      eslint: ^10.0.2
       eslint-config-prettier: ^10.1.8
       eslint-plugin-prettier: ^5.5.5
-      eslint-plugin-storybook: ^10.2.10
+      eslint-plugin-storybook: ^10.2.12
       eslint-plugin-svelte: ^3.15.0
       prettier: ^3.8.1
       prettier-plugin-css-order: ^2.2.0
       prettier-plugin-packagejson: ^2.5.20 || ^3.0.0
       prettier-plugin-sql: ^0.19.2
       prettier-plugin-svelte: ^3.5.0
-      storybook: ^10.2.10
-      svelte: ^5.53.2
+      storybook: ^10.2.12
+      svelte: ^5.53.5
       typescript: ^5.9.3
-      typescript-eslint: ^8.56.0
+      typescript-eslint: ^8.56.1
 
   '@a-novel/service-authentication-rest@2.3.1':
     resolution: {integrity: sha512-yPKUgBnFNdhF++/ySGOHWxMVNhwfVh9IoP6SBqhzkDGTUhw08/BTzXkYDmi6tcdPG8nXHbgBZJrndYpRG5/GNQ==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.3.1/3d7f80b9c9e77e6ad127aef8a936724020d8de33}
@@ -2993,11 +2993,11 @@ packages:
 
 snapshots:
 
-  '@a-novel-kit/nodelib-browser@1.3.16(zod@4.3.6)':
+  '@a-novel-kit/nodelib-browser@1.3.17(zod@4.3.6)':
     dependencies:
       zod: 4.3.6
 
-  '@a-novel-kit/nodelib-config@1.3.16(cb7fd37aa1e3694f40ddf347a9cd9750)':
+  '@a-novel-kit/nodelib-config@1.3.17(cb7fd37aa1e3694f40ddf347a9cd9750)':
     dependencies:
       '@eslint/compat': 2.0.2(eslint@10.0.2(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.0.2(jiti@2.6.1))
@@ -3019,14 +3019,14 @@ snapshots:
       typescript: 5.9.3
       typescript-eslint: 8.56.1(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)
 
-  '@a-novel/service-authentication-rest@2.3.1(@a-novel-kit/nodelib-browser@1.3.16(zod@4.3.6))(zod@4.3.6)':
+  '@a-novel/service-authentication-rest@2.3.1(@a-novel-kit/nodelib-browser@1.3.17(zod@4.3.6))(zod@4.3.6)':
     dependencies:
-      '@a-novel-kit/nodelib-browser': 1.3.16(zod@4.3.6)
+      '@a-novel-kit/nodelib-browser': 1.3.17(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.5(59025061c20d840c019d8367a18758a2)':
+  '@a-novel/uikit@0.12.5(d988bc7dfd93c0e38aa893dd56c23f57)':
     dependencies:
-      '@a-novel-kit/nodelib-browser': 1.3.16(zod@4.3.6)
+      '@a-novel-kit/nodelib-browser': 1.3.17(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.53.3)
       '@storybook/addon-a11y': 10.2.12(storybook@10.2.12(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-docs': 10.2.12(@types/react@19.2.7)(esbuild@0.27.3)(rollup@4.57.1)(storybook@10.2.12(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@7.3.1(@types/node@24.10.14)(jiti@2.6.1))
