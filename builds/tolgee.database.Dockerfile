@@ -1,6 +1,6 @@
 # This is a custom postgres image that comes with pre-loaded extensions. It allows us to customize
 # our instance at build time.
-FROM docker.io/library/postgres:18.2
+FROM docker.io/library/postgres:18.3
 
 # ======================================================================================================================
 # Prepare extension scripts.
