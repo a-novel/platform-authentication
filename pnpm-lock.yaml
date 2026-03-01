@@ -47,7 +47,7 @@ importers:
         version: 10.2.13(eslint@10.0.2(jiti@2.6.1))(storybook@10.2.13(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
       globals:
         specifier: ^17.0.0
-        version: 17.3.0
+        version: 17.4.0
       jiti:
         specifier: ^2.6.1
         version: 2.6.1
@@ -146,7 +146,7 @@ importers:
         version: 3.15.0(eslint@10.0.2(jiti@2.6.1))(svelte@5.53.5)
       globals:
         specifier: ^17.0.0
-        version: 17.3.0
+        version: 17.4.0
       jsdom:
         specifier: ^28.0.0
         version: 28.1.0
@@ -266,7 +266,7 @@ importers:
         version: 3.15.0(eslint@10.0.2(jiti@2.6.1))(svelte@5.53.5)
       globals:
         specifier: ^17.0.0
-        version: 17.3.0
+        version: 17.4.0
       jsdom:
         specifier: ^28.0.0
         version: 28.1.0
@@ -2043,8 +2043,8 @@ packages:
     resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
     engines: {node: '>=18'}
 
-  globals@17.3.0:
-    resolution: {integrity: sha512-yMqGUQVVCkD4tqjOJf3TnrvaaHDMYp4VlUSObbkIiuCPe/ofdMBFIAcBbCSRFWOnos6qRiTVStDwqPLUclaxIw==}
+  globals@17.4.0:
+    resolution: {integrity: sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==}
     engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
@@ -4480,7 +4480,7 @@ snapshots:
 
   globals@16.5.0: {}
 
-  globals@17.3.0: {}
+  globals@17.4.0: {}
 
   graceful-fs@4.2.11:
     optional: true
