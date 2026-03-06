@@ -129,7 +129,7 @@ jobs:
       id-token: write
     services:
       postgres-authentication:
-        image: ghcr.io/a-novel/service-authentication/database:v2.3.1
+        image: ghcr.io/a-novel/service-authentication/database:v2.4.0
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
