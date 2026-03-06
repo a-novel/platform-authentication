@@ -86,7 +86,7 @@ importers:
         version: 2.4.0(@a-novel-kit/nodelib-browser@1.3.20(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(8394aa5d9eeffc573e20f9d3d86d317b)
+        version: 0.12.5(b943f0f0c38b60382342bb77a887c959)
       '@eslint/compat':
         specifier: ^2.0.0
         version: 2.0.2(eslint@10.0.2(jiti@2.6.1))
@@ -122,7 +122,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/format-icu':
         specifier: ^6.2.7
-        version: 6.3.1
+        version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.2.7
         version: 6.3.1(svelte@5.53.7)
@@ -200,7 +200,7 @@ importers:
         version: 2.4.0(@a-novel-kit/nodelib-browser@1.3.20(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(8394aa5d9eeffc573e20f9d3d86d317b)
+        version: 0.12.5(b943f0f0c38b60382342bb77a887c959)
       '@eslint/compat':
         specifier: ^2.0.0
         version: 2.0.2(eslint@10.0.2(jiti@2.6.1))
@@ -236,7 +236,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/format-icu':
         specifier: ^6.2.7
-        version: 6.3.1
+        version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.2.7
         version: 6.3.1(svelte@5.53.7)
@@ -323,7 +323,7 @@ importers:
         version: 2.4.0(@a-novel-kit/nodelib-browser@1.3.20(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: ^0.12.3
-        version: 0.12.5(8394aa5d9eeffc573e20f9d3d86d317b)
+        version: 0.12.5(b943f0f0c38b60382342bb77a887c959)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.53.7)
@@ -332,7 +332,7 @@ importers:
         version: 2.53.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.7)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)))(svelte@5.53.7)(typescript@5.9.3)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1))
       '@tolgee/format-icu':
         specifier: ^6.2.7
-        version: 6.3.1
+        version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.2.7
         version: 6.3.1(svelte@5.53.7)
@@ -1369,8 +1369,8 @@ packages:
   '@tolgee/core@6.3.1':
     resolution: {integrity: sha512-g/IF/d3O/qjEtLfMsZbg0aRYcLv12Wr8Bt9e9sE8IdetASJbvDvpJ2YezwYrSEKIHWo2TzF6LUCbCmC4simJ8g==}
 
-  '@tolgee/format-icu@6.3.1':
-    resolution: {integrity: sha512-g3Pm9ZnZqlRkPpxAurkoAis/8FXz1tsJiP9S+3seVMBuG9w/sHPV58Rn4hgLtGtyVSNM3rAtQjLN/4TxduSkcQ==}
+  '@tolgee/format-icu@6.4.0':
+    resolution: {integrity: sha512-ifhZBMTogrg2hHG233vF1tMlZl/ydw/xSG+4SWaviDfWhes7L1b6zZvI+4fvmmDlzpnToJZ5Pp/OWY3ajOQgZA==}
 
   '@tolgee/svelte@6.3.1':
     resolution: {integrity: sha512-26hVRBrVuqiElUv28cXyMcuLWUx3K+mWBNTTcecjNOEZo829kNx9SpTmM9NY0y6jt0fXhFYlqcB1NHEYmiJylw==}
@@ -3021,7 +3021,7 @@ snapshots:
       '@a-novel-kit/nodelib-browser': 1.3.20(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.5(8394aa5d9eeffc573e20f9d3d86d317b)':
+  '@a-novel/uikit@0.12.5(b943f0f0c38b60382342bb77a887c959)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.20(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.53.7)
@@ -3032,7 +3032,7 @@ snapshots:
       '@storybook/addon-vitest': 10.2.16(@vitest/browser@4.0.18(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1))(vitest@4.0.18(@types/node@24.12.0)(jiti@2.6.1)(jsdom@28.1.0)))(@vitest/runner@4.0.18)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.2.16(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vitest@4.0.18(@types/node@24.12.0)(jiti@2.6.1)(jsdom@28.1.0))
       '@storybook/sveltekit': 10.2.16(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.7)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)))(esbuild@0.27.3)(rollup@4.59.0)(storybook@10.2.16(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.53.7)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1))
       '@sveltejs/kit': 2.53.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.7)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)))(svelte@5.53.7)(typescript@5.9.3)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1))
-      '@tolgee/format-icu': 6.3.1
+      '@tolgee/format-icu': 6.4.0
       '@tolgee/svelte': 6.3.1(svelte@5.53.7)
       '@tolgee/web': 6.3.1
       '@types/react': 19.2.7
@@ -3788,7 +3788,7 @@ snapshots:
 
   '@tolgee/core@6.3.1': {}
 
-  '@tolgee/format-icu@6.3.1': {}
+  '@tolgee/format-icu@6.4.0': {}
 
   '@tolgee/svelte@6.3.1(svelte@5.53.7)':
     dependencies:
