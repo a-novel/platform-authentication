@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Zgw5m4imWpHKYY7ulLWeenZyiEcMIZL9mndiIQO9F97zo6Bfdi3KB9MOy8UleBJ
+\restrict 7RKp478l5MKjNzobCxgNeIs83aV1bF39T4g8CQOrpzPAM6eU4JoKNozJl7iHKc3
 
--- Dumped from database version 18.1 (Debian 18.1-1.pgdg13+2)
--- Dumped by pg_dump version 18.1 (Debian 18.1-1.pgdg13+2)
+-- Dumped from database version 18.3 (Debian 18.3-1.pgdg13+1)
+-- Dumped by pg_dump version 18.3 (Debian 18.3-1.pgdg13+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2864,6 +2864,7 @@ Namespace	1000012010	{"name": "auth.platform.page.resetPassword"}	{}	34
 Key	1000001092	{"name": "field.password.aria.hide"}	{"namespace": {"entityId": 1000012010, "entityClass": "Namespace"}}	34
 Key	1000001093	{"name": "field.password.aria.reveal"}	{"namespace": {"entityId": 1000012010, "entityClass": "Namespace"}}	34
 Key	1000001094	{"name": "field.passwordConfirmation.aria.hide"}	{"namespace": {"entityId": 1000012010, "entityClass": "Namespace"}}	34
+Namespace	1000012001	{"name": "auth.form"}	{}	292
 Key	1000001095	{"name": "field.passwordConfirmation.aria.reveal"}	{"namespace": {"entityId": 1000012010, "entityClass": "Namespace"}}	34
 Namespace	1000015001	{"name": "auth.component.input"}	{}	35
 Key	1000016001	{"name": "field.password.aria.hide"}	{"namespace": {"entityId": 1000015001, "entityClass": "Namespace"}}	35
@@ -3492,6 +3493,15 @@ Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	
 Namespace	1000012005	{"name": "auth.page.register"}	{}	287
 Key	1000001057	{"name": "success.title"}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	287
 Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	287
+Key	1000001011	{"name": "logo"}	{"namespace": {"entityId": 1000012001, "entityClass": "Namespace"}}	292
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	292
+Namespace	1000012001	{"name": "auth.form"}	{}	294
+Key	1000001011	{"name": "logo"}	{"namespace": {"entityId": 1000012001, "entityClass": "Namespace"}}	294
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	294
+Namespace	1000012001	{"name": "auth.form"}	{}	293
+Key	1000001011	{"name": "logo"}	{"namespace": {"entityId": 1000012001, "entityClass": "Namespace"}}	293
+Language	1000000001	{"tag": "en", "name": "English", "flagEmoji": "🇬🇧"}	{}	293
+Language	1000000003	{"tag": "fr", "name": "French", "flagEmoji": "🇫🇷"}	{}	293
 \.
 
 
@@ -3671,6 +3681,7 @@ Key	1000001049	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespa
 Key	1000001050	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "login", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 UserAccount	1	{}	{}	{}	1	231
 UserAccount	1	{}	{}	{}	1	251
+UserAccount	1	{}	{}	{}	1	291
 Key	1000001051	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 Key	1000001052	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit.error.text", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
 Key	1000001053	{}	{"namespace": {"entityId": 1000012005, "entityClass": "Namespace"}}	{"name": {"new": "submit.error.title", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.page.register"}, "entityId": 1000012005, "entityClass": "Namespace"}, "old": null}}	0	10
@@ -4169,6 +4180,7 @@ Translation	1000019006	{"text": "Les mots de passe ne correspondent pas. Veuille
 Translation	1000019002	{"text": "An unknown error occurred during the creation of a validation link. You may try again later."}	{"key": {"entityId": 1000018002, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	118
 Namespace	1000015002	{}	{}	{"name": {"new": "auth.platform.page.manageAccount", "old": null}}	0	33
 Key	1000016003	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate,success.main", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	33
+Translation	1000002031	{}	{"key": {"entityId": 1000001011, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "Agoraa logo", "old": "Agora logo"}, "state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	292
 Key	1000016004	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate,success.sub", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	33
 Key	1000016005	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate,success.title", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	33
 Key	1000016006	{}	{"namespace": {"entityId": 1000015002, "entityClass": "Namespace"}}	{"name": {"new": "emailUpdate.aria.form", "old": null}, "isPlural": {"new": false, "old": null}, "namespace": {"new": {"data": {"name": "auth.platform.page.manageAccount"}, "entityId": 1000015002, "entityClass": "Namespace"}, "old": null}}	0	33
@@ -4224,6 +4236,7 @@ Translation	1000022010	{}	{"key": {"entityId": 1000021001, "entityClass": "Key"}
 Translation	1000022011	{}	{"key": {"entityId": 1000021002, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Échec de la mise à jour du courriel.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	147
 Translation	1000022011	{"text": "Échec de la mise à jour du courriel."}	{"key": {"entityId": 1000021002, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	148
 Translation	1000002208	{}	{"key": {"entityId": 1000001094, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Masquer la confirmation du mot de passe"}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	34
+Translation	1000002031	{}	{"key": {"entityId": 1000001011, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "Agora logo", "old": "Agoraa logo"}}	1	293
 Translation	1000002209	{}	{"key": {"entityId": 1000001095, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Révéler la validation du mot de passe"}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	34
 Key	1000001080	{}	{"namespace": {"entityId": 1000012009, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "field.password.aria.reveal"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.platform.page.register"}, "entityId": 1000012009, "entityClass": "Namespace"}}}	2	34
 Key	1000001095	{}	{"namespace": {"entityId": 1000012010, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "field.passwordConfirmation.aria.reveal"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.platform.page.resetPassword"}, "entityId": 1000012010, "entityClass": "Namespace"}}}	2	34
@@ -4302,6 +4315,7 @@ Translation	1000002162	{}	{"key": {"entityId": 1000001076, "entityClass": "Key"}
 Key	1000001074	{}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "validation.error.invalid.email"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.validation"}, "entityId": 1000012008, "entityClass": "Namespace"}}}	2	141
 Key	1000001075	{}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "validation.success.email.available"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.validation"}, "entityId": 1000012008, "entityClass": "Namespace"}}}	2	141
 Key	1000001072	{}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "validation.error"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.validation"}, "entityId": 1000012008, "entityClass": "Namespace"}}}	2	141
+Translation	1000002032	{"text": "Logo Agora"}	{"key": {"entityId": 1000001011, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"state": {"new": "TRANSLATED", "old": "REVIEWED"}}	1	293
 Translation	1000017036	{}	{"key": {"entityId": 1000016014, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Mot de passe actuel", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	75
 Translation	1000017036	{"text": "Mot de passe actuel"}	{"key": {"entityId": 1000016014, "entityClass": "Key"}, "language": {"entityId": 1000000005, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	76
 Translation	1000017014	{"text": "Current password"}	{"key": {"entityId": 1000016014, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	77
@@ -4439,6 +4453,7 @@ Translation	1000032002	{}	{"key": {"entityId": 1000031002, "entityClass": "Key"}
 Translation	1000032006	{}	{"key": {"entityId": 1000031001, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"auto": {"new": false, "old": null}, "text": {"new": "Le courriel ou le mot de passe fourni sont incorrects.", "old": null}, "state": {"new": "TRANSLATED", "old": null}, "outdated": {"new": false, "old": null}}	0	256
 Translation	1000002111	{}	{"key": {"entityId": 1000001055, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"text": {"new": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration.", "old": "A link will be sent to <strong>{user}</strong>, if no account uses this email yet. This link contains a single-usage temporary form to complete your registration."}}	1	271
 Translation	1000002141	{}	{"key": {"entityId": 1000001070, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "No account found with the provided email."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	253
+Translation	1000002031	{"text": "Agora logo"}	{"key": {"entityId": 1000001011, "entityClass": "Key"}, "language": {"entityId": 1000000001, "entityClass": "Language"}}	{"state": {"new": "REVIEWED", "old": "TRANSLATED"}}	1	294
 Translation	1000002156	{}	{"key": {"entityId": 1000001070, "entityClass": "Key"}, "language": {"entityId": 1000000003, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "Aucun compte utilisant ce courriel n'a été trouvé."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	253
 Key	1000001070	{}	{"namespace": {"entityId": 1000012008, "entityClass": "Namespace"}}	{"name": {"new": null, "old": "submit.error.invalid.email"}, "isPlural": {"new": null, "old": false}, "namespace": {"new": null, "old": {"data": {"name": "auth.validation"}, "entityId": 1000012008, "entityClass": "Namespace"}}}	2	253
 Translation	1000017004	{}	{"key": {"entityId": 1000016004, "entityClass": "Key"}, "language": {"entityId": 1000000004, "entityClass": "Language"}}	{"auto": {"new": null, "old": false}, "text": {"new": null, "old": "If you don't receive the email shortly, please check your spam folder. You can ask for a new link by reloading this page."}, "state": {"new": null, "old": "REVIEWED"}, "outdated": {"new": null, "old": false}}	2	255
@@ -4715,6 +4730,10 @@ COPY public.activity_revision (id, author_id, meta, project_id, "timestamp", typ
 285	1	\N	1	2026-01-22 01:04:55.85	SET_TRANSLATION_STATE	\N	\N	1
 286	1	\N	1	2026-01-22 01:05:05.336	SET_TRANSLATIONS	\N	\N	1
 287	1	\N	1	2026-01-22 01:05:06.31	SET_TRANSLATION_STATE	\N	\N	1
+291	\N	\N	\N	2026-03-12 18:41:59.283	\N	\N	\N	\N
+292	1	\N	1	2026-03-12 19:57:00.894	IMPORT	\N	\N	1
+293	1	\N	1	2026-03-12 19:58:12.757	SET_TRANSLATIONS	\N	\N	1
+294	1	\N	1	2026-03-12 19:58:14.068	SET_TRANSLATION_STATE	\N	\N	1
 \.
 
 
@@ -4731,8 +4750,8 @@ COPY public.ai_playground_result (id, created_at, updated_at, context_descriptio
 --
 
 COPY public.api_key (id, created_at, updated_at, key, project_id, user_account_id, description, key_hash, expires_at, last_used_at) FROM stdin;
-1000011001	2025-12-22 12:58:47.884	2025-12-22 12:58:47.884	\N	1	1	master-key	idw9znh3xhlId3TV0G/ylJ7gYlRuZ4U1ThxD1mPsOQo=	\N	2026-01-22 01:05:28.51
-1000011002	2025-12-22 12:59:08.426	2025-12-22 12:59:08.426	\N	2	1	master-key	Vm7cNfvx4UL3gwwquioz1/K3X304GdRJuF6wEL6cZY4=	\N	2026-01-22 01:05:31.012
+1000011002	2025-12-22 12:59:08.426	2025-12-22 12:59:08.426	\N	2	1	master-key	Vm7cNfvx4UL3gwwquioz1/K3X304GdRJuF6wEL6cZY4=	\N	2026-03-12 19:58:23.174
+1000011001	2025-12-22 12:58:47.884	2025-12-22 12:58:47.884	\N	1	1	master-key	idw9znh3xhlId3TV0G/ylJ7gYlRuZ4U1ThxD1mPsOQo=	\N	2026-03-12 19:58:25.59
 \.
 
 
@@ -5968,10 +5987,10 @@ COPY public.language (id, created_at, updated_at, tag, name, project_id, origina
 --
 
 COPY public.language_stats (id, created_at, updated_at, reviewed_keys, reviewed_percentage, reviewed_words, translated_keys, translated_percentage, translated_words, untranslated_keys, untranslated_percentage, untranslated_words, language_id, translations_updated_at) FROM stdin;
-1000007001	2025-12-22 12:56:23.361	2026-01-22 01:01:43.078	63	100	404	0	0	0	0	0	0	1000000001	2026-01-22 01:01:43.061
 1000007005	2025-12-22 12:57:57.314	2026-01-22 01:04:28.962	62	100	436	0	0	0	0	0	0	1000000005	2026-01-22 01:04:28.941
 1000007004	2025-12-22 12:57:57.312	2026-01-22 01:04:29.635	62	100	436	0	0	0	0	0	0	1000000004	2026-01-22 01:04:29.614
-1000007002	2025-12-22 12:56:23.367	2026-01-22 01:05:06.327	63	100	404	0	0	0	0	0	0	1000000003	2026-01-22 01:05:06.307
+1000007002	2025-12-22 12:56:23.367	2026-03-12 19:58:12.778	62	99.5049504950495	402	1	0.49504950495049505	2	0	0	0	1000000003	2026-03-12 19:58:12.737
+1000007001	2025-12-22 12:56:23.361	2026-03-12 19:58:14.089	63	100	404	0	0	0	0	0	0	1000000001	2026-03-12 19:58:14.065
 \.
 
 
@@ -6278,8 +6297,6 @@ COPY public.tolgee_batch_job_chunk_execution (id, created_at, updated_at, chunk_
 --
 
 COPY public.translation (id, created_at, updated_at, text, language_id, key_id, state, auto, mt_provider, character_count, word_count, outdated, prompt_id) FROM stdin;
-1000002031	2025-12-22 13:06:29.602	2025-12-22 13:06:57.41	Agora logo	1000000001	1000001011	2	f	\N	10	2	f	\N
-1000002032	2025-12-22 13:06:29.604	2025-12-22 13:06:57.413	Logo Agora	1000000003	1000001011	2	f	\N	10	2	f	\N
 1000002033	2025-12-22 13:06:29.604	2025-12-22 13:06:57.414	Account	1000000001	1000001012	2	f	\N	7	1	f	\N
 1000002034	2025-12-22 13:06:29.605	2025-12-22 13:06:57.415	Manage account	1000000001	1000001013	2	f	\N	14	2	f	\N
 1000002035	2025-12-22 13:06:29.605	2025-12-22 13:06:57.417	You are logged in as	1000000001	1000001014	2	f	\N	20	5	f	\N
@@ -6528,6 +6545,8 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000002123	2025-12-22 13:06:29.629	2026-01-22 01:01:44.58	Un lien sera envoyé à <strong>{user}</strong>, si aucun compte n'utilise ce courriel. Ce lien renvoie vers un formulaire temporaire à usage unique pour terminer l'inscription.	1000000003	1000001055	2	f	\N	175	27	f	\N
 1000032009	2026-01-22 01:04:18.188	2026-01-22 01:04:19.623	Si vous ne recevez pas de lien sous peu, vérifiez vos spams. Vous pourrez toujours en demander un nouveau en rechargeant cette page.	1000000005	1000031004	2	f	\N	132	23	f	\N
 1000032010	2026-01-22 01:04:28.155	2026-01-22 01:04:28.941	Courriel de validation envoyé	1000000005	1000031005	2	f	\N	29	4	f	\N
+1000002032	2025-12-22 13:06:29.604	2026-03-12 19:58:12.737	Logo Agora	1000000003	1000001011	1	f	\N	10	2	t	\N
+1000002031	2025-12-22 13:06:29.602	2026-03-12 19:58:14.065	Agora logo	1000000001	1000001011	2	f	\N	10	2	f	\N
 \.
 
 
@@ -6579,7 +6598,7 @@ COPY public.user_account (id, created_at, updated_at, name, password, reset_pass
 2	2025-12-22 12:56:22.875	2025-12-22 12:56:22.875	Alice Smith	\N	\N	USER	\N	\N	alice-demo@demo.tolgee.io	290B9055C2817991247AFA09D22F250296DE2D8FB6255237914723FEA2616D13	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.857	f	t	t	\N	\N
 3	2025-12-22 12:56:22.902	2025-12-22 12:56:22.902	Bob Johnson	\N	\N	USER	\N	\N	bob-demo@demo.tolgee.io	F216867C6A153CFE741827A9CA3065ED531EF454FBED32BDAA404D9F9AC02220	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.887	f	t	t	\N	\N
 4	2025-12-22 12:56:22.916	2025-12-22 12:56:22.916	Charlie Brown	\N	\N	USER	\N	\N	charlie-demo@demo.tolgee.io	6EB9AF81691DE8B07215C888F931005A01862ED31B5A634EA5458E63894CD082	\N	{}	LOCAL	\N	\N	2025-12-22 12:56:22.905	f	t	t	\N	\N
-1	2025-12-22 12:56:21.831	2026-01-22 00:34:03.937	admin	$2a$10$6ZHhC85DbmpAh33TMnIcyOWiFOgsS4E3edwBwlGz3hnY.VT/kW8jG	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-01-22 00:34:03	\N	\N	t	f	f	\N	\N
+1	2025-12-22 12:56:21.831	2026-03-12 18:41:59.207	admin	$2a$10$xRiCTHCWjc0kyy4M24Xoee10gw98SJHa//RSDxGZGkftL.4852x8G	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-03-12 18:41:59	\N	\N	t	f	f	\N	\N
 \.
 
 
@@ -6604,7 +6623,7 @@ COPY public.webhook_config (id, created_at, updated_at, first_failed, last_execu
 -- Name: activity_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.activity_sequence', 290, true);
+SELECT pg_catalog.setval('public.activity_sequence', 300, true);
 
 
 --
@@ -9731,5 +9750,5 @@ ALTER TABLE ONLY public.batch_step_execution_context
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Zgw5m4imWpHKYY7ulLWeenZyiEcMIZL9mndiIQO9F97zo6Bfdi3KB9MOy8UleBJ
+\unrestrict 7RKp478l5MKjNzobCxgNeIs83aV1bF39T4g8CQOrpzPAM6eU4JoKNozJl7iHKc3
 
