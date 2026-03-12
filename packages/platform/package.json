@@ -93,7 +93,7 @@
     "@a-novel/service-authentication-rest": "^2.4.2",
     "@a-novel/uikit": "^0.12.6",
     "@iconify/svelte": "^5.2.1",
-    "@sveltejs/kit": "^2.54.0",
+    "@sveltejs/kit": "^2.55.0",
     "@tolgee/format-icu": "^6.4.0",
     "@tolgee/svelte": "^6.4.0",
     "@tolgee/web": "^6.4.0",
