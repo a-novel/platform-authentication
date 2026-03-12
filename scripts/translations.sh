@@ -9,10 +9,14 @@ PODMAN_FILE="$PWD/builds/podman-compose.tolgee.yaml"
 int_handler()
 {
     podman compose -p "${APP_NAME}" -f "${PODMAN_FILE}" down --volume
+    sudo rm -rf builds/tolgee-data
 }
 trap int_handler INT TERM QUIT HUP
+
+. "$PWD/scripts/setup-env.sh"
 
 podman compose --podman-build-args="--format docker -q" -p "${APP_NAME}" -f "${PODMAN_FILE}" up --build
 
 # Normal execution: containers are shut down.
 podman compose -p "${APP_NAME}" -f "${PODMAN_FILE}" down --volume
+sudo rm -rf builds/tolgee-data

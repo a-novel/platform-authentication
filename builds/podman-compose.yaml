@@ -56,7 +56,7 @@ services:
   service-authentication:
     image: ghcr.io/a-novel/service-authentication/standalone:v2.2.4
     ports:
-      - "${AUTHENTICATION_API_PORT}:8080"
+      - "${SERVICE_AUTHENTICATION_PORT}:8080"
     depends_on:
       - postgres-authentication
       - service-json-keys
@@ -87,7 +87,7 @@ services:
       - api
       - platform
     environment:
-      PUBLIC_AUTHENTICATION_SERVICE_URL: "http://localhost:${AUTHENTICATION_API_PORT}"
+      PUBLIC_AUTHENTICATION_SERVICE_URL: "http://localhost:${SERVICE_AUTHENTICATION_PORT}"
       PUBLIC_STUDIO_PLATFORM_URL: "http://localhost:${STUDIO_PLATFORM_PORT}"
       PUBLIC_STORYVERSE_PLATFORM_URL: "http://localhost:${STUDIO_STORYVERSE_PORT}"
 

@@ -168,7 +168,7 @@ jobs:
       service-authentication:
         image: ghcr.io/a-novel/service-authentication/standalone:v2.3.1
         ports:
-          - "4011:8080"
+          - "4000:8080"
         credentials:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
@@ -178,7 +178,7 @@ jobs:
           SERVICE_JSON_KEYS_HOST: service-json-keys
           PLATFORM_AUTH_URL: http://localhost:6000
     env:
-      PUBLIC_AUTHENTICATION_SERVICE_URL: http://localhost:4011
+      PUBLIC_AUTHENTICATION_SERVICE_URL: http://localhost:4000
       PUBLIC_STUDIO_PLATFORM_URL: http://localhost:6020
       PUBLIC_STORYVERSE_PLATFORM_URL: http://localhost:6030
     steps:
