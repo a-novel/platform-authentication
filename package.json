@@ -47,7 +47,7 @@
     "publish:major": "pnpm version major --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
     "publish:minor": "pnpm version minor --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
     "publish:patch": "pnpm version patch --workspaces --workspaces-update=false --no-git-tag-version && git add -A && git commit -m \"$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
-    "run": "bash ./scripts/run.sh",
+    "run:platform": "bash ./scripts/run.sh",
     "setup:env": ". ./scripts/setup-env.sh",
     "storybook": "pnpm --dir packages/storybook run storybook",
     "test": "pnpm test:shared && pnpm test:platform",
