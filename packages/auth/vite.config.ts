@@ -19,7 +19,7 @@ export default defineConfig({
   plugins: [sveltekit(), svelteTesting()],
   build: {
     sourcemap: true,
-    rollupOptions: {
+    rolldownOptions: {
       external: Object.keys(peerDependencies),
     },
   },
