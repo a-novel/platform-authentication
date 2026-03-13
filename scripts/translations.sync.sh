@@ -3,7 +3,7 @@
 set -e
 
 PLATFORM=""
-AUTH=""
+SHARED=""
 
 ACTION=""
 
@@ -12,7 +12,7 @@ while test $# -gt 0; do
     -p*|--package*)
       TARGET="$(echo "$1" | sed -e 's/^[^=]*=//g')"
       if [ "$TARGET" == "platform" ]; then PLATFORM="true"; fi
-      if [ "$TARGET" == "auth" ]; then AUTH="true"; fi
+      if [ "$TARGET" == "shared" ]; then SHARED="true"; fi
       shift
       ;;
     -a*|--action*)
@@ -48,4 +48,4 @@ runAction() {
 }
 
 if [ "$PLATFORM" == "true" ]; then runAction "$PWD/packages/platform"; fi
-if [ "$AUTH" == "true" ]; then runAction "$PWD/packages/auth"; fi
+if [ "$SHARED" == "true" ]; then runAction "$PWD/packages/shared"; fi

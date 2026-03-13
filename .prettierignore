@@ -2,5 +2,5 @@ pnpm-lock.yaml
 dist
 build
 
-packages/auth/src/lib/locales
+packages/shared/src/lib/locales
 storybook-static
