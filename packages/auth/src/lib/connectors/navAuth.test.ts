@@ -49,7 +49,7 @@ function setupAuth() {
 }
 
 function setupDelayed() {
-  mockTokenCreateAnon.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(MockSessionRaw), 100)));
+  mockTokenCreateAnon.mockReturnValueOnce(new Promise((resolve) => setTimeout(() => resolve(MockSessionRaw), 1000)));
   mockClaimsGet.mockReturnValueOnce(Promise.resolve(MockSessionAnon.claims));
 }
 
