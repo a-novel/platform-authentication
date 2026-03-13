@@ -9,7 +9,7 @@ FROM base AS deps
 WORKDIR /usr/local/app
 
 COPY package.json ./package.json
-COPY packages/auth/package.json ./packages/auth/package.json
+COPY packages/shared/package.json ./packages/shared/package.json
 COPY packages/platform/package.json ./packages/platform/package.json
 COPY pnpm-lock.yaml ./pnpm-lock.yaml
 COPY pnpm-workspace.yaml ./pnpm-workspace.yaml
@@ -27,11 +27,11 @@ COPY package.json ./package.json
 COPY pnpm-lock.yaml ./pnpm-lock.yaml
 COPY pnpm-workspace.yaml ./pnpm-workspace.yaml
 
-COPY packages/auth/package.json ./packages/auth/package.json
-COPY packages/auth/svelte.config.js ./packages/auth/svelte.config.js
-COPY packages/auth/tsconfig.json ./packages/auth/tsconfig.json
-COPY packages/auth/vite.config.ts ./packages/auth/vite.config.ts
-COPY packages/auth/src ./packages/auth/src
+COPY packages/shared/package.json ./packages/shared/package.json
+COPY packages/shared/svelte.config.js ./packages/shared/svelte.config.js
+COPY packages/shared/tsconfig.json ./packages/shared/tsconfig.json
+COPY packages/shared/vite.config.ts ./packages/shared/vite.config.ts
+COPY packages/shared/src ./packages/shared/src
 
 COPY packages/platform/package.json ./packages/platform/package.json
 COPY packages/platform/package.json ./packages/platform/package.json
@@ -42,10 +42,10 @@ COPY packages/platform/src ./packages/platform/src
 COPY packages/platform/.env ./packages/platform/.env
 
 COPY --from=deps /usr/local/app/node_modules /app/node_modules
-COPY --from=deps /usr/local/app/packages/auth/node_modules /app/packages/auth/node_modules
+COPY --from=deps /usr/local/app/packages/shared/node_modules /app/packages/shared/node_modules
 COPY --from=deps /usr/local/app/packages/platform/node_modules /app/packages/platform/node_modules
 
-RUN pnpm run build:auth && pnpm build:platform
+RUN pnpm run build:shared && pnpm build:platform
 
 FROM docker.io/library/node:24.14.0-alpine
 
