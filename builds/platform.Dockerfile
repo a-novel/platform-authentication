@@ -15,8 +15,8 @@ COPY pnpm-lock.yaml ./pnpm-lock.yaml
 COPY pnpm-workspace.yaml ./pnpm-workspace.yaml
 
 RUN --mount=type=secret,id=npmrc,target=/usr/local/app/.npmrc \
-    # Dev dependencies are required to build the vite project. They will be scraped anyway from the
-    # final build.
+    # Dev dependencies are required to build the vite project. They will be scraped anyway from the \
+    # final build. \
     pnpm install --frozen-lockfile --ignore-scripts
 
 FROM base AS build
@@ -55,8 +55,6 @@ COPY --from=build /app/packages/platform/.svelte-kit .svelte-kit
 COPY --from=build /app/packages/platform/build build/
 COPY --from=build /app/packages/platform/node_modules node_modules/
 COPY --from=build /app/packages/platform/package.json package.json
-
-EXPOSE 8080
 
 # Inject env variables at runtime.
 COPY scripts/env.sh /usr/local/bin/env.sh
