@@ -14,9 +14,9 @@ COPY packages/platform/package.json ./packages/platform/package.json
 COPY pnpm-lock.yaml ./pnpm-lock.yaml
 COPY pnpm-workspace.yaml ./pnpm-workspace.yaml
 
+# Dev dependencies are required to build the vite project. They will be scraped anyway from the
+# final build.
 RUN --mount=type=secret,id=npmrc,target=/usr/local/app/.npmrc \
-    # Dev dependencies are required to build the vite project. They will be scraped anyway from the \
-    # final build. \
     pnpm install --frozen-lockfile --ignore-scripts
 
 FROM base AS build
