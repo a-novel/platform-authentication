@@ -43,7 +43,7 @@ catalog:
   get-port-please: ^3.2.0
   globals: ^17.0.0
   jiti: ^2.6.1
-  jsdom: ^28.0.0
+  jsdom: ^29.0.0
   prettier: ^3.7.4
   prettier-plugin-css-order: ^2.1.2
   prettier-plugin-packagejson: ^3.0.0
