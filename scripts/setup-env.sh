@@ -13,3 +13,4 @@ export TOLGEE_PORT
 export PLATFORM_URL="${PLATFORM_URL:="http://localhost:${PLATFORM_PORT}"}"
 export MAIL_HOST=${MAIL_HOST:="http://localhost:${MAIL_UI_PORT}"}
 export SERVICE_AUTHENTICATION_URL=${SERVICE_AUTHENTICATION_URL:="http://localhost:${SERVICE_AUTHENTICATION_PORT}"}
+export NPMRC_PATH="${NPMRC_PATH:=$HOME/.npmrc}"

@@ -36,6 +36,7 @@
     "@a-novel/uikit": "catalog:",
     "@iconify/svelte": "^5.1.0",
     "@sveltejs/kit": "catalog:",
+    "@tolgee/core": "catalog:",
     "@tolgee/format-icu": "^6.2.7",
     "@tolgee/svelte": "^6.2.7",
     "@tolgee/web": "^6.2.7",

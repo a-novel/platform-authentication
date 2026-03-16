@@ -43,15 +43,21 @@ for path in "$@"; do
         # Skip binary files
         if grep -Iq . "$file"; then
             # Find all placeholders
-            matches=$(grep -oE 'RUNTIME_VITE_[A-Za-z0-9_]+' "$file" || true)
+            matches=$(grep -oE 'RUNTIME_[A-Za-z0-9_]+' "$file" || true)
 
             for match in $matches; do
-                var_name="${match#RUNTIME_VITE_}"
-                env_var="VITE_${var_name}"
+                var_name="${match#RUNTIME_}"
+                env_var="${var_name}"
 
                 value="${!env_var}"
                 sed -i "s|$match|$value|g" "$file"
             done
+
+            # Regenerate pre-compressed variants so browsers don't get stale cached content.
+            if [ -n "$matches" ]; then
+                [ -f "$file.gz" ] && gzip -c "$file" > "$file.gz"
+                rm -f "$file.br"
+            fi
         fi
     done <<< "$files"
 done

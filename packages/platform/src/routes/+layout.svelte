@@ -9,6 +9,7 @@
 
   import { SessionComponent, SessionUiComponent } from "@a-novel/package-authentication";
   import { NavAuthConnector } from "@a-novel/package-authentication/connectors";
+  import { loadTranslations as loadPackageTranslations } from "@a-novel/package-authentication/locales";
   import agoraLogoDark from "@a-novel/uikit/assets/logos/integrated/agora (dark).png";
   import agoraLogoLight from "@a-novel/uikit/assets/logos/integrated/agora (light).png";
   import { TolgeeConfig } from "@a-novel/uikit/locales";
@@ -25,6 +26,7 @@
   let { children }: Props = $props();
 
   loadTranslations(TolgeeConfig);
+  loadPackageTranslations(TolgeeConfig);
 
   const manageAccountLink = resolve("/manage-account");
   function onManageAccount() {
