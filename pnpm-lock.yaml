@@ -20,7 +20,7 @@ catalogs:
       version: 0.1.1
     '@a-novel/uikit':
       specifier: ^0.12.7
-      version: 0.12.9
+      version: 0.12.11
     '@chromatic-com/storybook':
       specifier: ^5.0.0
       version: 5.0.1
@@ -233,7 +233,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.22(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.9(8c9be854e1a3c4a5246543921f189195)
+        version: 0.12.11(8c9be854e1a3c4a5246543921f189195)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -353,7 +353,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.22(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.9(8c9be854e1a3c4a5246543921f189195)
+        version: 0.12.11(8c9be854e1a3c4a5246543921f189195)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -467,7 +467,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.22(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.9(8c9be854e1a3c4a5246543921f189195)
+        version: 0.12.11(8c9be854e1a3c4a5246543921f189195)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.53.12)
@@ -590,8 +590,8 @@ packages:
       '@a-novel-kit/nodelib-browser': ^1.3.21
       zod: ^4.3.6
 
-  '@a-novel/uikit@0.12.9':
-    resolution: {integrity: sha512-znmUorlE2p0h6NJ2wadY7+7uC+SEPWnscukmm8KWg5GWLA/HwPOtsMOes6hwXorenAPLO93+Ees/CutS3QvDrQ==, tarball: https://npm.pkg.github.com/download/@a-novel/uikit/0.12.9/b3b35e90fcb5cb13a2a60a638ac8dd1279585c71}
+  '@a-novel/uikit@0.12.11':
+    resolution: {integrity: sha512-ZPjOC4lV87OgAjrJcfgMzRIiYSa9ci3TiOTGP1GlZPacvxCUZdMsFW+kmMKMtGgPYorNwK2Ts9O8wSoHeM/AGw==, tarball: https://npm.pkg.github.com/download/@a-novel/uikit/0.12.11/59a7f475a30df4b0dccf36fe983de9751a9246f3}
     peerDependencies:
       '@a-novel-kit/nodelib-browser': ^1.3.22
       '@iconify/svelte': ^5.2.1
@@ -3379,7 +3379,7 @@ snapshots:
       '@a-novel-kit/nodelib-browser': 1.3.22(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.9(8c9be854e1a3c4a5246543921f189195)':
+  '@a-novel/uikit@0.12.11(8c9be854e1a3c4a5246543921f189195)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.22(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.53.12)
