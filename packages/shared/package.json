@@ -111,7 +111,7 @@
     "@sveltejs/kit": "^2.55.0",
     "@tolgee/core": "^6.5.0",
     "@tolgee/format-icu": "^6.4.0",
-    "@tolgee/svelte": "^6.4.0",
+    "@tolgee/svelte": "^6.5.0",
     "@tolgee/web": "^6.5.0",
     "svelte": "^5.53.12",
     "zod": "^4.3.6"
