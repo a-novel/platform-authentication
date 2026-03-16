@@ -74,7 +74,7 @@ catalogs:
       version: 2.16.1
     '@tolgee/core':
       specifier: ^6.4.0
-      version: 6.4.0
+      version: 6.5.0
     '@trivago/prettier-plugin-sort-imports':
       specifier: ^6.0.0
       version: 6.0.2
@@ -236,7 +236,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(2504263125afe52b53f90250be29f312)
+        version: 0.12.11(c13e6dcbdd5f54d084928320a8c6e749)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -272,16 +272,16 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.4.0
+        version: 6.5.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.4.0
-        version: 6.4.0(svelte@5.53.12)
+        version: 6.5.0(svelte@5.53.12)
       '@tolgee/web':
         specifier: ^6.4.0
-        version: 6.4.0
+        version: 6.5.0
       '@types/jsdom':
         specifier: 'catalog:'
         version: 28.0.0
@@ -359,7 +359,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(2504263125afe52b53f90250be29f312)
+        version: 0.12.11(c13e6dcbdd5f54d084928320a8c6e749)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -395,16 +395,16 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.4.0
+        version: 6.5.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.4.0
-        version: 6.4.0(svelte@5.53.12)
+        version: 6.5.0(svelte@5.53.12)
       '@tolgee/web':
         specifier: ^6.4.0
-        version: 6.4.0
+        version: 6.5.0
       '@types/jsdom':
         specifier: 'catalog:'
         version: 28.0.0
@@ -476,7 +476,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(2504263125afe52b53f90250be29f312)
+        version: 0.12.11(c13e6dcbdd5f54d084928320a8c6e749)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.53.12)
@@ -485,16 +485,16 @@ importers:
         version: 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.53.12)(typescript@5.9.3)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.4.0
+        version: 6.5.0
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.4.0
       '@tolgee/svelte':
         specifier: ^6.2.7
-        version: 6.4.0(svelte@5.53.12)
+        version: 6.5.0(svelte@5.53.12)
       '@tolgee/web':
         specifier: ^6.2.7
-        version: 6.4.0
+        version: 6.5.0
       svelte:
         specifier: 'catalog:'
         version: 5.53.12
@@ -594,21 +594,6 @@ packages:
       svelte: ^5.53.12
       typescript: ^5.9.3
       typescript-eslint: ^8.57.0
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      eslint-plugin-storybook:
-        optional: true
-      eslint-plugin-svelte:
-        optional: true
-      prettier-plugin-css-order:
-        optional: true
-      prettier-plugin-sql:
-        optional: true
-      prettier-plugin-svelte:
-        optional: true
-      svelte:
-        optional: true
 
   '@a-novel/service-authentication-rest@2.4.2':
     resolution: {integrity: sha512-8XuxTjAR1Sbr5he/RMRyXRU/u/mAuv2TlcZ1dHdqcUNL0y8YiYvqI+BON/rVkz2odCvSazzUL51o3mDn7KjOAw==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.4.2/3602136557b7e66a9d314f04956a307404070d41}
@@ -638,25 +623,6 @@ packages:
       storybook: ^10.2.19
       svelte: ^5.53.12
       zod: ^4.3.6
-    peerDependenciesMeta:
-      '@storybook/addon-a11y':
-        optional: true
-      '@storybook/addon-docs':
-        optional: true
-      '@storybook/addon-svelte-csf':
-        optional: true
-      '@storybook/addon-themes':
-        optional: true
-      '@storybook/addon-vitest':
-        optional: true
-      '@storybook/sveltekit':
-        optional: true
-      '@types/react':
-        optional: true
-      react:
-        optional: true
-      storybook:
-        optional: true
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
@@ -1683,19 +1649,19 @@ packages:
       jiti:
         optional: true
 
-  '@tolgee/core@6.4.0':
-    resolution: {integrity: sha512-LeoAYSaGoY0vqiIhjUiTThwmFufj83zeR35CizibR13ZQjHUbNaC07DwWOTmhR7f2ZSFPj8M/CkdxWXpN4kewg==}
+  '@tolgee/core@6.5.0':
+    resolution: {integrity: sha512-HLdlCqhlyLefg2F+vSqxNAh7aTl2rgRsSrw4bK1ND9vPEzSP3hUcD+AG3YMTfLkIH53vckdcHlBXIStPOoE1cw==}
 
   '@tolgee/format-icu@6.4.0':
     resolution: {integrity: sha512-ifhZBMTogrg2hHG233vF1tMlZl/ydw/xSG+4SWaviDfWhes7L1b6zZvI+4fvmmDlzpnToJZ5Pp/OWY3ajOQgZA==}
 
-  '@tolgee/svelte@6.4.0':
-    resolution: {integrity: sha512-9YXyMMuDBteupuZOLfWFamZYMBOOCZGuBkJiOtM8S2LrawsgCUH749iUnj8yQ+phkX3E8kg3f4zc4hpC+0R/Uw==}
+  '@tolgee/svelte@6.5.0':
+    resolution: {integrity: sha512-3bvOyB/RDmRdI/NUylGaBYmkZdEjdUuOV1mWBkRMrUGlI3QTPqPMdt0/qMUWUY2Rjj3AZyFQsuua6xEsrhSXQA==}
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0
 
-  '@tolgee/web@6.4.0':
-    resolution: {integrity: sha512-pAUJf/mf7PMZsfQbOzjWHQpVrsbq1TWjg5IQ0S738TiN0V95Kt7dF3gBL7ebVecpLHv6lwDRQPxbPNJ45piwww==}
+  '@tolgee/web@6.5.0':
+    resolution: {integrity: sha512-BcBHzUVEgoWzocx2ORDe7kabKiCS67irbyq89MCe6rXcUhUOi+nzS9J139eiV8neRk7QybocAy/nUt4zWcqcMQ==}
 
   '@trivago/prettier-plugin-sort-imports@6.0.2':
     resolution: {integrity: sha512-3DgfkukFyC/sE/VuYjaUUWoFfuVjPK55vOFDsxD56XXynFMCZDYFogH2l/hDfOsQAm1myoU/1xByJ3tWqtulXA==}
@@ -3402,51 +3368,49 @@ snapshots:
     dependencies:
       '@eslint/compat': 2.0.3(eslint@10.0.3(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.0.3(jiti@2.6.1))
+      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.53.12)(typescript@5.9.3)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.53.12))(prettier@3.8.1)(svelte@5.53.12)
       '@types/node': 24.12.0
       eslint: 10.0.3(jiti@2.6.1)
       eslint-config-prettier: 10.1.8(eslint@10.0.3(jiti@2.6.1))
       eslint-plugin-prettier: 5.5.5(eslint-config-prettier@10.1.8(eslint@10.0.3(jiti@2.6.1)))(eslint@10.0.3(jiti@2.6.1))(prettier@3.8.1)
-      prettier: 3.8.1
-      prettier-plugin-packagejson: 3.0.2(prettier@3.8.1)
-      storybook: 10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      typescript: 5.9.3
-      typescript-eslint: 8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
-    optionalDependencies:
-      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.53.12)(typescript@5.9.3)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       eslint-plugin-storybook: 10.2.19(eslint@10.0.3(jiti@2.6.1))(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
       eslint-plugin-svelte: 3.15.2(eslint@10.0.3(jiti@2.6.1))(svelte@5.53.12)
+      prettier: 3.8.1
       prettier-plugin-css-order: 2.2.0(postcss@8.5.8)(prettier@3.8.1)
+      prettier-plugin-packagejson: 3.0.2(prettier@3.8.1)
       prettier-plugin-sql: 0.19.2(prettier@3.8.1)
       prettier-plugin-svelte: 3.5.1(prettier@3.8.1)(svelte@5.53.12)
+      storybook: 10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       svelte: 5.53.12
+      typescript: 5.9.3
+      typescript-eslint: 8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
 
   '@a-novel/service-authentication-rest@2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.23(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.11(2504263125afe52b53f90250be29f312)':
+  '@a-novel/uikit@0.12.11(c13e6dcbdd5f54d084928320a8c6e749)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.23(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.53.12)
-      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.53.12)(typescript@5.9.3)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
-      '@tolgee/core': 6.4.0
-      '@tolgee/format-icu': 6.4.0
-      '@tolgee/svelte': 6.4.0(svelte@5.53.12)
-      '@tolgee/web': 6.4.0
-      svelte: 5.53.12
-      zod: 4.3.6
-    optionalDependencies:
       '@storybook/addon-a11y': 10.2.19(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-docs': 10.2.19(@types/react@19.2.14)(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@storybook/addon-svelte-csf': 5.0.11(@storybook/svelte@10.2.19(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.53.12))(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@storybook/addon-themes': 10.2.19(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-vitest': 10.2.19(@vitest/browser@4.1.0(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))(vitest@4.1.0(@types/node@24.12.0)(jsdom@29.0.0)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))))(@vitest/runner@4.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vitest@4.1.0(@types/node@24.12.0)(jsdom@29.0.0)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))
       '@storybook/sveltekit': 10.2.19(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
+      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.12)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.53.12)(typescript@5.9.3)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
+      '@tolgee/core': 6.5.0
+      '@tolgee/format-icu': 6.4.0
+      '@tolgee/svelte': 6.5.0(svelte@5.53.12)
+      '@tolgee/web': 6.5.0
       '@types/react': 19.2.14
       react: 19.2.4
       storybook: 10.2.19(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      svelte: 5.53.12
+      zod: 4.3.6
 
   '@adobe/css-tools@4.4.4': {}
 
@@ -4270,18 +4234,18 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@tolgee/core@6.4.0': {}
+  '@tolgee/core@6.5.0': {}
 
   '@tolgee/format-icu@6.4.0': {}
 
-  '@tolgee/svelte@6.4.0(svelte@5.53.12)':
+  '@tolgee/svelte@6.5.0(svelte@5.53.12)':
     dependencies:
-      '@tolgee/web': 6.4.0
+      '@tolgee/web': 6.5.0
       svelte: 5.53.12
 
-  '@tolgee/web@6.4.0':
+  '@tolgee/web@6.5.0':
     dependencies:
-      '@tolgee/core': 6.4.0
+      '@tolgee/core': 6.5.0
 
   '@trivago/prettier-plugin-sort-imports@6.0.2(prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.53.12))(prettier@3.8.1)(svelte@5.53.12)':
     dependencies:
@@ -4335,8 +4299,7 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/pegjs@0.10.6':
-    optional: true
+  '@types/pegjs@0.10.6': {}
 
   '@types/react@19.2.14':
     dependencies:
@@ -4597,8 +4560,7 @@ snapshots:
     dependencies:
       require-from-string: 2.0.2
 
-  big-integer@1.6.52:
-    optional: true
+  big-integer@1.6.52: {}
 
   brace-expansion@5.0.4:
     dependencies:
@@ -4638,8 +4600,7 @@ snapshots:
 
   commander@12.1.0: {}
 
-  commander@2.20.3:
-    optional: true
+  commander@2.20.3: {}
 
   commondir@1.0.1: {}
 
@@ -4723,8 +4684,7 @@ snapshots:
 
   devalue@5.6.4: {}
 
-  discontinuous-range@1.0.0:
-    optional: true
+  discontinuous-range@1.0.0: {}
 
   dom-accessibility-api@0.5.16: {}
 
@@ -5121,8 +5081,7 @@ snapshots:
 
   jsonschema@1.5.0: {}
 
-  jsox@1.2.125:
-    optional: true
+  jsox@1.2.125: {}
 
   keyv@4.5.4:
     dependencies:
@@ -5226,8 +5185,7 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.4
 
-  moo@0.5.3:
-    optional: true
+  moo@0.5.3: {}
 
   mri@1.2.0: {}
 
@@ -5245,13 +5203,11 @@ snapshots:
       moo: 0.5.3
       railroad-diagrams: 1.0.0
       randexp: 0.4.6
-    optional: true
 
   node-sql-parser@5.4.0:
     dependencies:
       '@types/pegjs': 0.10.6
       big-integer: 1.6.52
-    optional: true
 
   obug@2.1.1: {}
 
@@ -5396,7 +5352,6 @@ snapshots:
       prettier: 3.8.1
       sql-formatter: 15.7.2
       tslib: 2.8.1
-    optional: true
 
   prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.53.12):
     dependencies:
@@ -5422,14 +5377,12 @@ snapshots:
 
   querystringify@2.2.0: {}
 
-  railroad-diagrams@1.0.0:
-    optional: true
+  railroad-diagrams@1.0.0: {}
 
   randexp@0.4.6:
     dependencies:
       discontinuous-range: 1.0.0
       ret: 0.1.15
-    optional: true
 
   react-dom@19.2.4(react@19.2.4):
     dependencies:
@@ -5469,8 +5422,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  ret@0.1.15:
-    optional: true
+  ret@0.1.15: {}
 
   rolldown@1.0.0-rc.9:
     dependencies:
@@ -5619,7 +5571,6 @@ snapshots:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
-    optional: true
 
   stackback@0.0.2: {}
 
