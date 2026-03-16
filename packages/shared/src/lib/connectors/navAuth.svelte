@@ -27,7 +27,7 @@
     return session.resetSession();
   }
 
-  let credentialsRequest = $derived.by(async () => {
+  let credentialsRequest = $derived.by(() => {
     // An anon session must at least be present.
     if (!session.accessToken || !session.claims?.userID) return undefined;
     return credentialsGet(api, session.accessToken, {

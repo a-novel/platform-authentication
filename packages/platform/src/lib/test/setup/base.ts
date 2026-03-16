@@ -5,5 +5,5 @@ afterEach(() => {
     localStorage.clear(); // Clear if available.
   }
 
-  vi.clearAllMocks();
+  vi.resetAllMocks();
 });

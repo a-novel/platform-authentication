@@ -170,6 +170,8 @@ describe("navAuth Connector", () => {
           expect(onManageAccount).toHaveBeenCalled();
         });
 
+        mockTokenCreateAnon.mockReturnValueOnce(Promise.resolve(MockSessionRaw));
+        mockClaimsGet.mockReturnValueOnce(Promise.resolve(MockSessionAnon.claims));
         await fireEvent.click(logoutButton);
         await waitFor(() => {
           expect(mockTokenCreateAnon).toHaveBeenCalled();
