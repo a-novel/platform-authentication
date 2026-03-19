@@ -74,7 +74,7 @@ catalogs:
       version: 2.16.1
     '@tolgee/core':
       specifier: ^6.4.0
-      version: 6.5.0
+      version: 6.6.0
     '@trivago/prettier-plugin-sort-imports':
       specifier: ^6.0.0
       version: 6.0.2
@@ -236,7 +236,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(c7df2aa39afae8da8d4248e5635d73f2)
+        version: 0.12.11(7512292b4abc56b8411bbd48a5780643)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -272,7 +272,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.5.0
+        version: 6.6.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.5.0
@@ -281,7 +281,7 @@ importers:
         version: 6.5.0(svelte@5.54.0)
       '@tolgee/web':
         specifier: ^6.4.0
-        version: 6.5.0
+        version: 6.6.0
       '@types/jsdom':
         specifier: 'catalog:'
         version: 28.0.0
@@ -359,7 +359,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(c7df2aa39afae8da8d4248e5635d73f2)
+        version: 0.12.11(7512292b4abc56b8411bbd48a5780643)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.0.3(jiti@2.6.1))
@@ -395,7 +395,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@5.9.3)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.5.0
+        version: 6.6.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.5.0
@@ -404,7 +404,7 @@ importers:
         version: 6.5.0(svelte@5.54.0)
       '@tolgee/web':
         specifier: ^6.4.0
-        version: 6.5.0
+        version: 6.6.0
       '@types/jsdom':
         specifier: 'catalog:'
         version: 28.0.0
@@ -476,7 +476,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.23(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(c7df2aa39afae8da8d4248e5635d73f2)
+        version: 0.12.11(7512292b4abc56b8411bbd48a5780643)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.54.0)
@@ -485,7 +485,7 @@ importers:
         version: 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.54.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.54.0)(typescript@5.9.3)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.5.0
+        version: 6.6.0
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.5.0
@@ -494,7 +494,7 @@ importers:
         version: 6.5.0(svelte@5.54.0)
       '@tolgee/web':
         specifier: ^6.2.7
-        version: 6.5.0
+        version: 6.6.0
       svelte:
         specifier: 'catalog:'
         version: 5.54.0
@@ -1648,6 +1648,9 @@ packages:
   '@tolgee/core@6.5.0':
     resolution: {integrity: sha512-HLdlCqhlyLefg2F+vSqxNAh7aTl2rgRsSrw4bK1ND9vPEzSP3hUcD+AG3YMTfLkIH53vckdcHlBXIStPOoE1cw==}
 
+  '@tolgee/core@6.6.0':
+    resolution: {integrity: sha512-jN1RfHqTx6vLbyGz0A1qvu7gf/FFhsgEFJvLTx837vz2Z1MrRMsslJ39g3wVM90W7UmIM25yFmnXm6okvt+13g==}
+
   '@tolgee/format-icu@6.5.0':
     resolution: {integrity: sha512-GQeB4sPN1RZLyUKX9czJp9fQCgEqBrQCbp7KR2tK0VrFjqaNqkFo4xk/GRxzI1p+rVhAhtQlefkBcYUDTtqvBA==}
 
@@ -1658,6 +1661,9 @@ packages:
 
   '@tolgee/web@6.5.0':
     resolution: {integrity: sha512-BcBHzUVEgoWzocx2ORDe7kabKiCS67irbyq89MCe6rXcUhUOi+nzS9J139eiV8neRk7QybocAy/nUt4zWcqcMQ==}
+
+  '@tolgee/web@6.6.0':
+    resolution: {integrity: sha512-x96madaGFBwV9YBJTvATvtHKvFQuNU1UInw49ifQ+N/vSB857dMx4ef0P28WuZ9LhDRJnbjBPRWbB++ucR9QEA==}
 
   '@trivago/prettier-plugin-sort-imports@6.0.2':
     resolution: {integrity: sha512-3DgfkukFyC/sE/VuYjaUUWoFfuVjPK55vOFDsxD56XXynFMCZDYFogH2l/hDfOsQAm1myoU/1xByJ3tWqtulXA==}
@@ -3387,7 +3393,7 @@ snapshots:
       '@a-novel-kit/nodelib-browser': 1.3.23(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.11(c7df2aa39afae8da8d4248e5635d73f2)':
+  '@a-novel/uikit@0.12.11(7512292b4abc56b8411bbd48a5780643)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.23(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.54.0)
@@ -3398,10 +3404,10 @@ snapshots:
       '@storybook/addon-vitest': 10.3.0(@vitest/browser@4.1.0(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))(vitest@4.1.0(@types/node@24.12.0)(jsdom@29.0.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))))(@vitest/runner@4.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vitest@4.1.0(@types/node@24.12.0)(jsdom@29.0.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))
       '@storybook/sveltekit': 10.3.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.54.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.3.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.54.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
       '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.54.0)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)))(svelte@5.54.0)(typescript@5.9.3)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
-      '@tolgee/core': 6.5.0
+      '@tolgee/core': 6.6.0
       '@tolgee/format-icu': 6.5.0
       '@tolgee/svelte': 6.5.0(svelte@5.54.0)
-      '@tolgee/web': 6.5.0
+      '@tolgee/web': 6.6.0
       '@types/react': 19.2.14
       react: 19.2.4
       storybook: 10.3.0(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -4230,6 +4236,8 @@ snapshots:
 
   '@tolgee/core@6.5.0': {}
 
+  '@tolgee/core@6.6.0': {}
+
   '@tolgee/format-icu@6.5.0': {}
 
   '@tolgee/svelte@6.5.0(svelte@5.54.0)':
@@ -4240,6 +4248,10 @@ snapshots:
   '@tolgee/web@6.5.0':
     dependencies:
       '@tolgee/core': 6.5.0
+
+  '@tolgee/web@6.6.0':
+    dependencies:
+      '@tolgee/core': 6.6.0
 
   '@trivago/prettier-plugin-sort-imports@6.0.2(prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.54.0))(prettier@3.8.1)(svelte@5.54.0)':
     dependencies:
