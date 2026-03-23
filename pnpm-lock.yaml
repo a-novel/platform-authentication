@@ -162,7 +162,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.25(47b83a0c569d8b2f3df989b46a43d7c0)
+        version: 1.3.25(bb670e3712258e2758cc4798528090ba)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -228,7 +228,7 @@ importers:
         version: 1.3.25(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.25(47b83a0c569d8b2f3df989b46a43d7c0)
+        version: 1.3.25(bb670e3712258e2758cc4798528090ba)
       '@a-novel/package-authentication':
         specifier: 'catalog:'
         version: link:../shared
@@ -354,7 +354,7 @@ importers:
         version: 1.3.25(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.25(47b83a0c569d8b2f3df989b46a43d7c0)
+        version: 1.3.25(bb670e3712258e2758cc4798528090ba)
       '@a-novel/service-authentication-rest':
         specifier: ^2.4.2
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.25(zod@4.3.6))(zod@4.3.6)
@@ -505,7 +505,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.25(47b83a0c569d8b2f3df989b46a43d7c0)
+        version: 1.3.25(bb670e3712258e2758cc4798528090ba)
       '@chromatic-com/storybook':
         specifier: 'catalog:'
         version: 5.0.2(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
@@ -2815,8 +2815,8 @@ packages:
       prettier:
         optional: true
 
-  prettier-plugin-sql@0.19.2:
-    resolution: {integrity: sha512-DAu1Jcanpvs32OAOXsqaVXOpPs4nFLVkB3XwzRiZZVNL5/c+XdlNxWFMiMpMhYhmCG5BW3srK8mhikCOv5tPfg==}
+  prettier-plugin-sql@0.20.0:
+    resolution: {integrity: sha512-7GRuduJIbWd10bFfYdFuymZdcVF37ZCukiuVi2a4c5ccqjAxHQtKbK7zSKyqGrFjCOBLQVVz4BStKWV7YvxAFA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       prettier: ^3.0.3
@@ -3361,7 +3361,7 @@ snapshots:
     dependencies:
       zod: 4.3.6
 
-  '@a-novel-kit/nodelib-config@1.3.25(47b83a0c569d8b2f3df989b46a43d7c0)':
+  '@a-novel-kit/nodelib-config@1.3.25(bb670e3712258e2758cc4798528090ba)':
     dependencies:
       '@eslint/compat': 2.0.3(eslint@10.1.0(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.1.0(jiti@2.6.1))
@@ -3376,7 +3376,7 @@ snapshots:
       prettier: 3.8.1
       prettier-plugin-css-order: 2.2.0(postcss@8.5.8)(prettier@3.8.1)
       prettier-plugin-packagejson: 3.0.2(prettier@3.8.1)
-      prettier-plugin-sql: 0.19.2(prettier@3.8.1)
+      prettier-plugin-sql: 0.20.0(prettier@3.8.1)
       prettier-plugin-svelte: 3.5.1(prettier@3.8.1)(svelte@5.54.1)
       storybook: 10.3.2(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       svelte: 5.54.1
@@ -5340,7 +5340,7 @@ snapshots:
     optionalDependencies:
       prettier: 3.8.1
 
-  prettier-plugin-sql@0.19.2(prettier@3.8.1):
+  prettier-plugin-sql@0.20.0(prettier@3.8.1):
     dependencies:
       jsox: 1.2.125
       node-sql-parser: 5.4.0
