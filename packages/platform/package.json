@@ -102,7 +102,7 @@
     "svelte": "^5.55.0",
     "zod": "^4.3.6"
   },
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@10.33.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
