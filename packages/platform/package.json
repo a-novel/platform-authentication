@@ -64,7 +64,7 @@
     "@tolgee/cli": "catalog:",
     "@tolgee/core": "catalog:",
     "@tolgee/format-icu": "^7.0.0",
-    "@tolgee/svelte": "^6.4.0",
+    "@tolgee/svelte": "^7.0.0",
     "@tolgee/web": "^7.0.0",
     "@types/jsdom": "catalog:",
     "@types/node": "^24.1.0",
@@ -97,7 +97,7 @@
     "@sveltejs/kit": "^2.55.0",
     "@tolgee/core": "^7.0.0",
     "@tolgee/format-icu": "^7.0.0",
-    "@tolgee/svelte": "^6.6.0",
+    "@tolgee/svelte": "^7.0.0",
     "@tolgee/web": "^7.0.0",
     "svelte": "^5.55.0",
     "zod": "^4.3.6"
