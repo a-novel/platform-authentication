@@ -37,7 +37,7 @@
     "@iconify/svelte": "^5.1.0",
     "@sveltejs/kit": "catalog:",
     "@tolgee/core": "catalog:",
-    "@tolgee/format-icu": "^6.2.7",
+    "@tolgee/format-icu": "^7.0.0",
     "@tolgee/svelte": "^6.2.7",
     "@tolgee/web": "^6.2.7",
     "svelte": "catalog:",
