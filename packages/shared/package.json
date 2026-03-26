@@ -83,7 +83,7 @@
     "@tolgee/core": "catalog:",
     "@tolgee/format-icu": "^7.0.0",
     "@tolgee/svelte": "^6.4.0",
-    "@tolgee/web": "^6.4.0",
+    "@tolgee/web": "^7.0.0",
     "@types/jsdom": "catalog:",
     "@types/node": "^24.1.0",
     "@vitest/browser": "catalog:",
@@ -112,7 +112,7 @@
     "@tolgee/core": "^7.0.0",
     "@tolgee/format-icu": "^7.0.0",
     "@tolgee/svelte": "^6.6.0",
-    "@tolgee/web": "^6.6.0",
+    "@tolgee/web": "^7.0.0",
     "svelte": "^5.55.0",
     "zod": "^4.3.6"
   },

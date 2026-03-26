@@ -39,7 +39,7 @@
     "@tolgee/core": "catalog:",
     "@tolgee/format-icu": "^7.0.0",
     "@tolgee/svelte": "^6.2.7",
-    "@tolgee/web": "^6.2.7",
+    "@tolgee/web": "^7.0.0",
     "svelte": "catalog:",
     "zod": "^4.1.12"
   },
