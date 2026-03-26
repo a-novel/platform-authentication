@@ -239,7 +239,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.26(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(f42ff224b58a638f9429459f605b414b)
+        version: 0.12.11(e1a6952c3f070f1ce60af0ee9e0e39b6)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -280,8 +280,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       '@tolgee/svelte':
-        specifier: ^6.4.0
-        version: 6.6.0(svelte@5.55.0)
+        specifier: ^7.0.0
+        version: 7.0.0(svelte@5.55.0)
       '@tolgee/web':
         specifier: ^7.0.0
         version: 7.0.0
@@ -362,7 +362,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.26(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(f42ff224b58a638f9429459f605b414b)
+        version: 0.12.11(e1a6952c3f070f1ce60af0ee9e0e39b6)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -403,8 +403,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       '@tolgee/svelte':
-        specifier: ^6.4.0
-        version: 6.6.0(svelte@5.55.0)
+        specifier: ^7.0.0
+        version: 7.0.0(svelte@5.55.0)
       '@tolgee/web':
         specifier: ^7.0.0
         version: 7.0.0
@@ -479,7 +479,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.26(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(f42ff224b58a638f9429459f605b414b)
+        version: 0.12.11(e1a6952c3f070f1ce60af0ee9e0e39b6)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.55.0)
@@ -493,8 +493,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       '@tolgee/svelte':
-        specifier: ^6.2.7
-        version: 6.6.0(svelte@5.55.0)
+        specifier: ^7.0.0
+        version: 7.0.0(svelte@5.55.0)
       '@tolgee/web':
         specifier: ^7.0.0
         version: 7.0.0
@@ -1648,22 +1648,16 @@ packages:
       jiti:
         optional: true
 
-  '@tolgee/core@6.6.0':
-    resolution: {integrity: sha512-jN1RfHqTx6vLbyGz0A1qvu7gf/FFhsgEFJvLTx837vz2Z1MrRMsslJ39g3wVM90W7UmIM25yFmnXm6okvt+13g==}
-
   '@tolgee/core@7.0.0':
     resolution: {integrity: sha512-dK1LTl7SAQCiR8559jTCz6MXTPIoPVcs+x1y1ZJr8V0tg6zpZOG1ZNyhABXXYZFUK3TblRVtKYRRDkNzQKdK/g==}
 
   '@tolgee/format-icu@7.0.0':
     resolution: {integrity: sha512-SfeOzFF2n0iLSDs2Y3tDlJBwQa4UneK+RABgiH5M27Uwlk2TWM3+qdvc5SHhh/HGEvdgvZjHwSwQuBK+4y8mZw==}
 
-  '@tolgee/svelte@6.6.0':
-    resolution: {integrity: sha512-INz2ANlX0EQOHFnzkvC3oMWMNPFsmGK9Tc/h3w8X/lbrco541fm9oksOnSu2OBFOc3D77ulKC3Fxwx3nWZMfMQ==}
+  '@tolgee/svelte@7.0.0':
+    resolution: {integrity: sha512-KxNbi1mxLgRClCzXz8umG143FbpNQyy2oXOHBhe+z98IU60vkBDllpCYadRzX6x/DYx1LkBbQ0W48v9gYhKO9g==}
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0
-
-  '@tolgee/web@6.6.0':
-    resolution: {integrity: sha512-x96madaGFBwV9YBJTvATvtHKvFQuNU1UInw49ifQ+N/vSB857dMx4ef0P28WuZ9LhDRJnbjBPRWbB++ucR9QEA==}
 
   '@tolgee/web@7.0.0':
     resolution: {integrity: sha512-1mSBsGMyAoJvdwM/jxHOOo8nIGTCVTyehrQXcrmoWsKdgLo6C9Trbl2bRe5idtAW1IOwos3TCl0fdVFzCGm/qQ==}
@@ -3402,7 +3396,7 @@ snapshots:
       '@a-novel-kit/nodelib-browser': 1.3.26(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.11(f42ff224b58a638f9429459f605b414b)':
+  '@a-novel/uikit@0.12.11(e1a6952c3f070f1ce60af0ee9e0e39b6)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.26(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.55.0)
@@ -3415,7 +3409,7 @@ snapshots:
       '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.0)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.0)(typescript@6.0.2)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))
       '@tolgee/core': 7.0.0
       '@tolgee/format-icu': 7.0.0
-      '@tolgee/svelte': 6.6.0(svelte@5.55.0)
+      '@tolgee/svelte': 7.0.0(svelte@5.55.0)
       '@tolgee/web': 7.0.0
       '@types/react': 19.2.14
       react: 19.2.4
@@ -4243,20 +4237,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@tolgee/core@6.6.0': {}
-
   '@tolgee/core@7.0.0': {}
 
   '@tolgee/format-icu@7.0.0': {}
 
-  '@tolgee/svelte@6.6.0(svelte@5.55.0)':
+  '@tolgee/svelte@7.0.0(svelte@5.55.0)':
     dependencies:
-      '@tolgee/web': 6.6.0
+      '@tolgee/web': 7.0.0
       svelte: 5.55.0
-
-  '@tolgee/web@6.6.0':
-    dependencies:
-      '@tolgee/core': 6.6.0
 
   '@tolgee/web@7.0.0':
     dependencies:
