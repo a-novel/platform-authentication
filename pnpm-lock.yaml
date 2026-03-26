@@ -73,8 +73,8 @@ catalogs:
       specifier: ^2.15.0
       version: 2.16.1
     '@tolgee/core':
-      specifier: ^6.4.0
-      version: 6.6.0
+      specifier: ^7.0.0
+      version: 7.0.0
     '@trivago/prettier-plugin-sort-imports':
       specifier: ^6.0.0
       version: 6.0.2
@@ -239,7 +239,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.25(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(ea0ce39f35a9b64ddb653bfef6a3ebe8)
+        version: 0.12.11(8807e24ac8474290233eaae80fe4e35b)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -275,7 +275,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@6.0.2)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.6.0
+        version: 7.0.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.6.0
@@ -362,7 +362,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.25(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(ea0ce39f35a9b64ddb653bfef6a3ebe8)
+        version: 0.12.11(8807e24ac8474290233eaae80fe4e35b)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.3(eslint@10.1.0(jiti@2.6.1))
@@ -398,7 +398,7 @@ importers:
         version: 2.16.1(jiti@2.6.1)(typescript@6.0.2)
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.6.0
+        version: 7.0.0
       '@tolgee/format-icu':
         specifier: ^6.4.0
         version: 6.6.0
@@ -479,7 +479,7 @@ importers:
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.25(zod@4.3.6))(zod@4.3.6)
       '@a-novel/uikit':
         specifier: 'catalog:'
-        version: 0.12.11(ea0ce39f35a9b64ddb653bfef6a3ebe8)
+        version: 0.12.11(8807e24ac8474290233eaae80fe4e35b)
       '@iconify/svelte':
         specifier: ^5.1.0
         version: 5.2.1(svelte@5.55.0)
@@ -488,7 +488,7 @@ importers:
         version: 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.0)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.0)(typescript@6.0.2)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))
       '@tolgee/core':
         specifier: 'catalog:'
-        version: 6.6.0
+        version: 7.0.0
       '@tolgee/format-icu':
         specifier: ^6.2.7
         version: 6.6.0
@@ -1650,6 +1650,9 @@ packages:
 
   '@tolgee/core@6.6.0':
     resolution: {integrity: sha512-jN1RfHqTx6vLbyGz0A1qvu7gf/FFhsgEFJvLTx837vz2Z1MrRMsslJ39g3wVM90W7UmIM25yFmnXm6okvt+13g==}
+
+  '@tolgee/core@7.0.0':
+    resolution: {integrity: sha512-dK1LTl7SAQCiR8559jTCz6MXTPIoPVcs+x1y1ZJr8V0tg6zpZOG1ZNyhABXXYZFUK3TblRVtKYRRDkNzQKdK/g==}
 
   '@tolgee/format-icu@6.6.0':
     resolution: {integrity: sha512-LXCfJCZ9UeMY578aT7uADMZ+vo3qzHJ2QL4wTvq9ky6fb+m42T2P3hOUgnqxq8uIfkWRIzk8dsP56kQKHzMFSA==}
@@ -3396,7 +3399,7 @@ snapshots:
       '@a-novel-kit/nodelib-browser': 1.3.25(zod@4.3.6)
       zod: 4.3.6
 
-  '@a-novel/uikit@0.12.11(ea0ce39f35a9b64ddb653bfef6a3ebe8)':
+  '@a-novel/uikit@0.12.11(8807e24ac8474290233eaae80fe4e35b)':
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.25(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.55.0)
@@ -3407,7 +3410,7 @@ snapshots:
       '@storybook/addon-vitest': 10.3.3(@vitest/browser@4.1.1(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))(vitest@4.1.1(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))))(@vitest/runner@4.1.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vitest@4.1.1(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))
       '@storybook/sveltekit': 10.3.3(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.0)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(esbuild@0.27.4)(rollup@4.59.0)(storybook@10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.55.0)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))
       '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.0)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.0)(typescript@6.0.2)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))
-      '@tolgee/core': 6.6.0
+      '@tolgee/core': 7.0.0
       '@tolgee/format-icu': 6.6.0
       '@tolgee/svelte': 6.6.0(svelte@5.55.0)
       '@tolgee/web': 6.6.0
@@ -4238,6 +4241,8 @@ snapshots:
       - utf-8-validate
 
   '@tolgee/core@6.6.0': {}
+
+  '@tolgee/core@7.0.0': {}
 
   '@tolgee/format-icu@6.6.0': {}
 
