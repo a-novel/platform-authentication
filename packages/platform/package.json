@@ -36,7 +36,7 @@
     "generate:translations:check": "pnpm tolgee compare check --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
     "generate:translations:pull": "pnpm tolgee pull --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
     "generate:translations:push": "pnpm tolgee push --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
-    "generate:translations:sync": "pnpm tolgee sync --yes --verbose --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
+    "generate:translations:sync": "pnpm tolgee sync --yes --api-key ${TOLGEE_PLATFORM_API_KEY} --api-url ${TOLGEE_URL}",
     "preinstall": "npx only-allow pnpm",
     "prepack": "svelte-kit sync && svelte-package && publint",
     "prepare": "svelte-kit sync || echo ''",
@@ -108,7 +108,7 @@
   },
   "tolgee": {
     "$schema": "https://docs.tolgee.io/cli-schema.json",
-    "projectId": 2,
+    "projectId": 1,
     "format": "JSON_ICU",
     "defaultNamespace": "auth",
     "patterns": [
