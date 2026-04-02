@@ -30,8 +30,8 @@ APP_NAME="auth-translations"
 # Retrieve tolgee port from running pods.
 TOLGEE_PORT="$(podman port "${APP_NAME}_tolgee-app_1" 8080 | sed -e 's/^[^:]*://g')"
 
-export TOLGEE_PKG_API_KEY="tgpak_gfpw4zlsnbuxezlfnqzwynlcnqzhimttgvuxe4tunvtgw"
-export TOLGEE_PLATFORM_API_KEY="tgpak_gjptomtvgzuwk3trmvsgczdroazxgndlobxgimlqgy2dk"
+export TOLGEE_PKG_API_KEY="tgpak_gjpwu5dgoiyw65lvoqydqndknrtwi5lmmzuw6yrwhfwda"
+export TOLGEE_PLATFORM_API_KEY="tgpak_gfptk4tiob2ds23thb2damtwmm2w23bzmuzte43tnvygk"
 export TOLGEE_URL=${TOLGEE_URL:="http://localhost:${TOLGEE_PORT}"}
 
 runAction() {
