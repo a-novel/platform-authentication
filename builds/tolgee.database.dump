@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict RQ3Su5qqzZyUJUjYEt6iEM8ZgQS3fR6nMtQ0woTRkMUbgzgCBWxmnpd8moXrLmw
+\restrict PwAKOwY97SwHLY25cmQYfo10S3t2gUkURLsWm6pth2bhXL5Gi806Tm3lOV5RaZ9
 
 -- Dumped from database version 18.3 (Debian 18.3-1.pgdg13+1)
 -- Dumped by pg_dump version 18.3 (Debian 18.3-1.pgdg13+1)
@@ -2595,8 +2595,8 @@ COPY public.ai_playground_result (id, created_at, updated_at, context_descriptio
 --
 
 COPY public.api_key (id, created_at, updated_at, key, project_id, user_account_id, description, key_hash, expires_at, last_used_at) FROM stdin;
-1000011002	2025-12-22 12:59:08.426	2026-04-02 11:28:31.009	\N	1	1	master-key	RGtmaSUu4owxjcl2jCJUkHNYaPKFmJtv/1Ohuv5bLSU=	\N	2026-04-02 11:40:05.634
-1000011001	2025-12-22 12:58:47.884	2026-04-02 11:28:43.071	\N	2	1	master-key	0IdC92eWvIqCMq00GYb1GVGJVS1PO1QN6tc6z6HT64Y=	\N	2026-04-02 11:40:08.063
+1000011002	2025-12-22 12:59:08.426	2026-04-02 11:28:31.009	\N	1	1	master-key	RGtmaSUu4owxjcl2jCJUkHNYaPKFmJtv/1Ohuv5bLSU=	\N	2026-04-02 11:51:22.242
+1000011001	2025-12-22 12:58:47.884	2026-04-02 11:28:43.071	\N	2	1	master-key	0IdC92eWvIqCMq00GYb1GVGJVS1PO1QN6tc6z6HT64Y=	\N	2026-04-02 11:51:24.489
 \.
 
 
@@ -3834,8 +3834,8 @@ COPY public.language (id, created_at, updated_at, tag, name, project_id, origina
 COPY public.language_stats (id, created_at, updated_at, reviewed_keys, reviewed_percentage, reviewed_words, translated_keys, translated_percentage, translated_words, untranslated_keys, untranslated_percentage, untranslated_words, language_id, translations_updated_at) FROM stdin;
 1000033003	2026-04-02 11:28:17.212	2026-04-02 11:30:00.391	62	100	436	0	0	0	0	0	0	1000000000	2026-04-02 11:30:00.335
 1000033004	2026-04-02 11:28:17.216	2026-04-02 11:30:00.391	62	100	436	0	0	0	0	0	0	1000000001	2026-04-02 11:30:00.341
-1000033002	2026-04-02 11:28:17.183	2026-04-02 11:34:44.787	63	100	489	0	0	0	0	0	0	1000000002	2026-04-02 11:34:44.764
-1000033001	2026-04-02 11:28:17.154	2026-04-02 11:34:45.524	63	100	489	0	0	0	0	0	0	1000000003	2026-04-02 11:34:45.506
+1000033002	2026-04-02 11:28:17.183	2026-04-02 11:51:10.254	63	100	495	0	0	0	0	0	0	1000000002	2026-04-02 11:51:10.232
+1000033001	2026-04-02 11:28:17.154	2026-04-02 11:51:11.072	63	100	495	0	0	0	0	0	0	1000000003	2026-04-02 11:51:11.048
 \.
 
 
@@ -4131,10 +4131,6 @@ COPY public.tolgee_batch_job_chunk_execution (id, created_at, updated_at, chunk_
 --
 
 COPY public.translation (id, created_at, updated_at, text, language_id, key_id, state, auto, mt_provider, character_count, word_count, outdated, prompt_id) FROM stdin;
-1000036247	2026-04-02 11:30:40.733	2026-04-02 11:34:36.929	Hide password	1000000003	1000035124	2	f	\N	13	2	f	\N
-1000036248	2026-04-02 11:30:40.747	2026-04-02 11:34:45.506	Reveal password	1000000003	1000035125	2	f	\N	15	2	f	\N
-1000036249	2026-04-02 11:34:33.853	2026-04-02 11:34:35.787	Masquer le mot de passe	1000000002	1000035124	2	f	\N	23	5	f	\N
-1000036250	2026-04-02 11:34:43.601	2026-04-02 11:34:44.764	Montrer le mot de passe	1000000002	1000035125	2	f	\N	23	5	f	\N
 1000036056	2026-04-02 11:29:04.301	2026-04-02 11:30:00.305	Complete password reset	1000000000	1000035031	2	f	\N	23	3	f	\N
 1000036106	2026-04-02 11:29:04.321	2026-04-02 11:30:00.333	You may now close this page, or proceed to your account page. You are already logged in so no further action is required.	1000000000	1000035060	2	f	\N	121	23	f	\N
 1000036107	2026-04-02 11:29:04.321	2026-04-02 11:30:00.334	Registration successful!	1000000000	1000035061	2	f	\N	24	2	f	\N
@@ -4189,6 +4185,8 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000036156	2026-04-02 11:29:05.258	2026-04-02 11:29:43.738	Manage account	1000000002	1000035079	2	f	\N	14	2	f	\N
 1000036157	2026-04-02 11:29:05.259	2026-04-02 11:29:43.738	You are logged in as	1000000002	1000035080	2	f	\N	20	5	f	\N
 1000036158	2026-04-02 11:29:05.259	2026-04-02 11:29:43.739	Loading user info...	1000000002	1000035081	2	f	\N	20	3	f	\N
+1000036248	2026-04-02 11:30:40.747	2026-04-02 11:51:08.138	Montrer le mot de passe	1000000003	1000035125	2	f	\N	23	5	f	\N
+1000036247	2026-04-02 11:30:40.733	2026-04-02 11:51:11.048	Masquer le mot de passe	1000000003	1000035124	2	f	\N	23	5	f	\N
 1000036159	2026-04-02 11:29:05.259	2026-04-02 11:29:43.74	Manage	1000000002	1000035082	2	f	\N	6	1	f	\N
 1000036160	2026-04-02 11:29:05.259	2026-04-02 11:29:43.741	Authentication	1000000002	1000035083	2	f	\N	14	1	f	\N
 1000036161	2026-04-02 11:29:05.259	2026-04-02 11:29:43.742	Login	1000000002	1000035084	2	f	\N	5	1	f	\N
@@ -4381,6 +4379,8 @@ COPY public.translation (id, created_at, updated_at, text, language_id, key_id, 
 1000036103	2026-04-02 11:29:04.32	2026-04-02 11:30:00.331	You are not allowed to create an account with the provided information. The link you are trying to use may have expired or is invalid, or has already been used.	1000000000	1000035057	2	f	\N	160	30	f	\N
 1000036104	2026-04-02 11:29:04.32	2026-04-02 11:30:00.332	Creating account...	1000000000	1000035058	2	f	\N	19	2	f	\N
 1000036105	2026-04-02 11:29:04.321	2026-04-02 11:30:00.333	Registration completed! Welcome aboard, <strong>{user}</strong>.	1000000000	1000035059	2	f	\N	64	7	f	\N
+1000036250	2026-04-02 11:34:43.601	2026-04-02 11:51:09.215	Reveal password	1000000002	1000035125	2	f	\N	15	2	f	\N
+1000036249	2026-04-02 11:34:33.853	2026-04-02 11:51:10.232	Hide password	1000000002	1000035124	2	f	\N	13	2	f	\N
 \.
 
 
@@ -4429,7 +4429,7 @@ COPY public.uploaded_image (id, created_at, updated_at, filename, user_account_i
 --
 
 COPY public.user_account (id, created_at, updated_at, name, password, reset_password_code, role, third_party_auth_id, third_party_auth_type, username, avatar_hash, totp_key, mfa_recovery_codes, account_type, tokens_valid_not_before, deleted_at, disabled_at, is_initial_user, password_changed, is_demo, sso_refresh_token, sso_session_expiry) FROM stdin;
-1	2025-12-22 12:56:21.831	2026-04-02 11:19:01.397	admin	$2a$10$ElmhIbKT.1iyU.6nCBEjeuGzfI8wpr1II28SVA6hcizo03DJI4xvO	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-04-02 11:19:01	\N	\N	t	f	f	\N	\N
+1	2025-12-22 12:56:21.831	2026-04-02 11:49:17.846	admin	$2a$10$cf58hZ3eKyNUVhQAqu0KmuyC9kUxFDhuk/lF3QToMzMlMh1NuStma	\N	ADMIN	\N	\N	admin	\N	\N	{}	LOCAL	2026-04-02 11:49:17	\N	\N	t	f	f	\N	\N
 \.
 
 
@@ -4454,7 +4454,7 @@ COPY public.webhook_config (id, created_at, updated_at, first_failed, last_execu
 -- Name: activity_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.activity_sequence', 320, true);
+SELECT pg_catalog.setval('public.activity_sequence', 330, true);
 
 
 --
@@ -7581,5 +7581,5 @@ ALTER TABLE ONLY public.batch_step_execution_context
 -- PostgreSQL database dump complete
 --
 
-\unrestrict RQ3Su5qqzZyUJUjYEt6iEM8ZgQS3fR6nMtQ0woTRkMUbgzgCBWxmnpd8moXrLmw
+\unrestrict PwAKOwY97SwHLY25cmQYfo10S3t2gUkURLsWm6pth2bhXL5Gi806Tm3lOV5RaZ9
 
