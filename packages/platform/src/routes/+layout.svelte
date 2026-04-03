@@ -5,7 +5,7 @@
   import { authenticationApi } from "$lib";
   import { loadTranslations } from "$lib/locales";
 
-  import type { ComponentProps, Snippet } from "svelte";
+  import type { Snippet } from "svelte";
 
   import { SessionComponent, SessionUiComponent } from "@a-novel/package-authentication";
   import { NavAuthConnector } from "@a-novel/package-authentication/connectors";
@@ -14,8 +14,8 @@
   import agoraLogoLight from "@a-novel/uikit/assets/logos/integrated/agora (light).png";
   import { TolgeeConfig } from "@a-novel/uikit/locales";
   import { DesignSystemComponent } from "@a-novel/uikit/ui";
-  import { Image, NavBar } from "@a-novel/uikit/ui/components";
-  import { NavApplications, NavSettings } from "@a-novel/uikit/ui/components/nav";
+  import { Image, NavBar, type NavItem } from "@a-novel/uikit/ui/components";
+  import { NavSettings } from "@a-novel/uikit/ui/components/nav";
 
   import { TolgeeProvider } from "@tolgee/svelte";
 
@@ -33,10 +33,10 @@
     goto(manageAccountLink);
   }
 
-  const urls: ComponentProps<typeof NavApplications>["urls"] = {
-    studio: PUBLIC_STUDIO_PLATFORM_URL,
-    storyverse: PUBLIC_STORYVERSE_PLATFORM_URL,
-  };
+  const links: NavItem[] = [
+    { content: "Studio", ariaLabel: "Agora Studio", link: PUBLIC_STUDIO_PLATFORM_URL },
+    { content: "Storyverse", ariaLabel: "Agora Storyverse", link: PUBLIC_STORYVERSE_PLATFORM_URL },
+  ];
 </script>
 
 {#snippet homeButton()}
@@ -46,15 +46,13 @@
 <TolgeeProvider tolgee={TolgeeConfig}>
   <DesignSystemComponent theme="dark">
     <SessionComponent api={authenticationApi}>
-      <NavBar homeLink={resolve("/")} {homeButton} nav={[]}>
+      <NavBar homeLink={resolve("/")} {homeButton} nav={links}>
         {#snippet actionsDesktop()}
           <NavAuthConnector {onManageAccount} api={authenticationApi} />
-          <NavApplications {urls} />
           <NavSettings />
         {/snippet}
         {#snippet actionsMobile()}
           <NavAuthConnector {onManageAccount} api={authenticationApi} mobile />
-          <NavApplications {urls} mobile />
           <NavSettings mobile />
         {/snippet}
       </NavBar>

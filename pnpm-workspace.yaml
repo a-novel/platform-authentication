@@ -13,7 +13,7 @@ catalog:
   "@a-novel/package-authentication": "*"
   "@a-novel/platform-authentication": "*"
   "@a-novel/service-authentication-rest": ^2.4.2
-  "@a-novel/uikit": ^0.12.11
+  "@a-novel/uikit": ^0.13.0
   "@chromatic-com/storybook": ^5.0.0
   "@eslint/compat": ^2.0.0
   "@eslint/js": ^10.0.0
