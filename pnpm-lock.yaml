@@ -600,6 +600,21 @@ packages:
       svelte: ^5.55.1
       typescript: ^6.0.2
       typescript-eslint: ^8.58.0
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      eslint-plugin-storybook:
+        optional: true
+      eslint-plugin-svelte:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-sql:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      svelte:
+        optional: true
 
   '@a-novel/service-authentication-rest@2.4.2':
     resolution: {integrity: sha512-8XuxTjAR1Sbr5he/RMRyXRU/u/mAuv2TlcZ1dHdqcUNL0y8YiYvqI+BON/rVkz2odCvSazzUL51o3mDn7KjOAw==, tarball: https://npm.pkg.github.com/download/@a-novel/service-authentication-rest/2.4.2/3602136557b7e66a9d314f04956a307404070d41}
@@ -629,6 +644,25 @@ packages:
       storybook: ^10.2.19
       svelte: ^5.53.12
       zod: ^4.3.6
+    peerDependenciesMeta:
+      '@storybook/addon-a11y':
+        optional: true
+      '@storybook/addon-docs':
+        optional: true
+      '@storybook/addon-svelte-csf':
+        optional: true
+      '@storybook/addon-themes':
+        optional: true
+      '@storybook/addon-vitest':
+        optional: true
+      '@storybook/sveltekit':
+        optional: true
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+      storybook:
+        optional: true
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
@@ -3379,23 +3413,24 @@ snapshots:
     dependencies:
       '@eslint/compat': 2.0.3(eslint@10.1.0(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.1.0(jiti@2.6.1))
-      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
       '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.55.1))(prettier@3.8.1)(svelte@5.55.1)
       '@types/node': 24.12.0
       eslint: 10.1.0(jiti@2.6.1)
       eslint-config-prettier: 10.1.8(eslint@10.1.0(jiti@2.6.1))
       eslint-plugin-prettier: 5.5.5(eslint-config-prettier@10.1.8(eslint@10.1.0(jiti@2.6.1)))(eslint@10.1.0(jiti@2.6.1))(prettier@3.8.1)
-      eslint-plugin-storybook: 10.3.4(eslint@10.1.0(jiti@2.6.1))(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@6.0.2)
-      eslint-plugin-svelte: 3.17.0(eslint@10.1.0(jiti@2.6.1))(svelte@5.55.1)
       prettier: 3.8.1
-      prettier-plugin-css-order: 2.2.0(postcss@8.5.8)(prettier@3.8.1)
       prettier-plugin-packagejson: 3.0.2(prettier@3.8.1)
-      prettier-plugin-sql: 0.20.0(prettier@3.8.1)
-      prettier-plugin-svelte: 3.5.1(prettier@3.8.1)(svelte@5.55.1)
       storybook: 10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      svelte: 5.55.1
       typescript: 6.0.2
       typescript-eslint: 8.58.0(eslint@10.1.0(jiti@2.6.1))(typescript@6.0.2)
+    optionalDependencies:
+      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
+      eslint-plugin-storybook: 10.3.4(eslint@10.1.0(jiti@2.6.1))(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@6.0.2)
+      eslint-plugin-svelte: 3.17.0(eslint@10.1.0(jiti@2.6.1))(svelte@5.55.1)
+      prettier-plugin-css-order: 2.2.0(postcss@8.5.8)(prettier@3.8.1)
+      prettier-plugin-sql: 0.20.0(prettier@3.8.1)
+      prettier-plugin-svelte: 3.5.1(prettier@3.8.1)(svelte@5.55.1)
+      svelte: 5.55.1
 
   '@a-novel/service-authentication-rest@2.4.2(@a-novel-kit/nodelib-browser@1.3.28(zod@4.3.6))(zod@4.3.6)':
     dependencies:
@@ -3406,22 +3441,23 @@ snapshots:
     dependencies:
       '@a-novel-kit/nodelib-browser': 1.3.28(zod@4.3.6)
       '@iconify/svelte': 5.2.1(svelte@5.55.1)
+      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
+      '@tolgee/core': 7.0.0
+      '@tolgee/format-icu': 7.0.0
+      '@tolgee/svelte': 7.0.0(svelte@5.55.1)
+      '@tolgee/web': 7.0.0
+      svelte: 5.55.1
+      zod: 4.3.6
+    optionalDependencies:
       '@storybook/addon-a11y': 10.3.4(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-docs': 10.3.4(@types/react@19.2.14)(esbuild@0.27.5)(rollup@4.59.0)(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
       '@storybook/addon-svelte-csf': 5.1.2(@storybook/svelte@10.3.4(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.55.1))(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
       '@storybook/addon-themes': 10.3.4(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@storybook/addon-vitest': 10.3.4(@vitest/browser@4.1.2(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))(vitest@4.1.2(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))))(@vitest/runner@4.1.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vitest@4.1.2(@types/node@24.12.0)(jsdom@29.0.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))
       '@storybook/sveltekit': 10.3.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(esbuild@0.27.5)(rollup@4.59.0)(storybook@10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
-      '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.1)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.1)(typescript@6.0.2)(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.5)(jiti@2.6.1)(yaml@2.8.3))
-      '@tolgee/core': 7.0.0
-      '@tolgee/format-icu': 7.0.0
-      '@tolgee/svelte': 7.0.0(svelte@5.55.1)
-      '@tolgee/web': 7.0.0
       '@types/react': 19.2.14
       react: 19.2.4
       storybook: 10.3.4(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      svelte: 5.55.1
-      zod: 4.3.6
 
   '@adobe/css-tools@4.4.4': {}
 
@@ -4308,7 +4344,8 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/pegjs@0.10.6': {}
+  '@types/pegjs@0.10.6':
+    optional: true
 
   '@types/react@19.2.14':
     dependencies:
@@ -4571,7 +4608,8 @@ snapshots:
     dependencies:
       require-from-string: 2.0.2
 
-  big-integer@1.6.52: {}
+  big-integer@1.6.52:
+    optional: true
 
   brace-expansion@5.0.5:
     dependencies:
@@ -4611,7 +4649,8 @@ snapshots:
 
   commander@12.1.0: {}
 
-  commander@2.20.3: {}
+  commander@2.20.3:
+    optional: true
 
   commondir@1.0.1: {}
 
@@ -4695,7 +4734,8 @@ snapshots:
 
   devalue@5.6.4: {}
 
-  discontinuous-range@1.0.0: {}
+  discontinuous-range@1.0.0:
+    optional: true
 
   dom-accessibility-api@0.5.16: {}
 
@@ -5092,7 +5132,8 @@ snapshots:
 
   jsonschema@1.5.0: {}
 
-  jsox@1.2.125: {}
+  jsox@1.2.125:
+    optional: true
 
   keyv@4.5.4:
     dependencies:
@@ -5196,7 +5237,8 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.5
 
-  moo@0.5.3: {}
+  moo@0.5.3:
+    optional: true
 
   mri@1.2.0: {}
 
@@ -5214,11 +5256,13 @@ snapshots:
       moo: 0.5.3
       railroad-diagrams: 1.0.0
       randexp: 0.4.6
+    optional: true
 
   node-sql-parser@5.4.0:
     dependencies:
       '@types/pegjs': 0.10.6
       big-integer: 1.6.52
+    optional: true
 
   obug@2.1.1: {}
 
@@ -5363,6 +5407,7 @@ snapshots:
       prettier: 3.8.1
       sql-formatter: 15.7.3
       tslib: 2.8.1
+    optional: true
 
   prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.55.1):
     dependencies:
@@ -5388,12 +5433,14 @@ snapshots:
 
   querystringify@2.2.0: {}
 
-  railroad-diagrams@1.0.0: {}
+  railroad-diagrams@1.0.0:
+    optional: true
 
   randexp@0.4.6:
     dependencies:
       discontinuous-range: 1.0.0
       ret: 0.1.15
+    optional: true
 
   react-dom@19.2.4(react@19.2.4):
     dependencies:
@@ -5433,7 +5480,8 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  ret@0.1.15: {}
+  ret@0.1.15:
+    optional: true
 
   rolldown@1.0.0-rc.12:
     dependencies:
@@ -5582,6 +5630,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
+    optional: true
 
   stackback@0.0.2: {}
 
