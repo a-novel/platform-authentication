@@ -29,7 +29,7 @@ catalogs:
       version: 5.1.1
     '@eslint/compat':
       specifier: ^2.0.0
-      version: 2.0.4
+      version: 2.0.5
     '@eslint/js':
       specifier: ^10.0.0
       version: 10.0.1
@@ -200,10 +200,10 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.29(5c429cf89c0ae4281a2bd61dc8ca9113)
+        version: 1.3.29(718e29bb30ea4ca99bf4c35c00dbd66a)
       '@eslint/compat':
         specifier: 'catalog:'
-        version: 2.0.4(eslint@10.2.0(jiti@2.6.1))
+        version: 2.0.5(eslint@10.2.0(jiti@2.6.1))
       '@eslint/js':
         specifier: 'catalog:'
         version: 10.0.1(eslint@10.2.0(jiti@2.6.1))
@@ -266,7 +266,7 @@ importers:
         version: 1.3.28(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.29(5c429cf89c0ae4281a2bd61dc8ca9113)
+        version: 1.3.29(718e29bb30ea4ca99bf4c35c00dbd66a)
       '@a-novel/package-authentication':
         specifier: 'catalog:'
         version: link:../shared
@@ -278,7 +278,7 @@ importers:
         version: 0.13.0(422b9c58c8b7fbc8be1343824e96db02)
       '@eslint/compat':
         specifier: 'catalog:'
-        version: 2.0.4(eslint@10.2.0(jiti@2.6.1))
+        version: 2.0.5(eslint@10.2.0(jiti@2.6.1))
       '@eslint/js':
         specifier: 'catalog:'
         version: 10.0.1(eslint@10.2.0(jiti@2.6.1))
@@ -392,7 +392,7 @@ importers:
         version: 1.3.28(zod@4.3.6)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.29(5c429cf89c0ae4281a2bd61dc8ca9113)
+        version: 1.3.29(718e29bb30ea4ca99bf4c35c00dbd66a)
       '@a-novel/service-authentication-rest':
         specifier: 'catalog:'
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.28(zod@4.3.6))(zod@4.3.6)
@@ -401,7 +401,7 @@ importers:
         version: 0.13.0(422b9c58c8b7fbc8be1343824e96db02)
       '@eslint/compat':
         specifier: 'catalog:'
-        version: 2.0.4(eslint@10.2.0(jiti@2.6.1))
+        version: 2.0.5(eslint@10.2.0(jiti@2.6.1))
       '@eslint/js':
         specifier: 'catalog:'
         version: 10.0.1(eslint@10.2.0(jiti@2.6.1))
@@ -543,7 +543,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.29(5c429cf89c0ae4281a2bd61dc8ca9113)
+        version: 1.3.29(718e29bb30ea4ca99bf4c35c00dbd66a)
       '@chromatic-com/storybook':
         specifier: 'catalog:'
         version: 5.1.1(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
@@ -946,8 +946,8 @@ packages:
     resolution: {integrity: sha512-EriSTlt5OC9/7SXkRSCAhfSxxoSUgBm33OH+IkwbdpgoqsSsUg7y3uh+IICI/Qg4BBWr3U2i39RpmycbxMq4ew==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@2.0.4':
-    resolution: {integrity: sha512-o598tCGstJv9Kk4XapwP+oDij9HD9Qr3V37ABzTfdzVvbFciV+sfg9zSW6olj6G/IXj7p89SwSzPnZ+JUEPIPg==}
+  '@eslint/compat@2.0.5':
+    resolution: {integrity: sha512-IbHDbHJfkVNv6xjlET8AIVo/K1NQt7YT4Rp6ok/clyBGcpRx1l6gv0Rq3vBvYfPJIZt6ODf66Zq08FJNDpnzgg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^8.40 || 9 || 10
@@ -963,8 +963,8 @@ packages:
     resolution: {integrity: sha512-jJhqiY3wPMlWWO3370M86CPJ7pt8GmEwSLglMfQhjXal07RCvhmU0as4IuUEW5SJeunfItiEetHmSxCCe9lDBg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/core@1.2.0':
-    resolution: {integrity: sha512-8FTGbNzTvmSlc4cZBaShkC6YvFMG0riksYWRFKXztqVdXaQbcZLXlFbSpC05s70sGEsXAw0qwhx69JiW7hQS7A==}
+  '@eslint/core@1.2.1':
+    resolution: {integrity: sha512-MwcE1P+AZ4C6DWlpin/OmOA54mmIZ/+xZuJiQd4SyB29oAJjN30UW9wkKNptW2ctp4cEsvhlLY/CsQ1uoHDloQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@eslint/js@10.0.1':
@@ -3417,9 +3417,9 @@ snapshots:
     dependencies:
       zod: 4.3.6
 
-  '@a-novel-kit/nodelib-config@1.3.29(5c429cf89c0ae4281a2bd61dc8ca9113)':
+  '@a-novel-kit/nodelib-config@1.3.29(718e29bb30ea4ca99bf4c35c00dbd66a)':
     dependencies:
-      '@eslint/compat': 2.0.4(eslint@10.2.0(jiti@2.6.1))
+      '@eslint/compat': 2.0.5(eslint@10.2.0(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.2.0(jiti@2.6.1))
       '@sveltejs/kit': 2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.7(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.7(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
       '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier-plugin-svelte@3.5.1(prettier@3.8.1)(svelte@5.55.2))(prettier@3.8.1)(svelte@5.55.2)
@@ -3677,9 +3677,9 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/compat@2.0.4(eslint@10.2.0(jiti@2.6.1))':
+  '@eslint/compat@2.0.5(eslint@10.2.0(jiti@2.6.1))':
     dependencies:
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
     optionalDependencies:
       eslint: 10.2.0(jiti@2.6.1)
 
@@ -3693,9 +3693,9 @@ snapshots:
 
   '@eslint/config-helpers@0.5.4':
     dependencies:
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
 
-  '@eslint/core@1.2.0':
+  '@eslint/core@1.2.1':
     dependencies:
       '@types/json-schema': 7.0.15
 
@@ -3707,7 +3707,7 @@ snapshots:
 
   '@eslint/plugin-kit@0.7.0':
     dependencies:
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
       levn: 0.4.1
 
   '@exodus/bytes@1.15.0': {}
@@ -4850,7 +4850,7 @@ snapshots:
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.4
       '@eslint/config-helpers': 0.5.4
-      '@eslint/core': 1.2.0
+      '@eslint/core': 1.2.1
       '@eslint/plugin-kit': 0.7.0
       '@humanfs/node': 0.16.7
       '@humanwhocodes/module-importer': 1.0.1
