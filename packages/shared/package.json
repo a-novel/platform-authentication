@@ -113,7 +113,7 @@
     "@tolgee/format-icu": "^7.0.0",
     "@tolgee/svelte": "^7.0.0",
     "@tolgee/web": "^7.0.0",
-    "svelte": "^5.55.2",
+    "svelte": "^5.55.3",
     "zod": "^4.3.6"
   },
   "packageManager": "pnpm@10.33.0",
