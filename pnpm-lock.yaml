@@ -11,7 +11,7 @@ catalogs:
       version: 1.3.28
     '@a-novel-kit/nodelib-config':
       specifier: ^1.3.22
-      version: 1.3.36
+      version: 1.3.37
     '@a-novel/package-authentication':
       specifier: '*'
       version: 0.1.2
@@ -200,7 +200,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.36(7fe4383f3c72b56871922a13430b0e5b)
+        version: 1.3.37(7fe4383f3c72b56871922a13430b0e5b)
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.0.5(eslint@10.3.0(jiti@2.6.1))
@@ -266,7 +266,7 @@ importers:
         version: 1.3.28(zod@4.4.2)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.36(7fe4383f3c72b56871922a13430b0e5b)
+        version: 1.3.37(7fe4383f3c72b56871922a13430b0e5b)
       '@a-novel/package-authentication':
         specifier: 'catalog:'
         version: link:../shared
@@ -392,7 +392,7 @@ importers:
         version: 1.3.28(zod@4.4.2)
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.36(7fe4383f3c72b56871922a13430b0e5b)
+        version: 1.3.37(7fe4383f3c72b56871922a13430b0e5b)
       '@a-novel/service-authentication-rest':
         specifier: 'catalog:'
         version: 2.4.2(@a-novel-kit/nodelib-browser@1.3.28(zod@4.4.2))(zod@4.4.2)
@@ -543,7 +543,7 @@ importers:
     devDependencies:
       '@a-novel-kit/nodelib-config':
         specifier: 'catalog:'
-        version: 1.3.36(7fe4383f3c72b56871922a13430b0e5b)
+        version: 1.3.37(7fe4383f3c72b56871922a13430b0e5b)
       '@chromatic-com/storybook':
         specifier: 'catalog:'
         version: 5.1.2(storybook@10.3.6(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))
@@ -610,26 +610,26 @@ packages:
     peerDependencies:
       zod: ^4.3.6
 
-  '@a-novel-kit/nodelib-config@1.3.36':
-    resolution: {integrity: sha512-4myCG+36JdQRonVVfd9wBWYIbYUqsiks6ALtE76evuNBA4gF2V4YyIWVU80nBnz0s5Yyhf8arVbiLCFtintpFw==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-config/1.3.36/525a917d2de2d71922d6733be4ea69039bdc4017}
+  '@a-novel-kit/nodelib-config@1.3.37':
+    resolution: {integrity: sha512-9Hv9/Mjl4s33RHIGRpeP1nh43nI3xR49ev6ku8V7GA2HTHIN3Sb8v7mYqxNaqLIGsrLWabH0uEnyaz8rY04G5Q==, tarball: https://npm.pkg.github.com/download/@a-novel-kit/nodelib-config/1.3.37/f74549aa59f5e1fa028f85f5b6b6577e327b761a}
     engines: {node: '>=24.0.0', npm: '>=10.9.2'}
     peerDependencies:
       '@eslint/compat': ^2.0.5
       '@eslint/js': ^10.0.1
-      '@sveltejs/kit': ^2.58.0
+      '@sveltejs/kit': ^2.59.0
       '@trivago/prettier-plugin-sort-imports': ^6.0.2
       '@types/node': ^24.12.2
-      eslint: ^10.2.1
+      eslint: ^10.3.0
       eslint-config-prettier: ^10.1.8
       eslint-plugin-prettier: ^5.5.5
-      eslint-plugin-storybook: ^10.3.5
+      eslint-plugin-storybook: ^10.3.6
       eslint-plugin-svelte: ^3.17.1
       prettier: ^3.8.3
       prettier-plugin-css-order: ^2.2.0
       prettier-plugin-packagejson: ^2.5.20 || ^3.0.0
       prettier-plugin-sql: ^0.20.0
       prettier-plugin-svelte: ^3.5.1
-      storybook: ^10.3.5
+      storybook: ^10.3.6
       svelte: ^5.55.5
       typescript: ^6.0.3
       typescript-eslint: ^8.59.1
@@ -3417,7 +3417,7 @@ snapshots:
     dependencies:
       zod: 4.4.2
 
-  '@a-novel-kit/nodelib-config@1.3.36(7fe4383f3c72b56871922a13430b0e5b)':
+  '@a-novel-kit/nodelib-config@1.3.37(7fe4383f3c72b56871922a13430b0e5b)':
     dependencies:
       '@eslint/compat': 2.0.5(eslint@10.3.0(jiti@2.6.1))
       '@eslint/js': 10.0.1(eslint@10.3.0(jiti@2.6.1))
