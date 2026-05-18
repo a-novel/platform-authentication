@@ -146,7 +146,7 @@ catalogs:
       version: 3.5.2
     publint:
       specifier: ^0.3.16
-      version: 0.3.20
+      version: 0.3.21
     react:
       specifier: ^19.2.3
       version: 19.2.5
@@ -362,7 +362,7 @@ importers:
         version: 3.5.2(prettier@3.8.3)(svelte@5.55.7(@typescript-eslint/types@8.59.3))
       publint:
         specifier: 'catalog:'
-        version: 0.3.20
+        version: 0.3.21
       sharp:
         specifier: 'catalog:'
         version: 0.34.5
@@ -476,7 +476,7 @@ importers:
         version: 3.5.2(prettier@3.8.3)(svelte@5.55.7(@typescript-eslint/types@8.59.3))
       publint:
         specifier: 'catalog:'
-        version: 0.3.20
+        version: 0.3.21
       sharp:
         specifier: 'catalog:'
         version: 0.34.5
@@ -588,7 +588,7 @@ importers:
         version: 3.17.1(eslint@10.4.0(jiti@2.7.0))(svelte@5.55.7(@typescript-eslint/types@8.59.3))
       publint:
         specifier: 'catalog:'
-        version: 0.3.20
+        version: 0.3.21
       react:
         specifier: 'catalog:'
         version: 19.2.5
@@ -2878,8 +2878,8 @@ packages:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
 
-  publint@0.3.20:
-    resolution: {integrity: sha512-UWqFYP7VBVCe9l/leEEGJrDs6Am4K4KapLmLi5qbt+9fA+Ny38ghdW+bw1nYfVqCK8/3kgsxjjhFjTYqYYRpyw==}
+  publint@0.3.21:
+    resolution: {integrity: sha512-OqejcnMV6E9zel2oCrUOJEiiFkGiAAni0A6ibfQNh1k9Gu5z4F+Yso8lllam7AzmV6Do0vp7u3UpZNRBwuXaHQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5413,7 +5413,7 @@ snapshots:
       ansi-styles: 5.2.0
       react-is: 17.0.2
 
-  publint@0.3.20:
+  publint@0.3.21:
     dependencies:
       '@publint/pack': 0.1.4
       package-manager-detector: 1.6.0
